@@ -1,0 +1,11 @@
+age,workclass,education,marital_status,occupation,race,gender,hours_per_week,income
+39.0,Government,Bachelors,Single,White-Collar,White,Male,40.0,0.094
+38.0,Private,HS-grad,Divorced,Blue-Collar,White,Male,40.0,0.002
+53.0,Private,School,Married,Blue-Collar,Other,Male,40.0,0.042
+49.0,Private,School,Married,Service,Other,Female,16.0,0.006
+31.0,Private,Masters,Single,Professional,White,Female,50.0,0.039
+23.0,Private,Bachelors,Single,White-Collar,White,Female,30.0,0.001
+32.0,Private,Assoc,Single,Sales,Other,Male,50.0,0.004
+34.0,Private,School,Married,Blue-Collar,Other,Male,45.0,0.015
+25.0,Self-Employed,HS-grad,Single,Blue-Collar,White,Male,35.0,0.0
+32.0,Private,HS-grad,Single,Blue-Collar,White,Male,40.0,0.0

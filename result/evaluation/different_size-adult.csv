@@ -1,0 +1,31 @@
+method,metric,value,emb_size
+mobj,target valid,1.0,32.0
+mobj,categorical proximity,4.0,32.0
+mobj,continuous proximity,0.25342600519512476,32.0
+mobj,causal validity,1.0,32.0
+mobj,IM1,0.09857615036730649,32.0
+mobj,IM2,0.0076770240919859,32.0
+mobj,target valid,1.0,64.0
+mobj,categorical proximity,3.9,64.0
+mobj,continuous proximity,0.2371019082212476,64.0
+mobj,causal validity,1.0,64.0
+mobj,IM1,0.07417490914525107,64.0
+mobj,IM2,0.00030376559739338444,64.0
+mobj,target valid,1.0,128.0
+mobj,categorical proximity,4.0,128.0
+mobj,continuous proximity,0.20178637612691783,128.0
+mobj,causal validity,1.0,128.0
+mobj,IM1,0.07699452008820684,128.0
+mobj,IM2,0.00038534452991915524,128.0
+mobj,target valid,1.0,256.0
+mobj,categorical proximity,4.0,256.0
+mobj,continuous proximity,0.26244923048846835,256.0
+mobj,causal validity,1.0,256.0
+mobj,IM1,0.08374122186422311,256.0
+mobj,IM2,0.0008022207852613251,256.0
+mobj,target valid,1.0,512.0
+mobj,categorical proximity,4.1,512.0
+mobj,continuous proximity,0.24441731149948565,512.0
+mobj,causal validity,1.0,512.0
+mobj,IM1,0.05042364743528582,512.0
+mobj,IM2,0.0007551797949130058,512.0
