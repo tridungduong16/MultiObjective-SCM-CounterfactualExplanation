@@ -1,1 +1,1 @@
-# Multiobjective optimization for Counterfactual Explanation with Structural Causal Model
+# Multi-objective Optimization for Counterfactual Explanation with Structural Causal Model
