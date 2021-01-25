@@ -28,9 +28,13 @@ from sklearn.metrics import mean_squared_error
 import torch 
 import torch.nn as nn
 
-from . import utils
-from . import dfencoder
-from . import source_code
+import utils
+import dfencoder
+import source_code
+
+# from . import utils
+# from . import dfencoder
+# from . import source_code
 
 from utils.helpers import load_adult_income_dataset
 from utils.dataloader import DataLoader
@@ -38,6 +42,7 @@ from utils.dataloader import DataLoader
 from source_code.prototype import find_proto, get_pos_neg_latent
 from dfencoder.autoencoder import AutoEncoder
 from source_code import configuration_path as cf
+
 
 from sklearn.metrics import mean_absolute_error
 from sklearn.metrics import classification_report
@@ -440,7 +445,7 @@ if __name__ == "__main__":
     df = d.data_df
     df = d.normalize_data(df)
     
-    sys.exit(1)
+    # sys.exit(1)
     """Preprocess data"""
     encoded_data = d.one_hot_encoded_data
     encoded_data = d.normalize_data(encoded_data)
