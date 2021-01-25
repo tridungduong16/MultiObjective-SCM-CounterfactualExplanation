@@ -1,10 +1,15 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
-Created on Thu Dec 31 14:25:35 2020
+All the views for our todos application
+Currently we support the following 3 views:
+
+1. **Home** - The main view for Todos
+2. **Delete** - called to delete a todo
+3. **Add** - called to add a new todo
 
 @author: trduong
+
 """
+
 import sys
 MAIN_PATH = "/home/trduong/Data/counterfactual-explanation-research.git/my-algorithm"
 sys.path.insert(1, MAIN_PATH)
