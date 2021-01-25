@@ -6,6 +6,46 @@ Code accompanying the paper [Preserving Causal Constraints in Counterfactual Exp
 
 This work is also being integerated with [DiCE](https://github.com/interpretml/DiCE), an open source library for explaining ML models. Please check the this [tutorial](https://github.com/interpretml/DiCE/blob/master/docs/notebooks/DiCE_getting_started_feasible.ipynb) and follow DiCE for updates regarding the same. 
 
+## Code Structure 
+
+## source_code
+
+* CF-Adult.py
+
+  - Contains pre trained models for the different methods across datasets
+
+
+* CF-Sangiovese.py
+
+  - Contains pre trained models for the different methods across datasets
+
+
+* CF-SimpleBN.py
+
+  - Contains pre trained models for the different methods across datasets
+
+* evaluation_final.py
+
+  - Contains pre trained models for the different methods across datasets
+
+* df_encoder_adults.py
+
+  - Contains pre trained models for the different methods across datasets
+
+* df_encoder_bn.py
+
+  - Contains pre trained models for the different methods across datasets
+
+* prototype.py
+
+  - Contains pre trained models for the different methods across datasets
+
+
+* prototype.py
+
+  - Contains pre trained models for the different methods across datasets
+
+
 ## Cite
 ```bibtex
 @article{mahajan2019preserving,
