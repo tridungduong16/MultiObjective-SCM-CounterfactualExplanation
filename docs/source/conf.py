@@ -13,16 +13,19 @@
 import os
 import sys
 sys.path.insert(0, os.path.abspath("../../"))
+# sys.path.insert(0, os.path.abspath('..'))
+
+# sys.path.insert(0, os.path.abspath('../'))
 
 
 # -- Project information -----------------------------------------------------
 
-project = 'DiCE'
-copyright = '2020, Ramaravind, Amit, Chenhao'
-author = 'Ramaravind, Amit, Chenhao'
+project = 'Multi-obj CF'
+copyright = '2021 Dung Duong, Qian Li, Guandong Xu'
+author = 'Dung Duong, Qian Li, Guandong Xu'
 
 # The full version, including alpha/beta/rc tags
-release = '0.4'
+release = '1.0.0'
 
 
 # -- General configuration ---------------------------------------------------
@@ -37,7 +40,28 @@ extensions = ['sphinx.ext.autodoc',
     'sphinx_rtd_theme'
 ]
 
-autodoc_mock_imports = ['numpy', 'pandas', 'matplotlib', 'os', 'tensorflow', 'random', 'collections', 'timeit', 'tensorflow.keras', 'sklearn', 'sklearn.model_selection.train_test_split', 'copy', 'IPython', 'IPython.display.display', 'collections', 'collections.OrderedDict', 'logging', 'torch', 'torchvision']
+autodoc_mock_imports = ['numpy',
+                        'pandas',
+                        'matplotlib',
+                        'os',
+                        'tensorflow',
+                        'random',
+                        'collections',
+                        'timeit',
+                        'tensorflow.keras',
+                        'sklearn',
+                        'sklearn.model_selection.train_test_split',
+                        'copy',
+                        'IPython',
+                        'IPython.display.display',
+                        'collections',
+                        'collections.OrderedDict',
+                        'logging',
+                        'torch',
+                        'scipy',
+                        'pymoo',
+                        'torchvision',
+                        'seaborn']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

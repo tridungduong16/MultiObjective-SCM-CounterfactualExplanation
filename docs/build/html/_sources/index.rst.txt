@@ -21,7 +21,8 @@
    :maxdepth: 2
    :caption: Package:
 
-   test
+   distance
+   evaluation_func
 
 Indices and tables
 ==================

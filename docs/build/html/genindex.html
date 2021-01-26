@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Index &mdash; DiCE 0.4 documentation</title>
+  <title>Index &mdash; Multi-obj CF 1.0.0 documentation</title>
   
 
   
@@ -52,7 +52,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> DiCE
+            <a href="index.html" class="icon icon-home"> Multi-obj CF
           
 
           
@@ -97,7 +97,8 @@
 </ul>
 <p class="caption"><span class="caption-text">Package:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="test.html">test module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="distance.html">distance module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="evaluation_func.html">evaluation_func module</a></li>
 </ul>
 
             
@@ -113,7 +114,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">DiCE</a>
+          <a href="index.html">Multi-obj CF</a>
         
       </nav>
 
@@ -174,7 +175,6 @@
  | <a href="#E"><strong>E</strong></a>
  | <a href="#F"><strong>F</strong></a>
  | <a href="#G"><strong>G</strong></a>
- | <a href="#H"><strong>H</strong></a>
  | <a href="#I"><strong>I</strong></a>
  | <a href="#L"><strong>L</strong></a>
  | <a href="#M"><strong>M</strong></a>
@@ -212,21 +212,49 @@
 <h2 id="C">C</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="evaluation_func.html#evaluation_func.Evaluation.cat_prox">cat_prox() (evaluation_func.Evaluation method)</a>
+</li>
+      <li><a href="evaluation_func.html#evaluation_func.Evaluation.cat_prox_eval">cat_prox_eval() (evaluation_func.Evaluation method)</a>
+</li>
+      <li><a href="distance.html#distance.Distance.cat_representation_dist">cat_representation_dist() (distance.Distance method)</a>
+</li>
+      <li><a href="evaluation_func.html#evaluation_func.Evaluation.cau_val_evaluation">cau_val_evaluation() (evaluation_func.Evaluation method)</a>
+</li>
+      <li><a href="distance.html#distance.Distance.causal_loss_adult">causal_loss_adult() (distance.Distance method)</a>
+</li>
+      <li><a href="distance.html#distance.Distance.causal_loss_sangio">causal_loss_sangio() (distance.Distance method)</a>
+</li>
+      <li><a href="evaluation_func.html#evaluation_func.Evaluation.causal_validity">causal_validity() (evaluation_func.Evaluation method)</a>
+</li>
+      <li><a href="distance.html#distance.Distance.certifai_distance">certifai_distance() (distance.Distance method)</a>
+</li>
+      <li><a href="evaluation_func.html#evaluation_func.Evaluation.change_width">change_width() (evaluation_func.Evaluation method)</a>
+</li>
       <li><a href="dfencoder.html#dfencoder.autoencoder.CompleteLayer">CompleteLayer (class in dfencoder.autoencoder)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="dfencoder.html#dfencoder.autoencoder.AutoEncoder.compute_baseline_performance">compute_baseline_performance() (dfencoder.autoencoder.AutoEncoder method)</a>
 </li>
       <li><a href="dfencoder.html#dfencoder.autoencoder.compute_embedding_size">compute_embedding_size() (in module dfencoder.autoencoder)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="dfencoder.html#dfencoder.autoencoder.AutoEncoder.compute_loss">compute_loss() (dfencoder.autoencoder.AutoEncoder method)</a>
 </li>
       <li><a href="dfencoder.html#dfencoder.autoencoder.AutoEncoder.compute_outputs">compute_outputs() (dfencoder.autoencoder.AutoEncoder method)</a>
 </li>
       <li><a href="dfencoder.html#dfencoder.autoencoder.AutoEncoder.compute_targets">compute_targets() (dfencoder.autoencoder.AutoEncoder method)</a>
 </li>
-      <li><a href="test.html#test.SimpleBleDevice.connect">connect() (test.SimpleBleDevice method)</a>
+      <li><a href="distance.html#distance.Distance.compute_yloss">compute_yloss() (distance.Distance method)</a>
+</li>
+      <li><a href="evaluation_func.html#evaluation_func.Evaluation.con_prox_eval">con_prox_eval() (evaluation_func.Evaluation method)</a>
+</li>
+      <li><a href="distance.html#distance.Distance.constraints_loss">constraints_loss() (distance.Distance method)</a>
+</li>
+      <li><a href="distance.html#distance.Distance.continous_dist">continous_dist() (distance.Distance method)</a>
+</li>
+      <li><a href="evaluation_func.html#evaluation_func.Evaluation.convert_to_label">convert_to_label() (evaluation_func.Evaluation method)</a>
+</li>
+      <li><a href="distance.html#distance.Distance.cross_entropy">cross_entropy() (distance.Distance method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -238,20 +266,6 @@
 </li>
       <li><a href="dfencoder.html#dfencoder.autoencoder.AutoEncoder.decode_to_df">decode_to_df() (dfencoder.autoencoder.AutoEncoder method)</a>
 </li>
-      <li>
-    df_encoder_adults
-
-      <ul>
-        <li><a href="df_encoder_adults.html#module-df_encoder_adults">module</a>
-</li>
-      </ul></li>
-      <li>
-    df_encoder_bn
-
-      <ul>
-        <li><a href="df_encoder_bn.html#module-df_encoder_bn">module</a>
-</li>
-      </ul></li>
       <li><a href="dfencoder.html#dfencoder.autoencoder.AutoEncoder.df_predict">df_predict() (dfencoder.autoencoder.AutoEncoder method)</a>
 </li>
       <li>
@@ -261,8 +275,6 @@
         <li><a href="dfencoder.html#module-dfencoder">module</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     dfencoder.autoencoder
 
@@ -277,6 +289,8 @@
         <li><a href="dfencoder.html#module-dfencoder.dataframe">module</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     dfencoder.scalers
 
@@ -284,7 +298,16 @@
         <li><a href="dfencoder.html#module-dfencoder.scalers">module</a>
 </li>
       </ul></li>
-      <li><a href="test.html#test.SimpleBleDevice.disconnect">disconnect() (test.SimpleBleDevice method)</a>
+      <li>
+    distance
+
+      <ul>
+        <li><a href="distance.html#module-distance">module</a>
+</li>
+      </ul></li>
+      <li><a href="distance.html#distance.Distance">Distance (class in distance)</a>
+</li>
+      <li><a href="distance.html#distance.Distance.distance_mad">distance_mad() (distance.Distance method)</a>
 </li>
       <li><a href="dfencoder.html#dfencoder.autoencoder.AutoEncoder.do_backward">do_backward() (dfencoder.autoencoder.AutoEncoder method)</a>
 </li>
@@ -296,12 +319,21 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="dfencoder.html#dfencoder.autoencoder.AutoEncoder.encode">encode() (dfencoder.autoencoder.AutoEncoder method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="dfencoder.html#dfencoder.autoencoder.AutoEncoder.encode_input">encode_input() (dfencoder.autoencoder.AutoEncoder method)</a>
 </li>
       <li><a href="dfencoder.html#dfencoder.dataframe.EncoderDataFrame">EncoderDataFrame (class in dfencoder.dataframe)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="evaluation_func.html#evaluation_func.Evaluation">Evaluation (class in evaluation_func)</a>
+</li>
+      <li>
+    evaluation_func
+
+      <ul>
+        <li><a href="evaluation_func.html#module-evaluation_func">module</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -348,47 +380,38 @@
 </li>
       <li><a href="dfencoder.html#dfencoder.autoencoder.AutoEncoder.get_deep_stack_features">get_deep_stack_features() (dfencoder.autoencoder.AutoEncoder method)</a>
 </li>
-      <li><a href="prototype.html#prototype.get_pos_neg_latent">get_pos_neg_latent() (in module prototype)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="prototype.html#prototype.get_pos_neg_latent">get_pos_neg_latent() (in module prototype)</a>
+</li>
       <li><a href="dfencoder.html#dfencoder.autoencoder.AutoEncoder.get_representation">get_representation() (dfencoder.autoencoder.AutoEncoder method)</a>
 </li>
       <li><a href="dfencoder.html#dfencoder.autoencoder.AutoEncoder.get_scaler">get_scaler() (dfencoder.autoencoder.AutoEncoder method)</a>
 </li>
-      <li><a href="test.html#test.SimpleBleDevice.getCharacteristics">getCharacteristics() (test.SimpleBleDevice method)</a>
-</li>
-      <li><a href="test.html#test.SimpleBleDevice.getServices">getServices() (test.SimpleBleDevice method)</a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="H">H</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li>
-    helpers_algo
-
-      <ul>
-        <li><a href="helpers_algo.html#module-helpers_algo">module</a>
-</li>
-      </ul></li>
   </ul></td>
 </tr></table>
 
 <h2 id="I">I</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="evaluation_func.html#evaluation_func.Evaluation.im1_score">im1_score() (evaluation_func.Evaluation method)</a>
+</li>
+      <li><a href="evaluation_func.html#evaluation_func.Evaluation.im2_score">im2_score() (evaluation_func.Evaluation method)</a>
+</li>
+      <li><a href="evaluation_func.html#evaluation_func.Evaluation.IM_calculate">IM_calculate() (evaluation_func.Evaluation method)</a>
+</li>
+      <li><a href="evaluation_func.html#evaluation_func.Evaluation.IM_evaluation">IM_evaluation() (evaluation_func.Evaluation method)</a>
+</li>
       <li><a href="dfencoder.html#dfencoder.autoencoder.AutoEncoder.init_binary">init_binary() (dfencoder.autoencoder.AutoEncoder method)</a>
 </li>
       <li><a href="dfencoder.html#dfencoder.autoencoder.AutoEncoder.init_cats">init_cats() (dfencoder.autoencoder.AutoEncoder method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="dfencoder.html#dfencoder.autoencoder.AutoEncoder.init_features">init_features() (dfencoder.autoencoder.AutoEncoder method)</a>
 </li>
       <li><a href="dfencoder.html#dfencoder.autoencoder.AutoEncoder.init_numeric">init_numeric() (dfencoder.autoencoder.AutoEncoder method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="dfencoder.html#dfencoder.autoencoder.CompleteLayer.interpret_activation">interpret_activation() (dfencoder.autoencoder.CompleteLayer method)</a>
 </li>
       <li><a href="dfencoder.html#dfencoder.scalers.GaussRankScaler.inverse_transform">inverse_transform() (dfencoder.scalers.GaussRankScaler method)</a>
@@ -399,15 +422,13 @@
         <li><a href="dfencoder.html#dfencoder.scalers.StandardScaler.inverse_transform">(dfencoder.scalers.StandardScaler method)</a>
 </li>
       </ul></li>
-      <li><a href="test.html#test.SimpleBleDevice.isConnected">isConnected() (test.SimpleBleDevice method)</a>
-</li>
   </ul></td>
 </tr></table>
 
 <h2 id="L">L</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="helpers_algo.html#helpers_algo.load_encoder_data">load_encoder_data() (in module helpers_algo)</a>
+      <li><a href="distance.html#distance.Distance.latent_distance">latent_distance() (distance.Distance method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -415,14 +436,14 @@
 <h2 id="M">M</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="distance.html#distance.Distance.MAD">MAD() (distance.Distance method)</a>
+</li>
+      <li><a href="evaluation_func.html#evaluation_func.Evaluation.map_ordered_education">map_ordered_education() (evaluation_func.Evaluation method)</a>
+</li>
       <li>
     module
 
       <ul>
-        <li><a href="df_encoder_adults.html#module-df_encoder_adults">df_encoder_adults</a>
-</li>
-        <li><a href="df_encoder_bn.html#module-df_encoder_bn">df_encoder_bn</a>
-</li>
         <li><a href="dfencoder.html#module-dfencoder">dfencoder</a>
 </li>
         <li><a href="dfencoder.html#module-dfencoder.autoencoder">dfencoder.autoencoder</a>
@@ -431,13 +452,23 @@
 </li>
         <li><a href="dfencoder.html#module-dfencoder.scalers">dfencoder.scalers</a>
 </li>
-        <li><a href="helpers_algo.html#module-helpers_algo">helpers_algo</a>
+        <li><a href="distance.html#module-distance">distance</a>
+</li>
+        <li><a href="evaluation_func.html#module-evaluation_func">evaluation_func</a>
 </li>
         <li><a href="prototype.html#module-prototype">prototype</a>
 </li>
         <li><a href="test.html#module-test">test</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="evaluation_func.html#evaluation_func.Evaluation.mul_cat_prox_eval">mul_cat_prox_eval() (evaluation_func.Evaluation method)</a>
+</li>
+      <li><a href="evaluation_func.html#evaluation_func.Evaluation.multi_IM_calculate">multi_IM_calculate() (evaluation_func.Evaluation method)</a>
+</li>
+      <li><a href="evaluation_func.html#evaluation_func.Evaluation.multiple_con_prox_eval">multiple_con_prox_eval() (evaluation_func.Evaluation method)</a>
+</li>
   </ul></td>
 </tr></table>
 
@@ -462,7 +493,7 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="dfencoder.html#dfencoder.autoencoder.AutoEncoder.prepare_df">prepare_df() (dfencoder.autoencoder.AutoEncoder method)</a>
 </li>
-      <li><a href="test.html#test.SimpleBleDevice.printInfo">printInfo() (test.SimpleBleDevice method)</a>
+      <li><a href="distance.html#distance.Distance.proto_loss">proto_loss() (distance.Distance method)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
@@ -473,20 +504,18 @@
         <li><a href="prototype.html#module-prototype">module</a>
 </li>
       </ul></li>
+      <li><a href="distance.html#distance.Distance.pure_distance">pure_distance() (distance.Distance method)</a>
+</li>
   </ul></td>
 </tr></table>
 
 <h2 id="S">S</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="test.html#test.SimpleBleDevice.setNotificationCallback">setNotificationCallback() (test.SimpleBleDevice method)</a>
-</li>
-      <li><a href="test.html#test.SimpleBleDevice">SimpleBleDevice (class in test)</a>
+      <li><a href="dfencoder.html#dfencoder.scalers.StandardScaler">StandardScaler (class in dfencoder.scalers)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="dfencoder.html#dfencoder.scalers.StandardScaler">StandardScaler (class in dfencoder.scalers)</a>
-</li>
       <li><a href="dfencoder.html#dfencoder.dataframe.EncoderDataFrame.swap">swap() (dfencoder.dataframe.EncoderDataFrame method)</a>
 </li>
   </ul></td>
@@ -495,6 +524,8 @@
 <h2 id="T">T</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="evaluation_func.html#evaluation_func.Evaluation.target_valid">target_valid() (evaluation_func.Evaluation method)</a>
+</li>
       <li>
     test
 
@@ -516,6 +547,8 @@
         <li><a href="dfencoder.html#dfencoder.scalers.StandardScaler.transform">(dfencoder.scalers.StandardScaler method)</a>
 </li>
       </ul></li>
+      <li><a href="distance.html#distance.Distance.two_cate_dist">two_cate_dist() (distance.Distance method)</a>
+</li>
   </ul></td>
 </tr></table>
 
@@ -530,7 +563,7 @@
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2020, Ramaravind, Amit, Chenhao.
+        &#169; Copyright 2021 Dung Duong, Qian Li, Guandong Xu.
 
     </p>
   </div>

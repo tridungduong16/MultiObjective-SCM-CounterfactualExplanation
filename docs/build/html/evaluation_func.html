@@ -1,0 +1,576 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>evaluation_func module &mdash; Multi-obj CF 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="distance module" href="distance.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Multi-obj CF
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="readme.html">Multi-objective Optimization for Counterfactual Explanation with Structural Causal Model</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Notebooks:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/DiCE_getting_started.html">Quick introduction to generating counterfactual explanations using DiCE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/DiCE_with_private_data.html">Generating Diverse Counterfactual Explanations without accessing training data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/DiCE_with_advanced_options.html">Advanced options to customize Counterfactual Explanations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/DiCE_getting_started_feasible.html">Generate feasible counterfactual explanations using a VAE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/DiCE_getting_started_feasible.html#Adding-feasibility-constraints">Adding feasibility constraints</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Package:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="distance.html">distance module</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">evaluation_func module</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Multi-obj CF</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>evaluation_func module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/evaluation_func.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="module-evaluation_func">
+<span id="evaluation-func-module"></span><h1>evaluation_func module<a class="headerlink" href="#module-evaluation_func" title="Permalink to this headline">¶</a></h1>
+<p>Created on Sun Dec 13 16:59:22 2020</p>
+<p>&#64;author: trduong</p>
+<dl class="py class">
+<dt id="evaluation_func.Evaluation">
+<em class="property">class </em><code class="sig-prename descclassname">evaluation_func.</code><code class="sig-name descname">Evaluation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x0</span></em>, <em class="sig-param"><span class="n">xcf</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/evaluation_func.html#Evaluation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evaluation_func.Evaluation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="evaluation_func.Evaluation.IM_calculate">
+<code class="sig-name descname">IM_calculate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">features</span></em>, <em class="sig-param"><span class="n">dfencoder_model</span></em>, <em class="sig-param"><span class="n">dfencoder_model_pos</span></em>, <em class="sig-param"><span class="n">dfencoder_model_neg</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/evaluation_func.html#Evaluation.IM_calculate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evaluation_func.Evaluation.IM_calculate" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>features</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+<li><p><strong>dfencoder_model</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+<li><p><strong>dfencoder_model_pos</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+<li><p><strong>dfencoder_model_neg</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DESCRIPTION</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>TYPE</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="evaluation_func.Evaluation.IM_evaluation">
+<code class="sig-name descname">IM_evaluation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">df_cf</span></em>, <em class="sig-param"><span class="n">df_evaluation</span></em>, <em class="sig-param"><span class="n">method_name</span></em>, <em class="sig-param"><span class="n">im1</span></em>, <em class="sig-param"><span class="n">im2</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/evaluation_func.html#Evaluation.IM_evaluation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evaluation_func.Evaluation.IM_evaluation" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df_cf</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+<li><p><strong>df_evaluation</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+<li><p><strong>method_name</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+<li><p><strong>im1</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+<li><p><strong>im2</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DESCRIPTION</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>TYPE</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="evaluation_func.Evaluation.cat_prox">
+<code class="sig-name descname">cat_prox</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x0</span></em>, <em class="sig-param"><span class="n">xcf</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/evaluation_func.html#Evaluation.cat_prox"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evaluation_func.Evaluation.cat_prox" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x0</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+<li><p><strong>xcf</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DESCRIPTION</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>TYPE</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="evaluation_func.Evaluation.cat_prox_eval">
+<code class="sig-name descname">cat_prox_eval</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">df_cf</span></em>, <em class="sig-param"><span class="n">df_original</span></em>, <em class="sig-param"><span class="n">df_evaluation</span></em>, <em class="sig-param"><span class="n">method_name</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/evaluation_func.html#Evaluation.cat_prox_eval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evaluation_func.Evaluation.cat_prox_eval" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df_cf</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+<li><p><strong>df_original</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+<li><p><strong>df_evaluation</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+<li><p><strong>method_name</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DESCRIPTION</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>TYPE</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="evaluation_func.Evaluation.cau_val_evaluation">
+<code class="sig-name descname">cau_val_evaluation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">df_cf</span></em>, <em class="sig-param"><span class="n">df_original</span></em>, <em class="sig-param"><span class="n">df_evaluation</span></em>, <em class="sig-param"><span class="n">col</span></em>, <em class="sig-param"><span class="n">method_name</span></em>, <em class="sig-param"><span class="n">dataset</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/evaluation_func.html#Evaluation.cau_val_evaluation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evaluation_func.Evaluation.cau_val_evaluation" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df_cf</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+<li><p><strong>df_original</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+<li><p><strong>df_evaluation</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+<li><p><strong>col</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+<li><p><strong>method_name</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+<li><p><strong>dataset</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DESCRIPTION</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>TYPE</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="evaluation_func.Evaluation.causal_validity">
+<code class="sig-name descname">causal_validity</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">df</span></em>, <em class="sig-param"><span class="n">dataset</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/evaluation_func.html#Evaluation.causal_validity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evaluation_func.Evaluation.causal_validity" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+<li><p><strong>dataset</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DESCRIPTION</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>TYPE</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="evaluation_func.Evaluation.change_width">
+<code class="sig-name descname">change_width</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ax</span></em>, <em class="sig-param"><span class="n">new_value</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/evaluation_func.html#Evaluation.change_width"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evaluation_func.Evaluation.change_width" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ax</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+<li><p><strong>new_value</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DESCRIPTION</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>TYPE</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="evaluation_func.Evaluation.con_prox_eval">
+<code class="sig-name descname">con_prox_eval</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">df_cf</span></em>, <em class="sig-param"><span class="n">df_original</span></em>, <em class="sig-param"><span class="n">df_evaluation</span></em>, <em class="sig-param"><span class="n">method_name</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/evaluation_func.html#Evaluation.con_prox_eval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evaluation_func.Evaluation.con_prox_eval" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df_cf</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+<li><p><strong>df_original</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+<li><p><strong>df_evaluation</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+<li><p><strong>method_name</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DESCRIPTION</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>TYPE</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="evaluation_func.Evaluation.convert_to_label">
+<code class="sig-name descname">convert_to_label</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">df</span></em>, <em class="sig-param"><span class="n">d</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/evaluation_func.html#Evaluation.convert_to_label"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evaluation_func.Evaluation.convert_to_label" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+<li><p><strong>d</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DESCRIPTION</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>TYPE</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="evaluation_func.Evaluation.im1_score">
+<code class="sig-name descname">im1_score</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">xcf</span></em>, <em class="sig-param"><span class="n">ae1</span></em>, <em class="sig-param"><span class="n">ae0</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/evaluation_func.html#Evaluation.im1_score"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evaluation_func.Evaluation.im1_score" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xcf</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+<li><p><strong>ae1</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+<li><p><strong>ae0</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DESCRIPTION</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>TYPE</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="evaluation_func.Evaluation.im2_score">
+<code class="sig-name descname">im2_score</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ae1</span></em>, <em class="sig-param"><span class="n">ae_full</span></em>, <em class="sig-param"><span class="n">xcf</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/evaluation_func.html#Evaluation.im2_score"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evaluation_func.Evaluation.im2_score" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ae1</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+<li><p><strong>ae_full</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+<li><p><strong>xcf</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DESCRIPTION</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>TYPE</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="evaluation_func.Evaluation.map_ordered_education">
+<code class="sig-name descname">map_ordered_education</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">df</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/evaluation_func.html#Evaluation.map_ordered_education"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evaluation_func.Evaluation.map_ordered_education" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>df</strong> (<em>TYPE</em>) – DESCRIPTION</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DESCRIPTION</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>TYPE</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="evaluation_func.Evaluation.mul_cat_prox_eval">
+<code class="sig-name descname">mul_cat_prox_eval</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">df_cf</span></em>, <em class="sig-param"><span class="n">df_original</span></em>, <em class="sig-param"><span class="n">method_name</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/evaluation_func.html#Evaluation.mul_cat_prox_eval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evaluation_func.Evaluation.mul_cat_prox_eval" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df_cf</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+<li><p><strong>df_original</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+<li><p><strong>method_name</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DESCRIPTION</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>TYPE</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="evaluation_func.Evaluation.multi_IM_calculate">
+<code class="sig-name descname">multi_IM_calculate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">features</span></em>, <em class="sig-param"><span class="n">dfencoder_model</span></em>, <em class="sig-param"><span class="n">dfencoder_model_pos</span></em>, <em class="sig-param"><span class="n">dfencoder_model_neg</span></em>, <em class="sig-param"><span class="n">method_name</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/evaluation_func.html#Evaluation.multi_IM_calculate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evaluation_func.Evaluation.multi_IM_calculate" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>features</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+<li><p><strong>dfencoder_model</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+<li><p><strong>dfencoder_model_pos</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+<li><p><strong>dfencoder_model_neg</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+<li><p><strong>method_name</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DESCRIPTION</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>TYPE</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="evaluation_func.Evaluation.multiple_con_prox_eval">
+<code class="sig-name descname">multiple_con_prox_eval</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">df_cf</span></em>, <em class="sig-param"><span class="n">df_original</span></em>, <em class="sig-param"><span class="n">method_name</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/evaluation_func.html#Evaluation.multiple_con_prox_eval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evaluation_func.Evaluation.multiple_con_prox_eval" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df_cf</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+<li><p><strong>df_original</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+<li><p><strong>method_name</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DESCRIPTION</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>TYPE</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="evaluation_func.Evaluation.target_valid">
+<code class="sig-name descname">target_valid</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">df_cf</span></em>, <em class="sig-param"><span class="n">df_evaluation</span></em>, <em class="sig-param"><span class="n">method_name</span></em>, <em class="sig-param"><span class="n">outcome</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/evaluation_func.html#Evaluation.target_valid"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evaluation_func.Evaluation.target_valid" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df_cf</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+<li><p><strong>df_evaluation</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+<li><p><strong>method_name</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+<li><p><strong>outcome</strong> (<em>TYPE</em>) – DESCRIPTION</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DESCRIPTION</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>TYPE</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="distance.html" class="btn btn-neutral float-left" title="distance module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021 Dung Duong, Qian Li, Guandong Xu.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
