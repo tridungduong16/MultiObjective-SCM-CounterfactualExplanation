@@ -2,7 +2,8 @@ pymongo==3.11.1
 pymoo==0.4.2.1
 pandas==0.25.3
 scikit-learn==0.23.2
-torch==1.7.1+cu110
-torchvision==0.8.2+cu110
-torchaudio===0.7.2
+torch
+torchvision
+torchaudio
 tqdm==4.48.0
+sphinx
