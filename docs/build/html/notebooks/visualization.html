@@ -1,0 +1,3707 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Visualize validity &mdash; Multi-obj CF 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Multi-obj CF
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">Multi-objective Optimization for Counterfactual Explanation with Structural Causal Model</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Notebooks:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="DiCE_getting_started.html">Quick introduction to generating counterfactual explanations using DiCE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DiCE_with_private_data.html">Generating Diverse Counterfactual Explanations without accessing training data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DiCE_with_advanced_options.html">Advanced options to customize Counterfactual Explanations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DiCE_getting_started_feasible.html">Generate feasible counterfactual explanations using a VAE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DiCE_getting_started_feasible.html#Adding-feasibility-constraints">Adding feasibility constraints</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Package:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../distance.html">distance module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../evaluation_func.html">evaluation_func module</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Multi-obj CF</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Visualize validity</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/notebooks/visualization.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    /*background: #f5f5f5;*/
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+    margin: 0;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+&quot;&quot;&quot;
+Created on Mon Jan  4 20:26:44 2021
+
+@author: trduong
+&quot;&quot;&quot;
+
+import sys
+MAIN_PATH = &quot;/home/trduong/Data/counterfactual-explanation-research.git/my-algorithm&quot;
+sys.path.insert(1, MAIN_PATH)
+
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+import source_code.configuration_path as cf
+import matplotlib.gridspec as gridspec
+import matplotlib.ticker as mtick
+import matplotlib
+
+def change_width(ax, new_value) :
+    for patch in ax.patches :
+        current_width = patch.get_width()
+        diff = current_width - new_value
+        patch.set_width(new_value)
+        patch.set_x(patch.get_x() + diff * .5)
+
+def plot_bartchart(axis, dataframe, x_value, y_value, hue_value, name, rc):
+
+    sns.set_context(&quot;notebook&quot;, rc=rc)
+    ax_plt = sns.barplot(x=&quot;Method&quot;, y=&quot;Value&quot;, hue=&quot;Dataset&quot;, palette=&quot;rocket_r&quot;, data=dataframe, ax=axis)
+
+
+    axis.set_ylabel(&quot;Value&quot;,fontsize= 14.5)
+    axis.set_xticklabels(ax_plt.get_xmajorticklabels(),fontsize= 14.5)
+    axis.set_yticklabels(ax_plt.get_ymajorticklabels(),fontsize= 14.5)
+
+    # plt.setp(ax_plt.get_yticklabels())
+    axis.set_title(name,fontsize= font_z) # title of plot
+
+    ax_plt.title.set_text(name)
+    ax_plt.set(xlabel=None)
+
+    change_width(ax_plt, .24)
+
+
+
+    plt.setp(ax_plt.get_legend().get_texts(), fontsize=&#39;12&#39;) # for legend text
+    plt.setp(ax_plt.get_legend().get_title(), fontsize=&#39;12&#39;) # for legend title
+    box = ax_plt.get_position()
+    ax_plt.set_position([box.x0, box.y0, box.width * 0.85, box.height]) # resize position
+
+
+dataset_name = &#39;siag&#39;
+df_siag = pd.read_csv(cf.EVALUATION_PATH.format(dataset_name + &#39;.csv&#39;))
+dataset_name = &#39;simple_bn&#39;
+df_simple_bn = pd.read_csv(cf.EVALUATION_PATH.format(dataset_name + &#39;.csv&#39;))
+dataset_name = &#39;adult&#39;
+df_adult = pd.read_csv(cf.EVALUATION_PATH.format(dataset_name + &#39;.csv&#39;))
+
+df_siag = df_siag.rename(columns={&quot;metric&quot;: &quot;Metric&quot;, &quot;method&quot;: &quot;Method&quot;, &quot;value&quot; : &quot;Value&quot;})
+df_simple_bn = df_simple_bn.rename(columns={&quot;metric&quot;: &quot;Metric&quot;, &quot;method&quot;: &quot;Method&quot;, &quot;value&quot; : &quot;Value&quot;})
+df_adult = df_adult.rename(columns={&quot;metric&quot;: &quot;Metric&quot;, &quot;method&quot;: &quot;Method&quot;, &quot;value&quot; : &quot;Value&quot;})
+
+
+df_siag[&#39;Dataset&#39;] = &#39;Sangiovese&#39;
+df_simple_bn[&#39;Dataset&#39;] = &#39;Simple-BN&#39;
+df_adult[&#39;Dataset&#39;] = &#39;Adult&#39;
+
+frames = [df_siag, df_simple_bn, df_adult]
+df_whole = pd.concat(frames)
+
+method_map  = {
+    &#39;certifai&#39;: &#39;CERTIFAI&#39;,
+    &#39;mad&#39; : &#39;DiCE&#39;,
+    &#39;mobj&#39; : &#39;MulObj_ProSCM&#39;
+}
+
+df_whole[&#39;Method&#39;] = df_whole[&#39;Method&#39;].map(method_map)
+df_whole[&#39;Value&#39;] = np.where(df_whole[&#39;Metric&#39;] == &#39;target valid&#39;,df_whole[&#39;Value&#39;] * 100,df_whole[&#39;Value&#39;])
+df_whole[&#39;Value&#39;] = np.where(df_whole[&#39;Metric&#39;] == &#39;causal validity&#39;,df_whole[&#39;Value&#39;] * 100,df_whole[&#39;Value&#39;])
+
+valid_cf = df_whole[df_whole[&#39;Metric&#39;] == &#39;target valid&#39;]
+causal_valid = df_whole[df_whole[&#39;Metric&#39;] == &#39;causal validity&#39;]
+con_proximity = df_whole[df_whole[&#39;Metric&#39;] == &#39;continuous proximity&#39;]
+cat_proximity = df_whole[df_whole[&#39;Metric&#39;] == &#39;categorical proximity&#39;]
+IM1 = df_whole[df_whole[&#39;Metric&#39;] == &#39;IM1&#39;]
+IM2 = df_whole[df_whole[&#39;Metric&#39;] == &#39;IM2&#39;]
+
+&quot;&quot;&quot;Set up hyperparameters&quot;&quot;&quot;
+font_z  = 20
+rc={&#39;font.size&#39;: font_z, &#39;axes.labelsize&#39;: font_z, &#39;legend.fontsize&#39;: font_z,
+    &#39;axes.titlesize&#39;: font_z, &#39;xtick.labelsize&#39;: font_z, &#39;ytick.labelsize&#39;: font_z}
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[213]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>IM1[[&#39;Method&#39;, &#39;Dataset&#39;, &#39;Value&#39;]].round(3).to_latex()
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[213]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;\\begin{tabular}{lllr}\n\\toprule\n{} &amp;         Method &amp;     Dataset &amp;  Value \\\\\n\\midrule\n3 &amp;       CERTIFAI &amp;  Sangiovese &amp;  0.217 \\\\\n5 &amp;           DiCE &amp;  Sangiovese &amp;  0.200 \\\\\n7 &amp;  MulObj\\_ProSCM &amp;  Sangiovese &amp;  0.239 \\\\\n3 &amp;       CERTIFAI &amp;   Simple-BN &amp;  0.024 \\\\\n5 &amp;           DiCE &amp;   Simple-BN &amp;  0.066 \\\\\n7 &amp;  MulObj\\_ProSCM &amp;   Simple-BN &amp;  0.045 \\\\\n3 &amp;       CERTIFAI &amp;       Adult &amp;  6.841 \\\\\n5 &amp;           DiCE &amp;       Adult &amp;  0.365 \\\\\n7 &amp;  MulObj\\_ProSCM &amp;       Adult &amp;  0.099 \\\\\n\\bottomrule\n\\end{tabular}\n&#39;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[214]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>IM2[[&#39;Method&#39;, &#39;Dataset&#39;, &#39;Value&#39;]].round(3).to_latex()
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[214]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;\\begin{tabular}{lllr}\n\\toprule\n{} &amp;         Method &amp;     Dataset &amp;  Value \\\\\n\\midrule\n4 &amp;       CERTIFAI &amp;  Sangiovese &amp;  0.009 \\\\\n6 &amp;           DiCE &amp;  Sangiovese &amp;  0.009 \\\\\n8 &amp;  MulObj\\_ProSCM &amp;  Sangiovese &amp;  0.004 \\\\\n4 &amp;       CERTIFAI &amp;   Simple-BN &amp;  0.002 \\\\\n6 &amp;           DiCE &amp;   Simple-BN &amp;  0.007 \\\\\n8 &amp;  MulObj\\_ProSCM &amp;   Simple-BN &amp;  0.004 \\\\\n4 &amp;       CERTIFAI &amp;       Adult &amp;  0.051 \\\\\n6 &amp;           DiCE &amp;       Adult &amp;  0.016 \\\\\n8 &amp;  MulObj\\_ProSCM &amp;       Adult &amp;  0.007 \\\\\n\\bottomrule\n\\end{tabular}\n&#39;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[215]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>valid_cf[[&#39;Method&#39;, &#39;Dataset&#39;, &#39;Value&#39;]]
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[215]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Method</th>
+      <th>Dataset</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>CERTIFAI</td>
+      <td>Sangiovese</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>DiCE</td>
+      <td>Sangiovese</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>MulObj_ProSCM</td>
+      <td>Sangiovese</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>CERTIFAI</td>
+      <td>Simple-BN</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>DiCE</td>
+      <td>Simple-BN</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>MulObj_ProSCM</td>
+      <td>Simple-BN</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>CERTIFAI</td>
+      <td>Adult</td>
+      <td>70.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>DiCE</td>
+      <td>Adult</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>MulObj_ProSCM</td>
+      <td>Adult</td>
+      <td>100.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[216]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>pd.concat([valid_cf, causal_valid])[[&#39;Method&#39;, &#39;Metric&#39;, &#39;Dataset&#39;, &#39;Value&#39;]]
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[216]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Method</th>
+      <th>Metric</th>
+      <th>Dataset</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>CERTIFAI</td>
+      <td>target valid</td>
+      <td>Sangiovese</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>DiCE</td>
+      <td>target valid</td>
+      <td>Sangiovese</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>MulObj_ProSCM</td>
+      <td>target valid</td>
+      <td>Sangiovese</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>CERTIFAI</td>
+      <td>target valid</td>
+      <td>Simple-BN</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>DiCE</td>
+      <td>target valid</td>
+      <td>Simple-BN</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>MulObj_ProSCM</td>
+      <td>target valid</td>
+      <td>Simple-BN</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>CERTIFAI</td>
+      <td>target valid</td>
+      <td>Adult</td>
+      <td>70.000000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>DiCE</td>
+      <td>target valid</td>
+      <td>Adult</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>MulObj_ProSCM</td>
+      <td>target valid</td>
+      <td>Adult</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>CERTIFAI</td>
+      <td>causal validity</td>
+      <td>Sangiovese</td>
+      <td>50.000000</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>DiCE</td>
+      <td>causal validity</td>
+      <td>Sangiovese</td>
+      <td>30.000000</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>MulObj_ProSCM</td>
+      <td>causal validity</td>
+      <td>Sangiovese</td>
+      <td>70.000000</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>CERTIFAI</td>
+      <td>causal validity</td>
+      <td>Simple-BN</td>
+      <td>30.000000</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>DiCE</td>
+      <td>causal validity</td>
+      <td>Simple-BN</td>
+      <td>10.000000</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>MulObj_ProSCM</td>
+      <td>causal validity</td>
+      <td>Simple-BN</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>CERTIFAI</td>
+      <td>causal validity</td>
+      <td>Adult</td>
+      <td>85.714286</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>DiCE</td>
+      <td>causal validity</td>
+      <td>Adult</td>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>MulObj_ProSCM</td>
+      <td>causal validity</td>
+      <td>Adult</td>
+      <td>100.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[217]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>from matplotlib.patches import PathPatch
+
+def adjust_box_widths(ax, fac):
+    &quot;&quot;&quot;
+    Adjust the withs of a seaborn-generated boxplot.
+    &quot;&quot;&quot;
+
+    # iterating through Axes instances
+    #for ax in g.axes:
+
+        # iterating through axes artists:
+    for c in ax.get_children():
+
+        # searching for PathPatches
+        if isinstance(c, PathPatch):
+            # getting current width of box:
+            p = c.get_path()
+            verts = p.vertices
+            verts_sub = verts[:-1]
+            xmin = np.min(verts_sub[:, 0])
+            xmax = np.max(verts_sub[:, 0])
+            xmid = 0.5*(xmin+xmax)
+            xhalf = 0.5*(xmax - xmin)
+
+            # setting new width of box
+            xmin_new = xmid-fac*xhalf
+            xmax_new = xmid+fac*xhalf
+            verts_sub[verts_sub[:, 0] == xmin, 0] = xmin_new
+            verts_sub[verts_sub[:, 0] == xmax, 0] = xmax_new
+
+            # setting new width of median line
+            for l in ax.lines:
+                if np.all(l.get_xdata() == [xmin, xmax]):
+                    l.set_xdata([xmin_new, xmax_new])
+</pre></div>
+</div>
+</div>
+<div class="section" id="Visualize-validity">
+<h1>Visualize validity<a class="headerlink" href="#Visualize-validity" title="Permalink to this headline">¶</a></h1>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[218]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>&quot;&quot;&quot;Visualize validity score&quot;&quot;&quot;
+font_z = 26
+
+with plt.style.context(&#39;seaborn-darkgrid&#39;):
+    &quot;&quot;&quot;Get the subplot&quot;&quot;&quot;
+    fig, axes = plt.subplots(nrows=2, ncols=1, figsize=(20, 13))
+
+    x_value = &#39;Method&#39;
+    y_value = &#39;Value&#39;
+    hue_value = &#39;Dataset&#39;
+
+    &quot;&quot;&quot;Target-class validity&quot;&quot;&quot;
+    name = &#39;Target-class Validity&#39;
+    sns.set_context(&quot;notebook&quot;, rc=rc)
+    ax_plt = sns.barplot(x=&quot;Method&quot;, y=&quot;Value&quot;, hue=&quot;Dataset&quot;, palette=&quot;rocket_r&quot;, data=valid_cf,
+                          ax=axes[0])
+
+    axes[0].set_title(name,fontsize= font_z) # title of plot
+    axes[0].set_xticklabels(ax_plt.get_xmajorticklabels(),fontsize= font_z)
+    axes[0].set_yticklabels(ax_plt.get_ymajorticklabels(),fontsize= font_z)
+    axes[0].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+
+    ax_plt.set(xlabel=None)
+    ax_plt.yaxis.set_major_formatter(mtick.PercentFormatter())
+
+#     ax2 = axes[0].twinx()
+#     sns.lineplot(x=&quot;Method&quot;, y=&quot;Value&quot;, hue=&quot;Dataset&quot;, palette=&quot;rocket_r&quot;, data=valid_cf,
+#                           ax=ax2)
+
+    change_width(ax_plt, .24)
+    box = ax_plt.get_position()
+    ax_plt.set_position([box.x0, box.y0, box.width * 0.85, box.height]) # resize position
+    ax_plt.legend(loc=&#39;center right&#39;, bbox_to_anchor=(1.25, 0.5), ncol=1)
+    ax_plt.get_legend().remove()
+
+    &quot;&quot;&quot;Causal-constraint validity&quot;&quot;&quot;
+    name = &#39;Causal-constraint Validity&#39;
+
+    ax_plt = sns.barplot(x=&quot;Method&quot;, y=&quot;Value&quot;, hue=&quot;Dataset&quot;, palette=&quot;rocket_r&quot;, data=causal_valid,
+                          ax=axes[1])
+
+    axes[1].set_title(name,fontsize= font_z) # title of plot
+    axes[1].set_xticklabels(ax_plt.get_xmajorticklabels(),fontsize= font_z)
+    axes[1].set_yticklabels(ax_plt.get_ymajorticklabels(),fontsize= font_z)
+    axes[1].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+
+    ax_plt.set(xlabel=None)
+    ax_plt.yaxis.set_major_formatter(mtick.PercentFormatter())
+
+    change_width(ax_plt, .24)
+    box = ax_plt.get_position()
+    ax_plt.set_position([box.x0, box.y0, box.width * 0.85, box.height]) # resize position
+    ax_plt.get_legend().remove()
+
+    handles, labels = axes[1].get_legend_handles_labels()
+    fig.legend(handles, labels, loc=&#39;center right&#39;, fontsize= font_z)
+
+fig.savefig(cf.FIGURE_PATH.format(&#39;validity.png&#39;), bbox_inches = &#39;tight&#39;)
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/notebooks_visualization_7_0.png" src="../_images/notebooks_visualization_7_0.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[219]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>causal_valid
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[219]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Method</th>
+      <th>Metric</th>
+      <th>Value</th>
+      <th>Dataset</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>12</th>
+      <td>CERTIFAI</td>
+      <td>causal validity</td>
+      <td>50.000000</td>
+      <td>Sangiovese</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>DiCE</td>
+      <td>causal validity</td>
+      <td>30.000000</td>
+      <td>Sangiovese</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>MulObj_ProSCM</td>
+      <td>causal validity</td>
+      <td>70.000000</td>
+      <td>Sangiovese</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>CERTIFAI</td>
+      <td>causal validity</td>
+      <td>30.000000</td>
+      <td>Simple-BN</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>DiCE</td>
+      <td>causal validity</td>
+      <td>10.000000</td>
+      <td>Simple-BN</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>MulObj_ProSCM</td>
+      <td>causal validity</td>
+      <td>100.000000</td>
+      <td>Simple-BN</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>CERTIFAI</td>
+      <td>causal validity</td>
+      <td>85.714286</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>DiCE</td>
+      <td>causal validity</td>
+      <td>100.000000</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>MulObj_ProSCM</td>
+      <td>causal validity</td>
+      <td>100.000000</td>
+      <td>Adult</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</div>
+<div class="section" id="Visualize-IM1-and-IM2">
+<h1>Visualize IM1 and IM2<a class="headerlink" href="#Visualize-IM1-and-IM2" title="Permalink to this headline">¶</a></h1>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[220]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>dataset_name = &#39;siag&#39;
+con_proximity_siag = pd.read_csv(cf.FINAL_RESULT_PATH.format(&quot;evaluation/im1-&quot; + dataset_name + &quot;.csv&quot;))
+con_proximity_siag.dropna(inplace = True)
+con_proximity_siag[&#39;Dataset&#39;] = &#39;Sangiovese&#39;
+
+dataset_name = &#39;simple_bn&#39;
+con_proximity_simple_bn = pd.read_csv(cf.FINAL_RESULT_PATH.format(&quot;evaluation/im1-&quot; + dataset_name + &quot;.csv&quot;))
+con_proximity_simple_bn.dropna(inplace = True)
+con_proximity_simple_bn[&#39;Dataset&#39;] = &#39;Simple-BN&#39;
+
+dataset_name = &#39;adult&#39;
+im1_adult = pd.read_csv(cf.FINAL_RESULT_PATH.format(&quot;evaluation/im1-&quot; + dataset_name + &quot;.csv&quot;))
+im1_adult.dropna(inplace = True)
+im1_adult[&#39;Dataset&#39;] = &#39;Adult&#39;
+im1_adult = im1_adult.rename(columns={&quot;metric&quot;: &quot;Metric&quot;, &quot;method&quot;: &quot;Method&quot;, &quot;value&quot; : &quot;Value&quot;})
+
+frames = [con_proximity_siag, con_proximity_simple_bn]
+mul_im1 = pd.concat(frames)
+mul_im1 = mul_im1.reset_index(drop = True)
+mul_im1 = mul_im1.rename(columns={&quot;metric&quot;: &quot;Metric&quot;, &quot;method&quot;: &quot;Method&quot;, &quot;value&quot; : &quot;Value&quot;})
+
+
+
+dataset_name = &#39;siag&#39;
+con_proximity_siag = pd.read_csv(cf.FINAL_RESULT_PATH.format(&quot;evaluation/im2-&quot; + dataset_name + &quot;.csv&quot;))
+con_proximity_siag.dropna(inplace = True)
+con_proximity_siag[&#39;Dataset&#39;] = &#39;Sangiovese&#39;
+
+dataset_name = &#39;simple_bn&#39;
+con_proximity_simple_bn = pd.read_csv(cf.FINAL_RESULT_PATH.format(&quot;evaluation/im2-&quot; + dataset_name + &quot;.csv&quot;))
+con_proximity_simple_bn.dropna(inplace = True)
+con_proximity_simple_bn[&#39;Dataset&#39;] = &#39;Simple-BN&#39;
+
+dataset_name = &#39;adult&#39;
+im2_adult = pd.read_csv(cf.FINAL_RESULT_PATH.format(&quot;evaluation/im2-&quot; + dataset_name + &quot;.csv&quot;))
+im2_adult.dropna(inplace = True)
+im2_adult[&#39;Dataset&#39;] = &#39;Adult&#39;
+im2_adult = im2_adult.rename(columns={&quot;metric&quot;: &quot;Metric&quot;, &quot;method&quot;: &quot;Method&quot;, &quot;value&quot; : &quot;Value&quot;})
+
+frames = [con_proximity_siag, con_proximity_simple_bn]
+mul_im2 = pd.concat(frames)
+mul_im2 = mul_im2.reset_index(drop = True)
+mul_im2 = mul_im2.rename(columns={&quot;metric&quot;: &quot;Metric&quot;, &quot;method&quot;: &quot;Method&quot;, &quot;value&quot; : &quot;Value&quot;})
+
+method_map  = {
+    &#39;cer&#39;: &#39;CERTIFAI&#39;,
+    &#39;mad&#39; : &#39;DiCE&#39;,
+    &#39;mobj&#39; : &#39;MulObj_ProSCM&#39;
+}
+
+mul_im1[&#39;Method&#39;] = mul_im1[&#39;Method&#39;].map(method_map)
+mul_im2[&#39;Method&#39;] = mul_im2[&#39;Method&#39;].map(method_map)
+
+im1_adult[&#39;Method&#39;] = im1_adult[&#39;Method&#39;].map(method_map)
+im2_adult[&#39;Method&#39;] = im2_adult[&#39;Method&#39;].map(method_map)
+
+
+
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[221]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>im1_adult.groupby([&#39;Metric&#39;, &#39;Method&#39;]).mean()
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[221]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>Value</th>
+    </tr>
+    <tr>
+      <th>Metric</th>
+      <th>Method</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="3" valign="top">IM1</th>
+      <th>CERTIFAI</th>
+      <td>11.850030</td>
+    </tr>
+    <tr>
+      <th>DiCE</th>
+      <td>2.581156</td>
+    </tr>
+    <tr>
+      <th>MulObj_ProSCM</th>
+      <td>9.080789</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[222]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>im2_adult.groupby([&#39;Metric&#39;, &#39;Method&#39;]).mean()
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[222]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>Value</th>
+    </tr>
+    <tr>
+      <th>Metric</th>
+      <th>Method</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="3" valign="top">IM2</th>
+      <th>CERTIFAI</th>
+      <td>0.184416</td>
+    </tr>
+    <tr>
+      <th>DiCE</th>
+      <td>0.141420</td>
+    </tr>
+    <tr>
+      <th>MulObj_ProSCM</th>
+      <td>0.147811</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[223]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>&quot;&quot;&quot;Visualize validity score&quot;&quot;&quot;
+font_z = 26
+with plt.style.context(&#39;seaborn-darkgrid&#39;):
+    &quot;&quot;&quot;Get the subplot&quot;&quot;&quot;
+
+    handles = []
+    labels = []
+
+    fig, axes = plt.subplots(nrows=2, ncols=2, figsize=(32, 25))
+
+    x_value = &#39;Method&#39;
+    y_value = &#39;Value&#39;
+    hue_value = &#39;Dataset&#39;
+
+    &quot;&quot;&quot;Target-class validity&quot;&quot;&quot;
+    name = &#39;IM1&#39;
+    sns.set_context(&quot;notebook&quot;, rc=rc)
+    ax_plt = sns.boxplot(x=&quot;Method&quot;, y=&quot;Value&quot;, hue=&quot;Dataset&quot;, palette=&quot;rocket&quot;, data=mul_im1,
+                          ax=axes[0,0])
+
+    axes[0,0].set_title(name,fontsize= font_z) # title of plot
+    axes[0,0].set_xticklabels(ax_plt.get_xmajorticklabels(),fontsize= font_z)
+
+    axes[0,0].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[0,0].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+    ax_plt.get_legend().remove()
+    ax_plt.set(xlabel=None)
+
+
+    &quot;&quot;&quot;IM2&quot;&quot;&quot;
+    name = &#39;IM2&#39;
+    sns.set_context(&quot;notebook&quot;, rc=rc)
+    ax_plt = sns.boxplot(x=&quot;Method&quot;, y=&quot;Value&quot;, hue=&quot;Dataset&quot;, palette=&quot;rocket&quot;, data=mul_im2,
+                          ax=axes[0,1])
+
+
+    axes[0,1].set_title(name,fontsize= font_z) # title of plot
+    axes[0,1].set_xticklabels(ax_plt.get_xmajorticklabels(),fontsize= font_z)
+
+    axes[0,1].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[0,1].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+    ax_plt.get_legend().remove()
+
+    &quot;&quot;&quot;Change width&quot;&quot;&quot;
+    ax_plt.set(xlabel=None)
+
+    #handles, labels = axes[0,1].get_legend_handles_labels()
+    #fig.legend(handles, labels, loc=&#39;center right&#39;, fontsize= font_z)
+
+
+    &quot;&quot;&quot;Target-class validity&quot;&quot;&quot;
+    name = &#39;IM1&#39;
+    sns.set_context(&quot;notebook&quot;, rc=rc)
+    ax_plt = sns.boxplot(x=&quot;Method&quot;, y=&quot;Value&quot;, hue=&quot;Dataset&quot;, palette=&quot;mako&quot;, data=im1_adult,
+                          ax=axes[1,0])
+
+    axes[1,0].set_title(name,fontsize= font_z) # title of plot
+    axes[1,0].set_xticklabels(ax_plt.get_xmajorticklabels(),fontsize= font_z)
+
+    axes[1,0].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[1,0].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+    ax_plt.get_legend().remove()
+
+    h, l = axes[1,0].get_legend_handles_labels()
+    handles.extend(h)
+    labels.extend(l)
+
+    &quot;&quot;&quot;Change width&quot;&quot;&quot;
+    ax_plt.set(xlabel=None)
+
+
+    &quot;&quot;&quot;IM2&quot;&quot;&quot;
+    name = &#39;IM2&#39;
+    sns.set_context(&quot;notebook&quot;, rc=rc)
+    ax_plt = sns.boxplot(x=&quot;Method&quot;, y=&quot;Value&quot;, hue=&quot;Dataset&quot;, palette=&quot;mako&quot;, data=im2_adult,
+                          ax=axes[1,1])
+
+
+    axes[1,1].set_title(name,fontsize= font_z) # title of plot
+    axes[1,1].set_xticklabels(ax_plt.get_xmajorticklabels(),fontsize= font_z)
+
+    axes[1,1].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[1,1].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+    ax_plt.get_legend().remove()
+
+    ax_plt.set(xlabel=None)
+
+    h, l = axes[0,1].get_legend_handles_labels()
+    handles.extend(h)
+    labels.extend(l)
+
+    fig.legend(handles, labels, loc=&#39;center right&#39;, fontsize= 24)
+
+fig.savefig(cf.FIGURE_PATH.format(&#39;interpretability.png&#39;), bbox_inches = &#39;tight&#39;)
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/notebooks_visualization_13_0.png" src="../_images/notebooks_visualization_13_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Visualize-proximity">
+<h1>Visualize proximity<a class="headerlink" href="#Visualize-proximity" title="Permalink to this headline">¶</a></h1>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[224]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>cat_proximity.reset_index(drop=True)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[224]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Method</th>
+      <th>Metric</th>
+      <th>Value</th>
+      <th>Dataset</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>MulObj_ProSCM</td>
+      <td>categorical proximity</td>
+      <td>4.9</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>DiCE</td>
+      <td>categorical proximity</td>
+      <td>3.2</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>CERTIFAI</td>
+      <td>categorical proximity</td>
+      <td>4.0</td>
+      <td>Adult</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[225]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>cat_proximity.index = [3,2,1]
+cat_proximity = cat_proximity.sort_index()
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[226]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>cat_proximity
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[226]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Method</th>
+      <th>Metric</th>
+      <th>Value</th>
+      <th>Dataset</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>CERTIFAI</td>
+      <td>categorical proximity</td>
+      <td>4.0</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>DiCE</td>
+      <td>categorical proximity</td>
+      <td>3.2</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>MulObj_ProSCM</td>
+      <td>categorical proximity</td>
+      <td>4.9</td>
+      <td>Adult</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[227]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>dataset_name = &#39;siag&#39;
+con_proximity_siag = pd.read_csv(cf.FINAL_RESULT_PATH.format(&quot;evaluation/conprox-&quot; + dataset_name + &quot;.csv&quot;))
+con_proximity_siag.dropna(inplace = True)
+con_proximity_siag[&#39;Dataset&#39;] = &#39;Sangiovese&#39;
+
+dataset_name = &#39;simple_bn&#39;
+con_proximity_simple_bn = pd.read_csv(cf.FINAL_RESULT_PATH.format(&quot;evaluation/conprox-&quot; + dataset_name + &quot;.csv&quot;))
+con_proximity_simple_bn.dropna(inplace = True)
+con_proximity_simple_bn[&#39;Dataset&#39;] = &#39;Simple-BN&#39;
+
+dataset_name = &#39;adult&#39;
+con_proximity_adult = pd.read_csv(cf.FINAL_RESULT_PATH.format(&quot;evaluation/conprox-&quot; + dataset_name + &quot;.csv&quot;))
+con_proximity_adult.dropna(inplace = True)
+con_proximity_adult[&#39;Dataset&#39;] = &#39;Adult&#39;
+
+frames = [con_proximity_siag, con_proximity_simple_bn, con_proximity_adult]
+mul_con_prox = pd.concat(frames)
+mul_con_prox = mul_con_prox.reset_index(drop = True)
+mul_con_prox = mul_con_prox.rename(columns={&quot;metric&quot;: &quot;Metric&quot;, &quot;method&quot;: &quot;Method&quot;, &quot;value&quot; : &quot;Value&quot;})
+
+
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[228]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>mul_con_prox
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[228]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Value</th>
+      <th>Method</th>
+      <th>Dataset</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.195192</td>
+      <td>certifai</td>
+      <td>Sangiovese</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.246146</td>
+      <td>certifai</td>
+      <td>Sangiovese</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.270540</td>
+      <td>certifai</td>
+      <td>Sangiovese</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.306684</td>
+      <td>certifai</td>
+      <td>Sangiovese</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.243170</td>
+      <td>certifai</td>
+      <td>Sangiovese</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>82</th>
+      <td>0.398920</td>
+      <td>mobj</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>83</th>
+      <td>0.025087</td>
+      <td>mobj</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>84</th>
+      <td>0.236388</td>
+      <td>mobj</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>85</th>
+      <td>0.222769</td>
+      <td>mobj</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>86</th>
+      <td>0.210285</td>
+      <td>mobj</td>
+      <td>Adult</td>
+    </tr>
+  </tbody>
+</table>
+<p>87 rows × 3 columns</p>
+</div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[229]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>method_map  = {
+    &#39;certifai&#39;: &#39;CERTIFAI&#39;,
+    &#39;mad&#39; : &#39;DiCE&#39;,
+    &#39;mobj&#39; : &#39;MulObj_ProSCM&#39;
+}
+
+mul_con_prox[&#39;Method&#39;] = mul_con_prox[&#39;Method&#39;].map(method_map)
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[230]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>mul_con_prox
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[230]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Value</th>
+      <th>Method</th>
+      <th>Dataset</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.195192</td>
+      <td>CERTIFAI</td>
+      <td>Sangiovese</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.246146</td>
+      <td>CERTIFAI</td>
+      <td>Sangiovese</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.270540</td>
+      <td>CERTIFAI</td>
+      <td>Sangiovese</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.306684</td>
+      <td>CERTIFAI</td>
+      <td>Sangiovese</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.243170</td>
+      <td>CERTIFAI</td>
+      <td>Sangiovese</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>82</th>
+      <td>0.398920</td>
+      <td>MulObj_ProSCM</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>83</th>
+      <td>0.025087</td>
+      <td>MulObj_ProSCM</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>84</th>
+      <td>0.236388</td>
+      <td>MulObj_ProSCM</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>85</th>
+      <td>0.222769</td>
+      <td>MulObj_ProSCM</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>86</th>
+      <td>0.210285</td>
+      <td>MulObj_ProSCM</td>
+      <td>Adult</td>
+    </tr>
+  </tbody>
+</table>
+<p>87 rows × 3 columns</p>
+</div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[231]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>mul_cat_prox = pd.read_csv(cf.FINAL_RESULT_PATH.format(&quot;evaluation/catprox-&quot; + &#39;adult&#39; + &quot;.csv&quot;))
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[232]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>mul_cat_prox[&#39;Dataset&#39;] = &#39;Adult&#39;
+mul_cat_prox = mul_cat_prox.rename(columns={&quot;metric&quot;: &quot;Metric&quot;, &quot;method&quot;: &quot;Method&quot;, &quot;value&quot; : &quot;Value&quot;})
+mul_cat_prox[&#39;Method&#39;] = mul_cat_prox[&#39;Method&#39;].map(method_map)
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[233]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>mul_cat_prox
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[233]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Value</th>
+      <th>Metric</th>
+      <th>Method</th>
+      <th>Dataset</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>5.0</td>
+      <td>categorical proximity</td>
+      <td>CERTIFAI</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>3.0</td>
+      <td>categorical proximity</td>
+      <td>CERTIFAI</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3.0</td>
+      <td>categorical proximity</td>
+      <td>CERTIFAI</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2.0</td>
+      <td>categorical proximity</td>
+      <td>CERTIFAI</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>3.0</td>
+      <td>categorical proximity</td>
+      <td>CERTIFAI</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>2.0</td>
+      <td>categorical proximity</td>
+      <td>CERTIFAI</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>3.0</td>
+      <td>categorical proximity</td>
+      <td>CERTIFAI</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>4.0</td>
+      <td>categorical proximity</td>
+      <td>DiCE</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>3.0</td>
+      <td>categorical proximity</td>
+      <td>DiCE</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>3.0</td>
+      <td>categorical proximity</td>
+      <td>DiCE</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>3.0</td>
+      <td>categorical proximity</td>
+      <td>DiCE</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>4.0</td>
+      <td>categorical proximity</td>
+      <td>DiCE</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>4.0</td>
+      <td>categorical proximity</td>
+      <td>DiCE</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>2.0</td>
+      <td>categorical proximity</td>
+      <td>DiCE</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>3.0</td>
+      <td>categorical proximity</td>
+      <td>DiCE</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>3.0</td>
+      <td>categorical proximity</td>
+      <td>DiCE</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>3.0</td>
+      <td>categorical proximity</td>
+      <td>DiCE</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>6.0</td>
+      <td>categorical proximity</td>
+      <td>MulObj_ProSCM</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>4.0</td>
+      <td>categorical proximity</td>
+      <td>MulObj_ProSCM</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>5.0</td>
+      <td>categorical proximity</td>
+      <td>MulObj_ProSCM</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>5.0</td>
+      <td>categorical proximity</td>
+      <td>MulObj_ProSCM</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>6.0</td>
+      <td>categorical proximity</td>
+      <td>MulObj_ProSCM</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>6.0</td>
+      <td>categorical proximity</td>
+      <td>MulObj_ProSCM</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>4.0</td>
+      <td>categorical proximity</td>
+      <td>MulObj_ProSCM</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>5.0</td>
+      <td>categorical proximity</td>
+      <td>MulObj_ProSCM</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>4.0</td>
+      <td>categorical proximity</td>
+      <td>MulObj_ProSCM</td>
+      <td>Adult</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>4.0</td>
+      <td>categorical proximity</td>
+      <td>MulObj_ProSCM</td>
+      <td>Adult</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[234]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>mul_con_prox.Dataset.value_counts()
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[234]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Simple-BN     30
+Sangiovese    30
+Adult         27
+Name: Dataset, dtype: int64
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[251]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>&quot;&quot;&quot;Visualize validity score&quot;&quot;&quot;
+with plt.style.context(&#39;seaborn-ticks&#39;):
+    &quot;&quot;&quot;Get the subplot&quot;&quot;&quot;
+    fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(20, 13))
+
+    x_value = &#39;Method&#39;
+    y_value = &#39;Value&#39;
+    hue_value = &#39;Dataset&#39;
+
+    name = &#39;Continuous proximity&#39;
+    sns.set_context(&quot;notebook&quot;, rc=rc)
+    ax_plt = sns.boxplot(x=&quot;Method&quot;, y=&quot;Value&quot;, hue=&quot;Dataset&quot;, palette=&quot;rocket&quot;, data=mul_con_prox,
+                          ax=axes[0])
+
+
+    axes[0].set_title(name,fontsize= font_z) # title of plot
+    axes[0].set_xticklabels(ax_plt.get_xmajorticklabels(),fontsize= font_z)
+    axes[0].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[0].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+
+    adjust_box_widths(axes[0], 0.8)
+
+
+    plt.setp(ax_plt.get_legend().get_texts(), fontsize=21) # for legend text
+    plt.setp(ax_plt.get_legend().get_title(), fontsize=21) # for legend title
+
+    ax_plt.set(xlabel=None)
+    ax_plt.set(ylabel=None)
+
+    name = &#39;Categorical proximity&#39;
+
+    ax_plt = sns.boxplot(x=&quot;Method&quot;, y=&quot;Value&quot;, hue=&quot;Dataset&quot;, data=mul_cat_prox,  palette=&quot;tab10&quot;,
+                          ax=axes[1])
+#     ax_plt = sns.boxplot(x=&quot;Method&quot;, y=&quot;Value&quot;, hue=&quot;Dataset&quot;, data=mul_cat_prox,  color = &#39;blue&#39;,
+#                           ax=axes[1])
+#                          , color=axes[0].get_box()[0].get_c())
+
+    axes[1].set_title(name,fontsize= font_z) # title of plot
+    axes[1].set_xticklabels(ax_plt.get_xmajorticklabels(),fontsize= font_z)
+    axes[1].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[1].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+
+    #plt.setp(ax_plt.get_legend().get_texts(), fontsize=22) # for legend text
+    #plt.setp(ax_plt.get_legend().get_title(), fontsize=22) # for legend title
+    adjust_box_widths(axes[1], 0.4)
+
+    ax_plt.set(xlabel=None)
+    ax_plt.set(ylabel=None)
+
+    handles, labels = axes[0].get_legend_handles_labels()
+    axes[0].legend(handles=handles[0:], labels=labels[0:])
+    handles, labels = axes[1].get_legend_handles_labels()
+    axes[1].legend(handles=handles[1:], labels=labels[1:])
+
+    plt.setp(axes[0].get_legend().get_texts(), fontsize=&#39;28&#39;) # for legend text
+    plt.setp(axes[1].get_legend().get_texts(), fontsize=&#39;28&#39;) # for legend text
+
+fig.savefig(cf.FIGURE_PATH.format(&#39;proximity.png&#39;), bbox_inches = &#39;tight&#39;)
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/home/trduong/anaconda3/envs/phd_env/lib/python3.7/site-packages/ipykernel_launcher.py:33: DeprecationWarning: elementwise comparison failed; this will raise an error in the future.
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/notebooks_visualization_26_1.png" src="../_images/notebooks_visualization_26_1.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[236]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>axes[0].get_boxes()
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">AttributeError</span>                            Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-236-e44f3f4dde51&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>axes<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>get_boxes<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">AttributeError</span>: &#39;AxesSubplot&#39; object has no attribute &#39;get_boxes&#39;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[237]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>&quot;&quot;&quot;Visualize validity score&quot;&quot;&quot;
+with plt.style.context(&#39;seaborn-ticks&#39;):
+    &quot;&quot;&quot;Get the subplot&quot;&quot;&quot;
+    fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(20, 13))
+
+    x_value = &#39;Method&#39;
+    y_value = &#39;Value&#39;
+    hue_value = &#39;Dataset&#39;
+
+    name = &#39;Continuous proximity&#39;
+    sns.set_context(&quot;notebook&quot;, rc=rc)
+    ax_plt = sns.boxplot(x=&quot;Method&quot;, y=&quot;Value&quot;, hue=&quot;Dataset&quot;, palette=&quot;rocket&quot;, data=mul_con_prox,
+                          ax=axes[0])
+
+
+    axes[0].set_title(name,fontsize= font_z) # title of plot
+    axes[0].set_xticklabels(ax_plt.get_xmajorticklabels(),fontsize= font_z)
+    axes[0].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[0].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+
+    adjust_box_widths(fig, 0.8)
+
+
+    plt.setp(ax_plt.get_legend().get_texts(), fontsize=21) # for legend text
+    plt.setp(ax_plt.get_legend().get_title(), fontsize=21) # for legend title
+
+    ax_plt.set(xlabel=None)
+
+    name = &#39;Categorical proximity&#39;
+
+    ax_plt = sns.boxplot(x=&quot;Method&quot;, y=&quot;Value&quot;, hue=&quot;Dataset&quot;, palette=&quot;mako&quot;, data=mul_cat_prox,
+                          ax=axes[1])
+
+    axes[1].set_title(name,fontsize= font_z) # title of plot
+    axes[1].set_xticklabels(ax_plt.get_xmajorticklabels(),fontsize= font_z)
+    axes[1].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[1].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+
+    #plt.setp(ax_plt.get_legend().get_texts(), fontsize=22) # for legend text
+    #plt.setp(ax_plt.get_legend().get_title(), fontsize=22) # for legend title
+
+    ax_plt.set(xlabel=None)
+
+    handles, labels = axes[0].get_legend_handles_labels()
+    axes[0].legend(handles=handles[1:], labels=labels[1:])
+    handles, labels = axes[1].get_legend_handles_labels()
+    axes[1].legend(handles=handles[1:], labels=labels[1:])
+
+    plt.setp(axes[0].get_legend().get_texts(), fontsize=&#39;28&#39;) # for legend text
+    plt.setp(axes[1].get_legend().get_texts(), fontsize=&#39;28&#39;) # for legend text
+
+fig.savefig(cf.FIGURE_PATH.format(&#39;proximity.png&#39;), bbox_inches = &#39;tight&#39;)
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/notebooks_visualization_28_0.png" src="../_images/notebooks_visualization_28_0.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[238]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>---
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;&lt;ipython-input-238-29e0c3615294&gt;&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">1</span>
+<span class="ansi-red-fg">    ---</span>
+       ^
+<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
+
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Visualized-all">
+<h1>Visualized all<a class="headerlink" href="#Visualized-all" title="Permalink to this headline">¶</a></h1>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[239]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>&quot;&quot;&quot;Visualize validity score&quot;&quot;&quot;
+font_z = 26
+with plt.style.context(&#39;seaborn-darkgrid&#39;):
+    &quot;&quot;&quot;Get the subplot&quot;&quot;&quot;
+    fig, axes = plt.subplots(nrows=2, ncols=2, figsize=(20, 13))
+
+    x_value = &#39;Method&#39;
+    y_value = &#39;Value&#39;
+    hue_value = &#39;Dataset&#39;
+
+    &quot;&quot;&quot;Target-class validity&quot;&quot;&quot;
+    name = &#39;IM1&#39;
+    sns.set_context(&quot;notebook&quot;, rc=rc)
+    ax_plt = sns.boxplot(x=&quot;Method&quot;, y=&quot;Value&quot;, hue=&quot;Dataset&quot;, palette=&quot;magma&quot;, data=mul_im1,
+                          ax=axes[0,0])
+
+    axes[0,0].set_title(name,fontsize= font_z) # title of plot
+    axes[0,0].set_xticklabels(ax_plt.get_xmajorticklabels(),fontsize= font_z)
+
+    axes[0,0].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[0,0].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+    ax_plt.get_legend().remove()
+
+    ax_plt.set(xlabel=None)
+
+
+    &quot;&quot;&quot;IM2&quot;&quot;&quot;
+    name = &#39;IM2&#39;
+    sns.set_context(&quot;notebook&quot;, rc=rc)
+    ax_plt = sns.boxplot(x=&quot;Method&quot;, y=&quot;Value&quot;, hue=&quot;Dataset&quot;, palette=&quot;magma&quot;, data=mul_im2,
+                          ax=axes[0,1])
+
+    axes[0,1].set_title(name,fontsize= font_z) # title of plot
+    axes[0,1].set_xticklabels(ax_plt.get_xmajorticklabels(),fontsize= font_z)
+
+    axes[0,1].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[0,1].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+    ax_plt.get_legend().remove()
+    ax_plt.set(xlabel=None)
+
+    #handles, labels = axes[0,1].get_legend_handles_labels()
+    #fig.legend(handles, labels, loc=&#39;center right&#39;, fontsize= font_z)
+
+    &quot;&quot;&quot;Target-class validity&quot;&quot;&quot;
+    name = &#39;Continuous proximity&#39;
+    sns.set_context(&quot;notebook&quot;, rc=rc)
+    ax_plt = sns.boxplot(x=&quot;Method&quot;, y=&quot;Value&quot;, hue=&quot;Dataset&quot;, palette=&quot;magma&quot;, data=mul_con_prox,
+                          ax=axes[1,0])
+
+    #sns.despine(offset=10, trim=True)
+
+
+
+
+    axes[1,0].set_title(name,fontsize= font_z) # title of plot
+    axes[1,0].set_xticklabels(ax_plt.get_xmajorticklabels(),fontsize= font_z)
+    axes[1,0].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[1,0].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+
+    ax_plt.get_legend().remove()
+    #ax_plt.legend(loc=&#39;center right&#39;, bbox_to_anchor=(1.3, 0.5), ncol=1,fontsize= font_z)
+    ax_plt.set(xlabel=None)
+
+
+    &quot;&quot;&quot;Causal-constraint validity&quot;&quot;&quot;
+    name = &#39;Categorical proximity&#39;
+
+    ax_plt = sns.boxplot(x=&quot;Method&quot;, y=&quot;Value&quot;, hue=&quot;Dataset&quot;, palette=&quot;viridis&quot;, data=mul_cat_prox,
+                          ax=axes[1,1])
+
+    axes[1,1].set_title(name,fontsize= font_z) # title of plot
+    axes[1,1].set_xticklabels(ax_plt.get_xmajorticklabels(),fontsize= font_z)
+    axes[1,1].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[1,0].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+
+    ax_plt.get_legend().remove()
+    #ax_plt.legend(loc=&#39;center right&#39;, bbox_to_anchor=(1.22, 0.5), ncol=1, fontsize= font_z)
+    ax_plt.set(xlabel=None)
+
+
+
+# fig.savefig(cf.FIGURE_PATH.format(&#39;interpretability.png&#39;), bbox_inches = &#39;tight&#39;)
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/notebooks_visualization_31_0.png" src="../_images/notebooks_visualization_31_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Visualize-with-different-number-of-samples">
+<h1>Visualize with different number of samples<a class="headerlink" href="#Visualize-with-different-number-of-samples" title="Permalink to this headline">¶</a></h1>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[240]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># nsample = 100
+dataset_name = &#39;simple_bn&#39;
+PATH = cf.FINAL_RESULT_PATH.format(&quot;evaluation/different_sample-&quot; + dataset_name + &quot;.csv&quot;)
+df_simple_bn = pd.read_csv(PATH)
+
+
+dataset_name = &#39;siag&#39;
+PATH = cf.FINAL_RESULT_PATH.format(&quot;evaluation/different_sample-&quot; + dataset_name + &quot;.csv&quot;)
+df_siag = pd.read_csv(PATH)
+
+
+dataset_name = &#39;adult&#39;
+PATH = cf.FINAL_RESULT_PATH.format(&quot;evaluation/different_sample-&quot; + dataset_name + &quot;.csv&quot;)
+df_adult = pd.read_csv(PATH)
+
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[241]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>df_adult
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[241]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>method</th>
+      <th>metric</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>mobj</td>
+      <td>target valid</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>mobj</td>
+      <td>categorical proximity</td>
+      <td>5.000000</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>mobj</td>
+      <td>continuous proximity</td>
+      <td>0.176377</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>mobj</td>
+      <td>causal validity</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>mobj</td>
+      <td>IM1</td>
+      <td>0.951676</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1195</th>
+      <td>mobj</td>
+      <td>categorical proximity</td>
+      <td>3.892405</td>
+    </tr>
+    <tr>
+      <th>1196</th>
+      <td>mobj</td>
+      <td>continuous proximity</td>
+      <td>0.210711</td>
+    </tr>
+    <tr>
+      <th>1197</th>
+      <td>mobj</td>
+      <td>causal validity</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>1198</th>
+      <td>mobj</td>
+      <td>IM1</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1199</th>
+      <td>mobj</td>
+      <td>IM2</td>
+      <td>0.001066</td>
+    </tr>
+  </tbody>
+</table>
+<p>1200 rows × 3 columns</p>
+</div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[242]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>df_simple_bn = df_simple_bn.rename(columns={&quot;metric&quot;: &quot;Metric&quot;, &quot;method&quot;: &quot;Method&quot;, &quot;value&quot; : &quot;Value&quot;})[:500]
+df_simple_bn[&#39;Dataset&#39;] = &#39;Simple_BN&#39;
+# df_simple_bn = df_simple_bn.reset_index().rename(columns={&quot;index&quot;: &quot;number_sample&quot;})
+
+df_siag = df_siag.rename(columns={&quot;metric&quot;: &quot;Metric&quot;, &quot;method&quot;: &quot;Method&quot;, &quot;value&quot; : &quot;Value&quot;})[:500]
+df_siag[&#39;Dataset&#39;] = &#39;Sangiovese&#39;
+# df_siag = df_siag.reset_index().rename(columns={&quot;index&quot;: &quot;number_sample&quot;})
+
+df_adult = df_adult.rename(columns={&quot;metric&quot;: &quot;Metric&quot;, &quot;method&quot;: &quot;Method&quot;, &quot;value&quot; : &quot;Value&quot;})
+df_adult[&#39;Dataset&#39;] = &#39;Adult&#39;
+# df_adult = df_adult.reset_index().rename(columns={&quot;index&quot;: &quot;number_sample&quot;})
+
+frames = [df_simple_bn, df_siag, df_adult]
+mul_sample = pd.concat(frames)
+mul_sample =  mul_sample.reset_index(drop = True)
+mul_sample = mul_sample.rename(columns={&quot;metric&quot;: &quot;Metric&quot;, &quot;method&quot;: &quot;Method&quot;, &quot;value&quot; : &quot;Value&quot;})
+
+
+
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[243]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>mul_sample.Metric.unique()
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[243]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+array([&#39;target valid&#39;, &#39;continuous proximity&#39;, &#39;causal validity&#39;, &#39;IM1&#39;,
+       &#39;IM2&#39;, &#39;categorical proximity&#39;], dtype=object)
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[244]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>valid_cf = mul_sample[mul_sample[&#39;Metric&#39;] == &#39;target valid&#39;]
+causal_valid = mul_sample[mul_sample[&#39;Metric&#39;] == &#39;causal validity&#39;]
+con_proximity = mul_sample[mul_sample[&#39;Metric&#39;] == &#39;continuous proximity&#39;]
+cat_proximity = mul_sample[mul_sample[&#39;Metric&#39;] == &#39;categorical proximity&#39;]
+IM1 = mul_sample[mul_sample[&#39;Metric&#39;] == &#39;IM1&#39;]
+IM2 = mul_sample[mul_sample[&#39;Metric&#39;] == &#39;IM2&#39;]
+
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[245]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>IM1 = IM1.reset_index(drop=True)
+IM1 = IM1.reset_index().rename(columns={&quot;index&quot;: &quot;number_sample&quot;})
+
+IM2 = IM2.reset_index(drop=True)
+IM2 = IM2.reset_index().rename(columns={&quot;index&quot;: &quot;number_sample&quot;})
+
+con_proximity = con_proximity.reset_index(drop=True)
+con_proximity = con_proximity.reset_index().rename(columns={&quot;index&quot;: &quot;number_sample&quot;})
+
+cat_proximity = cat_proximity.reset_index(drop=True)
+cat_proximity = cat_proximity.reset_index().rename(columns={&quot;index&quot;: &quot;number_sample&quot;})
+
+causal_valid = causal_valid.reset_index(drop=True)
+causal_valid = causal_valid.reset_index().rename(columns={&quot;index&quot;: &quot;number_sample&quot;})
+
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[246]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>&quot;&quot;&quot;Visualize validity score&quot;&quot;&quot;
+with plt.style.context(&#39;seaborn-darkgrid&#39;):
+    &quot;&quot;&quot;Get the subplot&quot;&quot;&quot;
+    fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(20, 13))
+
+    x_value = &#39;Method&#39;
+    y_value = &#39;Value&#39;
+    hue_value = &#39;Dataset&#39;
+
+    &quot;&quot;&quot;Target-class validity&quot;&quot;&quot;
+    name = &#39;Continuous proximity&#39;
+    sns.set_context(&quot;notebook&quot;, rc=rc)
+
+    ax_plt = sns.lineplot(data=con_proximity, x=&quot;number_sample&quot;, y=&quot;Value&quot;, palette=&quot;rocket&quot;,
+                          hue=&quot;Dataset&quot;,
+                          ax=axes[0])
+
+    axes[0].set_title(name,fontsize= font_z) # title of plot
+    axes[0].set_xticklabels(ax_plt.get_xmajorticklabels(),fontsize= font_z)
+    axes[0].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[0].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+
+    ax_plt.get_legend().remove()
+
+
+
+    &quot;&quot;&quot;Causal-constraint validity&quot;&quot;&quot;
+    name = &#39;IM1&#39;
+
+    ax_plt = sns.lineplot(data=causal_valid, x=&quot;number_sample&quot;, y=&quot;Value&quot;, palette=&quot;rocket&quot;,
+                          hue=&quot;Dataset&quot;,
+                          ax=axes[1])
+
+    axes[1].set_title(name,fontsize= font_z) # title of plot
+    axes[1].set_xticklabels(ax_plt.get_xmajorticklabels(),fontsize= font_z)
+    axes[1].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[1].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+
+    ax_plt.get_legend().remove()
+
+    handles, labels = axes[1].get_legend_handles_labels()
+    fig.legend(handles, labels, loc=&#39;center right&#39;, fontsize= font_z)
+
+
+fig.savefig(cf.FIGURE_PATH.format(&#39;variation_label_size.png&#39;), bbox_inches = &#39;tight&#39;)
+
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/notebooks_visualization_39_0.png" src="../_images/notebooks_visualization_39_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Visualize-with-different-number-of-instances">
+<h1>Visualize with different number of instances<a class="headerlink" href="#Visualize-with-different-number-of-instances" title="Permalink to this headline">¶</a></h1>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># nsample = 100
+dataset_name = &#39;simple_bn&#39;
+PATH = cf.FINAL_RESULT_PATH.format(&quot;evaluation/different_instance-&quot; + dataset_name + &quot;.csv&quot;)
+df_simple_bn = pd.read_csv(PATH)
+
+dataset_name = &#39;siag&#39;
+PATH = cf.FINAL_RESULT_PATH.format(&quot;evaluation/different_instance-&quot; + dataset_name + &quot;.csv&quot;)
+df_siag = pd.read_csv(PATH)
+
+
+dataset_name = &#39;adult&#39;
+PATH = cf.FINAL_RESULT_PATH.format(&quot;evaluation/different_instance-&quot; + dataset_name + &quot;.csv&quot;)
+df_adult = pd.read_csv(PATH)
+
+
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>df_simple_bn = df_simple_bn.rename(columns={&quot;metric&quot;: &quot;Metric&quot;, &quot;method&quot;: &quot;Method&quot;, &quot;value&quot; : &quot;Value&quot;})[:500]
+df_simple_bn[&#39;Dataset&#39;] = &#39;Simple_BN&#39;
+
+df_siag = df_siag.rename(columns={&quot;metric&quot;: &quot;Metric&quot;, &quot;method&quot;: &quot;Method&quot;, &quot;value&quot; : &quot;Value&quot;})[:500]
+df_siag[&#39;Dataset&#39;] = &#39;Sangiovese&#39;
+
+df_adult = df_adult.rename(columns={&quot;metric&quot;: &quot;Metric&quot;, &quot;method&quot;: &quot;Method&quot;, &quot;value&quot; : &quot;Value&quot;})
+df_adult[&#39;Dataset&#39;] = &#39;Adult&#39;
+
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>frames = [df_simple_bn, df_siag, df_adult]
+mul_sample = pd.concat(frames)
+mul_sample =  mul_sample.reset_index(drop = True)
+mul_sample = mul_sample.rename(columns={&quot;metric&quot;: &quot;Metric&quot;, &quot;method&quot;: &quot;Method&quot;, &quot;value&quot; : &quot;Value&quot;})
+
+valid_cf = mul_sample[mul_sample[&#39;Metric&#39;] == &#39;target valid&#39;]
+causal_valid = mul_sample[mul_sample[&#39;Metric&#39;] == &#39;causal validity&#39;]
+con_proximity = mul_sample[mul_sample[&#39;Metric&#39;] == &#39;continuous proximity&#39;]
+cat_proximity = mul_sample[mul_sample[&#39;Metric&#39;] == &#39;categorical proximity&#39;]
+IM1 = mul_sample[mul_sample[&#39;Metric&#39;] == &#39;IM1&#39;]
+IM2 = mul_sample[mul_sample[&#39;Metric&#39;] == &#39;IM2&#39;]
+
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>mul_sample.head()
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Method</th>
+      <th>Metric</th>
+      <th>Value</th>
+      <th>n_instance</th>
+      <th>Dataset</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>mobj</td>
+      <td>target valid</td>
+      <td>1.000000</td>
+      <td>5.0</td>
+      <td>Simple_BN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>mobj</td>
+      <td>continuous proximity</td>
+      <td>0.026440</td>
+      <td>5.0</td>
+      <td>Simple_BN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>mobj</td>
+      <td>causal validity</td>
+      <td>1.000000</td>
+      <td>5.0</td>
+      <td>Simple_BN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>mobj</td>
+      <td>IM1</td>
+      <td>0.041095</td>
+      <td>5.0</td>
+      <td>Simple_BN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>mobj</td>
+      <td>IM2</td>
+      <td>0.003608</td>
+      <td>5.0</td>
+      <td>Simple_BN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>mul_sample.n_instance.unique()
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+array([ 5., 10., 15., 20., 25., 30., 35., 40., 45.])
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>&quot;&quot;&quot;Visualize validity score&quot;&quot;&quot;
+linewidth = 5
+font_z = 30
+handles = []
+labels = []
+with plt.style.context(&#39;seaborn-ticks&#39;):
+    &quot;&quot;&quot;Get the subplot&quot;&quot;&quot;
+    fig, axes = plt.subplots(nrows=3, ncols=2, figsize=(34, 20))
+
+    x_value = &#39;Method&#39;
+    y_value = &#39;Value&#39;
+    hue_value = &#39;Dataset&#39;
+
+    name = &#39;Target validity&#39;
+    sns.set_context(&quot;notebook&quot;, rc=rc)
+
+    ax_plt = sns.lineplot(data=valid_cf, x=&quot;n_instance&quot;, y=&quot;Value&quot;, palette=&quot;rocket&quot;,
+                          hue=&quot;Dataset&quot;,
+                          ax=axes[0,0], linewidth = linewidth)
+
+    axes[0,0].set_title(name,fontsize= font_z)
+    axes[0,0].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[0,0].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+    ax_plt.set(xlabel=None)
+    ax_plt.get_legend().remove()
+
+
+
+    &quot;&quot;&quot;Causal-constraint validity&quot;&quot;&quot;
+    name = &#39;Causal-constraint Validity&#39;
+
+    ax_plt = sns.lineplot(data=causal_valid, x=&quot;n_instance&quot;, y=&quot;Value&quot;, palette=&quot;rocket&quot;,
+                          hue=&quot;Dataset&quot;,
+                          ax=axes[0,1], linewidth = linewidth)
+
+    axes[0,1].set_title(name,fontsize= font_z) # title of plot
+    axes[0,1].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[0,1].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+
+    ax_plt.get_legend().remove()
+    ax_plt.set(xlabel=None)
+    #handles, labels = axes[0,1].get_legend_handles_labels()
+    #fig.legend(handles, labels, loc=&#39;center right&#39;, fontsize= font_z)
+
+    name = &#39;Continuous proximity&#39;
+    sns.set_context(&quot;notebook&quot;, rc=rc)
+
+    ax_plt = sns.lineplot(data=con_proximity, x=&quot;n_instance&quot;, y=&quot;Value&quot;, palette=&quot;rocket&quot;,
+                          hue=&quot;Dataset&quot;,
+                          ax=axes[1,0], linewidth = linewidth)
+
+    axes[1,0].set_title(name,fontsize= font_z)
+    axes[1,0].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[1,0].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+    ax_plt.set(xlabel=None)
+    ax_plt.get_legend().remove()
+
+
+
+    &quot;&quot;&quot;Causal-constraint validity&quot;&quot;&quot;
+    name = &#39;Categorical proximity&#39;
+
+    ax_plt = sns.lineplot(data=cat_proximity, x=&quot;n_instance&quot;, y=&quot;Value&quot;,
+#                           hue=&quot;Dataset&quot;,
+                          ax=axes[1,1], linewidth = linewidth, color=axes[1,0].get_lines()[-1].get_c())
+
+    axes[1,1].set_title(name,fontsize= font_z) # title of plot
+    axes[1,1].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[1,1].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+    axes[1,1].set_ylim([3, 6])
+
+#     ax_plt.get_legend().remove()
+    ax_plt.set(xlabel=None)
+
+    name = &#39;IM1&#39;
+
+    ax_plt = sns.lineplot(data=IM1, x=&quot;n_instance&quot;, y=&quot;Value&quot;, palette=&quot;rocket&quot;,
+                          hue=&quot;Dataset&quot;,
+                          ax=axes[2,0], linewidth = linewidth)
+
+    axes[2,0].set_title(name,fontsize= font_z)
+    axes[2,0].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[2,0].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+    ax_plt.set(xlabel=None)
+    ax_plt.get_legend().remove()
+
+
+
+    &quot;&quot;&quot;Causal-constraint validity&quot;&quot;&quot;
+    name = &#39;IM2&#39;
+
+    ax_plt = sns.lineplot(data=IM2, x=&quot;n_instance&quot;, y=&quot;Value&quot;, palette=&quot;rocket&quot;,
+                          hue=&quot;Dataset&quot;,
+                          ax=axes[2,1], linewidth = linewidth)
+
+    axes[2,1].set_title(name,fontsize= font_z) # title of plot
+    axes[2,1].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[2,1].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+
+    ax_plt.get_legend().remove()
+    ax_plt.set(xlabel=None)
+
+
+    h, l = axes[2,1].get_legend_handles_labels()
+    handles.extend(h)
+    labels.extend(l)
+
+    fig.legend(handles, labels, loc=&#39;center right&#39;, fontsize= 25)
+
+
+fig.savefig(cf.FIGURE_PATH.format(&#39;number_instance.png&#39;), bbox_inches = &#39;tight&#39;)
+
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/notebooks_visualization_46_0.png" src="../_images/notebooks_visualization_46_0.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>&quot;&quot;&quot;Visualize validity score&quot;&quot;&quot;
+linewidth = 5
+font_z = 38
+handles = []
+labels = []
+list_ = mul_sample.n_instance.unique()
+
+with plt.style.context(&#39;seaborn-ticks&#39;):
+    &quot;&quot;&quot;Get the subplot&quot;&quot;&quot;
+    fig, axes = plt.subplots(nrows=2, ncols=2, figsize=(30, 25))
+    sns.set_context(&quot;notebook&quot;, rc=rc)
+
+    x_value = &#39;n_instance&#39;
+    y_value = &#39;Value&#39;
+    hue_value = &#39;Dataset&#39;
+    &quot;&quot;&quot;
+    name = &#39;Target validity&#39;
+
+    ax_plt = sns.lineplot(x=x_value, y=y_value, hue=hue_value,
+                          data=valid_cf, marker=&quot;o&quot;, ax = axes[0,0])
+
+    axes[0,0].set_xticks(list_, minor=False)
+    axes[0,0].set_title(name,fontsize= font_z)
+    axes[0,0].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[0,0].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+    axes[0,0].set_xlabel(None)
+
+    name = &#39;Causal-constraint Validity&#39;
+    ax_plt = sns.lineplot(x=x_value, y=y_value, hue=hue_value,
+                          data=causal_valid, marker=&quot;o&quot;, ax = axes[0,1])
+
+    axes[0,1].set_xticks(list_, minor=False)
+    axes[0,1].set_title(name,fontsize= font_z)
+    axes[0,1].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[0,1].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+    axes[0,1].set_xlabel(None)
+
+    &quot;&quot;&quot;
+    name = &#39;Continuous proximity&#39;
+    sns.set_context(&quot;notebook&quot;, rc=rc)
+
+    ax_plt = sns.lineplot(x=x_value, y=y_value, hue=hue_value,
+                          data=con_proximity, marker=&quot;o&quot;,
+                          linewidth = 4.0,
+                          ax = axes[0,0],markersize=15)
+
+    axes[0,0].set_xticks(list_, minor=False)
+    axes[0,0].set_title(name,fontsize= font_z)
+    axes[0,0].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[0,0].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+    axes[0,0].set_xlabel(None)
+    axes[0,0].set_ylabel(None)
+    axes[0,0].set_ylim([0, 0.6])
+
+
+
+    name = &#39;Categorical proximity&#39;
+    sns.set_context(&quot;notebook&quot;, rc=rc)
+
+    ax_plt = sns.lineplot(x=x_value, y=y_value, hue=hue_value, linewidth = 4.0,
+                          data=cat_proximity, marker=&quot;o&quot;, ax = axes[0,1],markersize=15)
+
+    axes[0,1].set_xticks(list_, minor=False)
+    axes[0,1].set_title(name,fontsize= font_z)
+    axes[0,1].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[0,1].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+    axes[0,1].set_xlabel(None)
+    axes[0,1].set_ylabel(None)
+    axes[0,1].set_ylim([3, 6])
+
+    name = &#39;IM1&#39;
+    sns.set_context(&quot;notebook&quot;, rc=rc)
+
+    ax_plt = sns.lineplot(x=x_value, y=y_value, hue=hue_value, linewidth = 4.0,
+                          data=IM1, marker=&quot;o&quot;, ax = axes[1,0],markersize=15)
+
+    axes[1,0].set_xticks(list_, minor=False)
+    axes[1,0].set_title(name,fontsize= font_z)
+    axes[1,0].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[1,0].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+    axes[1,0].set_xlabel(None)
+    axes[1,0].set_ylabel(None)
+    axes[1,0].set_ylim([0.02, 0.6])
+
+    name = &#39;IM2&#39;
+    sns.set_context(&quot;notebook&quot;, rc=rc)
+
+    ax_plt = sns.lineplot(x=x_value, y=y_value, hue=hue_value, linewidth = 4.0,
+                          data=IM2, marker=&quot;o&quot;, ax = axes[1,1],markersize=15)
+
+    axes[1,1].set_xticks(list_, minor=False)
+    axes[1,1].set_title(name,fontsize= font_z)
+    axes[1,1].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[1,1].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+    axes[1,1].set_xlabel(None)
+    axes[1,1].set_ylabel(None)
+    axes[1,1].set_ylim([-0.001, 0.1])
+
+    handles, labels = axes[0,0].get_legend_handles_labels()
+    axes[0,0].legend(handles=handles[1:], labels=labels[1:])
+    handles, labels = axes[0,1].get_legend_handles_labels()
+    axes[0,1].legend(handles=handles[1:], labels=labels[1:])
+    handles, labels = axes[1,0].get_legend_handles_labels()
+    axes[1,0].legend(handles=handles[1:], labels=labels[1:])
+    handles, labels = axes[1,1].get_legend_handles_labels()
+    axes[1,1].legend(handles=handles[1:], labels=labels[1:])
+
+    plt.setp(axes[0,0].get_legend().get_texts(), fontsize=font_z) # for legend text
+    plt.setp(axes[0,1].get_legend().get_texts(), fontsize=font_z) # for legend text
+    plt.setp(axes[1,0].get_legend().get_texts(), fontsize=font_z) # for legend text
+    plt.setp(axes[1,1].get_legend().get_texts(), fontsize=font_z) # for legend text
+
+
+fig.savefig(cf.FIGURE_PATH.format(&#39;number_instance.png&#39;), bbox_inches = &#39;tight&#39;)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/notebooks_visualization_47_0.png" src="../_images/notebooks_visualization_47_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Visualize-with-different-size">
+<h1>Visualize with different size<a class="headerlink" href="#Visualize-with-different-size" title="Permalink to this headline">¶</a></h1>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># nsample = 100
+dataset_name = &#39;simple_bn&#39;
+PATH = cf.FINAL_RESULT_PATH.format(&quot;evaluation/different_size-&quot; + dataset_name + &quot;.csv&quot;)
+df_simple_bn = pd.read_csv(PATH)
+
+dataset_name = &#39;siag&#39;
+PATH = cf.FINAL_RESULT_PATH.format(&quot;evaluation/different_size-&quot; + dataset_name + &quot;.csv&quot;)
+df_siag = pd.read_csv(PATH)
+
+
+dataset_name = &#39;adult&#39;
+PATH = cf.FINAL_RESULT_PATH.format(&quot;evaluation/different_size-&quot; + dataset_name + &quot;.csv&quot;)
+df_adult = pd.read_csv(PATH)
+
+
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>df_simple_bn = df_simple_bn.rename(columns={&quot;metric&quot;: &quot;Metric&quot;, &quot;method&quot;: &quot;Method&quot;, &quot;value&quot; : &quot;Value&quot;})[:500]
+df_simple_bn[&#39;Dataset&#39;] = &#39;Simple_BN&#39;
+
+df_siag = df_siag.rename(columns={&quot;metric&quot;: &quot;Metric&quot;, &quot;method&quot;: &quot;Method&quot;, &quot;value&quot; : &quot;Value&quot;})[:500]
+df_siag[&#39;Dataset&#39;] = &#39;Sangiovese&#39;
+
+df_adult = df_adult.rename(columns={&quot;metric&quot;: &quot;Metric&quot;, &quot;method&quot;: &quot;Method&quot;, &quot;value&quot; : &quot;Value&quot;})
+df_adult[&#39;Dataset&#39;] = &#39;Adult&#39;
+
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>frames = [df_simple_bn, df_siag, df_adult]
+mul_sample = pd.concat(frames)
+mul_sample =  mul_sample.reset_index(drop = True)
+mul_sample = mul_sample.rename(columns={&quot;metric&quot;: &quot;Metric&quot;, &quot;method&quot;: &quot;Method&quot;, &quot;value&quot; : &quot;Value&quot;})
+# mul_sample1 = mul_sample.copy(deep=True)
+# mul_sample1[&#39;Value&#39;] = mul_sample1[&#39;Value&#39;] + 0.02
+
+# mul_sample2 = mul_sample.copy(deep=True)
+# mul_sample2[&#39;Value&#39;] = mul_sample2[&#39;Value&#39;] - 0.02
+
+# mul_sample = pd.concat([mul_sample, mul_sample1, mul_sample2])
+
+valid_cf = mul_sample[mul_sample[&#39;Metric&#39;] == &#39;target valid&#39;]
+causal_valid = mul_sample[mul_sample[&#39;Metric&#39;] == &#39;causal validity&#39;]
+con_proximity = mul_sample[mul_sample[&#39;Metric&#39;] == &#39;continuous proximity&#39;]
+cat_proximity = mul_sample[mul_sample[&#39;Metric&#39;] == &#39;categorical proximity&#39;]
+IM1 = mul_sample[mul_sample[&#39;Metric&#39;] == &#39;IM1&#39;]
+IM2 = mul_sample[mul_sample[&#39;Metric&#39;] == &#39;IM2&#39;]
+
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>mul_sample.head()
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Method</th>
+      <th>Metric</th>
+      <th>Value</th>
+      <th>emb_size</th>
+      <th>Dataset</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>mobj</td>
+      <td>target valid</td>
+      <td>1.000000</td>
+      <td>32.0</td>
+      <td>Simple_BN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>mobj</td>
+      <td>continuous proximity</td>
+      <td>0.028573</td>
+      <td>32.0</td>
+      <td>Simple_BN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>mobj</td>
+      <td>causal validity</td>
+      <td>1.000000</td>
+      <td>32.0</td>
+      <td>Simple_BN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>mobj</td>
+      <td>IM1</td>
+      <td>0.049410</td>
+      <td>32.0</td>
+      <td>Simple_BN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>mobj</td>
+      <td>IM2</td>
+      <td>0.003983</td>
+      <td>32.0</td>
+      <td>Simple_BN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[100]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>&quot;&quot;&quot;Visualize validity score&quot;&quot;&quot;
+linewidth = 5
+font_z = 38
+handles = []
+labels = []
+with plt.style.context(&#39;seaborn-ticks&#39;):
+    &quot;&quot;&quot;Get the subplot&quot;&quot;&quot;
+    fig, axes = plt.subplots(nrows=3, ncols=2, figsize=(34, 20))
+
+    x_value = &#39;emb_size&#39;
+    y_value = &#39;Value&#39;
+    hue_value = &#39;Dataset&#39;
+
+    name = &#39;Target validity&#39;
+    sns.set_context(&quot;notebook&quot;, rc=rc)
+
+    ax_plt =  sns.lineplot(x=&quot;emb_size&quot;, y=&quot;Value&quot;, hue=&quot;Dataset&quot;,
+                           data=valid_cf, marker=&quot;o&quot;, linewidth = linewidth, ax=axes[0,0])
+
+
+    axes[0,0].set_title(name,fontsize= font_z)
+    axes[0,0].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[0,0].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+    ax_plt.set(xlabel=None)
+    ax_plt.get_legend().remove()
+
+    #ax_plt.set_xticks(range(len(valid_cf))) # &lt;--- set the ticks first
+    #ax_plt.set_xticklabels([&#39;2011&#39;,&#39;2012&#39;,&#39;2013&#39;,&#39;2014&#39;,&#39;2015&#39;,&#39;2016&#39;,&#39;2017&#39;,&#39;2018&#39;])
+
+
+    &quot;&quot;&quot;Causal-constraint validity&quot;&quot;&quot;
+    name = &#39;Causal-constraint Validity&#39;
+
+    ax_plt = sns.lineplot(x=&quot;emb_size&quot;, y=&quot;Value&quot;, hue=&quot;Dataset&quot;, data=causal_valid, marker=&quot;o&quot;, ax=axes[0,1])
+
+
+
+    axes[0,1].set_title(name,fontsize= font_z) # title of plot
+    axes[0,1].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[0,1].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+
+    ax_plt.get_legend().remove()
+    ax_plt.set(xlabel=None)
+    ax_plt.set(ylabel=None)
+
+    name = &#39;Continuous proximity&#39;
+    sns.set_context(&quot;notebook&quot;, rc=rc)
+
+    ax_plt =  sns.lineplot(x=&quot;emb_size&quot;, y=&quot;Value&quot;, hue=&quot;Dataset&quot;,
+                           data=con_proximity, marker=&quot;o&quot;, linewidth = linewidth, ax=axes[1,0])
+
+
+    axes[1,0].set_title(name,fontsize= font_z)
+    axes[1,0].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[1,0].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+    ax_plt.set(xlabel=None)
+    ax_plt.set(ylabel=None)
+    ax_plt.get_legend().remove()
+
+
+
+    name = &#39;Categorical proximity&#39;
+
+    ax_plt =  sns.lineplot(x=&quot;emb_size&quot;, y=&quot;Value&quot;, hue=&quot;Dataset&quot;,
+                           data=cat_proximity, marker=&quot;o&quot;, linewidth = linewidth, ax=axes[1,0]
+                           , color=axes[1,0].get_lines()[-1].get_c())
+
+
+    axes[1,1].set_title(name,fontsize= font_z) # title of plot
+    axes[1,1].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[1,1].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+#     axes[1,1].set_ylim([0, 8])
+
+    ax_plt.set(xlabel=None)
+    ax_plt.set(ylabel=None)
+
+    name = &#39;IM1&#39;
+
+    ax_plt = sns.lineplot(data=IM1, x=&quot;emb_size&quot;, y=&quot;Value&quot;, palette=&quot;rocket&quot;,
+                          hue=&quot;Dataset&quot;,
+                          ax=axes[2,0], linewidth = linewidth)
+
+    axes[2,0].set_title(name,fontsize= font_z)
+    axes[2,0].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[2,0].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+    ax_plt.set(xlabel=None)
+    ax_plt.set(ylabel=None)
+
+    ax_plt.get_legend().remove()
+
+
+
+    name = &#39;IM2&#39;
+
+    ax_plt = sns.lineplot(data=IM2, x=&quot;emb_size&quot;, y=&quot;Value&quot;, palette=&quot;rocket&quot;,
+                          hue=&quot;Dataset&quot;, markers=[&quot;o&quot;, &quot;o&quot;,&quot;o&quot;], dashes=False, style=&quot;Dataset&quot;,
+                          ax=axes[2,1], linewidth = linewidth)
+
+    axes[2,1].set_title(name,fontsize= font_z) # title of plot
+    axes[2,1].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[2,1].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+
+    ax_plt.get_legend().remove()
+    ax_plt.set(xlabel=None)
+    ax_plt.set(ylabel=None)
+
+
+    h, l = axes[2,1].get_legend_handles_labels()
+    handles.extend(h)
+    labels.extend(l)
+
+    fig.legend(handles, labels, loc=&#39;center right&#39;, fontsize= font_z)
+
+
+fig.savefig(cf.FIGURE_PATH.format(&#39;different_size.png&#39;), bbox_inches = &#39;tight&#39;)
+
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/notebooks_visualization_53_0.png" src="../_images/notebooks_visualization_53_0.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>&quot;&quot;&quot;Visualize validity score&quot;&quot;&quot;
+linewidth = 5
+font_z = 38
+handles = []
+labels = []
+list_ = mul_sample.emb_size.unique()
+
+with plt.style.context(&#39;seaborn-ticks&#39;):
+    &quot;&quot;&quot;Get the subplot&quot;&quot;&quot;
+    fig, axes = plt.subplots(nrows=2, ncols=2, figsize=(30, 25))
+    sns.set_context(&quot;notebook&quot;, rc=rc)
+
+    x_value = &#39;emb_size&#39;
+    y_value = &#39;Value&#39;
+    hue_value = &#39;Dataset&#39;
+    &quot;&quot;&quot;
+    name = &#39;Target validity&#39;
+
+    ax_plt = sns.lineplot(x=x_value, y=y_value, hue=hue_value,
+                          data=valid_cf, marker=&quot;o&quot;, ax = axes[0,0])
+
+    axes[0,0].set_xticks(list_, minor=False)
+    axes[0,0].set_title(name,fontsize= font_z)
+    axes[0,0].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[0,0].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+    axes[0,0].set_xlabel(None)
+
+    name = &#39;Causal-constraint Validity&#39;
+    ax_plt = sns.lineplot(x=x_value, y=y_value, hue=hue_value,
+                          data=causal_valid, marker=&quot;o&quot;, ax = axes[0,1])
+
+    axes[0,1].set_xticks(list_, minor=False)
+    axes[0,1].set_title(name,fontsize= font_z)
+    axes[0,1].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[0,1].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+    axes[0,1].set_xlabel(None)
+
+    &quot;&quot;&quot;
+    name = &#39;Continuous proximity&#39;
+    sns.set_context(&quot;notebook&quot;, rc=rc)
+
+    ax_plt = sns.lineplot(x=x_value, y=y_value, hue=hue_value,
+                          data=con_proximity, marker=&quot;o&quot;,
+                          linewidth = 4.0,
+                          ax = axes[0,0],markersize=15)
+
+    axes[0,0].set_xticks(list_, minor=False)
+    axes[0,0].set_title(name,fontsize= font_z)
+    axes[0,0].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    #axes[0,0].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+    axes[0,0].set_xlabel(None)
+    axes[0,0].set_ylabel(None)
+
+    axes[0,0].set_ylim([0, 0.5])
+
+
+
+    name = &#39;Categorical proximity&#39;
+    sns.set_context(&quot;notebook&quot;, rc=rc)
+
+    ax_plt = sns.lineplot(x=x_value, y=y_value, hue=hue_value, linewidth = 4.0,
+                          data=cat_proximity, marker=&quot;o&quot;, ax = axes[0,1],markersize=15)
+
+    axes[0,1].set_xticks(list_, minor=False)
+    axes[0,1].set_title(name,fontsize= font_z)
+    axes[0,1].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    #axes[0,1].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+    axes[0,1].set_xlabel(None)
+    axes[0,1].set_ylabel(None)
+
+    axes[0,1].set_ylim([3.6, 4.5])
+
+    name = &#39;IM1&#39;
+    sns.set_context(&quot;notebook&quot;, rc=rc)
+
+    ax_plt = sns.lineplot(x=x_value, y=y_value, hue=hue_value, linewidth = 4.0,
+                          data=IM1, marker=&quot;o&quot;, ax = axes[1,0],markersize=15)
+
+    axes[1,0].set_xticks(list_, minor=False)
+    axes[1,0].set_title(name,fontsize= font_z)
+    axes[1,0].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    #axes[1,0].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+    axes[1,0].set_xlabel(None)
+    axes[1,0].set_ylabel(None)
+
+    axes[1,0].set_ylim([0.02, 0.3])
+
+    name = &#39;IM2&#39;
+    sns.set_context(&quot;notebook&quot;, rc=rc)
+
+    ax_plt = sns.lineplot(x=x_value, y=y_value, hue=hue_value, linewidth = 4.0,
+                          data=IM2, marker=&quot;o&quot;, ax = axes[1,1],markersize=15)
+
+    axes[1,1].set_xticks(list_, minor=False)
+    axes[1,1].set_title(name,fontsize= font_z)
+    axes[1,1].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    #axes[1,1].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+    axes[1,1].set_xlabel(None)
+    axes[1,1].set_ylabel(None)
+
+    axes[1,1].set_ylim([-0.0005, 0.025])
+
+    handles, labels = axes[0,0].get_legend_handles_labels()
+    axes[0,0].legend(handles=handles[1:], labels=labels[1:])
+    handles, labels = axes[0,1].get_legend_handles_labels()
+    axes[0,1].legend(handles=handles[1:], labels=labels[1:])
+    handles, labels = axes[1,0].get_legend_handles_labels()
+    axes[1,0].legend(handles=handles[1:], labels=labels[1:])
+    handles, labels = axes[1,1].get_legend_handles_labels()
+    axes[1,1].legend(handles=handles[1:], labels=labels[1:])
+
+    plt.setp(axes[0,0].get_legend().get_texts(), fontsize=font_z) # for legend text
+    plt.setp(axes[0,1].get_legend().get_texts(), fontsize=font_z) # for legend text
+    plt.setp(axes[1,0].get_legend().get_texts(), fontsize=font_z) # for legend text
+    plt.setp(axes[1,1].get_legend().get_texts(), fontsize=font_z) # for legend text
+
+
+fig.savefig(cf.FIGURE_PATH.format(&#39;different_size.png&#39;), bbox_inches = &#39;tight&#39;)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/notebooks_visualization_54_0.png" src="../_images/notebooks_visualization_54_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Visualize-different-sizes-with-confidence">
+<h1>Visualize different sizes with confidence<a class="headerlink" href="#Visualize-different-sizes-with-confidence" title="Permalink to this headline">¶</a></h1>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span># nsample = 100
+seeds = [1,2,3]
+dataset_name = &#39;simple_bn&#39;
+frames = []
+
+for s in seeds:
+    PATH = cf.FINAL_RESULT_PATH.format(&quot;evaluation/different_size-{}-seed-{}-.csv&quot;.format(dataset_name, s))
+    df = pd.read_csv(PATH)
+    frames.append(df)
+df_simple_bn = pd.concat(frames)
+
+dataset_name = &#39;siag&#39;
+for s in seeds:
+    PATH = cf.FINAL_RESULT_PATH.format(&quot;evaluation/different_size-{}-seed-{}-.csv&quot;.format(dataset_name, s))
+    df = pd.read_csv(PATH)
+    frames.append(df)
+df_siag = pd.concat(frames)
+
+
+dataset_name = &#39;adult&#39;
+for s in seeds:
+    PATH = cf.FINAL_RESULT_PATH.format(&quot;evaluation/different_size-{}-seed-{}-.csv&quot;.format(dataset_name, s))
+    df = pd.read_csv(PATH)
+    frames.append(df)
+df_adult = pd.concat(frames)
+
+
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>df_simple_bn = df_simple_bn.rename(columns={&quot;metric&quot;: &quot;Metric&quot;, &quot;method&quot;: &quot;Method&quot;, &quot;value&quot; : &quot;Value&quot;})[:500]
+df_simple_bn[&#39;Dataset&#39;] = &#39;Simple_BN&#39;
+
+df_siag = df_siag.rename(columns={&quot;metric&quot;: &quot;Metric&quot;, &quot;method&quot;: &quot;Method&quot;, &quot;value&quot; : &quot;Value&quot;})[:500]
+df_siag[&#39;Dataset&#39;] = &#39;Sangiovese&#39;
+
+df_adult = df_adult.rename(columns={&quot;metric&quot;: &quot;Metric&quot;, &quot;method&quot;: &quot;Method&quot;, &quot;value&quot; : &quot;Value&quot;})
+df_adult[&#39;Dataset&#39;] = &#39;Adult&#39;
+
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>frames = [df_simple_bn, df_siag, df_adult]
+mul_sample = pd.concat(frames)
+mul_sample =  mul_sample.reset_index(drop = True)
+mul_sample = mul_sample.rename(columns={&quot;metric&quot;: &quot;Metric&quot;, &quot;method&quot;: &quot;Method&quot;, &quot;value&quot; : &quot;Value&quot;})
+
+valid_cf = mul_sample[mul_sample[&#39;Metric&#39;] == &#39;target valid&#39;]
+causal_valid = mul_sample[mul_sample[&#39;Metric&#39;] == &#39;causal validity&#39;]
+con_proximity = mul_sample[mul_sample[&#39;Metric&#39;] == &#39;continuous proximity&#39;]
+cat_proximity = mul_sample[mul_sample[&#39;Metric&#39;] == &#39;categorical proximity&#39;]
+IM1 = mul_sample[mul_sample[&#39;Metric&#39;] == &#39;IM1&#39;]
+IM2 = mul_sample[mul_sample[&#39;Metric&#39;] == &#39;IM2&#39;]
+
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>cat_proximity
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>&quot;&quot;&quot;Visualize validity score&quot;&quot;&quot;
+linewidth = 5
+font_z = 30
+handles = []
+labels = []
+list_ = causal_valid.emb_size.unique()
+
+with plt.style.context(&#39;seaborn-darkgrid&#39;):
+    &quot;&quot;&quot;Get the subplot&quot;&quot;&quot;
+    fig, axes = plt.subplots(nrows=3, ncols=2, figsize=(30, 34))
+    sns.set_context(&quot;notebook&quot;, rc=rc)
+
+    x_value = &#39;emb_size&#39;
+    y_value = &#39;Value&#39;
+    hue_value = &#39;Dataset&#39;
+
+    name = &#39;Target validity&#39;
+
+    ax_plt = sns.lineplot(x=x_value, y=y_value, hue=hue_value,
+                          data=valid_cf, marker=&quot;o&quot;, ax = axes[0,0])
+
+    axes[0,0].set_xticks(list_, minor=False)
+    axes[0,0].set_title(name,fontsize= font_z)
+    axes[0,0].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[0,0].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+    axes[0,0].set_xlabel(None)
+
+    name = &#39;Causal-constraint Validity&#39;
+    ax_plt = sns.lineplot(x=x_value, y=y_value, hue=hue_value,
+                          data=causal_valid, marker=&quot;o&quot;, ax = axes[0,1])
+
+    axes[0,1].set_xticks(list_, minor=False)
+    axes[0,1].set_title(name,fontsize= font_z)
+    axes[0,1].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[0,1].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+    axes[0,1].set_xlabel(None)
+    axes[0,1].set_ylim([0, 2])
+
+    name = &#39;Continuous proximity&#39;
+    sns.set_context(&quot;notebook&quot;, rc=rc)
+
+    ax_plt = sns.lineplot(x=x_value, y=y_value, hue=hue_value,
+                          data=con_proximity, marker=&quot;o&quot;, ax = axes[1,0])
+
+    axes[1,0].set_xticks(list_, minor=False)
+    axes[1,0].set_title(name,fontsize= font_z)
+    axes[1,0].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[1,0].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+    axes[1,0].set_xlabel(None)
+    axes[1,0].set_ylim([0, 0.5])
+
+    name = &#39;Categorical proximity&#39;
+    sns.set_context(&quot;notebook&quot;, rc=rc)
+
+    ax_plt = sns.lineplot(x=x_value, y=y_value, hue=hue_value,
+                          data=cat_proximity, marker=&quot;o&quot;, ax = axes[1,1])
+
+    axes[1,1].set_xticks(list_, minor=False)
+    axes[1,1].set_title(name,fontsize= font_z)
+    axes[1,1].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[1,1].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+    axes[1,1].set_xlabel(None)
+    axes[1,1].set_ylim([3.5, 4.25])
+
+    name = &#39;IM1&#39;
+    sns.set_context(&quot;notebook&quot;, rc=rc)
+
+    ax_plt = sns.lineplot(x=x_value, y=y_value, hue=hue_value,
+                          data=IM1, marker=&quot;o&quot;, ax = axes[2,0])
+
+    axes[2,0].set_xticks(list_, minor=False)
+    axes[2,0].set_title(name,fontsize= font_z)
+    axes[2,0].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[2,0].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+    axes[2,0].set_xlabel(None)
+    axes[2,0].set_ylim([0.01, 0.7])
+
+    name = &#39;IM2&#39;
+    sns.set_context(&quot;notebook&quot;, rc=rc)
+
+    ax_plt = sns.lineplot(x=x_value, y=y_value, hue=hue_value,
+                          data=IM2, marker=&quot;o&quot;, ax = axes[2,1])
+
+    axes[2,1].set_xticks(list_, minor=False)
+    axes[2,1].set_title(name,fontsize= font_z)
+    axes[2,1].tick_params(axis=&#39;both&#39;, which=&#39;major&#39;, labelsize=font_z)
+    axes[2,1].set_ylabel(&quot;Value&quot;,fontsize= font_z)
+    axes[2,1].set_xlabel(None)
+    axes[2,1].set_ylim([-0.01, 0.03])
+
+fig.savefig(cf.FIGURE_PATH.format(&#39;different_size.png&#39;), bbox_inches = &#39;tight&#39;)
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021 Dung Duong, Qian Li, Guandong Xu.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

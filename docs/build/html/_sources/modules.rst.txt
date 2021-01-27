@@ -8,3 +8,4 @@ multiobj-scm-cf
    distance
    evaluation_func
    prototype
+   utils

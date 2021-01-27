@@ -183,6 +183,7 @@
  | <a href="#P"><strong>P</strong></a>
  | <a href="#S"><strong>S</strong></a>
  | <a href="#T"><strong>T</strong></a>
+ | <a href="#U"><strong>U</strong></a>
  
 </div>
 <h2 id="A">A</h2>
@@ -191,17 +192,25 @@
       <li><a href="dfencoder.html#dfencoder.autoencoder.AutoEncoder">AutoEncoder (class in dfencoder.autoencoder)</a>
 </li>
   </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="utils.html#utils.AE_architecture.autoencoder">autoencoder (class in utils.AE_architecture)</a>
+</li>
+      <li><a href="utils.html#utils.vae_model.AutoEncoder">AutoEncoder (class in utils.vae_model)</a>
+</li>
+  </ul></td>
 </tr></table>
 
 <h2 id="B">B</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="dfencoder.html#dfencoder.autoencoder.AutoEncoder.build_inputs">build_inputs() (dfencoder.autoencoder.AutoEncoder method)</a>
+      <li><a href="utils.html#utils.blackboxmodel.BlackBox">BlackBox (class in utils.blackboxmodel)</a>
 </li>
-      <li><a href="dfencoder.html#dfencoder.autoencoder.AutoEncoder.build_model">build_model() (dfencoder.autoencoder.AutoEncoder method)</a>
+      <li><a href="dfencoder.html#dfencoder.autoencoder.AutoEncoder.build_inputs">build_inputs() (dfencoder.autoencoder.AutoEncoder method)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="dfencoder.html#dfencoder.autoencoder.AutoEncoder.build_model">build_model() (dfencoder.autoencoder.AutoEncoder method)</a>
+</li>
       <li><a href="dfencoder.html#dfencoder.autoencoder.AutoEncoder.build_optimizer">build_optimizer() (dfencoder.autoencoder.AutoEncoder method)</a>
 </li>
       <li><a href="dfencoder.html#dfencoder.autoencoder.AutoEncoder.build_outputs">build_outputs() (dfencoder.autoencoder.AutoEncoder method)</a>
@@ -228,6 +237,8 @@
 </li>
       <li><a href="distance.html#distance.Distance.certifai_distance">certifai_distance() (distance.Distance method)</a>
 </li>
+      <li><a href="utils.html#utils.vae_model.CF_VAE">CF_VAE (class in utils.vae_model)</a>
+</li>
       <li><a href="evaluation_func.html#evaluation_func.Evaluation.change_width">change_width() (evaluation_func.Evaluation method)</a>
 </li>
       <li><a href="dfencoder.html#dfencoder.autoencoder.CompleteLayer">CompleteLayer (class in dfencoder.autoencoder)</a>
@@ -235,6 +246,8 @@
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="dfencoder.html#dfencoder.autoencoder.AutoEncoder.compute_baseline_performance">compute_baseline_performance() (dfencoder.autoencoder.AutoEncoder method)</a>
+</li>
+      <li><a href="utils.html#utils.vae_model.CF_VAE.compute_elbo">compute_elbo() (utils.vae_model.CF_VAE method)</a>
 </li>
       <li><a href="dfencoder.html#dfencoder.autoencoder.compute_embedding_size">compute_embedding_size() (in module dfencoder.autoencoder)</a>
 </li>
@@ -262,10 +275,20 @@
 <h2 id="D">D</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="utils.html#utils.dataloader.DataLoader">DataLoader (class in utils.dataloader)</a>
+</li>
+      <li><a href="utils.html#utils.dataloader.DataLoader.de_normalize_data">de_normalize_data() (utils.dataloader.DataLoader method)</a>
+</li>
       <li><a href="dfencoder.html#dfencoder.autoencoder.AutoEncoder.decode">decode() (dfencoder.autoencoder.AutoEncoder method)</a>
 </li>
       <li><a href="dfencoder.html#dfencoder.autoencoder.AutoEncoder.decode_to_df">decode_to_df() (dfencoder.autoencoder.AutoEncoder method)</a>
 </li>
+      <li><a href="utils.html#utils.vae_model.AutoEncoder.decoder">decoder() (utils.vae_model.AutoEncoder method)</a>
+
+      <ul>
+        <li><a href="utils.html#utils.vae_model.CF_VAE.decoder">(utils.vae_model.CF_VAE method)</a>
+</li>
+      </ul></li>
       <li><a href="dfencoder.html#dfencoder.autoencoder.AutoEncoder.df_predict">df_predict() (dfencoder.autoencoder.AutoEncoder method)</a>
 </li>
       <li>
@@ -282,6 +305,8 @@
         <li><a href="dfencoder.html#module-dfencoder.autoencoder">module</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     dfencoder.dataframe
 
@@ -289,8 +314,6 @@
         <li><a href="dfencoder.html#module-dfencoder.dataframe">module</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     dfencoder.scalers
 
@@ -321,10 +344,16 @@
 </li>
       <li><a href="dfencoder.html#dfencoder.autoencoder.AutoEncoder.encode_input">encode_input() (dfencoder.autoencoder.AutoEncoder method)</a>
 </li>
-      <li><a href="dfencoder.html#dfencoder.dataframe.EncoderDataFrame">EncoderDataFrame (class in dfencoder.dataframe)</a>
+      <li><a href="utils.html#utils.vae_model.AutoEncoder.encoder">encoder() (utils.vae_model.AutoEncoder method)</a>
+
+      <ul>
+        <li><a href="utils.html#utils.vae_model.CF_VAE.encoder">(utils.vae_model.CF_VAE method)</a>
 </li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="dfencoder.html#dfencoder.dataframe.EncoderDataFrame">EncoderDataFrame (class in dfencoder.dataframe)</a>
+</li>
       <li><a href="evaluation_func.html#evaluation_func.Evaluation">Evaluation (class in evaluation_func)</a>
 </li>
       <li>
@@ -352,8 +381,6 @@
         <li><a href="dfencoder.html#dfencoder.scalers.StandardScaler.fit">(dfencoder.scalers.StandardScaler method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="dfencoder.html#dfencoder.scalers.GaussRankScaler.fit_transform">fit_transform() (dfencoder.scalers.GaussRankScaler method)</a>
 
       <ul>
@@ -362,12 +389,24 @@
         <li><a href="dfencoder.html#dfencoder.scalers.StandardScaler.fit_transform">(dfencoder.scalers.StandardScaler method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="dfencoder.html#dfencoder.autoencoder.AutoEncoder.forward">forward() (dfencoder.autoencoder.AutoEncoder method)</a>
 
       <ul>
         <li><a href="dfencoder.html#dfencoder.autoencoder.CompleteLayer.forward">(dfencoder.autoencoder.CompleteLayer method)</a>
 </li>
+        <li><a href="utils.html#utils.AE_architecture.autoencoder.forward">(utils.AE_architecture.autoencoder method)</a>
+</li>
+        <li><a href="utils.html#utils.blackboxmodel.BlackBox.forward">(utils.blackboxmodel.BlackBox method)</a>
+</li>
+        <li><a href="utils.html#utils.vae_model.AutoEncoder.forward">(utils.vae_model.AutoEncoder method)</a>
+</li>
+        <li><a href="utils.html#utils.vae_model.CF_VAE.forward">(utils.vae_model.CF_VAE method)</a>
+</li>
       </ul></li>
+      <li><a href="utils.html#utils.dataloader.DataLoader.from_dummies">from_dummies() (utils.dataloader.DataLoader method)</a>
+</li>
   </ul></td>
 </tr></table>
 
@@ -376,12 +415,36 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="dfencoder.html#dfencoder.scalers.GaussRankScaler">GaussRankScaler (class in dfencoder.scalers)</a>
 </li>
+      <li><a href="utils.html#utils.helpers.get_adult_data_info">get_adult_data_info() (in module utils.helpers)</a>
+</li>
+      <li><a href="utils.html#utils.helpers.get_adult_income_modelpath">get_adult_income_modelpath() (in module utils.helpers)</a>
+</li>
       <li><a href="dfencoder.html#dfencoder.autoencoder.AutoEncoder.get_anomaly_score">get_anomaly_score() (dfencoder.autoencoder.AutoEncoder method)</a>
+</li>
+      <li><a href="utils.html#utils.dataloader.DataLoader.get_data_params">get_data_params() (utils.dataloader.DataLoader method)</a>
+</li>
+      <li><a href="utils.html#utils.dataloader.DataLoader.get_data_type">get_data_type() (utils.dataloader.DataLoader method)</a>
+</li>
+      <li><a href="utils.html#utils.dataloader.DataLoader.get_decimal_precisions">get_decimal_precisions() (utils.dataloader.DataLoader method)</a>
+</li>
+      <li><a href="utils.html#utils.dataloader.DataLoader.get_decoded_data">get_decoded_data() (utils.dataloader.DataLoader method)</a>
 </li>
       <li><a href="dfencoder.html#dfencoder.autoencoder.AutoEncoder.get_deep_stack_features">get_deep_stack_features() (dfencoder.autoencoder.AutoEncoder method)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="utils.html#utils.dataloader.DataLoader.get_dev_data">get_dev_data() (utils.dataloader.DataLoader method)</a>
+</li>
+      <li><a href="utils.html#utils.dataloader.DataLoader.get_encoded_categorical_feature_indexes">get_encoded_categorical_feature_indexes() (utils.dataloader.DataLoader method)</a>
+</li>
+      <li><a href="utils.html#utils.dataloader.DataLoader.get_features_range">get_features_range() (utils.dataloader.DataLoader method)</a>
+</li>
+      <li><a href="utils.html#utils.dataloader.DataLoader.get_indexes_of_features_to_vary">get_indexes_of_features_to_vary() (utils.dataloader.DataLoader method)</a>
+</li>
+      <li><a href="utils.html#utils.dataloader.DataLoader.get_mads_from_training_data">get_mads_from_training_data() (utils.dataloader.DataLoader method)</a>
+</li>
+      <li><a href="utils.html#utils.dataloader.DataLoader.get_minx_maxx">get_minx_maxx() (utils.dataloader.DataLoader method)</a>
+</li>
       <li><a href="prototype.html#prototype.get_pos_neg_latent">get_pos_neg_latent() (in module prototype)</a>
 </li>
       <li><a href="dfencoder.html#dfencoder.autoencoder.AutoEncoder.get_representation">get_representation() (dfencoder.autoencoder.AutoEncoder method)</a>
@@ -431,6 +494,10 @@
       <li><a href="distance.html#distance.Distance.latent_distance">latent_distance() (distance.Distance method)</a>
 </li>
   </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="utils.html#utils.helpers.load_adult_income_dataset">load_adult_income_dataset() (in module utils.helpers)</a>
+</li>
+  </ul></td>
 </tr></table>
 
 <h2 id="M">M</h2>
@@ -460,6 +527,18 @@
 </li>
         <li><a href="test.html#module-test">test</a>
 </li>
+        <li><a href="utils.html#module-utils">utils</a>
+</li>
+        <li><a href="utils.html#module-utils.AE_architecture">utils.AE_architecture</a>
+</li>
+        <li><a href="utils.html#module-utils.blackboxmodel">utils.blackboxmodel</a>
+</li>
+        <li><a href="utils.html#module-utils.dataloader">utils.dataloader</a>
+</li>
+        <li><a href="utils.html#module-utils.helpers">utils.helpers</a>
+</li>
+        <li><a href="utils.html#module-utils.vae_model">utils.vae_model</a>
+</li>
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
@@ -475,6 +554,16 @@
 <h2 id="N">N</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="utils.html#utils.vae_model.AutoEncoder.normal_likelihood">normal_likelihood() (utils.vae_model.AutoEncoder method)</a>
+
+      <ul>
+        <li><a href="utils.html#utils.vae_model.CF_VAE.normal_likelihood">(utils.vae_model.CF_VAE method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="utils.html#utils.dataloader.DataLoader.normalize_data">normalize_data() (utils.dataloader.DataLoader method)</a>
+</li>
       <li><a href="dfencoder.html#dfencoder.scalers.NullScaler">NullScaler (class in dfencoder.scalers)</a>
 </li>
   </ul></td>
@@ -486,6 +575,10 @@
       <li><a href="dfencoder.html#dfencoder.autoencoder.ohe">ohe() (in module dfencoder.autoencoder)</a>
 </li>
   </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="utils.html#utils.dataloader.DataLoader.one_hot_encode_data">one_hot_encode_data() (utils.dataloader.DataLoader method)</a>
+</li>
+  </ul></td>
 </tr></table>
 
 <h2 id="P">P</h2>
@@ -493,10 +586,14 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="dfencoder.html#dfencoder.autoencoder.AutoEncoder.prepare_df">prepare_df() (dfencoder.autoencoder.AutoEncoder method)</a>
 </li>
-      <li><a href="distance.html#distance.Distance.proto_loss">proto_loss() (distance.Distance method)</a>
+      <li><a href="utils.html#utils.dataloader.DataLoader.prepare_df_for_encoding">prepare_df_for_encoding() (utils.dataloader.DataLoader method)</a>
+</li>
+      <li><a href="utils.html#utils.dataloader.DataLoader.prepare_query_instance">prepare_query_instance() (utils.dataloader.DataLoader method)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="distance.html#distance.Distance.proto_loss">proto_loss() (distance.Distance method)</a>
+</li>
       <li>
     prototype
 
@@ -512,10 +609,18 @@
 <h2 id="S">S</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="dfencoder.html#dfencoder.scalers.StandardScaler">StandardScaler (class in dfencoder.scalers)</a>
+      <li><a href="utils.html#utils.vae_model.AutoEncoder.sample_latent_code">sample_latent_code() (utils.vae_model.AutoEncoder method)</a>
+
+      <ul>
+        <li><a href="utils.html#utils.vae_model.CF_VAE.sample_latent_code">(utils.vae_model.CF_VAE method)</a>
 </li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="utils.html#utils.dataloader.DataLoader.split_data">split_data() (utils.dataloader.DataLoader method)</a>
+</li>
+      <li><a href="dfencoder.html#dfencoder.scalers.StandardScaler">StandardScaler (class in dfencoder.scalers)</a>
+</li>
       <li><a href="dfencoder.html#dfencoder.dataframe.EncoderDataFrame.swap">swap() (dfencoder.dataframe.EncoderDataFrame method)</a>
 </li>
   </ul></td>
@@ -535,10 +640,18 @@
       </ul></li>
       <li><a href="dfencoder.html#dfencoder.autoencoder.AutoEncoder.train_epoch">train_epoch() (dfencoder.autoencoder.AutoEncoder method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="dfencoder.html#dfencoder.autoencoder.AutoEncoder.train_megabatch_epoch">train_megabatch_epoch() (dfencoder.autoencoder.AutoEncoder method)</a>
 </li>
+      <li><a href="utils.html#utils.blackboxmodel.BlackBox.training">training (utils.blackboxmodel.BlackBox attribute)</a>
+
+      <ul>
+        <li><a href="utils.html#utils.vae_model.AutoEncoder.training">(utils.vae_model.AutoEncoder attribute)</a>
+</li>
+        <li><a href="utils.html#utils.vae_model.CF_VAE.training">(utils.vae_model.CF_VAE attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="dfencoder.html#dfencoder.scalers.GaussRankScaler.transform">transform() (dfencoder.scalers.GaussRankScaler method)</a>
 
       <ul>
@@ -549,6 +662,56 @@
       </ul></li>
       <li><a href="distance.html#distance.Distance.two_cate_dist">two_cate_dist() (distance.Distance method)</a>
 </li>
+  </ul></td>
+</tr></table>
+
+<h2 id="U">U</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    utils
+
+      <ul>
+        <li><a href="utils.html#module-utils">module</a>
+</li>
+      </ul></li>
+      <li>
+    utils.AE_architecture
+
+      <ul>
+        <li><a href="utils.html#module-utils.AE_architecture">module</a>
+</li>
+      </ul></li>
+      <li>
+    utils.blackboxmodel
+
+      <ul>
+        <li><a href="utils.html#module-utils.blackboxmodel">module</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    utils.dataloader
+
+      <ul>
+        <li><a href="utils.html#module-utils.dataloader">module</a>
+</li>
+      </ul></li>
+      <li>
+    utils.helpers
+
+      <ul>
+        <li><a href="utils.html#module-utils.helpers">module</a>
+</li>
+      </ul></li>
+      <li>
+    utils.vae_model
+
+      <ul>
+        <li><a href="utils.html#module-utils.vae_model">module</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
