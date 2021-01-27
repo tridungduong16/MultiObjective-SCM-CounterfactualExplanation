@@ -10,4 +10,5 @@ Example notebooks
    DiCE_with_private_data
    DiCE_with_advanced_options
    DiCE_getting_started_feasible
+   visualization
 

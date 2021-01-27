@@ -38,7 +38,8 @@
 
     
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="prototype module" href="prototype.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -94,11 +95,36 @@
 <li class="toctree-l1"><a class="reference internal" href="notebooks/DiCE_with_advanced_options.html">Advanced options to customize Counterfactual Explanations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/DiCE_getting_started_feasible.html">Generate feasible counterfactual explanations using a VAE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/DiCE_getting_started_feasible.html#Adding-feasibility-constraints">Adding feasibility constraints</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/visualization.html">Visualize validity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/visualization.html#Visualize-IM1-and-IM2">Visualize IM1 and IM2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/visualization.html#Visualize-proximity">Visualize proximity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/visualization.html#Visualized-all">Visualized all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/visualization.html#Visualize-with-different-number-of-samples">Visualize with different number of samples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/visualization.html#Visualize-with-different-number-of-instances">Visualize with different number of instances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/visualization.html#Visualize-with-different-size">Visualize with different size</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/visualization.html#Visualize-different-sizes-with-confidence">Visualize different sizes with confidence</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Package:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="distance.html">distance module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="evaluation_func.html">evaluation_func module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dfencoder.html">dfencoder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prototype.html">prototype module</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">utils package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-utils.AE_architecture">utils.AE_architecture module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#utils-ae-train-module">utils.AE_train module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#utils-auto-encoder-train-module">utils.auto-encoder-train module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#utils-blackbox-model-train-module">utils.blackbox-model-train module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-utils.blackboxmodel">utils.blackboxmodel module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#utils-calculate-loss-module">utils.calculate_loss module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#utils-datagen-module">utils.datagen module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-utils.dataloader">utils.dataloader module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-utils.helpers">utils.helpers module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-utils.vae_model">utils.vae_model module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-utils">Module contents</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -201,11 +227,25 @@
 <p>&#64;author: trduong</p>
 <dl class="py class">
 <dt id="utils.AE_architecture.autoencoder">
-<em class="property">class </em><code class="sig-prename descclassname">utils.AE_architecture.</code><code class="sig-name descname">autoencoder</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utils/AE_architecture.html#autoencoder"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#utils.AE_architecture.autoencoder" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.</span></code></p>
+<em class="property">class </em><code class="sig-prename descclassname">utils.AE_architecture.</code><code class="sig-name descname">autoencoder</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">index_age</span></em>, <em class="sig-param"><span class="n">index_hours</span></em>, <em class="sig-param"><span class="n">index_workclass</span></em>, <em class="sig-param"><span class="n">index_education</span></em>, <em class="sig-param"><span class="n">index_marital_status</span></em>, <em class="sig-param"><span class="n">index_occupation</span></em>, <em class="sig-param"><span class="n">index_race</span></em>, <em class="sig-param"><span class="n">index_gender</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utils/AE_architecture.html#autoencoder"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#utils.AE_architecture.autoencoder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
 <dl class="py method">
 <dt id="utils.AE_architecture.autoencoder.forward">
 <code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utils/AE_architecture.html#autoencoder.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#utils.AE_architecture.autoencoder.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="utils.AE_architecture.autoencoder.training">
+<code class="sig-name descname">training</code><em class="property">: bool</em><a class="headerlink" href="#utils.AE_architecture.autoencoder.training" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -497,6 +537,9 @@ registered hooks while the latter silently ignores them.</p>
            
           </div>
           <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="prototype.html" class="btn btn-neutral float-left" title="prototype module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
 
   <hr/>
 

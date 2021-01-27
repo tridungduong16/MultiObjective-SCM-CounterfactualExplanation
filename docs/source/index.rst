@@ -23,6 +23,9 @@
 
    distance
    evaluation_func
+   dfencoder
+   prototype
+   utils
 
 Indices and tables
 ==================
