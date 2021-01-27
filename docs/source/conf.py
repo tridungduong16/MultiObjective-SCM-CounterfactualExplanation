@@ -33,12 +33,26 @@ release = '1.0.0'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx.ext.autodoc',
-    'sphinx.ext.viewcode',
+# extensions = ['sphinx.ext.autodoc',
+#     'sphinx.ext.viewcode',
+#     'sphinx.ext.todo',
+#     'nbsphinx',
+#     'sphinx_rtd_theme'
+# ]
+
+extensions = [
+    "sphinx.ext.intersphinx",
+    "sphinx.ext.autodoc",
+    "sphinx.ext.mathjax",
+    "sphinx.ext.viewcode",
     'sphinx.ext.todo',
     'nbsphinx',
-    'sphinx_rtd_theme'
+    'sphinx_rtd_theme',
+    'dask_sphinx_theme',
+    'sphinx_mdolab_theme',
+    'sphinx_veldus_theme'
 ]
+
 
 autodoc_mock_imports = ['numpy',
                         'pandas',
@@ -85,13 +99,18 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '.ipynb_checkpoints']
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'sphinx_rtd_theme'
+# html_theme = 'sphinx_rtd_theme'
+# html_theme = 'dask_sphinx_theme'
+# html_theme = 'sphinx_mdolab_theme'
+html_theme = 'sphinx_veldus_theme'
+
+
 
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 if not on_rtd:
     # only import and set the theme if we're building docs locally
     import sphinx_rtd_theme
-    html_theme = 'sphinx_rtd_theme'
+    html_theme = html_theme
     html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # Add any paths that contain custom static files (such as style sheets) here,
