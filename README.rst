@@ -22,6 +22,46 @@ Multi-objective Optimization for Counterfactual Explanation with Structural Caus
 .. _Binder:  https://mybinder.org/v2/gh/interpretML/DiCE/master?filepath=docs/source/notebooks
 
 
+Code Structure 
+-------------------------
+
+
+* CF-Adult.py
+
+  - Contains pre trained models for the different methods across datasets
+
+
+* CF-Sangiovese.py
+
+  - Contains pre trained models for the different methods across datasets
+
+
+* CF-SimpleBN.py
+
+  - Contains pre trained models for the different methods across datasets
+
+* evaluation_final.py
+
+  - Contains pre trained models for the different methods across datasets
+
+* df_encoder_adults.py
+
+  - Contains pre trained models for the different methods across datasets
+
+* df_encoder_bn.py
+
+  - Contains pre trained models for the different methods across datasets
+
+* prototype.py
+
+  - Contains pre trained models for the different methods across datasets
+
+
+* prototype.py
+
+  - Contains pre trained models for the different methods across datasets
+
+
 Getting started with Multi-objective-CF
 -------------------------
 With DiCE, generating explanations is a simple three-step  process: train
@@ -39,6 +79,9 @@ mode and then invoke DiCE to generate counterfactual examples for any input.
     m = dice_ml.Model(model_path=dice_ml.utils.helpers.get_adult_income_modelpath())
     # DiCE explanation instance
     exp = dice_ml.Dice(d,m)
+
+
+
 
 
 Citing
