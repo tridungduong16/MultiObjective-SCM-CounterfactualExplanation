@@ -22,7 +22,6 @@ from sklearn.preprocessing import LabelEncoder
 
 import pymoo 
 from pymoo.model import problem
-import autograd.numpy as np
 from pymoo.model.problem import Problem
 from pymoo.util.normalization import normalize
 from pymoo.algorithms.nsga2 import NSGA2
@@ -33,60 +32,60 @@ from pymoo.factory import get_sampling, get_crossover, get_mutation
 from pymoo.operators.mixed_variable_operator import MixedVariableSampling, MixedVariableMutation, MixedVariableCrossover
 from pymoo.util import plotting
 
+from distance import Distance
+import autograd.numpy as anp
+
+
 if torch.cuda.is_available():
     dev = "cuda:0"
 else:
     dev = "cpu"
 device = torch.device(dev)
 
-class CF2(Problem):
+
+class CF_SimpleBN(Problem):
     def __init__(self, x0,
-                 d,
                  pred_model,
                  dfencoder_model,
-                 pos_proto,
-                 features,
-                 x6,
-                 x7,
-                 n_var=8,
+                 scm_model,
+                 proto,
+                 col,
+                 n_var=3,
                  **kwargs):
         super().__init__(n_var=n_var,
-                         n_obj=4,
-                         n_constr=1,
-                         xl=np.array([0, 0, 0, 0, 0, 0, x6, x7]),
-                         xu=np.array([0.95, 0.85, 3, 7, 4, 5, x6, x7]),
+                         n_obj=3,
+                         n_constr=0,
                          type_var=anp.double,
                          elementwise_evaluation=True,
+                         xl=np.array([0, 0, 0]),
+                         xu=np.array([1, 1, 1]),
+
                          **kwargs)
+
         self.x0 = x0
         self.pred_model = pred_model
-        self.proto = pos_proto
         self.dfencoder_model = dfencoder_model
-        self.features = features
+        self.scm_model = scm_model
+        self.col = col
+        self.proto = proto
+
     def _evaluate(self, xcf, out, *args, **kwargs):
-        df_store = pd.DataFrame(columns=list(self.features.columns))
+        xcf[2] = self.scm_model.predict(xcf[:2].reshape(1, -1))
 
-        df_store.loc[0] = self.x0
-        df_store.loc[1] = self.xcf
-        """Get the representation"""
-        z = self.dfencoder_model.get_representation(df_store)
-        zcf = z[1]
+        """Create the distance object"""
+        dist = Distance()
 
-        """Compute prediction loss"""
-        # ycf = torch.Tensor([1.0]).to(device)
-        # yloss = compute_yloss(xcf, ycf, self.pred_model, self.d)
-        # con_dist = continous_dist(self.x0, xcf, self.d)
-        # cat_dist = cat_representation_dist(self.dfencoder_model, self.x0, xcf)
-        #
-        # """Compute prototype loss"""
-        # ploss = proto_loss(zcf, self.proto)
-        #
-        # """Constraints"""
-        # g1 = self.x0[0] - self.xcf[0]
-        #
-        # out["F"] = anp.column_stack([yloss, con_dist, cat_dist, ploss])
-        # out["F"] = anp.column_stack([yloss, con_dist, cat_dist])
-        out["G"] = np.column_stack([g1])
+        pur_dist = dist.pure_distance(self.x0, xcf)
+        yloss = dist.cross_entropy(self.pred_model, xcf)
+        # closs = causal_loss(self.scm_model, xcf, self.x0)
 
+        df_store = pd.DataFrame(columns=self.col)
+        df_store.loc[0] = xcf
+        zcf = self.dfencoder_model.get_representation(df_store)[0]
+
+        ploss = dist.proto_loss(zcf, self.proto)
+
+        out["F"] = anp.column_stack([yloss, pur_dist, ploss])
+        # out["F"] = anp.column_stack([yloss, dist, closs, ploss])
 
 
