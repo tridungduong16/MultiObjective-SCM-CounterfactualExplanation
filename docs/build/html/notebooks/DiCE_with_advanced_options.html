@@ -448,16 +448,16 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># import DiCE
-import dice_ml
-from dice_ml.utils import helpers # helper functions
+<span></span><span class="c1"># import DiCE</span>
+<span class="kn">import</span> <span class="nn">dice_ml</span>
+<span class="kn">from</span> <span class="nn">dice_ml.utils</span> <span class="kn">import</span> <span class="n">helpers</span> <span class="c1"># helper functions</span>
 
-# Tensorflow libraries
-import tensorflow as tf
-from tensorflow import keras
+<span class="c1"># Tensorflow libraries</span>
+<span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+<span class="kn">from</span> <span class="nn">tensorflow</span> <span class="kn">import</span> <span class="n">keras</span>
 
-# supress deprecation warnings from TF
-tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
+<span class="c1"># supress deprecation warnings from TF</span>
+<span class="n">tf</span><span class="o">.</span><span class="n">compat</span><span class="o">.</span><span class="n">v1</span><span class="o">.</span><span class="n">logging</span><span class="o">.</span><span class="n">set_verbosity</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">compat</span><span class="o">.</span><span class="n">v1</span><span class="o">.</span><span class="n">logging</span><span class="o">.</span><span class="n">ERROR</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -469,7 +469,7 @@ tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>dataset = helpers.load_adult_income_dataset()
+<span></span><span class="n">dataset</span> <span class="o">=</span> <span class="n">helpers</span><span class="o">.</span><span class="n">load_adult_income_dataset</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -478,7 +478,7 @@ tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>dataset.head()
+<span></span><span class="n">dataset</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -586,7 +586,7 @@ tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>d = dice_ml.Data(dataframe=dataset, continuous_features=[&#39;age&#39;, &#39;hours_per_week&#39;], outcome_name=&#39;income&#39;)
+<span></span><span class="n">d</span> <span class="o">=</span> <span class="n">dice_ml</span><span class="o">.</span><span class="n">Data</span><span class="p">(</span><span class="n">dataframe</span><span class="o">=</span><span class="n">dataset</span><span class="p">,</span> <span class="n">continuous_features</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;hours_per_week&#39;</span><span class="p">],</span> <span class="n">outcome_name</span><span class="o">=</span><span class="s1">&#39;income&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -599,11 +599,11 @@ tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># seeding random numbers for reproducability
-from numpy.random import seed
-seed(1)
-from tensorflow import set_random_seed
-set_random_seed(2)
+<span></span><span class="c1"># seeding random numbers for reproducability</span>
+<span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">seed</span>
+<span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">tensorflow</span> <span class="kn">import</span> <span class="n">set_random_seed</span>
+<span class="n">set_random_seed</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -612,20 +612,20 @@ set_random_seed(2)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>sess = tf.InteractiveSession()
+<span></span><span class="n">sess</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">InteractiveSession</span><span class="p">()</span>
 
-train, _ = d.split_data(d.normalize_data(d.one_hot_encoded_data))
-X_train = train.loc[:, train.columns != &#39;income&#39;]
-y_train = train.loc[:, train.columns == &#39;income&#39;]
+<span class="n">train</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">split_data</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">normalize_data</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">one_hot_encoded_data</span><span class="p">))</span>
+<span class="n">X_train</span> <span class="o">=</span> <span class="n">train</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="n">train</span><span class="o">.</span><span class="n">columns</span> <span class="o">!=</span> <span class="s1">&#39;income&#39;</span><span class="p">]</span>
+<span class="n">y_train</span> <span class="o">=</span> <span class="n">train</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="n">train</span><span class="o">.</span><span class="n">columns</span> <span class="o">==</span> <span class="s1">&#39;income&#39;</span><span class="p">]</span>
 
-ann_model = keras.Sequential()
-ann_model.add(keras.layers.Dense(20, input_shape=(X_train.shape[1],), kernel_regularizer=keras.regularizers.l1(0.001), activation=tf.nn.relu))
-ann_model.add(keras.layers.Dense(1, activation=tf.nn.sigmoid))
+<span class="n">ann_model</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">Sequential</span><span class="p">()</span>
+<span class="n">ann_model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],),</span> <span class="n">kernel_regularizer</span><span class="o">=</span><span class="n">keras</span><span class="o">.</span><span class="n">regularizers</span><span class="o">.</span><span class="n">l1</span><span class="p">(</span><span class="mf">0.001</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">relu</span><span class="p">))</span>
+<span class="n">ann_model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">sigmoid</span><span class="p">))</span>
 
-ann_model.compile(loss=&#39;binary_crossentropy&#39;, optimizer=tf.keras.optimizers.Adam(0.01), metrics=[&#39;accuracy&#39;])
-ann_model.fit(X_train, y_train, validation_split=0.20, epochs=100, verbose=0, class_weight={0:1,1:2})
-# the training will take some time for 100 epochs.
-# you can wait or set verbose=1 to see the progress of training.
+<span class="n">ann_model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s1">&#39;binary_crossentropy&#39;</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">optimizers</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="mf">0.01</span><span class="p">),</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">])</span>
+<span class="n">ann_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">validation_split</span><span class="o">=</span><span class="mf">0.20</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">class_weight</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">})</span>
+<span class="c1"># the training will take some time for 100 epochs.</span>
+<span class="c1"># you can wait or set verbose=1 to see the progress of training.</span>
 </pre></div>
 </div>
 </div>
@@ -643,9 +643,9 @@ ann_model.fit(X_train, y_train, validation_split=0.20, epochs=100, verbose=0, cl
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># provide the trained ML model to DiCE&#39;s model object
-backend = &#39;TF&#39;+tf.__version__[0] # TF1
-m = dice_ml.Model(model=ann_model, backend=backend)
+<span></span><span class="c1"># provide the trained ML model to DiCE&#39;s model object</span>
+<span class="n">backend</span> <span class="o">=</span> <span class="s1">&#39;TF&#39;</span><span class="o">+</span><span class="n">tf</span><span class="o">.</span><span class="n">__version__</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># TF1</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">dice_ml</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">ann_model</span><span class="p">,</span> <span class="n">backend</span><span class="o">=</span><span class="n">backend</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -657,8 +657,8 @@ m = dice_ml.Model(model=ann_model, backend=backend)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># initiate DiCE
-exp = dice_ml.Dice(d, m)
+<span></span><span class="c1"># initiate DiCE</span>
+<span class="n">exp</span> <span class="o">=</span> <span class="n">dice_ml</span><span class="o">.</span><span class="n">Dice</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -667,15 +667,15 @@ exp = dice_ml.Dice(d, m)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># query instance in the form of a dictionary; keys: feature name, values: feature value
-query_instance = {&#39;age&#39;:22,
-                  &#39;workclass&#39;:&#39;Private&#39;,
-                  &#39;education&#39;:&#39;HS-grad&#39;,
-                  &#39;marital_status&#39;:&#39;Single&#39;,
-                  &#39;occupation&#39;:&#39;Service&#39;,
-                  &#39;race&#39;: &#39;White&#39;,
-                  &#39;gender&#39;:&#39;Female&#39;,
-                  &#39;hours_per_week&#39;: 45}
+<span></span><span class="c1"># query instance in the form of a dictionary; keys: feature name, values: feature value</span>
+<span class="n">query_instance</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;age&#39;</span><span class="p">:</span><span class="mi">22</span><span class="p">,</span>
+                  <span class="s1">&#39;workclass&#39;</span><span class="p">:</span><span class="s1">&#39;Private&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;education&#39;</span><span class="p">:</span><span class="s1">&#39;HS-grad&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;marital_status&#39;</span><span class="p">:</span><span class="s1">&#39;Single&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;occupation&#39;</span><span class="p">:</span><span class="s1">&#39;Service&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;race&#39;</span><span class="p">:</span> <span class="s1">&#39;White&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;gender&#39;</span><span class="p">:</span><span class="s1">&#39;Female&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;hours_per_week&#39;</span><span class="p">:</span> <span class="mi">45</span><span class="p">}</span>
 </pre></div>
 </div>
 </div>
@@ -684,8 +684,8 @@ query_instance = {&#39;age&#39;:22,
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># generate counterfactuals
-dice_exp = exp.generate_counterfactuals(query_instance, total_CFs=4, desired_class=&quot;opposite&quot;)
+<span></span><span class="c1"># generate counterfactuals</span>
+<span class="n">dice_exp</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">generate_counterfactuals</span><span class="p">(</span><span class="n">query_instance</span><span class="p">,</span> <span class="n">total_CFs</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">desired_class</span><span class="o">=</span><span class="s2">&quot;opposite&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -702,8 +702,8 @@ Diverse Counterfactuals found! total time taken: 00 min 03 sec
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># visualize the resutls
-dice_exp.visualize_as_dataframe()
+<span></span><span class="c1"># visualize the resutls</span>
+<span class="n">dice_exp</span><span class="o">.</span><span class="n">visualize_as_dataframe</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -871,14 +871,14 @@ values in the training set. Let’s see what their values are by computing them 
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># get MAD
-mads = d.get_mads(normalized=True)
+<span></span><span class="c1"># get MAD</span>
+<span class="n">mads</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">get_mads</span><span class="p">(</span><span class="n">normalized</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-# create feature weights
-feature_weights = {}
-for feature in mads:
-    feature_weights[feature] = round(1/mads[feature], 2)
-print(feature_weights)
+<span class="c1"># create feature weights</span>
+<span class="n">feature_weights</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">mads</span><span class="p">:</span>
+    <span class="n">feature_weights</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">mads</span><span class="p">[</span><span class="n">feature</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">feature_weights</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -897,8 +897,8 @@ print(feature_weights)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># assigning equal weights
-feature_weights = {&#39;age&#39;: 1, &#39;hours_per_week&#39;: 1}
+<span></span><span class="c1"># assigning equal weights</span>
+<span class="n">feature_weights</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;hours_per_week&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
 </pre></div>
 </div>
 </div>
@@ -907,9 +907,9 @@ feature_weights = {&#39;age&#39;: 1, &#39;hours_per_week&#39;: 1}
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># generate counterfactuals
-dice_exp = exp.generate_counterfactuals(query_instance, total_CFs=4, desired_class=&quot;opposite&quot;,
-                                        feature_weights=feature_weights)
+<span></span><span class="c1"># generate counterfactuals</span>
+<span class="n">dice_exp</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">generate_counterfactuals</span><span class="p">(</span><span class="n">query_instance</span><span class="p">,</span> <span class="n">total_CFs</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">desired_class</span><span class="o">=</span><span class="s2">&quot;opposite&quot;</span><span class="p">,</span>
+                                        <span class="n">feature_weights</span><span class="o">=</span><span class="n">feature_weights</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -926,8 +926,8 @@ Diverse Counterfactuals found! total time taken: 00 min 04 sec
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># visualize the resutls
-dice_exp.visualize_as_dataframe()
+<span></span><span class="c1"># visualize the resutls</span>
+<span class="n">dice_exp</span><span class="o">.</span><span class="n">visualize_as_dataframe</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1096,9 +1096,9 @@ Diverse Counterfactual set (new outcome : 1)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># change proximity_weight from default value of 0.5 to 1.5
-dice_exp = exp.generate_counterfactuals(query_instance, total_CFs=4, desired_class=&quot;opposite&quot;,
-                                        proximity_weight=1.5, diversity_weight=1.0)
+<span></span><span class="c1"># change proximity_weight from default value of 0.5 to 1.5</span>
+<span class="n">dice_exp</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">generate_counterfactuals</span><span class="p">(</span><span class="n">query_instance</span><span class="p">,</span> <span class="n">total_CFs</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">desired_class</span><span class="o">=</span><span class="s2">&quot;opposite&quot;</span><span class="p">,</span>
+                                        <span class="n">proximity_weight</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">diversity_weight</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1115,8 +1115,8 @@ Diverse Counterfactuals found! total time taken: 00 min 05 sec
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># visualize the resutls
-dice_exp.visualize_as_dataframe()
+<span></span><span class="c1"># visualize the resutls</span>
+<span class="n">dice_exp</span><span class="o">.</span><span class="n">visualize_as_dataframe</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1283,8 +1283,8 @@ Diverse Counterfactual set (new outcome : 1)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>dice_exp = exp.generate_counterfactuals(query_instance, total_CFs=4, desired_class=&quot;opposite&quot;,
-                                        features_to_vary=[&#39;workclass&#39;,&#39;education&#39;,&#39;occupation&#39;,&#39;hours_per_week&#39;])
+<span></span><span class="n">dice_exp</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">generate_counterfactuals</span><span class="p">(</span><span class="n">query_instance</span><span class="p">,</span> <span class="n">total_CFs</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">desired_class</span><span class="o">=</span><span class="s2">&quot;opposite&quot;</span><span class="p">,</span>
+                                        <span class="n">features_to_vary</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;workclass&#39;</span><span class="p">,</span><span class="s1">&#39;education&#39;</span><span class="p">,</span><span class="s1">&#39;occupation&#39;</span><span class="p">,</span><span class="s1">&#39;hours_per_week&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -1301,8 +1301,8 @@ Diverse Counterfactuals found! total time taken: 00 min 04 sec
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># visualize the resutls
-dice_exp.visualize_as_dataframe()
+<span></span><span class="c1"># visualize the resutls</span>
+<span class="n">dice_exp</span><span class="o">.</span><span class="n">visualize_as_dataframe</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>

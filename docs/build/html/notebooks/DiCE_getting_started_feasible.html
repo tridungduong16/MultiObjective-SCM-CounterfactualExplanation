@@ -443,9 +443,9 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># import DiCE
-import dice_ml
-from dice_ml.utils import helpers # helper functions
+<span></span><span class="c1"># import DiCE</span>
+<span class="kn">import</span> <span class="nn">dice_ml</span>
+<span class="kn">from</span> <span class="nn">dice_ml.utils</span> <span class="kn">import</span> <span class="n">helpers</span> <span class="c1"># helper functions</span>
 </pre></div>
 </div>
 </div>
@@ -473,7 +473,7 @@ from dice_ml.utils import helpers # helper functions
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>dataset = helpers.load_adult_income_dataset()
+<span></span><span class="n">dataset</span> <span class="o">=</span> <span class="n">helpers</span><span class="o">.</span><span class="n">load_adult_income_dataset</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -483,7 +483,7 @@ from dice_ml.utils import helpers # helper functions
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>dataset.head()
+<span></span><span class="n">dataset</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -492,9 +492,9 @@ from dice_ml.utils import helpers # helper functions
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># description of transformed features
-adult_info = helpers.get_adult_data_info()
-adult_info
+<span></span><span class="c1"># description of transformed features</span>
+<span class="n">adult_info</span> <span class="o">=</span> <span class="n">helpers</span><span class="o">.</span><span class="n">get_adult_data_info</span><span class="p">()</span>
+<span class="n">adult_info</span>
 </pre></div>
 </div>
 </div>
@@ -504,7 +504,7 @@ adult_info
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>d = dice_ml.Data(dataframe=dataset, continuous_features=[&#39;age&#39;, &#39;hours_per_week&#39;], outcome_name=&#39;income&#39;, data_name=&#39;adult&#39;, test_size=0.1)
+<span></span><span class="n">d</span> <span class="o">=</span> <span class="n">dice_ml</span><span class="o">.</span><span class="n">Data</span><span class="p">(</span><span class="n">dataframe</span><span class="o">=</span><span class="n">dataset</span><span class="p">,</span> <span class="n">continuous_features</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;hours_per_week&#39;</span><span class="p">],</span> <span class="n">outcome_name</span><span class="o">=</span><span class="s1">&#39;income&#39;</span><span class="p">,</span> <span class="n">data_name</span><span class="o">=</span><span class="s1">&#39;adult&#39;</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -518,13 +518,13 @@ adult_info
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>backend = {&#39;model&#39;: &#39;pytorch_model.PyTorchModel&#39;,
-            &#39;explainer&#39;: &#39;feasible_base_vae.FeasibleBaseVAE&#39;}
-ML_modelpath = helpers.get_adult_income_modelpath(backend=&#39;PYT&#39;)
-ML_modelpath = ML_modelpath[:-4] + &#39;_2nodes.pth&#39;
-m = dice_ml.Model(model_path= ML_modelpath, backend=backend)
-m.load_model()
-print(&#39;ML Model&#39;, m.model)
+<span></span><span class="n">backend</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;model&#39;</span><span class="p">:</span> <span class="s1">&#39;pytorch_model.PyTorchModel&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;explainer&#39;</span><span class="p">:</span> <span class="s1">&#39;feasible_base_vae.FeasibleBaseVAE&#39;</span><span class="p">}</span>
+<span class="n">ML_modelpath</span> <span class="o">=</span> <span class="n">helpers</span><span class="o">.</span><span class="n">get_adult_income_modelpath</span><span class="p">(</span><span class="n">backend</span><span class="o">=</span><span class="s1">&#39;PYT&#39;</span><span class="p">)</span>
+<span class="n">ML_modelpath</span> <span class="o">=</span> <span class="n">ML_modelpath</span><span class="p">[:</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;_2nodes.pth&#39;</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">dice_ml</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="n">model_path</span><span class="o">=</span> <span class="n">ML_modelpath</span><span class="p">,</span> <span class="n">backend</span><span class="o">=</span><span class="n">backend</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">load_model</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ML Model&#39;</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">model</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -538,10 +538,10 @@ print(&#39;ML Model&#39;, m.model)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># initiate DiCE
-exp = dice_ml.Dice(d, m, encoded_size= 10, lr= 1e-2, batch_size=2048, validity_reg= 42.0, margin=0.165, epochs= 25,
-                   wm1= 1e-2, wm2= 1e-2, wm3= 1e-2)
-exp.train(pre_trained=1)
+<span></span><span class="c1"># initiate DiCE</span>
+<span class="n">exp</span> <span class="o">=</span> <span class="n">dice_ml</span><span class="o">.</span><span class="n">Dice</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">encoded_size</span><span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">lr</span><span class="o">=</span> <span class="mf">1e-2</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">2048</span><span class="p">,</span> <span class="n">validity_reg</span><span class="o">=</span> <span class="mf">42.0</span><span class="p">,</span> <span class="n">margin</span><span class="o">=</span><span class="mf">0.165</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span> <span class="mi">25</span><span class="p">,</span>
+                   <span class="n">wm1</span><span class="o">=</span> <span class="mf">1e-2</span><span class="p">,</span> <span class="n">wm2</span><span class="o">=</span> <span class="mf">1e-2</span><span class="p">,</span> <span class="n">wm3</span><span class="o">=</span> <span class="mf">1e-2</span><span class="p">)</span>
+<span class="n">exp</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">pre_trained</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -551,15 +551,15 @@ exp.train(pre_trained=1)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># query instance in the form of a dictionary; keys: feature name, values: feature value
-query_instance = {&#39;age&#39;:41,
-                  &#39;workclass&#39;:&#39;Private&#39;,
-                  &#39;education&#39;:&#39;HS-grad&#39;,
-                  &#39;marital_status&#39;:&#39;Single&#39;,
-                  &#39;occupation&#39;:&#39;Service&#39;,
-                  &#39;race&#39;: &#39;White&#39;,
-                  &#39;gender&#39;:&#39;Female&#39;,
-                  &#39;hours_per_week&#39;: 45}
+<span></span><span class="c1"># query instance in the form of a dictionary; keys: feature name, values: feature value</span>
+<span class="n">query_instance</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;age&#39;</span><span class="p">:</span><span class="mi">41</span><span class="p">,</span>
+                  <span class="s1">&#39;workclass&#39;</span><span class="p">:</span><span class="s1">&#39;Private&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;education&#39;</span><span class="p">:</span><span class="s1">&#39;HS-grad&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;marital_status&#39;</span><span class="p">:</span><span class="s1">&#39;Single&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;occupation&#39;</span><span class="p">:</span><span class="s1">&#39;Service&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;race&#39;</span><span class="p">:</span> <span class="s1">&#39;White&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;gender&#39;</span><span class="p">:</span><span class="s1">&#39;Female&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;hours_per_week&#39;</span><span class="p">:</span> <span class="mi">45</span><span class="p">}</span>
 </pre></div>
 </div>
 </div>
@@ -569,10 +569,10 @@ query_instance = {&#39;age&#39;:41,
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># generate counterfactuals
-dice_exp = exp.generate_counterfactuals(query_instance, total_CFs=5, desired_class=&quot;opposite&quot;)
-# visualize the results
-dice_exp.visualize_as_dataframe()
+<span></span><span class="c1"># generate counterfactuals</span>
+<span class="n">dice_exp</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">generate_counterfactuals</span><span class="p">(</span><span class="n">query_instance</span><span class="p">,</span> <span class="n">total_CFs</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">desired_class</span><span class="o">=</span><span class="s2">&quot;opposite&quot;</span><span class="p">)</span>
+<span class="c1"># visualize the results</span>
+<span class="n">dice_exp</span><span class="o">.</span><span class="n">visualize_as_dataframe</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -600,13 +600,13 @@ dice_exp.visualize_as_dataframe()
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>backend = {&#39;model&#39;: &#39;pytorch_model.PyTorchModel&#39;,
-            &#39;explainer&#39;: &#39;feasible_model_approx.FeasibleModelApprox&#39;}
-ML_modelpath = helpers.get_adult_income_modelpath(backend=backend)
-ML_modelpath = ML_modelpath[:-4] + &#39;_2nodes.pth&#39;
-m = dice_ml.Model(model_path= ML_modelpath, backend=backend)
-m.load_model()
-print(&#39;ML Model&#39;, m.model)
+<span></span><span class="n">backend</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;model&#39;</span><span class="p">:</span> <span class="s1">&#39;pytorch_model.PyTorchModel&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;explainer&#39;</span><span class="p">:</span> <span class="s1">&#39;feasible_model_approx.FeasibleModelApprox&#39;</span><span class="p">}</span>
+<span class="n">ML_modelpath</span> <span class="o">=</span> <span class="n">helpers</span><span class="o">.</span><span class="n">get_adult_income_modelpath</span><span class="p">(</span><span class="n">backend</span><span class="o">=</span><span class="n">backend</span><span class="p">)</span>
+<span class="n">ML_modelpath</span> <span class="o">=</span> <span class="n">ML_modelpath</span><span class="p">[:</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;_2nodes.pth&#39;</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">dice_ml</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="n">model_path</span><span class="o">=</span> <span class="n">ML_modelpath</span><span class="p">,</span> <span class="n">backend</span><span class="o">=</span><span class="n">backend</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">load_model</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ML Model&#39;</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">model</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -615,10 +615,10 @@ print(&#39;ML Model&#39;, m.model)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># initiate DiCE
-exp = dice_ml.Dice(d, m, encoded_size= 10, lr= 1e-2, batch_size=2048, validity_reg= 76.0, margin=0.344, epochs= 25,
-                   wm1= 1e-2, wm2= 1e-2, wm3= 1e-2)
-exp.train(1, [[0]], 1, 87, pre_trained=1)
+<span></span><span class="c1"># initiate DiCE</span>
+<span class="n">exp</span> <span class="o">=</span> <span class="n">dice_ml</span><span class="o">.</span><span class="n">Dice</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">encoded_size</span><span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">lr</span><span class="o">=</span> <span class="mf">1e-2</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">2048</span><span class="p">,</span> <span class="n">validity_reg</span><span class="o">=</span> <span class="mf">76.0</span><span class="p">,</span> <span class="n">margin</span><span class="o">=</span><span class="mf">0.344</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span> <span class="mi">25</span><span class="p">,</span>
+                   <span class="n">wm1</span><span class="o">=</span> <span class="mf">1e-2</span><span class="p">,</span> <span class="n">wm2</span><span class="o">=</span> <span class="mf">1e-2</span><span class="p">,</span> <span class="n">wm3</span><span class="o">=</span> <span class="mf">1e-2</span><span class="p">)</span>
+<span class="n">exp</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">[[</span><span class="mi">0</span><span class="p">]],</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="n">pre_trained</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -627,10 +627,10 @@ exp.train(1, [[0]], 1, 87, pre_trained=1)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># generate counterfactuals
-dice_exp = exp.generate_counterfactuals(query_instance, total_CFs=5, desired_class=&quot;opposite&quot;)
-# visualize the results
-dice_exp.visualize_as_dataframe()
+<span></span><span class="c1"># generate counterfactuals</span>
+<span class="n">dice_exp</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">generate_counterfactuals</span><span class="p">(</span><span class="n">query_instance</span><span class="p">,</span> <span class="n">total_CFs</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">desired_class</span><span class="o">=</span><span class="s2">&quot;opposite&quot;</span><span class="p">)</span>
+<span class="c1"># visualize the results</span>
+<span class="n">dice_exp</span><span class="o">.</span><span class="n">visualize_as_dataframe</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>

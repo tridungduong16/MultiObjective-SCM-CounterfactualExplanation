@@ -439,20 +439,20 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># import DiCE
-PATH = &quot;/data/trduong/counterfactual-explanation-research.git/DiCE&quot;
+<span></span><span class="c1"># import DiCE</span>
+<span class="n">PATH</span> <span class="o">=</span> <span class="s2">&quot;/data/trduong/counterfactual-explanation-research.git/DiCE&quot;</span>
 
-import sys
-sys.path.insert(1, PATH)
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">PATH</span><span class="p">)</span>
 
 
 
-import dice_ml
-from dice_ml.utils import helpers # helper functions
+<span class="kn">import</span> <span class="nn">dice_ml</span>
+<span class="kn">from</span> <span class="nn">dice_ml.utils</span> <span class="kn">import</span> <span class="n">helpers</span> <span class="c1"># helper functions</span>
 
-# supress deprecation warnings from TF
-import tensorflow as tf
-tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
+<span class="c1"># supress deprecation warnings from TF</span>
+<span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+<span class="n">tf</span><span class="o">.</span><span class="n">compat</span><span class="o">.</span><span class="n">v1</span><span class="o">.</span><span class="n">logging</span><span class="o">.</span><span class="n">set_verbosity</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">compat</span><span class="o">.</span><span class="n">v1</span><span class="o">.</span><span class="n">logging</span><span class="o">.</span><span class="n">ERROR</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -465,7 +465,7 @@ tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>dataset = helpers.load_adult_income_dataset()
+<span></span><span class="n">dataset</span> <span class="o">=</span> <span class="n">helpers</span><span class="o">.</span><span class="n">load_adult_income_dataset</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -475,7 +475,7 @@ tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>dataset.head()
+<span></span><span class="n">dataset</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -583,9 +583,9 @@ tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># description of transformed features
-adult_info = helpers.get_adult_data_info()
-adult_info
+<span></span><span class="c1"># description of transformed features</span>
+<span class="n">adult_info</span> <span class="o">=</span> <span class="n">helpers</span><span class="o">.</span><span class="n">get_adult_data_info</span><span class="p">()</span>
+<span class="n">adult_info</span>
 </pre></div>
 </div>
 </div>
@@ -612,7 +612,7 @@ adult_info
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>d = dice_ml.Data(dataframe=dataset, continuous_features=[&#39;age&#39;, &#39;hours_per_week&#39;], outcome_name=&#39;income&#39;)
+<span></span><span class="n">d</span> <span class="o">=</span> <span class="n">dice_ml</span><span class="o">.</span><span class="n">Data</span><span class="p">(</span><span class="n">dataframe</span><span class="o">=</span><span class="n">dataset</span><span class="p">,</span> <span class="n">continuous_features</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;hours_per_week&#39;</span><span class="p">],</span> <span class="n">outcome_name</span><span class="o">=</span><span class="s1">&#39;income&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -626,9 +626,9 @@ adult_info
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>backend = &#39;PYT&#39; # TF1
-ML_modelpath = helpers.get_adult_income_modelpath(backend=backend)
-m = dice_ml.Model(model_path= ML_modelpath, backend=backend)
+<span></span><span class="n">backend</span> <span class="o">=</span> <span class="s1">&#39;PYT&#39;</span> <span class="c1"># TF1</span>
+<span class="n">ML_modelpath</span> <span class="o">=</span> <span class="n">helpers</span><span class="o">.</span><span class="n">get_adult_income_modelpath</span><span class="p">(</span><span class="n">backend</span><span class="o">=</span><span class="n">backend</span><span class="p">)</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">dice_ml</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="n">model_path</span><span class="o">=</span> <span class="n">ML_modelpath</span><span class="p">,</span> <span class="n">backend</span><span class="o">=</span><span class="n">backend</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -637,7 +637,7 @@ m = dice_ml.Model(model_path= ML_modelpath, backend=backend)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>ML_modelpath
+<span></span><span class="n">ML_modelpath</span>
 </pre></div>
 </div>
 </div>
@@ -660,8 +660,8 @@ m = dice_ml.Model(model_path= ML_modelpath, backend=backend)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># initiate DiCE
-exp = dice_ml.Dice(d, m)
+<span></span><span class="c1"># initiate DiCE</span>
+<span class="n">exp</span> <span class="o">=</span> <span class="n">dice_ml</span><span class="o">.</span><span class="n">Dice</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -671,15 +671,15 @@ exp = dice_ml.Dice(d, m)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># query instance in the form of a dictionary; keys: feature name, values: feature value
-query_instance = {&#39;age&#39;:22,
-                  &#39;workclass&#39;:&#39;Private&#39;,
-                  &#39;education&#39;:&#39;HS-grad&#39;,
-                  &#39;marital_status&#39;:&#39;Single&#39;,
-                  &#39;occupation&#39;:&#39;Service&#39;,
-                  &#39;race&#39;: &#39;White&#39;,
-                  &#39;gender&#39;:&#39;Female&#39;,
-                  &#39;hours_per_week&#39;: 45}
+<span></span><span class="c1"># query instance in the form of a dictionary; keys: feature name, values: feature value</span>
+<span class="n">query_instance</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;age&#39;</span><span class="p">:</span><span class="mi">22</span><span class="p">,</span>
+                  <span class="s1">&#39;workclass&#39;</span><span class="p">:</span><span class="s1">&#39;Private&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;education&#39;</span><span class="p">:</span><span class="s1">&#39;HS-grad&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;marital_status&#39;</span><span class="p">:</span><span class="s1">&#39;Single&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;occupation&#39;</span><span class="p">:</span><span class="s1">&#39;Service&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;race&#39;</span><span class="p">:</span> <span class="s1">&#39;White&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;gender&#39;</span><span class="p">:</span><span class="s1">&#39;Female&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;hours_per_week&#39;</span><span class="p">:</span> <span class="mi">45</span><span class="p">}</span>
 </pre></div>
 </div>
 </div>
@@ -689,8 +689,8 @@ query_instance = {&#39;age&#39;:22,
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># generate counterfactuals
-dice_exp = exp.generate_counterfactuals(query_instance, total_CFs=4, desired_class=&quot;opposite&quot;)
+<span></span><span class="c1"># generate counterfactuals</span>
+<span class="n">dice_exp</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">generate_counterfactuals</span><span class="p">(</span><span class="n">query_instance</span><span class="p">,</span> <span class="n">total_CFs</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">desired_class</span><span class="o">=</span><span class="s2">&quot;opposite&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1527,8 +1527,8 @@ Diverse Counterfactuals found! total time taken: 00 min 11 sec
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># visualize the results
-dice_exp.visualize_as_dataframe()
+<span></span><span class="c1"># visualize the results</span>
+<span class="n">dice_exp</span><span class="o">.</span><span class="n">visualize_as_dataframe</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1691,8 +1691,8 @@ Diverse Counterfactual set (new outcome : 1)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># highlight only the changes
-dice_exp.visualize_as_dataframe(show_only_changes=True)
+<span></span><span class="c1"># highlight only the changes</span>
+<span class="n">dice_exp</span><span class="o">.</span><span class="n">visualize_as_dataframe</span><span class="p">(</span><span class="n">show_only_changes</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1861,11 +1861,11 @@ Diverse Counterfactual set (new outcome : 1)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>try:
-    import torch
-    print(&#39;PyTorch installed.&#39;)
-except ImportError as e:
-    print(&quot;Import Error!&quot;, e.name, &quot;not found.. Please install from https://pytorch.org/&quot;)
+<span></span><span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">torch</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;PyTorch installed.&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ImportError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Import Error!&quot;</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot;not found.. Please install from https://pytorch.org/&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1883,9 +1883,9 @@ PyTorch installed.
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>backend = &#39;PYT&#39;
-ML_modelpath = helpers.get_adult_income_modelpath(backend=backend)
-m = dice_ml.Model(model_path= ML_modelpath, backend=backend)
+<span></span><span class="n">backend</span> <span class="o">=</span> <span class="s1">&#39;PYT&#39;</span>
+<span class="n">ML_modelpath</span> <span class="o">=</span> <span class="n">helpers</span><span class="o">.</span><span class="n">get_adult_income_modelpath</span><span class="p">(</span><span class="n">backend</span><span class="o">=</span><span class="n">backend</span><span class="p">)</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">dice_ml</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="n">model_path</span><span class="o">=</span> <span class="n">ML_modelpath</span><span class="p">,</span> <span class="n">backend</span><span class="o">=</span><span class="n">backend</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1895,7 +1895,7 @@ m = dice_ml.Model(model_path= ML_modelpath, backend=backend)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>exp = dice_ml.Dice(d, m)
+<span></span><span class="n">exp</span> <span class="o">=</span> <span class="n">dice_ml</span><span class="o">.</span><span class="n">Dice</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1904,15 +1904,15 @@ m = dice_ml.Model(model_path= ML_modelpath, backend=backend)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># query instance in the form of a dictionary; keys: feature name, values: feature value
-query_instance = {&#39;age&#39;:22,
-                  &#39;workclass&#39;:&#39;Private&#39;,
-                  &#39;education&#39;:&#39;HS-grad&#39;,
-                  &#39;marital_status&#39;:&#39;Single&#39;,
-                  &#39;occupation&#39;:&#39;Service&#39;,
-                  &#39;race&#39;: &#39;White&#39;,
-                  &#39;gender&#39;:&#39;Female&#39;,
-                  &#39;hours_per_week&#39;: 45}
+<span></span><span class="c1"># query instance in the form of a dictionary; keys: feature name, values: feature value</span>
+<span class="n">query_instance</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;age&#39;</span><span class="p">:</span><span class="mi">22</span><span class="p">,</span>
+                  <span class="s1">&#39;workclass&#39;</span><span class="p">:</span><span class="s1">&#39;Private&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;education&#39;</span><span class="p">:</span><span class="s1">&#39;HS-grad&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;marital_status&#39;</span><span class="p">:</span><span class="s1">&#39;Single&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;occupation&#39;</span><span class="p">:</span><span class="s1">&#39;Service&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;race&#39;</span><span class="p">:</span> <span class="s1">&#39;White&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;gender&#39;</span><span class="p">:</span><span class="s1">&#39;Female&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;hours_per_week&#39;</span><span class="p">:</span> <span class="mi">45</span><span class="p">}</span>
 </pre></div>
 </div>
 </div>
@@ -1921,8 +1921,8 @@ query_instance = {&#39;age&#39;:22,
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># generate counterfactuals
-dice_exp = exp.generate_counterfactuals(query_instance, total_CFs=4, desired_class=&quot;opposite&quot;)
+<span></span><span class="c1"># generate counterfactuals</span>
+<span class="n">dice_exp</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">generate_counterfactuals</span><span class="p">(</span><span class="n">query_instance</span><span class="p">,</span> <span class="n">total_CFs</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">desired_class</span><span class="o">=</span><span class="s2">&quot;opposite&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2759,8 +2759,8 @@ Diverse Counterfactuals found! total time taken: 00 min 11 sec
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span># highlight only the changes
-dice_exp.visualize_as_dataframe(show_only_changes=True)
+<span></span><span class="c1"># highlight only the changes</span>
+<span class="n">dice_exp</span><span class="o">.</span><span class="n">visualize_as_dataframe</span><span class="p">(</span><span class="n">show_only_changes</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
