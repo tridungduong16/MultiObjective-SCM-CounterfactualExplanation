@@ -1,0 +1,16 @@
+method,metric,value
+certifai,target valid,1.0
+mad,target valid,1.0
+mobj,target valid,1.0
+certifai,IM1,0.21678958994194283
+certifai,IM2,0.008549803754049377
+mad,IM1,0.20044522818576277
+mad,IM2,0.009212409983150665
+mobj,IM1,0.2390147927567369
+mobj,IM2,0.004428693106570207
+certifai,continuous proximity,0.23750664105487754
+mad,continuous proximity,0.28102368123611654
+mobj,continuous proximity,0.09069465968838421
+certifai,causal validity,0.5
+mad,causal validity,0.3
+mobj,causal validity,0.7

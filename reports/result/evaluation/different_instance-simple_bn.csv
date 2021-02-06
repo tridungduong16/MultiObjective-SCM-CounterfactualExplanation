@@ -1,0 +1,46 @@
+method,metric,value,n_instance
+mobj,target valid,1.0,5.0
+mobj,continuous proximity,0.026439949334445007,5.0
+mobj,causal validity,1.0,5.0
+mobj,IM1,0.041094694075984525,5.0
+mobj,IM2,0.0036077558713603574,5.0
+mobj,target valid,1.0,10.0
+mobj,continuous proximity,0.027234595691936897,10.0
+mobj,causal validity,1.0,10.0
+mobj,IM1,0.03860794571241786,10.0
+mobj,IM2,0.002872925347127907,10.0
+mobj,target valid,1.0,15.0
+mobj,continuous proximity,0.025527211971423602,15.0
+mobj,causal validity,1.0,15.0
+mobj,IM1,0.040435483631620375,15.0
+mobj,IM2,0.0029657311117344508,15.0
+mobj,target valid,1.0,20.0
+mobj,continuous proximity,0.029590570244147917,20.0
+mobj,causal validity,1.0,20.0
+mobj,IM1,0.04984233720591476,20.0
+mobj,IM2,0.004170460561639063,20.0
+mobj,target valid,1.0,25.0
+mobj,continuous proximity,0.025589417857791633,25.0
+mobj,causal validity,1.0,25.0
+mobj,IM1,0.039079056548997376,25.0
+mobj,IM2,0.003425160545675464,25.0
+mobj,target valid,1.0,30.0
+mobj,continuous proximity,0.030932725402081765,30.0
+mobj,causal validity,1.0,30.0
+mobj,IM1,0.05571827699854546,30.0
+mobj,IM2,0.00459988837731087,30.0
+mobj,target valid,1.0,35.0
+mobj,continuous proximity,0.027647952716283054,35.0
+mobj,causal validity,1.0,35.0
+mobj,IM1,0.03755106883276401,35.0
+mobj,IM2,0.002854492973725172,35.0
+mobj,target valid,1.0,40.0
+mobj,continuous proximity,0.028268979010824077,40.0
+mobj,causal validity,1.0,40.0
+mobj,IM1,0.03368922316870567,40.0
+mobj,IM2,0.0025666914925500687,40.0
+mobj,target valid,1.0,45.0
+mobj,continuous proximity,0.03173005627270717,45.0
+mobj,causal validity,1.0,45.0
+mobj,IM1,0.0382878071427503,45.0
+mobj,IM2,0.003576084777367195,45.0

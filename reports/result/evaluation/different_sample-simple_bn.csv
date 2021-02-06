@@ -1,0 +1,1001 @@
+method,metric,value
+mobj,target valid,1.0
+mobj,continuous proximity,0.037997425507100835
+mobj,causal validity,1.0
+mobj,IM1,0.6524947298588983
+mobj,IM2,0.05049584571022671
+mobj,target valid,1.0
+mobj,continuous proximity,0.028875529647732157
+mobj,causal validity,1.0
+mobj,IM1,0.43842942626774634
+mobj,IM2,0.028461211009204124
+mobj,target valid,1.0
+mobj,continuous proximity,0.026997605760203203
+mobj,causal validity,1.0
+mobj,IM1,0.263200707396061
+mobj,IM2,0.017750873886744192
+mobj,target valid,1.0
+mobj,continuous proximity,0.026518558088182157
+mobj,causal validity,1.0
+mobj,IM1,0.3689485493790958
+mobj,IM2,0.017664538060651384
+mobj,target valid,1.0
+mobj,continuous proximity,0.02525999118860681
+mobj,causal validity,1.0
+mobj,IM1,0.09497142034017575
+mobj,IM2,0.007305598748840537
+mobj,target valid,1.0
+mobj,continuous proximity,0.03102180665182187
+mobj,causal validity,1.0
+mobj,IM1,0.1984416305400641
+mobj,IM2,0.028156323715202353
+mobj,target valid,1.0
+mobj,continuous proximity,0.030995564328592698
+mobj,causal validity,1.0
+mobj,IM1,0.13681600156979037
+mobj,IM2,0.015031584540773055
+mobj,target valid,1.0
+mobj,continuous proximity,0.028765317094499393
+mobj,causal validity,1.0
+mobj,IM1,0.07016118878869712
+mobj,IM2,0.00373599301191157
+mobj,target valid,1.0
+mobj,continuous proximity,0.02926791014082464
+mobj,causal validity,1.0
+mobj,IM1,0.1602662101512345
+mobj,IM2,0.03307692375625097
+mobj,target valid,1.0
+mobj,continuous proximity,0.027234595691936897
+mobj,causal validity,1.0
+mobj,IM1,0.03860794571241786
+mobj,IM2,0.002872925347127907
+mobj,target valid,1.0
+mobj,continuous proximity,0.026793183934163276
+mobj,causal validity,1.0
+mobj,IM1,0.09707851687049111
+mobj,IM2,0.010037681743829768
+mobj,target valid,1.0
+mobj,continuous proximity,0.027531993227165416
+mobj,causal validity,1.0
+mobj,IM1,0.03134388998805087
+mobj,IM2,0.002719139077328275
+mobj,target valid,1.0
+mobj,continuous proximity,0.02647262427097381
+mobj,causal validity,1.0
+mobj,IM1,0.09339683439443167
+mobj,IM2,0.013623544493158037
+mobj,target valid,1.0
+mobj,continuous proximity,0.02502053295039765
+mobj,causal validity,1.0
+mobj,IM1,0.09601980929385137
+mobj,IM2,0.004035667361336743
+mobj,target valid,1.0
+mobj,continuous proximity,0.025069689965744265
+mobj,causal validity,1.0
+mobj,IM1,0.08484033755271268
+mobj,IM2,0.0088748430869206
+mobj,target valid,1.0
+mobj,continuous proximity,0.02526691033919805
+mobj,causal validity,1.0
+mobj,IM1,0.09221979870359356
+mobj,IM2,0.024698313089715988
+mobj,target valid,1.0
+mobj,continuous proximity,0.02504721844624731
+mobj,causal validity,1.0
+mobj,IM1,0.025358126396507356
+mobj,IM2,0.0025790068156175696
+mobj,target valid,1.0
+mobj,continuous proximity,0.02440710327580614
+mobj,causal validity,1.0
+mobj,IM1,0.009367396322136947
+mobj,IM2,0.00044840835127084636
+mobj,target valid,1.0
+mobj,continuous proximity,0.02423413498497706
+mobj,causal validity,1.0
+mobj,IM1,0.038244498701633434
+mobj,IM2,0.002455910868803612
+mobj,target valid,1.0
+mobj,continuous proximity,0.024265758610559535
+mobj,causal validity,1.0
+mobj,IM1,0.04337005181534331
+mobj,IM2,0.00418082347551765
+mobj,target valid,1.0
+mobj,continuous proximity,0.02395962286330419
+mobj,causal validity,1.0
+mobj,IM1,0.02976515152415383
+mobj,IM2,0.0018445536221813495
+mobj,target valid,1.0
+mobj,continuous proximity,0.024828128171190195
+mobj,causal validity,1.0
+mobj,IM1,0.02512660616348761
+mobj,IM2,0.0017723556472736236
+mobj,target valid,1.0
+mobj,continuous proximity,0.02464726203870958
+mobj,causal validity,1.0
+mobj,IM1,0.054608483377675265
+mobj,IM2,0.00774551724956157
+mobj,target valid,1.0
+mobj,continuous proximity,0.024499596867917795
+mobj,causal validity,1.0
+mobj,IM1,0.02706591821457467
+mobj,IM2,0.0014148975396242266
+mobj,target valid,1.0
+mobj,continuous proximity,0.024785563015786133
+mobj,causal validity,1.0
+mobj,IM1,0.033014521420293375
+mobj,IM2,0.0022828613615547117
+mobj,target valid,1.0
+mobj,continuous proximity,0.024598629045796388
+mobj,causal validity,1.0
+mobj,IM1,0.046310044527833785
+mobj,IM2,0.0056975830099141025
+mobj,target valid,1.0
+mobj,continuous proximity,0.02481625946687314
+mobj,causal validity,1.0
+mobj,IM1,0.012151343309372228
+mobj,IM2,0.0010334067173251964
+mobj,target valid,1.0
+mobj,continuous proximity,0.025119383973566767
+mobj,causal validity,1.0
+mobj,IM1,0.030535919387885684
+mobj,IM2,0.005016535445430182
+mobj,target valid,1.0
+mobj,continuous proximity,0.02514256214337113
+mobj,causal validity,1.0
+mobj,IM1,0.026074182908809074
+mobj,IM2,0.001380729398381016
+mobj,target valid,1.0
+mobj,continuous proximity,0.025322987524234453
+mobj,causal validity,1.0
+mobj,IM1,0.04078371500010096
+mobj,IM2,0.002425457578086191
+mobj,target valid,1.0
+mobj,continuous proximity,0.025154527989564163
+mobj,causal validity,1.0
+mobj,IM1,0.04038063204592507
+mobj,IM2,0.008720392929694456
+mobj,target valid,1.0
+mobj,continuous proximity,0.024815161345343506
+mobj,causal validity,1.0
+mobj,IM1,0.022497025542755754
+mobj,IM2,0.0014393272687089273
+mobj,target valid,1.0
+mobj,continuous proximity,0.02520977514774413
+mobj,causal validity,1.0
+mobj,IM1,0.03587643644895231
+mobj,IM2,0.004066790520866697
+mobj,target valid,1.0
+mobj,continuous proximity,0.026327582611301914
+mobj,causal validity,1.0
+mobj,IM1,0.025738259307872796
+mobj,IM2,0.0030935611259136687
+mobj,target valid,1.0
+mobj,continuous proximity,0.026860988689382703
+mobj,causal validity,1.0
+mobj,IM1,0.04634692392133718
+mobj,IM2,0.008939474811774128
+mobj,target valid,1.0
+mobj,continuous proximity,0.02679744881724001
+mobj,causal validity,1.0
+mobj,IM1,0.023222962937427982
+mobj,IM2,0.001670320446303191
+mobj,target valid,1.0
+mobj,continuous proximity,0.027132194043708396
+mobj,causal validity,1.0
+mobj,IM1,0.03084617242585101
+mobj,IM2,0.0024352417761342115
+mobj,target valid,1.0
+mobj,continuous proximity,0.027643971227888642
+mobj,causal validity,1.0
+mobj,IM1,0.01636306678743326
+mobj,IM2,0.0012509140928537912
+mobj,target valid,1.0
+mobj,continuous proximity,0.027481999460365416
+mobj,causal validity,1.0
+mobj,IM1,0.0306728845466831
+mobj,IM2,0.005607950491276005
+mobj,target valid,1.0
+mobj,continuous proximity,0.02733407836957677
+mobj,causal validity,1.0
+mobj,IM1,0.01302727535908473
+mobj,IM2,0.0011916687990035744
+mobj,target valid,1.0
+mobj,continuous proximity,0.026967257988734006
+mobj,causal validity,1.0
+mobj,IM1,0.013767764366063789
+mobj,IM2,0.0004044605727521635
+mobj,target valid,1.0
+mobj,continuous proximity,0.0286991763965881
+mobj,causal validity,0.9761904761904762
+mobj,IM1,0.020255309729122664
+mobj,IM2,0.0016564124969192095
+mobj,target valid,1.0
+mobj,continuous proximity,0.02851613775558068
+mobj,causal validity,0.9767441860465116
+mobj,IM1,0.014362163543217087
+mobj,IM2,0.0003936942018290223
+mobj,target valid,1.0
+mobj,continuous proximity,0.028556554304528147
+mobj,causal validity,0.9772727272727273
+mobj,IM1,0.020864130214748713
+mobj,IM2,0.001938163812275136
+mobj,target valid,1.0
+mobj,continuous proximity,0.028780325043180875
+mobj,causal validity,0.9777777777777777
+mobj,IM1,0.021467715684830257
+mobj,IM2,0.0034227914323198072
+mobj,target valid,1.0
+mobj,continuous proximity,0.02827078747479587
+mobj,causal validity,0.9782608695652174
+mobj,IM1,0.014097404602590515
+mobj,IM2,0.0010934611924746196
+mobj,target valid,1.0
+mobj,continuous proximity,0.0279006948656103
+mobj,causal validity,0.9787234042553191
+mobj,IM1,0.013813108045791946
+mobj,IM2,0.0018225055609111611
+mobj,target valid,1.0
+mobj,continuous proximity,0.02765004321528244
+mobj,causal validity,0.9791666666666666
+mobj,IM1,0.02135247047012667
+mobj,IM2,0.0019842084519578044
+mobj,target valid,1.0
+mobj,continuous proximity,0.02801098941031492
+mobj,causal validity,0.9795918367346939
+mobj,IM1,0.018638430804189296
+mobj,IM2,0.003300558986478156
+mobj,target valid,1.0
+mobj,continuous proximity,0.02796596675842462
+mobj,causal validity,0.98
+mobj,IM1,0.025275528012395
+mobj,IM2,0.0030825221343305726
+mobj,target valid,1.0
+mobj,continuous proximity,0.027628673323496483
+mobj,causal validity,0.9803921568627451
+mobj,IM1,0.010527690432792693
+mobj,IM2,0.0008404101564706382
+mobj,target valid,1.0
+mobj,continuous proximity,0.027830303103602575
+mobj,causal validity,0.9807692307692307
+mobj,IM1,0.01870643382578588
+mobj,IM2,0.0028569125443597596
+mobj,target valid,1.0
+mobj,continuous proximity,0.027497199017175525
+mobj,causal validity,0.9811320754716981
+mobj,IM1,0.007153700961741878
+mobj,IM2,0.0004533296495141408
+mobj,target valid,1.0
+mobj,continuous proximity,0.027244017944032407
+mobj,causal validity,0.9814814814814815
+mobj,IM1,0.02130693910496134
+mobj,IM2,0.001628963101065082
+mobj,target valid,1.0
+mobj,continuous proximity,0.027570741093356988
+mobj,causal validity,0.9818181818181818
+mobj,IM1,0.019734603473362703
+mobj,IM2,0.002364071034657363
+mobj,target valid,1.0
+mobj,continuous proximity,0.02722316530482118
+mobj,causal validity,0.9821428571428571
+mobj,IM1,0.015232204446399033
+mobj,IM2,0.0011592041627397896
+mobj,target valid,1.0
+mobj,continuous proximity,0.027378381143937713
+mobj,causal validity,0.9824561403508771
+mobj,IM1,0.012872223534885563
+mobj,IM2,0.0006552471082418509
+mobj,target valid,1.0
+mobj,continuous proximity,0.02742126591125213
+mobj,causal validity,0.9827586206896551
+mobj,IM1,0.022202363465454098
+mobj,IM2,0.004566226787469389
+mobj,target valid,1.0
+mobj,continuous proximity,0.027026922236282554
+mobj,causal validity,0.9830508474576272
+mobj,IM1,0.007070397432372698
+mobj,IM2,0.0004987242248508697
+mobj,target valid,1.0
+mobj,continuous proximity,0.027165511209889425
+mobj,causal validity,0.9833333333333333
+mobj,IM1,0.01342529335015631
+mobj,IM2,0.0008478336768842109
+mobj,target valid,1.0
+mobj,continuous proximity,0.02723122619020264
+mobj,causal validity,0.9836065573770492
+mobj,IM1,0.021458908709002987
+mobj,IM2,0.004725924988151817
+mobj,target valid,1.0
+mobj,continuous proximity,0.02717538552800351
+mobj,causal validity,0.9838709677419355
+mobj,IM1,0.017017530782597642
+mobj,IM2,0.0017923305302459318
+mobj,target valid,1.0
+mobj,continuous proximity,0.02740523019033098
+mobj,causal validity,0.9841269841269841
+mobj,IM1,0.02044092229588768
+mobj,IM2,0.0024353070283852783
+mobj,target valid,1.0
+mobj,continuous proximity,0.027413140033491917
+mobj,causal validity,0.984375
+mobj,IM1,0.023719749180666785
+mobj,IM2,0.0011495498896011993
+mobj,target valid,1.0
+mobj,continuous proximity,0.02738165909894624
+mobj,causal validity,0.9846153846153847
+mobj,IM1,0.01774909902272017
+mobj,IM2,0.002504183591900219
+mobj,target valid,1.0
+mobj,continuous proximity,0.027310621461387168
+mobj,causal validity,0.9848484848484849
+mobj,IM1,0.006982386833360666
+mobj,IM2,0.00043488363740966157
+mobj,target valid,1.0
+mobj,continuous proximity,0.027282086715499986
+mobj,causal validity,0.9850746268656716
+mobj,IM1,0.007182191156019989
+mobj,IM2,0.0003292208924679177
+mobj,target valid,1.0
+mobj,continuous proximity,0.02696137202615288
+mobj,causal validity,0.9852941176470589
+mobj,IM1,0.021630800558040314
+mobj,IM2,0.0011264397986039893
+mobj,target valid,1.0
+mobj,continuous proximity,0.026878636840938313
+mobj,causal validity,0.9855072463768116
+mobj,IM1,0.006303690388967174
+mobj,IM2,0.0003403040418742403
+mobj,target valid,1.0
+mobj,continuous proximity,0.026733887036436626
+mobj,causal validity,0.9857142857142858
+mobj,IM1,0.015070983511559853
+mobj,IM2,0.0023428259542266927
+mobj,target valid,1.0
+mobj,continuous proximity,0.026792002573749172
+mobj,causal validity,0.9859154929577465
+mobj,IM1,0.007728080415454209
+mobj,IM2,0.0004304036623894204
+mobj,target valid,1.0
+mobj,continuous proximity,0.02694861523842043
+mobj,causal validity,0.9861111111111112
+mobj,IM1,0.005647742764238317
+mobj,IM2,0.0005124268657233728
+mobj,target valid,1.0
+mobj,continuous proximity,0.026904491433223543
+mobj,causal validity,0.9863013698630136
+mobj,IM1,0.01146129167532647
+mobj,IM2,0.0007672546743081347
+mobj,target valid,1.0
+mobj,continuous proximity,0.02672609005639946
+mobj,causal validity,0.9864864864864865
+mobj,IM1,0.007342553932393659
+mobj,IM2,0.0005969858615136051
+mobj,target valid,1.0
+mobj,continuous proximity,0.02662580380878855
+mobj,causal validity,0.9866666666666667
+mobj,IM1,0.011147484077152048
+mobj,IM2,0.0007549606846709512
+mobj,target valid,1.0
+mobj,continuous proximity,0.02650633742339532
+mobj,causal validity,0.9868421052631579
+mobj,IM1,0.012977427372215794
+mobj,IM2,0.0013005727035834468
+mobj,target valid,1.0
+mobj,continuous proximity,0.02677789102161372
+mobj,causal validity,0.987012987012987
+mobj,IM1,0.02127321137019868
+mobj,IM2,0.004434471984420475
+mobj,target valid,1.0
+mobj,continuous proximity,0.026681141039996137
+mobj,causal validity,0.9871794871794872
+mobj,IM1,0.00560798059510439
+mobj,IM2,0.0003656309717842492
+mobj,target valid,1.0
+mobj,continuous proximity,0.026714860766203857
+mobj,causal validity,0.9873417721518988
+mobj,IM1,0.013131613551328586
+mobj,IM2,0.0006797509105773426
+mobj,target valid,1.0
+mobj,continuous proximity,0.0265136979866763
+mobj,causal validity,0.9875
+mobj,IM1,0.01580460791469932
+mobj,IM2,0.0017989724949918078
+mobj,target valid,1.0
+mobj,continuous proximity,0.026419384190080764
+mobj,causal validity,0.9876543209876543
+mobj,IM1,0.008043638271294836
+mobj,IM2,0.00048082757968016663
+mobj,target valid,1.0
+mobj,continuous proximity,0.026584323798531675
+mobj,causal validity,0.9878048780487805
+mobj,IM1,0.006375018351319959
+mobj,IM2,0.00043749413916610515
+mobj,target valid,1.0
+mobj,continuous proximity,0.026323296968421072
+mobj,causal validity,0.9879518072289156
+mobj,IM1,0.011501879425966003
+mobj,IM2,0.0007649752234334719
+mobj,target valid,1.0
+mobj,continuous proximity,0.026059942494487093
+mobj,causal validity,0.9880952380952381
+mobj,IM1,0.0061824150595523476
+mobj,IM2,0.0006108647454178697
+mobj,target valid,1.0
+mobj,continuous proximity,0.02611222462767177
+mobj,causal validity,0.9882352941176471
+mobj,IM1,0.003819267837429911
+mobj,IM2,0.0002673488036008986
+mobj,target valid,1.0
+mobj,continuous proximity,0.026315025261732985
+mobj,causal validity,0.9883720930232558
+mobj,IM1,0.015709760442743935
+mobj,IM2,0.0010362243761974433
+mobj,target valid,1.0
+mobj,continuous proximity,0.02614123895183426
+mobj,causal validity,0.9885057471264368
+mobj,IM1,0.007514520962483831
+mobj,IM2,0.0010067385565539872
+mobj,target valid,1.0
+mobj,continuous proximity,0.026223022527155086
+mobj,causal validity,0.9886363636363636
+mobj,IM1,0.009827314918218498
+mobj,IM2,0.0007184849127560653
+mobj,target valid,1.0
+mobj,continuous proximity,0.026141165126938565
+mobj,causal validity,0.9887640449438202
+mobj,IM1,0.0034677932655728877
+mobj,IM2,0.00015572390391643823
+mobj,target valid,1.0
+mobj,continuous proximity,0.025962102292666378
+mobj,causal validity,0.9888888888888889
+mobj,IM1,0.00759864750763872
+mobj,IM2,0.0002388233182355674
+mobj,target valid,1.0
+mobj,continuous proximity,0.02610970806571858
+mobj,causal validity,0.989010989010989
+mobj,IM1,0.008466672977077531
+mobj,IM2,0.0006550876647055345
+mobj,target valid,1.0
+mobj,continuous proximity,0.025960700148275857
+mobj,causal validity,0.9891304347826086
+mobj,IM1,0.016297529961599933
+mobj,IM2,0.0008423649725234172
+mobj,target valid,1.0
+mobj,continuous proximity,0.026013383782717826
+mobj,causal validity,0.989247311827957
+mobj,IM1,0.009686914347858684
+mobj,IM2,0.000681437012619888
+mobj,target valid,1.0
+mobj,continuous proximity,0.026164517013462205
+mobj,causal validity,0.9893617021276596
+mobj,IM1,0.0051948145558745615
+mobj,IM2,0.0004160531729288744
+mobj,target valid,1.0
+mobj,continuous proximity,0.02624508143999856
+mobj,causal validity,0.9894736842105263
+mobj,IM1,0.00804613400705961
+mobj,IM2,0.00031328532370820803
+mobj,target valid,1.0
+mobj,continuous proximity,0.02608914043366915
+mobj,causal validity,0.9895833333333334
+mobj,IM1,0.010236358280881312
+mobj,IM2,0.0016540269389502366
+mobj,target valid,1.0
+mobj,continuous proximity,0.025899953536429116
+mobj,causal validity,0.9896907216494846
+mobj,IM1,0.010095570920232565
+mobj,IM2,0.0008232441695606857
+mobj,target valid,1.0
+mobj,continuous proximity,0.025701879454280957
+mobj,causal validity,0.9897959183673469
+mobj,IM1,0.012281290368062893
+mobj,IM2,0.0014842358034181573
+mobj,target valid,1.0
+mobj,continuous proximity,0.025674307327484994
+mobj,causal validity,0.98989898989899
+mobj,IM1,0.0076704542073051775
+mobj,IM2,0.0004419243848323518
+mobj,target valid,1.0
+mobj,continuous proximity,0.025831224385366836
+mobj,causal validity,0.99
+mobj,IM1,0.01289246962608774
+mobj,IM2,0.0023074003273542646
+mobj,target valid,1.0
+mobj,continuous proximity,0.025614436852736497
+mobj,causal validity,0.9900990099009901
+mobj,IM1,0.008556627172651519
+mobj,IM2,0.0014510696773814941
+mobj,target valid,1.0
+mobj,continuous proximity,0.025452542773262515
+mobj,causal validity,0.9901960784313726
+mobj,IM1,0.009010123845917537
+mobj,IM2,0.0006563513022616785
+mobj,target valid,1.0
+mobj,continuous proximity,0.02557451158826748
+mobj,causal validity,0.9902912621359223
+mobj,IM1,0.00624818910167496
+mobj,IM2,0.00034272603378759166
+mobj,target valid,1.0
+mobj,continuous proximity,0.02556963914173621
+mobj,causal validity,0.9903846153846154
+mobj,IM1,0.006805651071941375
+mobj,IM2,0.0003339786261685321
+mobj,target valid,1.0
+mobj,continuous proximity,0.025459582819767974
+mobj,causal validity,0.9904761904761905
+mobj,IM1,0.011011052271323735
+mobj,IM2,0.000513431982651554
+mobj,target valid,1.0
+mobj,continuous proximity,0.025618933368294627
+mobj,causal validity,0.9905660377358491
+mobj,IM1,0.00880904192151459
+mobj,IM2,0.0006329289496969794
+mobj,target valid,1.0
+mobj,continuous proximity,0.02542488693207935
+mobj,causal validity,0.9906542056074766
+mobj,IM1,0.008327847114690036
+mobj,IM2,0.0004928578638060965
+mobj,target valid,1.0
+mobj,continuous proximity,0.025458206737043465
+mobj,causal validity,0.9907407407407407
+mobj,IM1,0.008378353008190991
+mobj,IM2,0.0009533638073570992
+mobj,target valid,1.0
+mobj,continuous proximity,0.0255652405697039
+mobj,causal validity,0.9908256880733946
+mobj,IM1,0.01529721154789438
+mobj,IM2,0.0022846659008556934
+mobj,target valid,1.0
+mobj,continuous proximity,0.025464018614669525
+mobj,causal validity,0.990909090909091
+mobj,IM1,0.007411423698609896
+mobj,IM2,0.0005191937231117986
+mobj,target valid,1.0
+mobj,continuous proximity,0.025279248201285843
+mobj,causal validity,0.990990990990991
+mobj,IM1,0.007226953505525629
+mobj,IM2,0.0004571505950412451
+mobj,target valid,1.0
+mobj,continuous proximity,0.025215809198278233
+mobj,causal validity,0.9910714285714286
+mobj,IM1,0.006294051040329443
+mobj,IM2,0.0004687454452686858
+mobj,target valid,1.0
+mobj,continuous proximity,0.0251533921253574
+mobj,causal validity,0.9911504424778761
+mobj,IM1,0.007864523606608286
+mobj,IM2,0.00044948898856178777
+mobj,target valid,1.0
+mobj,continuous proximity,0.02518307803574793
+mobj,causal validity,0.9912280701754386
+mobj,IM1,0.0025448580398266816
+mobj,IM2,0.00015642595587392848
+mobj,target valid,1.0
+mobj,continuous proximity,0.0250958685244685
+mobj,causal validity,0.991304347826087
+mobj,IM1,0.004777654799994883
+mobj,IM2,0.0002857660057160772
+mobj,target valid,1.0
+mobj,continuous proximity,0.025305212225919232
+mobj,causal validity,0.9913793103448276
+mobj,IM1,0.012899574023929664
+mobj,IM2,0.00277983853494945
+mobj,target valid,1.0
+mobj,continuous proximity,0.02532872392024478
+mobj,causal validity,0.9914529914529915
+mobj,IM1,0.00486586299247763
+mobj,IM2,0.0003139526478908482
+mobj,target valid,1.0
+mobj,continuous proximity,0.025276798090574957
+mobj,causal validity,0.9915254237288136
+mobj,IM1,0.009119107060118934
+mobj,IM2,0.0004428588206796121
+mobj,target valid,1.0
+mobj,continuous proximity,0.025289224330370893
+mobj,causal validity,0.9915966386554622
+mobj,IM1,0.004509010296272269
+mobj,IM2,0.0004845108023621055
+mobj,target valid,1.0
+mobj,continuous proximity,0.025121699917103918
+mobj,causal validity,0.9916666666666667
+mobj,IM1,0.007794692250469478
+mobj,IM2,0.00045841997910796577
+mobj,target valid,1.0
+mobj,continuous proximity,0.025149611975327394
+mobj,causal validity,0.9917355371900827
+mobj,IM1,0.009613899106433739
+mobj,IM2,0.0016321998028518048
+mobj,target valid,1.0
+mobj,continuous proximity,0.025171857917484053
+mobj,causal validity,0.9918032786885246
+mobj,IM1,0.011773209563907967
+mobj,IM2,0.0006638610667676282
+mobj,target valid,1.0
+mobj,continuous proximity,0.025422483284654535
+mobj,causal validity,0.991869918699187
+mobj,IM1,0.007574735146042919
+mobj,IM2,0.0009070800512911453
+mobj,target valid,1.0
+mobj,continuous proximity,0.02537984614661892
+mobj,causal validity,0.9919354838709677
+mobj,IM1,0.006886662981857343
+mobj,IM2,0.0004608870060837997
+mobj,target valid,1.0
+mobj,continuous proximity,0.025303020807656822
+mobj,causal validity,0.992
+mobj,IM1,0.006502321464638509
+mobj,IM2,0.00044926737538041674
+mobj,target valid,1.0
+mobj,continuous proximity,0.02520224050150166
+mobj,causal validity,0.9920634920634921
+mobj,IM1,0.006012335760191305
+mobj,IM2,0.00032044975112983525
+mobj,target valid,1.0
+mobj,continuous proximity,0.025070560966137644
+mobj,causal validity,0.9921259842519685
+mobj,IM1,0.007191702017829804
+mobj,IM2,0.00039991543823300726
+mobj,target valid,1.0
+mobj,continuous proximity,0.0250591250147378
+mobj,causal validity,0.9921875
+mobj,IM1,0.009573943232524902
+mobj,IM2,0.000825033484095837
+mobj,target valid,1.0
+mobj,continuous proximity,0.025311925619348957
+mobj,causal validity,0.9844961240310077
+mobj,IM1,0.009967801287364055
+mobj,IM2,0.004774634669961582
+mobj,target valid,1.0
+mobj,continuous proximity,0.02529718841390145
+mobj,causal validity,0.9846153846153847
+mobj,IM1,0.003602541900695179
+mobj,IM2,0.00036988173725965195
+mobj,target valid,1.0
+mobj,continuous proximity,0.025127940938110615
+mobj,causal validity,0.9847328244274809
+mobj,IM1,0.009760122203949003
+mobj,IM2,0.0003703160909818111
+mobj,target valid,1.0
+mobj,continuous proximity,0.025109411510775018
+mobj,causal validity,0.9848484848484849
+mobj,IM1,0.004285197189520721
+mobj,IM2,0.0001480892791515697
+mobj,target valid,1.0
+mobj,continuous proximity,0.025150231297719625
+mobj,causal validity,0.9849624060150376
+mobj,IM1,0.009895728290918624
+mobj,IM2,0.0029484410038061438
+mobj,target valid,1.0
+mobj,continuous proximity,0.02524610559282268
+mobj,causal validity,0.9850746268656716
+mobj,IM1,0.00936249096134315
+mobj,IM2,0.0009137548000341965
+mobj,target valid,1.0
+mobj,continuous proximity,0.025309490046419164
+mobj,causal validity,0.9851851851851852
+mobj,IM1,0.00931552312840635
+mobj,IM2,0.0008946323713497291
+mobj,target valid,1.0
+mobj,continuous proximity,0.02534539317133414
+mobj,causal validity,0.9852941176470589
+mobj,IM1,0.009254091321078557
+mobj,IM2,0.0007026840908182826
+mobj,target valid,1.0
+mobj,continuous proximity,0.0258342411967398
+mobj,causal validity,0.9781021897810219
+mobj,IM1,0.009742398451400453
+mobj,IM2,0.004429182035284854
+mobj,target valid,1.0
+mobj,continuous proximity,0.025788597928037754
+mobj,causal validity,0.9782608695652174
+mobj,IM1,0.008774951910775547
+mobj,IM2,0.0006303251631281145
+mobj,target valid,1.0
+mobj,continuous proximity,0.025984528717737487
+mobj,causal validity,0.9784172661870504
+mobj,IM1,0.009541576929797969
+mobj,IM2,0.0007674628087023953
+mobj,target valid,1.0
+mobj,continuous proximity,0.02603177511443698
+mobj,causal validity,0.9785714285714285
+mobj,IM1,0.007478615456089691
+mobj,IM2,0.001466110852781617
+mobj,target valid,1.0
+mobj,continuous proximity,0.025958471234716996
+mobj,causal validity,0.9787234042553191
+mobj,IM1,0.00520756258877496
+mobj,IM2,0.00034283666022768395
+mobj,target valid,1.0
+mobj,continuous proximity,0.02603255297756237
+mobj,causal validity,0.9788732394366197
+mobj,IM1,0.006204249181392294
+mobj,IM2,0.0003971822998729431
+mobj,target valid,1.0
+mobj,continuous proximity,0.025907017302687924
+mobj,causal validity,0.9790209790209791
+mobj,IM1,0.005950216808877099
+mobj,IM2,0.0003841178428594339
+mobj,target valid,1.0
+mobj,continuous proximity,0.025831550735497786
+mobj,causal validity,0.9791666666666666
+mobj,IM1,0.008560440084465088
+mobj,IM2,0.0010182271258831355
+mobj,target valid,1.0
+mobj,continuous proximity,0.025838904958872918
+mobj,causal validity,0.9793103448275862
+mobj,IM1,0.004421977700931507
+mobj,IM2,0.0002408181121049635
+mobj,target valid,1.0
+mobj,continuous proximity,0.025739930967751595
+mobj,causal validity,0.9794520547945206
+mobj,IM1,0.008601345168972529
+mobj,IM2,0.0006481328287730932
+mobj,target valid,1.0
+mobj,continuous proximity,0.025810581229059087
+mobj,causal validity,0.9795918367346939
+mobj,IM1,0.00501792185806373
+mobj,IM2,0.00032363588056379214
+mobj,target valid,1.0
+mobj,continuous proximity,0.025861151366309027
+mobj,causal validity,0.9797297297297297
+mobj,IM1,0.007122569357836473
+mobj,IM2,0.0007528507163584413
+mobj,target valid,1.0
+mobj,continuous proximity,0.02616365936671976
+mobj,causal validity,0.9798657718120806
+mobj,IM1,0.010792945000017555
+mobj,IM2,0.0017756982051057647
+mobj,target valid,1.0
+mobj,continuous proximity,0.02618562090733813
+mobj,causal validity,0.98
+mobj,IM1,0.00576111730674906
+mobj,IM2,0.00042627822178287504
+mobj,target valid,1.0
+mobj,continuous proximity,0.02606158935323727
+mobj,causal validity,0.9801324503311258
+mobj,IM1,0.008642434917161624
+mobj,IM2,0.0014342877937812658
+mobj,target valid,1.0
+mobj,continuous proximity,0.026066618911138664
+mobj,causal validity,0.9802631578947368
+mobj,IM1,0.005294757702273087
+mobj,IM2,0.000361978259004664
+mobj,target valid,1.0
+mobj,continuous proximity,0.02600610078712884
+mobj,causal validity,0.9803921568627451
+mobj,IM1,0.005803107733244034
+mobj,IM2,0.0013560386256895069
+mobj,target valid,1.0
+mobj,continuous proximity,0.025915555556627324
+mobj,causal validity,0.9805194805194806
+mobj,IM1,0.004112774719979677
+mobj,IM2,0.00025545885799272745
+mobj,target valid,1.0
+mobj,continuous proximity,0.025855793676425747
+mobj,causal validity,0.9806451612903225
+mobj,IM1,0.008566293116144024
+mobj,IM2,0.000484683548498603
+mobj,target valid,1.0
+mobj,continuous proximity,0.025773418030956164
+mobj,causal validity,0.9807692307692307
+mobj,IM1,0.0076149857834176184
+mobj,IM2,0.00032807364002918537
+mobj,target valid,1.0
+mobj,continuous proximity,0.02572181700492086
+mobj,causal validity,0.9808917197452229
+mobj,IM1,0.008267571433653182
+mobj,IM2,0.0018419274640061642
+mobj,target valid,1.0
+mobj,continuous proximity,0.025793347612982225
+mobj,causal validity,0.9810126582278481
+mobj,IM1,0.002218916331723139
+mobj,IM2,0.00021563634383626359
+mobj,target valid,1.0
+mobj,continuous proximity,0.025790292671315888
+mobj,causal validity,0.9811320754716981
+mobj,IM1,0.0022544697373707264
+mobj,IM2,0.00015168692559060532
+mobj,target valid,1.0
+mobj,continuous proximity,0.025961308250904452
+mobj,causal validity,0.98125
+mobj,IM1,0.004029501652336032
+mobj,IM2,0.0005605851563716245
+mobj,target valid,1.0
+mobj,continuous proximity,0.025949529502304874
+mobj,causal validity,0.9813664596273292
+mobj,IM1,0.002354496224891472
+mobj,IM2,0.00018339726489473955
+mobj,target valid,1.0
+mobj,continuous proximity,0.025932949189187548
+mobj,causal validity,0.9814814814814815
+mobj,IM1,0.006469016080389033
+mobj,IM2,0.001902830559569202
+mobj,target valid,1.0
+mobj,continuous proximity,0.025972335398361857
+mobj,causal validity,0.9815950920245399
+mobj,IM1,0.007247753782358489
+mobj,IM2,0.0006545518305191573
+mobj,target valid,1.0
+mobj,continuous proximity,0.0259185986225284
+mobj,causal validity,0.9817073170731707
+mobj,IM1,0.004855189717615617
+mobj,IM2,0.00021574841870504338
+mobj,target valid,1.0
+mobj,continuous proximity,0.025867226226859694
+mobj,causal validity,0.9818181818181818
+mobj,IM1,0.005612730629938238
+mobj,IM2,0.00037054064257171555
+mobj,target valid,1.0
+mobj,continuous proximity,0.025916683277727743
+mobj,causal validity,0.9819277108433735
+mobj,IM1,0.005346323299197327
+mobj,IM2,0.0004143387707820216
+mobj,target valid,1.0
+mobj,continuous proximity,0.026127011926509746
+mobj,causal validity,0.9820359281437125
+mobj,IM1,0.007605824731254824
+mobj,IM2,0.0007725368401388163
+mobj,target valid,1.0
+mobj,continuous proximity,0.02601786796085621
+mobj,causal validity,0.9821428571428571
+mobj,IM1,0.005865346070355126
+mobj,IM2,0.00047100567045335514
+mobj,target valid,1.0
+mobj,continuous proximity,0.026146961691035652
+mobj,causal validity,0.9822485207100592
+mobj,IM1,0.004765444181241526
+mobj,IM2,0.0004152808032772985
+mobj,target valid,1.0
+mobj,continuous proximity,0.026354545385095064
+mobj,causal validity,0.9823529411764705
+mobj,IM1,0.004819545752839917
+mobj,IM2,0.00014394970192105924
+mobj,target valid,1.0
+mobj,continuous proximity,0.026310754837437906
+mobj,causal validity,0.9824561403508771
+mobj,IM1,0.004727191559157864
+mobj,IM2,0.00025897225075927657
+mobj,target valid,1.0
+mobj,continuous proximity,0.026361428658840464
+mobj,causal validity,0.9825581395348837
+mobj,IM1,0.0054024399105595915
+mobj,IM2,0.0012246478688634627
+mobj,target valid,1.0
+mobj,continuous proximity,0.026274635346475516
+mobj,causal validity,0.9826589595375722
+mobj,IM1,0.005028210690422803
+mobj,IM2,0.00034228479077412575
+mobj,target valid,1.0
+mobj,continuous proximity,0.02630874448427557
+mobj,causal validity,0.9827586206896551
+mobj,IM1,0.008842434943303508
+mobj,IM2,0.0022305798126160264
+mobj,target valid,1.0
+mobj,continuous proximity,0.026233727711099563
+mobj,causal validity,0.9828571428571429
+mobj,IM1,0.0017274593794763646
+mobj,IM2,0.00012297674517972815
+mobj,target valid,1.0
+mobj,continuous proximity,0.0262793849368403
+mobj,causal validity,0.9829545454545454
+mobj,IM1,0.008152441116412536
+mobj,IM2,0.00044703486235269827
+mobj,target valid,1.0
+mobj,continuous proximity,0.026308611877305557
+mobj,causal validity,0.9830508474576272
+mobj,IM1,0.0025485585104947604
+mobj,IM2,0.00027302031538821474
+mobj,target valid,1.0
+mobj,continuous proximity,0.026443300877550317
+mobj,causal validity,0.9831460674157303
+mobj,IM1,0.0080404655333514
+mobj,IM2,0.001963417415449419
+mobj,target valid,1.0
+mobj,continuous proximity,0.026431149610342902
+mobj,causal validity,0.9832402234636871
+mobj,IM1,0.004980428122627796
+mobj,IM2,0.0010564407985949077
+mobj,target valid,1.0
+mobj,continuous proximity,0.02640891101053359
+mobj,causal validity,0.9833333333333333
+mobj,IM1,0.006910277979274092
+mobj,IM2,0.0008436691523414692
+mobj,target valid,1.0
+mobj,continuous proximity,0.02634368825014015
+mobj,causal validity,0.9834254143646409
+mobj,IM1,0.003426427514069088
+mobj,IM2,0.0003943767490836915
+mobj,target valid,1.0
+mobj,continuous proximity,0.026317356623244498
+mobj,causal validity,0.9835164835164835
+mobj,IM1,0.007048829367969071
+mobj,IM2,0.0005163117777332894
+mobj,target valid,1.0
+mobj,continuous proximity,0.02632033289422384
+mobj,causal validity,0.9836065573770492
+mobj,IM1,0.008075161384621414
+mobj,IM2,0.001475880293723976
+mobj,target valid,1.0
+mobj,continuous proximity,0.026295136253614636
+mobj,causal validity,0.9836956521739131
+mobj,IM1,0.0028466034951939102
+mobj,IM2,0.00013051638552755366
+mobj,target valid,1.0
+mobj,continuous proximity,0.026237174392399653
+mobj,causal validity,0.9837837837837838
+mobj,IM1,0.005534422288917481
+mobj,IM2,0.0007810581826181531
+mobj,target valid,1.0
+mobj,continuous proximity,0.026133612344820062
+mobj,causal validity,0.9838709677419355
+mobj,IM1,0.0025040646497259387
+mobj,IM2,0.00023954572250598714
+mobj,target valid,1.0
+mobj,continuous proximity,0.026104175667679877
+mobj,causal validity,0.983957219251337
+mobj,IM1,0.0032264114930207668
+mobj,IM2,7.446921290949747e-05
+mobj,target valid,1.0
+mobj,continuous proximity,0.026000732291609374
+mobj,causal validity,0.9840425531914894
+mobj,IM1,0.004271935053313605
+mobj,IM2,0.00044389050460028723
+mobj,target valid,1.0
+mobj,continuous proximity,0.026104324527395778
+mobj,causal validity,0.9841269841269841
+mobj,IM1,0.00872346986930339
+mobj,IM2,0.0018565927967142556
+mobj,target valid,1.0
+mobj,continuous proximity,0.0260931063530269
+mobj,causal validity,0.9842105263157894
+mobj,IM1,0.0031610946709240773
+mobj,IM2,0.0003583266973570165
+mobj,target valid,1.0
+mobj,continuous proximity,0.0261947815396661
+mobj,causal validity,0.9842931937172775
+mobj,IM1,0.006568307795798912
+mobj,IM2,0.0005005857834727487
+mobj,target valid,1.0
+mobj,continuous proximity,0.02617872793361202
+mobj,causal validity,0.984375
+mobj,IM1,0.006619957827014452
+mobj,IM2,0.0008548085394300409
+mobj,target valid,1.0
+mobj,continuous proximity,0.02619401723704368
+mobj,causal validity,0.9844559585492227
+mobj,IM1,0.004973618588186417
+mobj,IM2,0.00036019254676307254
+mobj,target valid,1.0
+mobj,continuous proximity,0.02612637442280673
+mobj,causal validity,0.9845360824742269
+mobj,IM1,0.003053952379636155
+mobj,IM2,0.00019972760057181227
+mobj,target valid,1.0
+mobj,continuous proximity,0.02607423549489099
+mobj,causal validity,0.9846153846153847
+mobj,IM1,0.0023171159478155056
+mobj,IM2,0.0001745314621133039
+mobj,target valid,1.0
+mobj,continuous proximity,0.02613195938762426
+mobj,causal validity,0.9846938775510204
+mobj,IM1,0.006690882031610282
+mobj,IM2,0.0006345611332855181
+mobj,target valid,1.0
+mobj,continuous proximity,0.026021668039470706
+mobj,causal validity,0.9847715736040609
+mobj,IM1,0.0018394158071327446
+mobj,IM2,0.00011333380110511263
+mobj,target valid,1.0
+mobj,continuous proximity,0.025990116821954807
+mobj,causal validity,0.9848484848484849
+mobj,IM1,0.0066191915901922475
+mobj,IM2,0.0004033895074419284
+mobj,target valid,1.0
+mobj,continuous proximity,0.026058066843551067
+mobj,causal validity,0.9849246231155779
+mobj,IM1,0.005940484428816761
+mobj,IM2,0.0005046438050459834
+mobj,target valid,1.0
+mobj,continuous proximity,0.02602644437382387
+mobj,causal validity,0.985
+mobj,IM1,0.0023078697401000357
+mobj,IM2,0.00019412550909786346
