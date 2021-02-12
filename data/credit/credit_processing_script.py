@@ -1,12 +1,25 @@
 import numpy as np
 import pandas as pd
-from paper.paths import *
-pd.options.mode.chained_assignment = None
+import yaml
+
+# from paper.paths import *
+# pd.options.mode.chained_assignment = None
 
 # input vars
-data_name = 'credit'
-raw_data_file = '%s/%s/%s_raw.csv' % (data_dir, data_name, data_name)
-processed_file = '%s/%s_processed.csv' % (data_dir, data_name)
+# data_name = 'credit'
+# raw_data_file = '%s/%s/%s_raw.csv' % (data_dir, data_name, data_name)
+# processed_file = '%s/%s_processed.csv' % (data_dir, data_name)
+
+
+"""Load configuration"""
+with open('/home/trduong/Data/multiobj-scm-cf/src/config.yml') as file:
+    conf = yaml.safe_load(file)
+
+raw_data_file = conf['data_credit']
+processed_file = conf['processed_data_credit']
+# raw_data_file = '%s/%s/%s_raw.csv' % (data_dir, data_name, data_name)
+# processed_file = '%s/%s_processed.csv' % (data_dir, data_name)
+
 
 ##### Credit Data Processing
 raw_df = pd.read_csv(raw_data_file, index_col = 0)
@@ -24,14 +37,15 @@ processed_df['NoDefaultNextMonth'] = 1.0 - raw_df['default payment next month']
 # processed_df['Female'] = raw_df['SEX'] == 2
 
 # Married (1 = married; 2 = single; 3 = other)
-processed_df['Married'] = raw_df['MARRIAGE'] == 1
-processed_df['Single'] = raw_df['MARRIAGE'] == 2
+# processed_df['Married'] = raw_df['MARRIAGE'] == 1
+# processed_df['Single'] = raw_df['MARRIAGE'] == 2
 
 # Age
-processed_df['Age_lt_25'] = raw_df['AGE'] < 25
-processed_df['Age_in_25_to_40'] = raw_df['AGE'].between(25, 40, inclusive = True)
-processed_df['Age_in_40_to_59'] = raw_df['AGE'].between(40, 59, inclusive = True)
-processed_df['Age_geq_60'] = raw_df['AGE'] >= 60
+# processed_df['Age_lt_25'] = raw_df['AGE'] < 25
+# processed_df['Age_in_25_to_40'] = raw_df['AGE'].between(25, 40, inclusive = True)
+# processed_df['Age_in_40_to_59'] = raw_df['AGE'].between(40, 59, inclusive = True)
+# processed_df['Age_geq_60'] = raw_df['AGE'] >= 60
+processed_df['AGE'] = raw_df['AGE']
 
 # EducationLevel (currently, 1 = graduate school; 2 = university; 3 = high school; 4 = others)
 processed_df['EducationLevel'] = 0

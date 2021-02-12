@@ -1,0 +1,437 @@
+2021-02-12 11:18:28,224 genetic      DEBUG    Store result
+2021-02-12 11:20:07,810 genetic      DEBUG    Store result
+2021-02-12 11:20:12,356 genetic      DEBUG    Setup for genetic algorithm
+2021-02-12 11:20:12,358 genetic      DEBUG    Define algorithm
+2021-02-12 11:20:12,377 genetic      DEBUG    Run optimization progress
+2021-02-12 12:24:00,073 genetic      DEBUG    Store result
+2021-02-12 12:24:04,595 genetic      DEBUG    ['real', 'int', 'int', 'int', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real']
+2021-02-12 12:25:05,888 genetic      DEBUG    Store result
+2021-02-12 12:25:10,456 genetic      DEBUG    ['real', 'int', 'int', 'int', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real']
+2021-02-12 12:25:10,457 genetic      DEBUG    ['real', 'int', 'int', 'int', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real']
+2021-02-12 12:25:27,939 genetic      DEBUG    Store result
+2021-02-12 12:25:32,372 genetic      DEBUG    ['real', 'int', 'int', 'int', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real']
+2021-02-12 12:25:32,373 genetic      DEBUG    [120000      2      2      2     26     -1      2      0      0      0
+      2   2682   1725   2682   3272   3455   3261      0   1000   1000
+   1000      0   2000]
+2021-02-12 13:04:00,832 genetic      DEBUG    Store result
+2021-02-12 13:04:05,522 genetic      DEBUG    ['real', 'int', 'int', 'int', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real']
+2021-02-12 13:04:05,523 genetic      DEBUG    [10000, 1, 0, 0, 21, -2, -2, -2, -2, -2, -2, -165580, -69777, -157264, -170000, -81334, -339603, 0, 0, 0, 0, 0, 0]
+2021-02-12 13:04:05,523 genetic      DEBUG    [1000000, 2, 6, 3, 79, 8, 8, 8, 8, 8, 8, 964511, 983931, 1664089, 891586, 927171, 961664, 873552, 1684259, 896040, 621000, 426529, 528666]
+2021-02-12 13:09:43,191 genetic      DEBUG    Store result
+2021-02-12 13:09:47,965 genetic      DEBUG    ['real', 'int', 'int', 'int', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real']
+2021-02-12 13:09:47,966 genetic      DEBUG    [10000, 1, 0, 0, 21, -2, -2, -2, -2, -2, -2, -165580, -69777, -157264, -170000, -81334, -339603, 0, 0, 0, 0, 0, 0]
+2021-02-12 13:09:47,966 genetic      DEBUG    [1000000, 2, 6, 3, 79, 8, 8, 8, 8, 8, 8, 964511, 983931, 1664089, 891586, 927171, 961664, 873552, 1684259, 896040, 621000, 426529, 528666]
+2021-02-12 13:15:44,469 genetic      DEBUG    Store result
+2021-02-12 13:15:49,189 genetic      DEBUG    ['real', 'int', 'int', 'int', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real']
+2021-02-12 13:15:49,190 genetic      DEBUG    [10000, 1, 0, 0, 21, -2, -2, -2, -2, -2, -2, -165580, -69777, -157264, -170000, -81334, -339603, 0, 0, 0, 0, 0, 0]
+2021-02-12 13:15:49,190 genetic      DEBUG    [1000000, 2, 6, 3, 79, 8, 8, 8, 8, 8, 8, 964511, 983931, 1664089, 891586, 927171, 961664, 873552, 1684259, 896040, 621000, 426529, 528666]
+2021-02-12 13:15:49,190 genetic      DEBUG    [120000      2      2      2     26     -1      2      0      0      0
+      2   2682   1725   2682   3272   3455   3261      0   1000   1000
+   1000      0   2000]
+2021-02-12 13:15:49,192 genetic      DEBUG    Define algorithm
+2021-02-12 13:15:49,208 genetic      DEBUG    Run optimization progress
+2021-02-12 13:26:23,721 genetic      DEBUG    Store result
+2021-02-12 13:26:28,548 genetic      DEBUG    ['real', 'int', 'int', 'int', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real']
+2021-02-12 13:26:28,548 genetic      DEBUG    [10000, 1, 0, 0, 21, -2, -2, -2, -2, -2, -2, -165580, -69777, -157264, -170000, -81334, -339603, 0, 0, 0, 0, 0, 0]
+2021-02-12 13:26:28,548 genetic      DEBUG    [1000000, 2, 6, 3, 79, 8, 8, 8, 8, 8, 8, 964511, 983931, 1664089, 891586, 927171, 961664, 873552, 1684259, 896040, 621000, 426529, 528666]
+2021-02-12 13:26:28,549 genetic      DEBUG    [120000      2      2      2     26     -1      2      0      0      0
+      2   2682   1725   2682   3272   3455   3261      0   1000   1000
+   1000      0   2000]
+2021-02-12 13:26:28,551 genetic      DEBUG    Define algorithm
+2021-02-12 13:26:28,564 genetic      DEBUG    Run optimization progress
+2021-02-12 13:36:07,777 genetic      DEBUG    Store result
+2021-02-12 13:36:12,444 genetic      DEBUG    ['real', 'int', 'int', 'int', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real']
+2021-02-12 13:36:12,445 genetic      DEBUG    [10000, 1, 0, 0, 21, -2, -2, -2, -2, -2, -2, -165580, -69777, -157264, -170000, -81334, -339603, 0, 0, 0, 0, 0, 0]
+2021-02-12 13:36:12,445 genetic      DEBUG    [1000000, 2, 6, 3, 79, 8, 8, 8, 8, 8, 8, 964511, 983931, 1664089, 891586, 927171, 961664, 873552, 1684259, 896040, 621000, 426529, 528666]
+2021-02-12 13:36:12,445 genetic      DEBUG    [120000      2      2      2     26     -1      2      0      0      0
+      2   2682   1725   2682   3272   3455   3261      0   1000   1000
+   1000      0   2000]
+2021-02-12 13:36:12,447 genetic      DEBUG    Define algorithm
+2021-02-12 13:36:12,462 genetic      DEBUG    Run optimization progress
+2021-02-12 13:55:09,967 genetic      DEBUG    Store result
+2021-02-12 13:55:14,834 genetic      DEBUG    ['real', 'int', 'int', 'int', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real']
+2021-02-12 13:55:14,834 genetic      DEBUG    [10000, 1, 0, 0, 21, -2, -2, -2, -2, -2, -2, -165580, -69777, -157264, -170000, -81334, -339603, 0, 0, 0, 0, 0, 0]
+2021-02-12 13:55:14,834 genetic      DEBUG    [1000000, 2, 6, 3, 79, 8, 8, 8, 8, 8, 8, 964511, 983931, 1664089, 891586, 927171, 961664, 873552, 1684259, 896040, 621000, 426529, 528666]
+2021-02-12 13:55:14,834 genetic      DEBUG    [120000      2      2      2     26     -1      2      0      0      0
+      2   2682   1725   2682   3272   3455   3261      0   1000   1000
+   1000      0   2000]
+2021-02-12 13:55:14,836 genetic      DEBUG    Define algorithm
+2021-02-12 13:55:14,852 genetic      DEBUG    Run optimization progress
+2021-02-12 13:58:11,883 genetic      DEBUG    Store result
+2021-02-12 13:58:16,154 genetic      DEBUG    ['real', 'int', 'int', 'int', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real']
+2021-02-12 13:58:16,154 genetic      DEBUG    [10000, 1, 0, 0, 21, -2, -2, -2, -2, -2, -2, -165580, -69777, -157264, -170000, -81334, -339603, 0, 0, 0, 0, 0, 0]
+2021-02-12 13:58:16,154 genetic      DEBUG    [1000000, 2, 6, 3, 79, 8, 8, 8, 8, 8, 8, 964511, 983931, 1664089, 891586, 927171, 961664, 873552, 1684259, 896040, 621000, 426529, 528666]
+2021-02-12 13:58:16,155 genetic      DEBUG    [120000      2      2      2     26     -1      2      0      0      0
+      2   2682   1725   2682   3272   3455   3261      0   1000   1000
+   1000      0   2000]
+2021-02-12 13:58:16,157 genetic      DEBUG    Define algorithm
+2021-02-12 13:58:16,173 genetic      DEBUG    Run optimization progress
+2021-02-12 13:58:37,783 genetic      DEBUG    Store result
+2021-02-12 13:58:42,631 genetic      DEBUG    ['real', 'int', 'int', 'int', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real']
+2021-02-12 13:58:42,631 genetic      DEBUG    [10000, 1, 0, 0, 21, -2, -2, -2, -2, -2, -2, -165580, -69777, -157264, -170000, -81334, -339603, 0, 0, 0, 0, 0, 0]
+2021-02-12 13:58:42,631 genetic      DEBUG    [1000000, 2, 6, 3, 79, 8, 8, 8, 8, 8, 8, 964511, 983931, 1664089, 891586, 927171, 961664, 873552, 1684259, 896040, 621000, 426529, 528666]
+2021-02-12 13:58:42,632 genetic      DEBUG    [120000      2      2      2     26     -1      2      0      0      0
+      2   2682   1725   2682   3272   3455   3261      0   1000   1000
+   1000      0   2000]
+2021-02-12 13:58:42,634 genetic      DEBUG    Define algorithm
+2021-02-12 13:58:42,643 genetic      DEBUG    Run optimization progress
+2021-02-12 14:00:40,710 genetic      DEBUG    Store result
+2021-02-12 14:00:45,657 genetic      DEBUG    ['real', 'int', 'int', 'int', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real']
+2021-02-12 14:00:45,658 genetic      DEBUG    [10000, 1, 0, 0, 21, -2, -2, -2, -2, -2, -2, -165580, -69777, -157264, -170000, -81334, -339603, 0, 0, 0, 0, 0, 0]
+2021-02-12 14:00:45,658 genetic      DEBUG    [1000000, 2, 6, 3, 79, 8, 8, 8, 8, 8, 8, 964511, 983931, 1664089, 891586, 927171, 961664, 873552, 1684259, 896040, 621000, 426529, 528666]
+2021-02-12 14:00:45,658 genetic      DEBUG    [120000      2      2      2     26     -1      2      0      0      0
+      2   2682   1725   2682   3272   3455   3261      0   1000   1000
+   1000      0   2000]
+2021-02-12 14:00:45,660 genetic      DEBUG    Define algorithm
+2021-02-12 14:00:45,676 genetic      DEBUG    Run optimization progress
+2021-02-12 14:05:11,875 genetic      DEBUG    Store result
+2021-02-12 14:05:16,594 genetic      DEBUG    ['real', 'int', 'int', 'int', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real']
+2021-02-12 14:05:16,594 genetic      DEBUG    [10000, 1, 0, 0, 21, -2, -2, -2, -2, -2, -2, -165580, -69777, -157264, -170000, -81334, -339603, 0, 0, 0, 0, 0, 0]
+2021-02-12 14:05:16,594 genetic      DEBUG    [1000000, 2, 6, 3, 79, 8, 8, 8, 8, 8, 8, 964511, 983931, 1664089, 891586, 927171, 961664, 873552, 1684259, 896040, 621000, 426529, 528666]
+2021-02-12 14:05:16,595 genetic      DEBUG    [120000      2      2      2     26     -1      2      0      0      0
+      2   2682   1725   2682   3272   3455   3261      0   1000   1000
+   1000      0   2000]
+2021-02-12 14:05:16,596 genetic      DEBUG    Define algorithm
+2021-02-12 14:05:16,611 genetic      DEBUG    Run optimization progress
+2021-02-12 14:10:53,971 genetic      DEBUG    Store result
+2021-02-12 14:10:58,830 genetic      DEBUG    ['real', 'int', 'int', 'int', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real']
+2021-02-12 14:10:58,830 genetic      DEBUG    [10000, 1, 0, 0, 21, -2, -2, -2, -2, -2, -2, -165580, -69777, -157264, -170000, -81334, -339603, 0, 0, 0, 0, 0, 0]
+2021-02-12 14:10:58,831 genetic      DEBUG    [1000000, 2, 6, 3, 79, 8, 8, 8, 8, 8, 8, 964511, 983931, 1664089, 891586, 927171, 961664, 873552, 1684259, 896040, 621000, 426529, 528666]
+2021-02-12 14:10:58,832 genetic      DEBUG    [120000      2      2      2     26     -1      2      0      0      0
+      2   2682   1725   2682   3272   3455   3261      0   1000   1000
+   1000      0   2000]
+2021-02-12 14:10:58,834 genetic      DEBUG    Define algorithm
+2021-02-12 14:10:58,838 genetic      DEBUG    Run optimization progress
+2021-02-12 14:15:37,976 genetic      DEBUG    Store result
+2021-02-12 14:15:42,768 genetic      DEBUG    ['real', 'int', 'int', 'int', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real']
+2021-02-12 14:15:42,768 genetic      DEBUG    [10000, 1, 0, 0, 21, -2, -2, -2, -2, -2, -2, -165580, -69777, -157264, -170000, -81334, -339603, 0, 0, 0, 0, 0, 0]
+2021-02-12 14:15:42,768 genetic      DEBUG    [1000000, 2, 6, 3, 79, 8, 8, 8, 8, 8, 8, 964511, 983931, 1664089, 891586, 927171, 961664, 873552, 1684259, 896040, 621000, 426529, 528666]
+2021-02-12 14:15:42,768 genetic      DEBUG    Number of variable 23
+2021-02-12 14:15:42,769 genetic      DEBUG    Original
+2021-02-12 14:15:42,769 genetic      DEBUG    [120000      2      2      2     26     -1      2      0      0      0
+      2   2682   1725   2682   3272   3455   3261      0   1000   1000
+   1000      0   2000]
+2021-02-12 14:15:42,769 genetic      DEBUG    23
+2021-02-12 14:15:42,771 genetic      DEBUG    Define algorithm
+2021-02-12 14:15:42,774 genetic      DEBUG    Run optimization progress
+2021-02-12 14:16:40,849 genetic      DEBUG    Store result
+2021-02-12 14:16:45,664 genetic      DEBUG    ['real', 'int', 'int', 'int', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real']
+2021-02-12 14:16:45,664 genetic      DEBUG    [10000, 1, 0, 0, 21, -2, -2, -2, -2, -2, -2, -165580, -69777, -157264, -170000, -81334, -339603, 0, 0, 0, 0, 0, 0]
+2021-02-12 14:16:45,664 genetic      DEBUG    [1000000, 2, 6, 3, 79, 8, 8, 8, 8, 8, 8, 964511, 983931, 1664089, 891586, 927171, 961664, 873552, 1684259, 896040, 621000, 426529, 528666]
+2021-02-12 14:16:45,664 genetic      DEBUG    Number of variable 23
+2021-02-12 14:16:45,665 genetic      DEBUG    Original
+2021-02-12 14:16:45,665 genetic      DEBUG    [120000      2      2      2     26     -1      2      0      0      0
+      2   2682   1725   2682   3272   3455   3261      0   1000   1000
+   1000      0   2000]
+2021-02-12 14:16:45,665 genetic      DEBUG    23
+2021-02-12 14:17:34,724 genetic      DEBUG    Store result
+2021-02-12 14:17:39,587 genetic      DEBUG    ['real', 'int', 'int', 'int', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real']
+2021-02-12 14:17:39,588 genetic      DEBUG    [10000, 1, 0, 0, 21, -2, -2, -2, -2, -2, -2, -165580, -69777, -157264, -170000, -81334, -339603, 0, 0, 0, 0, 0, 0]
+2021-02-12 14:17:39,588 genetic      DEBUG    [1000000, 2, 6, 3, 79, 8, 8, 8, 8, 8, 8, 964511, 983931, 1664089, 891586, 927171, 961664, 873552, 1684259, 896040, 621000, 426529, 528666]
+2021-02-12 14:17:39,588 genetic      DEBUG    23
+2021-02-12 14:17:39,588 genetic      DEBUG    Number of variable 23
+2021-02-12 14:17:39,588 genetic      DEBUG    Original
+2021-02-12 14:17:39,588 genetic      DEBUG    [120000      2      2      2     26     -1      2      0      0      0
+      2   2682   1725   2682   3272   3455   3261      0   1000   1000
+   1000      0   2000]
+2021-02-12 14:17:39,589 genetic      DEBUG    23
+2021-02-12 14:22:56,709 genetic      DEBUG    Store result
+2021-02-12 14:23:01,435 genetic      DEBUG    Min and max
+2021-02-12 14:23:01,435 genetic      DEBUG    ['real', 'int', 'int', 'int', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real']
+2021-02-12 14:23:01,435 genetic      DEBUG    [10000, 1, 0, 0, 21, -2, -2, -2, -2, -2, -2, -165580, -69777, -157264, -170000, -81334, -339603, 0, 0, 0, 0, 0, 0]
+2021-02-12 14:23:01,435 genetic      DEBUG    [1000000, 2, 6, 3, 79, 8, 8, 8, 8, 8, 8, 964511, 983931, 1664089, 891586, 927171, 961664, 873552, 1684259, 896040, 621000, 426529, 528666]
+2021-02-12 14:23:01,435 genetic      DEBUG    23
+2021-02-12 14:23:51,628 genetic      DEBUG    Store result
+2021-02-12 14:23:56,626 genetic      DEBUG    Min and max
+2021-02-12 14:23:56,626 genetic      DEBUG    ['real', 'int', 'int', 'int', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real']
+2021-02-12 14:23:56,626 genetic      DEBUG    [10000, 1, 0, 0, 21, -2, -2, -2, -2, -2, -2, -165580, -69777, -157264, -170000, -81334, -339603, 0, 0, 0, 0, 0, 0]
+2021-02-12 14:23:56,626 genetic      DEBUG    [1000000, 2, 6, 3, 79, 8, 8, 8, 8, 8, 8, 964511, 983931, 1664089, 891586, 927171, 961664, 873552, 1684259, 896040, 621000, 426529, 528666]
+2021-02-12 14:23:56,626 genetic      DEBUG    23
+2021-02-12 14:23:56,626 genetic      DEBUG    [ -990000       -1       -6       -3      -58      -10      -10      -10
+      -10      -10      -10 -1130091 -1053708 -1821353 -1061586 -1008505
+ -1301267  -873552 -1684259  -896040  -621000  -426529  -528666]
+2021-02-12 14:23:56,627 genetic      DEBUG    Number of variable 23
+2021-02-12 14:23:56,627 genetic      DEBUG    Original
+2021-02-12 14:23:56,627 genetic      DEBUG    [120000      2      2      2     26     -1      2      0      0      0
+      2   2682   1725   2682   3272   3455   3261      0   1000   1000
+   1000      0   2000]
+2021-02-12 14:23:56,628 genetic      DEBUG    23
+2021-02-12 14:25:00,019 genetic      DEBUG    Store result
+2021-02-12 14:25:05,023 genetic      DEBUG    Min and max
+2021-02-12 14:25:05,024 genetic      DEBUG    ['real', 'int', 'int', 'int', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real']
+2021-02-12 14:25:05,024 genetic      DEBUG    [1000000, 2, 6, 3, 79, 8, 8, 8, 8, 8, 8, 964511, 983931, 1664089, 891586, 927171, 961664, 873552, 1684259, 896040, 621000, 426529, 528666]
+2021-02-12 14:25:05,024 genetic      DEBUG    [10000, 1, 0, 0, 21, -2, -2, -2, -2, -2, -2, -165580, -69777, -157264, -170000, -81334, -339603, 0, 0, 0, 0, 0, 0]
+2021-02-12 14:25:05,024 genetic      DEBUG    23
+2021-02-12 14:25:05,024 genetic      DEBUG    [ 990000       1       6       3      58      10      10      10      10
+      10      10 1130091 1053708 1821353 1061586 1008505 1301267  873552
+ 1684259  896040  621000  426529  528666]
+2021-02-12 14:25:05,025 genetic      DEBUG    Number of variable 23
+2021-02-12 14:25:05,026 genetic      DEBUG    Original
+2021-02-12 14:25:05,026 genetic      DEBUG    [120000      2      2      2     26     -1      2      0      0      0
+      2   2682   1725   2682   3272   3455   3261      0   1000   1000
+   1000      0   2000]
+2021-02-12 14:25:05,026 genetic      DEBUG    23
+2021-02-12 14:25:17,174 genetic      DEBUG    Store result
+2021-02-12 14:25:21,590 genetic      DEBUG    Min and max
+2021-02-12 14:25:21,590 genetic      DEBUG    ['real', 'int', 'int', 'int', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real', 'real']
+2021-02-12 14:25:21,590 genetic      DEBUG    [1000000, 2, 6, 3, 79, 8, 8, 8, 8, 8, 8, 964511, 983931, 1664089, 891586, 927171, 961664, 873552, 1684259, 896040, 621000, 426529, 528666]
+2021-02-12 14:25:21,590 genetic      DEBUG    [10000, 1, 0, 0, 21, -2, -2, -2, -2, -2, -2, -165580, -69777, -157264, -170000, -81334, -339603, 0, 0, 0, 0, 0, 0]
+2021-02-12 14:25:21,590 genetic      DEBUG    23
+2021-02-12 14:25:21,590 genetic      DEBUG    [ 990000       1       6       3      58      10      10      10      10
+      10      10 1130091 1053708 1821353 1061586 1008505 1301267  873552
+ 1684259  896040  621000  426529  528666]
+2021-02-12 14:25:21,591 genetic      DEBUG    Number of variable 23
+2021-02-12 14:25:21,591 genetic      DEBUG    Original
+2021-02-12 14:25:21,591 genetic      DEBUG    [120000      2      2      2     26     -1      2      0      0      0
+      2   2682   1725   2682   3272   3455   3261      0   1000   1000
+   1000      0   2000]
+2021-02-12 14:25:21,592 genetic      DEBUG    23
+2021-02-12 14:25:21,593 genetic      DEBUG    Define algorithm
+2021-02-12 14:25:21,596 genetic      DEBUG    Run optimization progress
+2021-02-12 14:27:18,257 genetic      DEBUG    Store result
+2021-02-12 14:27:23,012 genetic      DEBUG    Define algorithm
+2021-02-12 14:27:23,015 genetic      DEBUG    Run optimization progress
+2021-02-12 14:27:24,919 genetic      DEBUG    Define algorithm
+2021-02-12 14:27:24,920 genetic      DEBUG    Run optimization progress
+2021-02-12 14:30:03,990 genetic      DEBUG    Store result
+2021-02-12 14:30:08,305 genetic      DEBUG    Define algorithm
+2021-02-12 14:30:08,309 genetic      DEBUG    Run optimization progress
+2021-02-12 14:32:28,823 genetic      DEBUG    Define algorithm
+2021-02-12 14:32:28,849 genetic      DEBUG    Run optimization progress
+2021-02-12 16:22:16,394 genetic      DEBUG    Store result
+2021-02-12 16:22:21,290 genetic      DEBUG    Define algorithm
+2021-02-12 16:22:21,293 genetic      DEBUG    Run optimization progress
+2021-02-12 16:24:40,379 genetic      DEBUG    Define algorithm
+2021-02-12 16:24:40,405 genetic      DEBUG    Run optimization progress
+2021-02-12 16:27:03,211 genetic      DEBUG    Define algorithm
+2021-02-12 16:27:03,234 genetic      DEBUG    Run optimization progress
+2021-02-12 16:42:24,508 genetic      DEBUG    Store result
+2021-02-12 16:49:20,245 genetic      DEBUG    Store result
+2021-02-12 16:49:24,961 genetic      DEBUG    26420
+2021-02-12 16:58:20,016 genetic      DEBUG    Store result
+2021-02-12 16:58:25,120 genetic      DEBUG    Define algorithm
+2021-02-12 16:58:25,123 genetic      DEBUG    Run optimization progress
+2021-02-12 17:00:46,212 genetic      DEBUG    Define algorithm
+2021-02-12 17:00:46,237 genetic      DEBUG    Run optimization progress
+2021-02-12 17:03:06,569 genetic      DEBUG    Define algorithm
+2021-02-12 17:03:06,586 genetic      DEBUG    Run optimization progress
+2021-02-12 17:05:26,158 genetic      DEBUG    Define algorithm
+2021-02-12 17:05:26,160 genetic      DEBUG    Run optimization progress
+2021-02-12 17:07:49,942 genetic      DEBUG    Define algorithm
+2021-02-12 17:07:49,944 genetic      DEBUG    Run optimization progress
+2021-02-12 17:10:09,226 genetic      DEBUG    Define algorithm
+2021-02-12 17:10:09,229 genetic      DEBUG    Run optimization progress
+2021-02-12 17:12:31,772 genetic      DEBUG    Define algorithm
+2021-02-12 17:12:31,774 genetic      DEBUG    Run optimization progress
+2021-02-12 17:14:55,346 genetic      DEBUG    Define algorithm
+2021-02-12 17:14:55,348 genetic      DEBUG    Run optimization progress
+2021-02-12 17:17:15,645 genetic      DEBUG    Define algorithm
+2021-02-12 17:17:15,650 genetic      DEBUG    Run optimization progress
+2021-02-12 17:19:34,192 genetic      DEBUG    Define algorithm
+2021-02-12 17:19:34,193 genetic      DEBUG    Run optimization progress
+2021-02-12 17:21:49,903 genetic      DEBUG    Define algorithm
+2021-02-12 17:21:49,904 genetic      DEBUG    Run optimization progress
+2021-02-12 17:24:07,380 genetic      DEBUG    Define algorithm
+2021-02-12 17:24:07,382 genetic      DEBUG    Run optimization progress
+2021-02-12 17:26:24,483 genetic      DEBUG    Define algorithm
+2021-02-12 17:26:24,485 genetic      DEBUG    Run optimization progress
+2021-02-12 17:28:40,570 genetic      DEBUG    Define algorithm
+2021-02-12 17:28:40,572 genetic      DEBUG    Run optimization progress
+2021-02-12 17:30:58,054 genetic      DEBUG    Define algorithm
+2021-02-12 17:30:58,055 genetic      DEBUG    Run optimization progress
+2021-02-12 17:33:15,512 genetic      DEBUG    Define algorithm
+2021-02-12 17:33:15,513 genetic      DEBUG    Run optimization progress
+2021-02-12 17:35:31,740 genetic      DEBUG    Define algorithm
+2021-02-12 17:35:31,741 genetic      DEBUG    Run optimization progress
+2021-02-12 17:37:48,729 genetic      DEBUG    Define algorithm
+2021-02-12 17:37:48,731 genetic      DEBUG    Run optimization progress
+2021-02-12 17:40:05,175 genetic      DEBUG    Define algorithm
+2021-02-12 17:40:05,176 genetic      DEBUG    Run optimization progress
+2021-02-12 17:42:20,817 genetic      DEBUG    Define algorithm
+2021-02-12 17:42:20,820 genetic      DEBUG    Run optimization progress
+2021-02-12 17:44:36,551 genetic      DEBUG    Define algorithm
+2021-02-12 17:44:36,552 genetic      DEBUG    Run optimization progress
+2021-02-12 17:46:51,090 genetic      DEBUG    Define algorithm
+2021-02-12 17:46:51,091 genetic      DEBUG    Run optimization progress
+2021-02-12 17:49:07,915 genetic      DEBUG    Define algorithm
+2021-02-12 17:49:07,916 genetic      DEBUG    Run optimization progress
+2021-02-12 17:51:24,309 genetic      DEBUG    Define algorithm
+2021-02-12 17:51:24,311 genetic      DEBUG    Run optimization progress
+2021-02-12 17:53:40,968 genetic      DEBUG    Define algorithm
+2021-02-12 17:53:40,970 genetic      DEBUG    Run optimization progress
+2021-02-12 17:55:57,840 genetic      DEBUG    Define algorithm
+2021-02-12 17:55:57,842 genetic      DEBUG    Run optimization progress
+2021-02-12 17:58:13,716 genetic      DEBUG    Define algorithm
+2021-02-12 17:58:13,717 genetic      DEBUG    Run optimization progress
+2021-02-12 18:00:29,514 genetic      DEBUG    Define algorithm
+2021-02-12 18:00:29,517 genetic      DEBUG    Run optimization progress
+2021-02-12 18:02:45,230 genetic      DEBUG    Define algorithm
+2021-02-12 18:02:45,232 genetic      DEBUG    Run optimization progress
+2021-02-12 18:05:01,887 genetic      DEBUG    Define algorithm
+2021-02-12 18:05:01,889 genetic      DEBUG    Run optimization progress
+2021-02-12 18:07:18,474 genetic      DEBUG    Define algorithm
+2021-02-12 18:07:18,476 genetic      DEBUG    Run optimization progress
+2021-02-12 18:09:34,545 genetic      DEBUG    Define algorithm
+2021-02-12 18:09:34,548 genetic      DEBUG    Run optimization progress
+2021-02-12 18:11:49,165 genetic      DEBUG    Define algorithm
+2021-02-12 18:11:49,167 genetic      DEBUG    Run optimization progress
+2021-02-12 18:14:04,820 genetic      DEBUG    Define algorithm
+2021-02-12 18:14:04,822 genetic      DEBUG    Run optimization progress
+2021-02-12 18:16:21,218 genetic      DEBUG    Define algorithm
+2021-02-12 18:16:21,219 genetic      DEBUG    Run optimization progress
+2021-02-12 18:18:38,384 genetic      DEBUG    Define algorithm
+2021-02-12 18:18:38,386 genetic      DEBUG    Run optimization progress
+2021-02-12 18:20:54,897 genetic      DEBUG    Define algorithm
+2021-02-12 18:20:54,899 genetic      DEBUG    Run optimization progress
+2021-02-12 18:23:11,219 genetic      DEBUG    Define algorithm
+2021-02-12 18:23:11,220 genetic      DEBUG    Run optimization progress
+2021-02-12 18:25:28,143 genetic      DEBUG    Define algorithm
+2021-02-12 18:25:28,144 genetic      DEBUG    Run optimization progress
+2021-02-12 18:27:44,860 genetic      DEBUG    Define algorithm
+2021-02-12 18:27:44,863 genetic      DEBUG    Run optimization progress
+2021-02-12 18:30:01,645 genetic      DEBUG    Define algorithm
+2021-02-12 18:30:01,646 genetic      DEBUG    Run optimization progress
+2021-02-12 18:32:18,354 genetic      DEBUG    Define algorithm
+2021-02-12 18:32:18,356 genetic      DEBUG    Run optimization progress
+2021-02-12 18:34:35,064 genetic      DEBUG    Define algorithm
+2021-02-12 18:34:35,066 genetic      DEBUG    Run optimization progress
+2021-02-12 18:36:51,200 genetic      DEBUG    Define algorithm
+2021-02-12 18:36:51,202 genetic      DEBUG    Run optimization progress
+2021-02-12 18:39:05,932 genetic      DEBUG    Define algorithm
+2021-02-12 18:39:05,934 genetic      DEBUG    Run optimization progress
+2021-02-12 18:41:22,443 genetic      DEBUG    Define algorithm
+2021-02-12 18:41:22,445 genetic      DEBUG    Run optimization progress
+2021-02-12 18:43:38,234 genetic      DEBUG    Define algorithm
+2021-02-12 18:43:38,236 genetic      DEBUG    Run optimization progress
+2021-02-12 18:45:53,724 genetic      DEBUG    Define algorithm
+2021-02-12 18:45:53,726 genetic      DEBUG    Run optimization progress
+2021-02-12 18:48:10,020 genetic      DEBUG    Define algorithm
+2021-02-12 18:48:10,024 genetic      DEBUG    Run optimization progress
+2021-02-12 18:50:27,419 genetic      DEBUG    Define algorithm
+2021-02-12 18:50:27,421 genetic      DEBUG    Run optimization progress
+2021-02-12 18:52:44,693 genetic      DEBUG    Define algorithm
+2021-02-12 18:52:44,696 genetic      DEBUG    Run optimization progress
+2021-02-12 18:55:00,644 genetic      DEBUG    Define algorithm
+2021-02-12 18:55:00,648 genetic      DEBUG    Run optimization progress
+2021-02-12 18:57:17,807 genetic      DEBUG    Define algorithm
+2021-02-12 18:57:17,809 genetic      DEBUG    Run optimization progress
+2021-02-12 18:59:35,029 genetic      DEBUG    Define algorithm
+2021-02-12 18:59:35,031 genetic      DEBUG    Run optimization progress
+2021-02-12 19:01:50,600 genetic      DEBUG    Define algorithm
+2021-02-12 19:01:50,601 genetic      DEBUG    Run optimization progress
+2021-02-12 19:04:07,465 genetic      DEBUG    Define algorithm
+2021-02-12 19:04:07,467 genetic      DEBUG    Run optimization progress
+2021-02-12 19:06:22,975 genetic      DEBUG    Define algorithm
+2021-02-12 19:06:22,977 genetic      DEBUG    Run optimization progress
+2021-02-12 19:08:37,596 genetic      DEBUG    Define algorithm
+2021-02-12 19:08:37,600 genetic      DEBUG    Run optimization progress
+2021-02-12 19:10:52,889 genetic      DEBUG    Define algorithm
+2021-02-12 19:10:52,892 genetic      DEBUG    Run optimization progress
+2021-02-12 19:13:09,234 genetic      DEBUG    Define algorithm
+2021-02-12 19:13:09,236 genetic      DEBUG    Run optimization progress
+2021-02-12 19:15:24,805 genetic      DEBUG    Define algorithm
+2021-02-12 19:15:24,807 genetic      DEBUG    Run optimization progress
+2021-02-12 19:17:40,377 genetic      DEBUG    Define algorithm
+2021-02-12 19:17:40,379 genetic      DEBUG    Run optimization progress
+2021-02-12 19:19:57,353 genetic      DEBUG    Define algorithm
+2021-02-12 19:19:57,356 genetic      DEBUG    Run optimization progress
+2021-02-12 19:22:14,625 genetic      DEBUG    Define algorithm
+2021-02-12 19:22:14,626 genetic      DEBUG    Run optimization progress
+2021-02-12 19:24:33,004 genetic      DEBUG    Define algorithm
+2021-02-12 19:24:33,006 genetic      DEBUG    Run optimization progress
+2021-02-12 19:26:50,350 genetic      DEBUG    Define algorithm
+2021-02-12 19:26:50,353 genetic      DEBUG    Run optimization progress
+2021-02-12 19:29:07,417 genetic      DEBUG    Define algorithm
+2021-02-12 19:29:07,418 genetic      DEBUG    Run optimization progress
+2021-02-12 19:31:25,130 genetic      DEBUG    Define algorithm
+2021-02-12 19:31:25,132 genetic      DEBUG    Run optimization progress
+2021-02-12 19:33:40,470 genetic      DEBUG    Define algorithm
+2021-02-12 19:33:40,472 genetic      DEBUG    Run optimization progress
+2021-02-12 19:35:55,261 genetic      DEBUG    Define algorithm
+2021-02-12 19:35:55,263 genetic      DEBUG    Run optimization progress
+2021-02-12 19:38:11,518 genetic      DEBUG    Define algorithm
+2021-02-12 19:38:11,521 genetic      DEBUG    Run optimization progress
+2021-02-12 19:40:26,545 genetic      DEBUG    Define algorithm
+2021-02-12 19:40:26,547 genetic      DEBUG    Run optimization progress
+2021-02-12 19:42:42,980 genetic      DEBUG    Define algorithm
+2021-02-12 19:42:42,982 genetic      DEBUG    Run optimization progress
+2021-02-12 19:44:58,542 genetic      DEBUG    Define algorithm
+2021-02-12 19:44:58,544 genetic      DEBUG    Run optimization progress
+2021-02-12 19:47:13,929 genetic      DEBUG    Define algorithm
+2021-02-12 19:47:13,932 genetic      DEBUG    Run optimization progress
+2021-02-12 19:49:29,937 genetic      DEBUG    Define algorithm
+2021-02-12 19:49:29,937 genetic      DEBUG    Run optimization progress
+2021-02-12 19:51:43,110 genetic      DEBUG    Define algorithm
+2021-02-12 19:51:43,111 genetic      DEBUG    Run optimization progress
+2021-02-12 19:53:59,317 genetic      DEBUG    Define algorithm
+2021-02-12 19:53:59,318 genetic      DEBUG    Run optimization progress
+2021-02-12 19:56:14,263 genetic      DEBUG    Define algorithm
+2021-02-12 19:56:14,265 genetic      DEBUG    Run optimization progress
+2021-02-12 19:58:30,286 genetic      DEBUG    Define algorithm
+2021-02-12 19:58:30,288 genetic      DEBUG    Run optimization progress
+2021-02-12 20:00:46,178 genetic      DEBUG    Define algorithm
+2021-02-12 20:00:46,180 genetic      DEBUG    Run optimization progress
+2021-02-12 20:03:03,231 genetic      DEBUG    Define algorithm
+2021-02-12 20:03:03,233 genetic      DEBUG    Run optimization progress
+2021-02-12 20:05:19,375 genetic      DEBUG    Define algorithm
+2021-02-12 20:05:19,377 genetic      DEBUG    Run optimization progress
+2021-02-12 20:07:37,279 genetic      DEBUG    Define algorithm
+2021-02-12 20:07:37,281 genetic      DEBUG    Run optimization progress
+2021-02-12 20:09:54,995 genetic      DEBUG    Define algorithm
+2021-02-12 20:09:54,996 genetic      DEBUG    Run optimization progress
+2021-02-12 20:12:11,140 genetic      DEBUG    Define algorithm
+2021-02-12 20:12:11,142 genetic      DEBUG    Run optimization progress
+2021-02-12 20:14:27,997 genetic      DEBUG    Define algorithm
+2021-02-12 20:14:28,001 genetic      DEBUG    Run optimization progress
+2021-02-12 20:16:44,975 genetic      DEBUG    Define algorithm
+2021-02-12 20:16:44,977 genetic      DEBUG    Run optimization progress
+2021-02-12 20:19:01,872 genetic      DEBUG    Define algorithm
+2021-02-12 20:19:01,874 genetic      DEBUG    Run optimization progress
+2021-02-12 20:21:17,963 genetic      DEBUG    Define algorithm
+2021-02-12 20:21:17,964 genetic      DEBUG    Run optimization progress
+2021-02-12 20:23:34,753 genetic      DEBUG    Define algorithm
+2021-02-12 20:23:34,755 genetic      DEBUG    Run optimization progress
+2021-02-12 20:25:51,433 genetic      DEBUG    Define algorithm
+2021-02-12 20:25:51,435 genetic      DEBUG    Run optimization progress
+2021-02-12 20:28:07,485 genetic      DEBUG    Define algorithm
+2021-02-12 20:28:07,487 genetic      DEBUG    Run optimization progress
+2021-02-12 20:30:24,612 genetic      DEBUG    Define algorithm
+2021-02-12 20:30:24,615 genetic      DEBUG    Run optimization progress
+2021-02-12 20:32:39,991 genetic      DEBUG    Define algorithm
+2021-02-12 20:32:39,993 genetic      DEBUG    Run optimization progress
+2021-02-12 20:34:56,705 genetic      DEBUG    Define algorithm
+2021-02-12 20:34:56,706 genetic      DEBUG    Run optimization progress
+2021-02-12 20:37:13,992 genetic      DEBUG    Define algorithm
+2021-02-12 20:37:13,995 genetic      DEBUG    Run optimization progress
+2021-02-12 20:39:30,911 genetic      DEBUG    Define algorithm
+2021-02-12 20:39:30,914 genetic      DEBUG    Run optimization progress
+2021-02-12 20:41:47,944 genetic      DEBUG    Define algorithm
+2021-02-12 20:41:47,947 genetic      DEBUG    Run optimization progress
+2021-02-12 20:44:05,488 genetic      DEBUG    Define algorithm
+2021-02-12 20:44:05,490 genetic      DEBUG    Run optimization progress
+2021-02-12 20:46:22,989 genetic      DEBUG    Define algorithm
+2021-02-12 20:46:22,990 genetic      DEBUG    Run optimization progress
+2021-02-12 20:48:40,216 genetic      DEBUG    Define algorithm
+2021-02-12 20:48:40,218 genetic      DEBUG    Run optimization progress
+2021-02-12 20:50:56,064 genetic      DEBUG    Define algorithm
+2021-02-12 20:50:56,066 genetic      DEBUG    Run optimization progress
+2021-02-12 20:53:10,630 genetic      DEBUG    Define algorithm
+2021-02-12 20:53:10,634 genetic      DEBUG    Run optimization progress
+2021-02-12 20:55:26,934 genetic      DEBUG    Define algorithm
+2021-02-12 20:55:26,938 genetic      DEBUG    Run optimization progress
+2021-02-12 20:57:43,903 genetic      DEBUG    Define algorithm
+2021-02-12 20:57:43,904 genetic      DEBUG    Run optimization progress
+2021-02-12 21:00:00,338 genetic      DEBUG    Define algorithm
+2021-02-12 21:00:00,340 genetic      DEBUG    Run optimization progress
+2021-02-12 21:02:16,670 genetic      DEBUG    Define algorithm
+2021-02-12 21:02:16,672 genetic      DEBUG    Run optimization progress
+2021-02-12 21:04:33,321 genetic      DEBUG    Define algorithm
+2021-02-12 21:04:33,323 genetic      DEBUG    Run optimization progress
+2021-02-12 21:06:50,097 genetic      DEBUG    Define algorithm
+2021-02-12 21:06:50,099 genetic      DEBUG    Run optimization progress
+2021-02-12 21:09:06,308 genetic      DEBUG    Define algorithm
+2021-02-12 21:09:06,311 genetic      DEBUG    Run optimization progress
+2021-02-12 21:11:22,272 genetic      DEBUG    Define algorithm
+2021-02-12 21:11:22,274 genetic      DEBUG    Run optimization progress
+2021-02-12 21:13:40,245 genetic      DEBUG    Define algorithm
+2021-02-12 21:13:40,246 genetic      DEBUG    Run optimization progress

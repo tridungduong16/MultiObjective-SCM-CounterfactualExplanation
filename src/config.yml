@@ -1,0 +1,36 @@
+## Model path
+model_path_simple_bn: /data/trduong/multiobj-scm-cf/model/simple_bn/{}
+prediction_model_simple_bn: /data/trduong/multiobj-scm-cf/model/simple_bn/simpleBN_prediction.pkl
+scm_model_simple_bn: /data/trduong/multiobj-scm-cf/model/simple_bn/simpleBN_scm.pkl
+prediction_model_credit: /data/trduong/multiobj-scm-cf/model/credit/credit_prediction.pkl
+autoencoder_model_credit: /data/trduong/multiobj-scm-cf/model/credit/dfencoder_{}_{}.pt
+
+
+
+
+siag: siag
+simple_bn: simple_bn
+adult: adult
+encoder_model: dfencoder_full
+
+## Logging path
+log_path: /data/trduong/multiobj-scm-cf/logs/{}
+credit_log_path: /data/trduong/multiobj-scm-cf/logs/credit.log
+
+
+## Data path
+data_path: /data/trduong/multiobj-scm-cf/data/{}
+data_simple_bn: /data/trduong/multiobj-scm-cf/data/simple_bn/bn1.csv
+processed_simple_bn: /data/trduong/multiobj-scm-cf/data/simple_bn/processed_bn1.csv
+data_sangiovese: /data/trduong/multiobj-scm-cf/data/sangiovese/sangiovese.csv
+data_credit: /data/trduong/multiobj-scm-cf/data/credit/credit_raw.csv
+processed_data_credit: /data/trduong/multiobj-scm-cf/data/credit/processed_credit_raw.csv
+
+## Result path
+original_simple_bn: /data/trduong/multiobj-scm-cf/reports/result/simple_bn/original-nsample-{}.csv
+result_simple_bn: /data/trduong/multiobj-scm-cf/reports/result/simple_bn/result_nin-{}-ns-{}-size-{}-seed-{}.csv
+
+original_credit: /data/trduong/multiobj-scm-cf/reports/result/credit/original-nsample-{}.csv
+result_credit: /data/trduong/multiobj-scm-cf/reports/result/credit/result_nin-{}-ns-{}-size-{}-seed-{}.csv
+
+
