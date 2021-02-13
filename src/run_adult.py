@@ -1,74 +1,41 @@
-"""
-All the views for our todos application
-Currently we support the following 3 views:
-
-1. **Home** - The main view for Todos
-2. **Delete** - called to delete a todo
-3. **Add** - called to add a new todo
-
-@author: trduong
-
-"""
-
-import sys
-# MAIN_PATH = "/home/trduong/Data/counterfactual-explanation-research.git/my-algorithm"
-# sys.path.insert(1, MAIN_PATH)
-
+#!/usr/bin/env python3
+import argparse
 import numpy as np
 import pandas as pd
-import copy
-import logging 
-import argparse
 import pickle
-import matplotlib.pyplot as plt
-from scipy.spatial.distance import cosine
-from sklearn.preprocessing import LabelEncoder
-from sklearn.metrics import mean_squared_error
+import torch
+import yaml
+import logging
+import sys
 
-import torch 
-import torch.nn as nn
+from ml_cfexplainer.explainer.prototype import get_pos_neg_latent
+from ml_cfexplainer.explainer.prototype import find_proto
+from ml_cfexplainer.explainer.cf_credit import CF_Credit
 
-from . import utils
-from . import dfencoder
-from . import source_code
-
-from utils.helpers import load_adult_income_dataset
-from utils.dataloader import DataLoader
-
-from source_code.prototype import find_proto, get_pos_neg_latent
-from dfencoder.autoencoder import AutoEncoder
-from source_code import configuration_path as cf
-
-from sklearn.metrics import mean_absolute_error
-from sklearn.metrics import classification_report
-
-import autograd.numpy as anp
-
-from pymoo.model.problem import Problem
-from pymoo.util.normalization import normalize
 from pymoo.algorithms.nsga2 import NSGA2
-from pymoo.factory import get_problem
 from pymoo.optimize import minimize
-from pymoo.visualization.scatter import Scatter
 from pymoo.factory import get_sampling, get_crossover, get_mutation
 from pymoo.operators.mixed_variable_operator import MixedVariableSampling, MixedVariableMutation, MixedVariableCrossover
-from pymoo.util import plotting
 
-from .cf_adult import CF_Adult
+from scipy.spatial.distance import cdist
 
-if torch.cuda.is_available():  
-    dev = "cuda:0" 
-else:  
-    dev = "cpu" 
-device = torch.device(dev)  
 
+def find_best_solution(resX, x0, pred_model):
+    y_prediction = pred_model.predict(resX)
+    pos_index = np.where(y_prediction == 1)[0]
+    filtered_arr  = resX[pos_index]
+    if len(filtered_arr) == 0:
+        return resX[0]
+    distance = cdist(x0.reshape(1,-1), filtered_arr, 'euclidean')[0]
+    min_index = np.where(distance == min(distance))[0]
+    return filtered_arr[min_index]
 
 if __name__ == "__main__":
     """Parsing argument"""
     parser = argparse.ArgumentParser()
     parser.add_argument('--mode', type=str, default='different_instance')
     parser.add_argument('--n_instance', type=int, default=10)
-    parser.add_argument('--n_sample', type=int, default=10)
+    parser.add_argument('--n_sample', type=int, default=2)
     parser.add_argument('--emb_size', type=int, default=512)
     parser.add_argument('--seed', type=int, default=1)
 
@@ -78,85 +45,15 @@ if __name__ == "__main__":
     n_sample = args.n_sample
     emb_size = args.emb_size
     seed = args.seed
-    
-    torch.manual_seed(seed)   
-    
-    
-    """Load data and dataloader and normalize data"""
-    dataset = load_adult_income_dataset()
-    params= {'dataframe':dataset.copy(), 
-              'continuous_features':['age','hours_per_week'], 
-              'outcome_name':'income'}
-    d = DataLoader(params)
-    df = d.data_df
-    df = d.normalize_data(df)
-    
-    sys.exit(1)
-    """Preprocess data"""
-    encoded_data = d.one_hot_encoded_data
-    encoded_data = d.normalize_data(encoded_data)
-    encoded_features = encoded_data.drop(columns = ['income'])
-    encoded_features_tensor = torch.from_numpy(encoded_features.values).float().to(device)
-    features = df.drop(columns = ['income'])
+    torch.manual_seed(seed)
 
-    for v in d.categorical_feature_names:
-        features[v] = pd.Categorical(features[v].values)
-    
-    for c in d.categorical_feature_names:
-        le = LabelEncoder()
-        le.classes_ = np.load(cf.MODEL_FINAL_PATH.format(c + '.npy'), allow_pickle=True)
-        features[c] = le.fit_transform(features[c].values)
+    """Load configuration"""
+    with open('/home/trduong/Data/multiobj-scm-cf/src/config.yml') as file:
+        conf = yaml.safe_load(file)
 
-    col = ['age','hours_per_week', 'workclass', 'education', 'marital_status', 'occupation', 'race',
-       'gender']
-    
-    features = features[col]
-    """Load prediction and auto encoder model"""    
-    name = 'adult'
-    version = 'full'
-    # dfencoder_model = torch.load(cf.FINAL_MODEL_PATH.format('/' + name + '/dfencoder_{}.pt'.format(version)))
-    print("Load autoencoder model from {}".format(cf.FINAL_MODEL_PATH.format(name + '/dfencoder_{}_{}.pt'.format(version,emb_size))))
-    dfencoder_model = torch.load(cf.FINAL_MODEL_PATH.format(name + '/dfencoder_{}_{}.pt'.format(version,emb_size)))
-
-    pred_model = torch.load('/data/trduong/DiCE/dice_ml/utils/sample_trained_models/adult.pth')
-    pred_model.to(device)
-    
-    """Store the result"""
-    df_store = pd.DataFrame(columns = list(features.columns))
-
-    """Get the representation for the dataset"""
-    z_representation = dfencoder_model.get_representation(features)
-
-    prediction_score = pred_model(encoded_features_tensor)
-    prediction = torch.ge(prediction_score, 0.5).int()
-    prediction = prediction.reshape(-1)
-    
-    neg_index = (prediction == 0).nonzero()
-    
-    pos_z, neg_z = get_pos_neg_latent(prediction, z_representation)
-    
-    """Get category constraints"""    
-    arr = []
-    for i in d.categorical_feature_indexes:
-        arr.append(features.iloc[:,i].nunique())
-        
-
-    
-    list_ = neg_index.detach().cpu().numpy().reshape(-1)
-
-    ORG_PATH = "/data/trduong/counterfactual-explanation-research.git/my-algorithm/final_result/result/original/{}"
-    neg_features = features.iloc[list_,:]
-    neg_features['income'] = 0
-    neg_features.to_csv(ORG_PATH.format('full_negative_adult.csv'), index = False)
-    # sys.exit(1)
-    
-
-    
     """Set up logging"""
-    file_name = "multi_objective_{}.log".format(version)
-    PATH = cf.LOGGING_PATH.format(file_name)
     logger = logging.getLogger('genetic')
-    file_handler = logging.FileHandler(filename=PATH)
+    file_handler = logging.FileHandler(filename=conf['credit_log_path'])
     stdout_handler = logging.StreamHandler(sys.stdout)
     formatter = logging.Formatter('%(asctime)s %(name)-12s %(levelname)-8s %(message)s')
     file_handler.setFormatter(formatter)
@@ -164,126 +61,165 @@ if __name__ == "__main__":
     logger.addHandler(file_handler)
     logger.addHandler(stdout_handler)
     logger.setLevel(logging.DEBUG)
+
+    """Load data"""
+    data = pd.read_csv(conf['data_credit'])
     
-    loc_= 0 
-    # n_sample = n_sample
+    """Define features value"""
 
-    df_original = pd.DataFrame(columns = list(features.columns))
-    df_counterfactual = pd.DataFrame(columns = list(features.columns))
-    df_original['income'] = -1
-    df_counterfactual['income'] = -1
+    outcome = 'default payment next month'
+    features_col = ['LIMIT_BAL', 'SEX', 'EDUCATION', 'MARRIAGE', 'AGE', 'PAY_0',
+                'PAY_2', 'PAY_3', 'PAY_4', 'PAY_5', 'PAY_6', 'BILL_AMT1', 'BILL_AMT2',
+                'BILL_AMT3', 'BILL_AMT4', 'BILL_AMT5', 'BILL_AMT6', 'PAY_AMT1',
+                'PAY_AMT2', 'PAY_AMT3', 'PAY_AMT4', 'PAY_AMT5', 'PAY_AMT6']
+    category = ['SEX', 'EDUCATION', 'MARRIAGE']
+    categorical_index = {'EDUCATION': 2, 'MARRIAGE': 3}
+    cat_index = [1,2,3]
+    con_index = [0,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22]
     
-    count_ = 0
-    for index_ in list_[:n_sample]:
-        count_ +=  1
-        # df_original = pd.DataFrame(columns = list(features.columns))
-        # df_counterfactual = pd.DataFrame(columns = list(features.columns))
+    features = data[features_col]
+    n_var = len(features_col)
     
-        """Global variable"""    
-        x_valid = 0
-        best_fitness = 0
-        best_prediction_score = 0
-        pureDist = 10000
-        
-        df_store = pd.DataFrame(columns = list(features.columns))
+    """Find range value"""
+    education = list(features['EDUCATION'].unique())
+    marriage = list(features['MARRIAGE'].unique())
+    sex = list(features['SEX'].unique())
 
-        logger.debug("Sample index {}".format(count_))
-        
-        mask = ["real","real","int", "int", "int", "int", "int", "int"]
-        sampling = MixedVariableSampling(mask, {
-            "real": get_sampling("real_random"),
-            "int": get_sampling("int_random"),
-        })
-        
-        crossover = MixedVariableCrossover(mask, {
-            "real": get_crossover("real_sbx", prob=1.0, eta=3.0),
-            "int": get_crossover("int_sbx", prob=1.0, eta=3.0)
-        })
-        
-        mutation = MixedVariableMutation(mask, {
-            "real": get_mutation("real_pm", eta=3.0),
-            "int": get_mutation("int_pm", eta=3.0)
-        })
+    """Store result"""
+    logger.debug("Store result")
+    df_original = pd.DataFrame(columns=list(features.columns))
+    df_cf = pd.DataFrame(columns=list(features.columns))
 
-        """Get original instance"""
-        query = features.iloc[index_,:].to_dict()
-        x0 = list(query.values())
-        df_store.loc[0] = x0
-        z = dfencoder_model.get_representation(df_store)
-        z0 = z[0]
+    """Load model"""
+    version = 'full'
+    name = 'simple_bn'
+    pred_model = pickle.load(open(conf['prediction_model_credit'], 'rb'))
+    dfencoder_model = torch.load(conf['autoencoder_model_credit'].format(version, emb_size))
 
+    """Get prediction and negative index"""
+    y_prediction = pred_model.predict(features.values)
+    neg_index = np.where(y_prediction == 0)[0]
+
+    """Get the representation for the dataset"""
+    z_representation = dfencoder_model.get_representation(features)
+    y_prediction = torch.Tensor(y_prediction)
+    pos_z, neg_z = get_pos_neg_latent(y_prediction, z_representation)
+
+    """Setup for genetic algorithm"""
+    mask = ['real']*len(features.columns)
+    for i in cat_index:
+        mask[i] = 'int'
         
-        # sys.exit("Age less than 18")     
-        
-        """Find prototype"""
+    xu = [0]*n_var
+    xl = [1]*n_var
+    
+    for i in cat_index:
+        xu[i] = max(features.iloc[:, i])
+        xl[i] = min(features.iloc[:, i])
+    
+    for j in con_index:
+        xu[j] = max(features.iloc[:, j])
+        xl[j] = min(features.iloc[:, j])        
+    
+
+    sampling = MixedVariableSampling(mask, {
+        "real": get_sampling("real_random"),
+        "int": get_sampling("int_random"),
+    })
+    
+    crossover = MixedVariableCrossover(mask, {
+        "real": get_crossover("real_sbx", prob=1.0, eta=3.0),
+        "int": get_crossover("int_sbx", prob=1.0, eta=3.0)
+    })
+    
+    mutation = MixedVariableMutation(mask, {
+        "real": get_mutation("real_pm", eta=3.0),
+        "int": get_mutation("int_pm", eta=3.0)
+    })
+    
+    # logger.debug("Min and max")
+    # logger.debug(mask)
+    # logger.debug(xu)
+    # logger.debug(xl)
+    # logger.debug(len(xu))
+    # logger.debug(np.array(xu) - np.array(xl))
+
+    # logger.debug("Number of variable {}".format(n_var))
+
+    # sys.exit(1)
+
+    if n_sample == -1:
+        n_sample = len(neg_index)
+
+    # logger.debug(n_sample)
+    # sys.exit(1)
+
+    for i in range(n_sample):
+
+        """Explainer"""
+        index_ = neg_index[i]
+        x0 = features.loc[index_].values
+        # logger.debug("Original")
+
+        # logger.debug(x0)
+        # logger.debug(len(x0))
+
+
+        z0 = z_representation[index_]
         k_instance = n_instance
-        pos_proto, neg_proto = find_proto(z0.reshape(1,-1), pos_z, neg_z, k_instance)
-        
-        # problem = CF2(x0,
-        #               d,
-        #               pred_model,
-        #               dfencoder_model,
-        #               pos_proto,
-        #               x0[6],
-        #               x0[7]
-        #               )
 
-        problem = CF_Adult(x0, d, pred_model, dfencoder_model, pos_proto,x0[6],x0[7])
+        pos_proto, neg_proto = find_proto(z0.reshape(1, -1), pos_z, neg_z, k_instance)
+
+        problem = CF_Credit(x0,
+                 pred_model,
+                 dfencoder_model,
+                 features_col,
+                 xl,
+                 xu,
+                 n_obj = 3,
+                 n_var = n_var,
+                 proto = pos_proto,
+                 scm_model = None,
+                 con_index = con_index,
+                 cat_index = cat_index,
+                 dict_cat_index = categorical_index)
         
+
+
+        logger.debug("Define algorithm")
         algorithm = NSGA2(
-                pop_size=100,
-                n_offsprings=50,
-                sampling=sampling,
-                crossover=crossover,
-                mutation=mutation,
-                eliminate_duplicates=True)
-        
+            pop_size=200,
+            n_offsprings=50,
+            sampling=sampling,
+            crossover=crossover,
+            mutation=mutation,
+            eliminate_duplicates=True)
+
+        logger.debug("Run optimization progress")
         res = minimize(problem,
-                        algorithm,
-                        ('n_gen', 30),
-                        save_history=True,
-                        seed = seed,
-                        verbose=True)
-    
+                       algorithm,
+                       ('n_gen', 300),
+                       save_history=True,
+                       seed=seed,
+                       verbose=True)
 
-        x_valid = 0
-        y_valid = -1
-        current_dist = -9999
-        index_ = -1
-        df_store = pd.DataFrame(columns = list(features.columns))
-    
-    
-        for i in range(len(res.X)):
-            xcf = res.X[i]
-            term_xcf = convert_label_to_ohe(xcf, d)
-            tensor_cf = torch.from_numpy(term_xcf).float().to(device)
-            ycf_pred = pred_model(tensor_cf)
-            if ycf_pred >= 0.5:
-                y_valid = ycf_pred.detach().cpu().numpy()
-                if pure_distance(x0, xcf) >= current_dist:
-                    current_dist = pure_distance(x0, xcf)
-                    x_valid = xcf
-                    index_ = i
-        df_counterfactual.at[loc_, :-1] = x_valid
-        if type(y_valid) != int:
-            df_counterfactual.at[loc_, 'income'] = y_valid[0]
-        else:
-            df_counterfactual.at[loc_, 'income'] = y_valid
-            
-        df_original.at[loc_, :-1] = x0
-        df_original.at[loc_, 'income'] = 0
-        loc_ += 1
-        print(df_original)
-        print(df_counterfactual)
-        df_counterfactual.to_csv( cf.FINAL_RESULT_PATH.format("adult/"+mode +"/mobj-ninstance-{}-nsample-{}-size-{}.csv".format(n_instance, n_sample, emb_size)),
-                              index = False)
-        # break
 
-    print("Output file to ", cf.FINAL_RESULT_PATH.format("adult/"+ mode + "/mobj-ninstance-{}-nsample-{}-size-{}.csv".format(n_instance, n_sample, emb_size)))
-    # print("Output file to ", cf.FINAL_RESULT_PATH.format("adult/original.csv"))    
-    
-    # df_original.to_csv(cf.FINAL_RESULT_PATH.format("adult/original.csv"),
-    #                          index = False)    
-    df_counterfactual.to_csv( cf.FINAL_RESULT_PATH.format("adult/"+mode +"/mobj-ninstance-{}-nsample-{}-size-{}-seed-{}.csv".format(n_instance, n_sample, emb_size, seed)),
-                              index = False)
+
+        df_original.loc[i,:] = x0
+        df_cf.loc[i,:] =  find_best_solution(res.X, x0, pred_model)
+
+        del problem
+        del algorithm
+        del res
+
+
+
+
+    df_original['y'] = pred_model.predict_proba(df_original[features_col].values)[:,1]
+    df_cf['y'] =  pred_model.predict_proba(df_cf[features_col].values)[:,1]
+
+    df_original.to_csv(conf['original_credit'].format(n_sample), index = False)
+    df_cf.to_csv(conf['result_credit'].format(n_instance, n_sample, emb_size, seed), index = False)
+
+
 

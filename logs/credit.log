@@ -435,3 +435,1009 @@
 2021-02-12 21:11:22,274 genetic      DEBUG    Run optimization progress
 2021-02-12 21:13:40,245 genetic      DEBUG    Define algorithm
 2021-02-12 21:13:40,246 genetic      DEBUG    Run optimization progress
+2021-02-12 21:15:57,129 genetic      DEBUG    Define algorithm
+2021-02-12 21:15:57,131 genetic      DEBUG    Run optimization progress
+2021-02-12 21:18:13,385 genetic      DEBUG    Define algorithm
+2021-02-12 21:18:13,387 genetic      DEBUG    Run optimization progress
+2021-02-12 21:20:31,006 genetic      DEBUG    Define algorithm
+2021-02-12 21:20:31,010 genetic      DEBUG    Run optimization progress
+2021-02-12 21:22:48,690 genetic      DEBUG    Define algorithm
+2021-02-12 21:22:48,691 genetic      DEBUG    Run optimization progress
+2021-02-12 21:25:05,237 genetic      DEBUG    Define algorithm
+2021-02-12 21:25:05,241 genetic      DEBUG    Run optimization progress
+2021-02-12 21:27:21,148 genetic      DEBUG    Define algorithm
+2021-02-12 21:27:21,150 genetic      DEBUG    Run optimization progress
+2021-02-12 21:29:37,460 genetic      DEBUG    Define algorithm
+2021-02-12 21:29:37,462 genetic      DEBUG    Run optimization progress
+2021-02-12 21:31:53,019 genetic      DEBUG    Define algorithm
+2021-02-12 21:31:53,023 genetic      DEBUG    Run optimization progress
+2021-02-12 21:34:08,889 genetic      DEBUG    Define algorithm
+2021-02-12 21:34:08,892 genetic      DEBUG    Run optimization progress
+2021-02-12 21:36:25,609 genetic      DEBUG    Define algorithm
+2021-02-12 21:36:25,611 genetic      DEBUG    Run optimization progress
+2021-02-12 21:38:43,399 genetic      DEBUG    Define algorithm
+2021-02-12 21:38:43,402 genetic      DEBUG    Run optimization progress
+2021-02-12 21:40:59,664 genetic      DEBUG    Define algorithm
+2021-02-12 21:40:59,666 genetic      DEBUG    Run optimization progress
+2021-02-12 21:43:16,225 genetic      DEBUG    Define algorithm
+2021-02-12 21:43:16,227 genetic      DEBUG    Run optimization progress
+2021-02-12 21:45:33,227 genetic      DEBUG    Define algorithm
+2021-02-12 21:45:33,230 genetic      DEBUG    Run optimization progress
+2021-02-12 21:47:48,836 genetic      DEBUG    Define algorithm
+2021-02-12 21:47:48,839 genetic      DEBUG    Run optimization progress
+2021-02-12 21:50:05,167 genetic      DEBUG    Define algorithm
+2021-02-12 21:50:05,170 genetic      DEBUG    Run optimization progress
+2021-02-12 21:52:21,473 genetic      DEBUG    Define algorithm
+2021-02-12 21:52:21,476 genetic      DEBUG    Run optimization progress
+2021-02-12 21:54:38,284 genetic      DEBUG    Define algorithm
+2021-02-12 21:54:38,285 genetic      DEBUG    Run optimization progress
+2021-02-12 21:56:54,116 genetic      DEBUG    Define algorithm
+2021-02-12 21:56:54,117 genetic      DEBUG    Run optimization progress
+2021-02-12 21:59:10,566 genetic      DEBUG    Define algorithm
+2021-02-12 21:59:10,568 genetic      DEBUG    Run optimization progress
+2021-02-12 22:01:27,884 genetic      DEBUG    Define algorithm
+2021-02-12 22:01:27,887 genetic      DEBUG    Run optimization progress
+2021-02-12 22:03:45,780 genetic      DEBUG    Define algorithm
+2021-02-12 22:03:45,783 genetic      DEBUG    Run optimization progress
+2021-02-12 22:06:02,498 genetic      DEBUG    Define algorithm
+2021-02-12 22:06:02,500 genetic      DEBUG    Run optimization progress
+2021-02-12 22:08:19,107 genetic      DEBUG    Define algorithm
+2021-02-12 22:08:19,110 genetic      DEBUG    Run optimization progress
+2021-02-12 22:10:34,808 genetic      DEBUG    Define algorithm
+2021-02-12 22:10:34,829 genetic      DEBUG    Run optimization progress
+2021-02-12 22:12:51,249 genetic      DEBUG    Define algorithm
+2021-02-12 22:12:51,251 genetic      DEBUG    Run optimization progress
+2021-02-12 22:15:07,448 genetic      DEBUG    Define algorithm
+2021-02-12 22:15:07,450 genetic      DEBUG    Run optimization progress
+2021-02-12 22:17:22,488 genetic      DEBUG    Define algorithm
+2021-02-12 22:17:22,490 genetic      DEBUG    Run optimization progress
+2021-02-12 22:19:39,544 genetic      DEBUG    Define algorithm
+2021-02-12 22:19:39,546 genetic      DEBUG    Run optimization progress
+2021-02-12 22:21:56,541 genetic      DEBUG    Define algorithm
+2021-02-12 22:21:56,543 genetic      DEBUG    Run optimization progress
+2021-02-12 22:24:13,317 genetic      DEBUG    Define algorithm
+2021-02-12 22:24:13,320 genetic      DEBUG    Run optimization progress
+2021-02-12 22:26:30,191 genetic      DEBUG    Define algorithm
+2021-02-12 22:26:30,193 genetic      DEBUG    Run optimization progress
+2021-02-12 22:28:46,763 genetic      DEBUG    Define algorithm
+2021-02-12 22:28:46,765 genetic      DEBUG    Run optimization progress
+2021-02-12 22:31:01,978 genetic      DEBUG    Define algorithm
+2021-02-12 22:31:01,979 genetic      DEBUG    Run optimization progress
+2021-02-12 22:33:16,350 genetic      DEBUG    Define algorithm
+2021-02-12 22:33:16,353 genetic      DEBUG    Run optimization progress
+2021-02-12 22:35:32,119 genetic      DEBUG    Define algorithm
+2021-02-12 22:35:32,120 genetic      DEBUG    Run optimization progress
+2021-02-12 22:37:48,525 genetic      DEBUG    Define algorithm
+2021-02-12 22:37:48,527 genetic      DEBUG    Run optimization progress
+2021-02-12 22:40:04,598 genetic      DEBUG    Define algorithm
+2021-02-12 22:40:04,602 genetic      DEBUG    Run optimization progress
+2021-02-12 22:42:20,496 genetic      DEBUG    Define algorithm
+2021-02-12 22:42:20,498 genetic      DEBUG    Run optimization progress
+2021-02-12 22:44:36,188 genetic      DEBUG    Define algorithm
+2021-02-12 22:44:36,190 genetic      DEBUG    Run optimization progress
+2021-02-12 22:46:53,043 genetic      DEBUG    Define algorithm
+2021-02-12 22:46:53,044 genetic      DEBUG    Run optimization progress
+2021-02-12 22:49:10,216 genetic      DEBUG    Define algorithm
+2021-02-12 22:49:10,219 genetic      DEBUG    Run optimization progress
+2021-02-12 22:51:26,884 genetic      DEBUG    Define algorithm
+2021-02-12 22:51:26,886 genetic      DEBUG    Run optimization progress
+2021-02-12 22:53:42,180 genetic      DEBUG    Define algorithm
+2021-02-12 22:53:42,182 genetic      DEBUG    Run optimization progress
+2021-02-12 22:55:59,220 genetic      DEBUG    Define algorithm
+2021-02-12 22:55:59,222 genetic      DEBUG    Run optimization progress
+2021-02-12 22:58:15,305 genetic      DEBUG    Define algorithm
+2021-02-12 22:58:15,307 genetic      DEBUG    Run optimization progress
+2021-02-12 23:00:30,925 genetic      DEBUG    Define algorithm
+2021-02-12 23:00:30,928 genetic      DEBUG    Run optimization progress
+2021-02-12 23:02:47,769 genetic      DEBUG    Define algorithm
+2021-02-12 23:02:47,771 genetic      DEBUG    Run optimization progress
+2021-02-12 23:05:05,494 genetic      DEBUG    Define algorithm
+2021-02-12 23:05:05,497 genetic      DEBUG    Run optimization progress
+2021-02-12 23:07:21,921 genetic      DEBUG    Define algorithm
+2021-02-12 23:07:21,923 genetic      DEBUG    Run optimization progress
+2021-02-12 23:09:39,247 genetic      DEBUG    Define algorithm
+2021-02-12 23:09:39,249 genetic      DEBUG    Run optimization progress
+2021-02-12 23:11:55,491 genetic      DEBUG    Define algorithm
+2021-02-12 23:11:55,493 genetic      DEBUG    Run optimization progress
+2021-02-12 23:14:10,014 genetic      DEBUG    Define algorithm
+2021-02-12 23:14:10,019 genetic      DEBUG    Run optimization progress
+2021-02-12 23:16:25,247 genetic      DEBUG    Define algorithm
+2021-02-12 23:16:25,249 genetic      DEBUG    Run optimization progress
+2021-02-12 23:18:41,596 genetic      DEBUG    Define algorithm
+2021-02-12 23:18:41,598 genetic      DEBUG    Run optimization progress
+2021-02-12 23:20:57,375 genetic      DEBUG    Define algorithm
+2021-02-12 23:20:57,379 genetic      DEBUG    Run optimization progress
+2021-02-12 23:23:12,705 genetic      DEBUG    Define algorithm
+2021-02-12 23:23:12,707 genetic      DEBUG    Run optimization progress
+2021-02-12 23:25:28,174 genetic      DEBUG    Define algorithm
+2021-02-12 23:25:28,177 genetic      DEBUG    Run optimization progress
+2021-02-12 23:27:44,273 genetic      DEBUG    Define algorithm
+2021-02-12 23:27:44,274 genetic      DEBUG    Run optimization progress
+2021-02-12 23:29:59,669 genetic      DEBUG    Define algorithm
+2021-02-12 23:29:59,672 genetic      DEBUG    Run optimization progress
+2021-02-12 23:32:16,758 genetic      DEBUG    Define algorithm
+2021-02-12 23:32:16,760 genetic      DEBUG    Run optimization progress
+2021-02-12 23:34:33,328 genetic      DEBUG    Define algorithm
+2021-02-12 23:34:33,330 genetic      DEBUG    Run optimization progress
+2021-02-12 23:36:49,651 genetic      DEBUG    Define algorithm
+2021-02-12 23:36:49,654 genetic      DEBUG    Run optimization progress
+2021-02-12 23:39:05,808 genetic      DEBUG    Define algorithm
+2021-02-12 23:39:05,809 genetic      DEBUG    Run optimization progress
+2021-02-12 23:41:20,909 genetic      DEBUG    Define algorithm
+2021-02-12 23:41:20,912 genetic      DEBUG    Run optimization progress
+2021-02-12 23:43:36,533 genetic      DEBUG    Define algorithm
+2021-02-12 23:43:36,537 genetic      DEBUG    Run optimization progress
+2021-02-12 23:45:53,041 genetic      DEBUG    Define algorithm
+2021-02-12 23:45:53,043 genetic      DEBUG    Run optimization progress
+2021-02-12 23:48:09,223 genetic      DEBUG    Define algorithm
+2021-02-12 23:48:09,224 genetic      DEBUG    Run optimization progress
+2021-02-12 23:50:25,716 genetic      DEBUG    Define algorithm
+2021-02-12 23:50:25,719 genetic      DEBUG    Run optimization progress
+2021-02-12 23:52:42,308 genetic      DEBUG    Define algorithm
+2021-02-12 23:52:42,312 genetic      DEBUG    Run optimization progress
+2021-02-12 23:54:58,577 genetic      DEBUG    Define algorithm
+2021-02-12 23:54:58,580 genetic      DEBUG    Run optimization progress
+2021-02-12 23:57:13,224 genetic      DEBUG    Define algorithm
+2021-02-12 23:57:13,229 genetic      DEBUG    Run optimization progress
+2021-02-12 23:59:28,086 genetic      DEBUG    Define algorithm
+2021-02-12 23:59:28,089 genetic      DEBUG    Run optimization progress
+2021-02-13 00:01:44,563 genetic      DEBUG    Define algorithm
+2021-02-13 00:01:44,565 genetic      DEBUG    Run optimization progress
+2021-02-13 00:04:00,483 genetic      DEBUG    Define algorithm
+2021-02-13 00:04:00,485 genetic      DEBUG    Run optimization progress
+2021-02-13 00:06:17,654 genetic      DEBUG    Define algorithm
+2021-02-13 00:06:17,655 genetic      DEBUG    Run optimization progress
+2021-02-13 00:08:34,603 genetic      DEBUG    Define algorithm
+2021-02-13 00:08:34,606 genetic      DEBUG    Run optimization progress
+2021-02-13 00:10:50,846 genetic      DEBUG    Define algorithm
+2021-02-13 00:10:50,848 genetic      DEBUG    Run optimization progress
+2021-02-13 00:13:06,397 genetic      DEBUG    Define algorithm
+2021-02-13 00:13:06,400 genetic      DEBUG    Run optimization progress
+2021-02-13 00:15:22,538 genetic      DEBUG    Define algorithm
+2021-02-13 00:15:22,545 genetic      DEBUG    Run optimization progress
+2021-02-13 00:17:39,297 genetic      DEBUG    Define algorithm
+2021-02-13 00:17:39,300 genetic      DEBUG    Run optimization progress
+2021-02-13 00:19:56,133 genetic      DEBUG    Define algorithm
+2021-02-13 00:19:56,135 genetic      DEBUG    Run optimization progress
+2021-02-13 00:22:11,767 genetic      DEBUG    Define algorithm
+2021-02-13 00:22:11,769 genetic      DEBUG    Run optimization progress
+2021-02-13 00:24:27,935 genetic      DEBUG    Define algorithm
+2021-02-13 00:24:27,938 genetic      DEBUG    Run optimization progress
+2021-02-13 00:26:44,029 genetic      DEBUG    Define algorithm
+2021-02-13 00:26:44,030 genetic      DEBUG    Run optimization progress
+2021-02-13 00:28:58,861 genetic      DEBUG    Define algorithm
+2021-02-13 00:28:58,863 genetic      DEBUG    Run optimization progress
+2021-02-13 00:31:14,976 genetic      DEBUG    Define algorithm
+2021-02-13 00:31:14,978 genetic      DEBUG    Run optimization progress
+2021-02-13 00:33:31,648 genetic      DEBUG    Define algorithm
+2021-02-13 00:33:31,650 genetic      DEBUG    Run optimization progress
+2021-02-13 00:35:48,396 genetic      DEBUG    Define algorithm
+2021-02-13 00:35:48,398 genetic      DEBUG    Run optimization progress
+2021-02-13 00:38:05,000 genetic      DEBUG    Define algorithm
+2021-02-13 00:38:05,002 genetic      DEBUG    Run optimization progress
+2021-02-13 00:40:21,580 genetic      DEBUG    Define algorithm
+2021-02-13 00:40:21,582 genetic      DEBUG    Run optimization progress
+2021-02-13 00:42:37,758 genetic      DEBUG    Define algorithm
+2021-02-13 00:42:37,759 genetic      DEBUG    Run optimization progress
+2021-02-13 00:44:54,086 genetic      DEBUG    Define algorithm
+2021-02-13 00:44:54,087 genetic      DEBUG    Run optimization progress
+2021-02-13 00:47:09,239 genetic      DEBUG    Define algorithm
+2021-02-13 00:47:09,241 genetic      DEBUG    Run optimization progress
+2021-02-13 00:49:24,838 genetic      DEBUG    Define algorithm
+2021-02-13 00:49:24,842 genetic      DEBUG    Run optimization progress
+2021-02-13 00:51:41,079 genetic      DEBUG    Define algorithm
+2021-02-13 00:51:41,088 genetic      DEBUG    Run optimization progress
+2021-02-13 00:53:57,206 genetic      DEBUG    Define algorithm
+2021-02-13 00:53:57,209 genetic      DEBUG    Run optimization progress
+2021-02-13 00:56:13,515 genetic      DEBUG    Define algorithm
+2021-02-13 00:56:13,518 genetic      DEBUG    Run optimization progress
+2021-02-13 00:58:28,388 genetic      DEBUG    Define algorithm
+2021-02-13 00:58:28,390 genetic      DEBUG    Run optimization progress
+2021-02-13 01:00:45,202 genetic      DEBUG    Define algorithm
+2021-02-13 01:00:45,207 genetic      DEBUG    Run optimization progress
+2021-02-13 01:03:00,989 genetic      DEBUG    Define algorithm
+2021-02-13 01:03:00,991 genetic      DEBUG    Run optimization progress
+2021-02-13 01:05:17,818 genetic      DEBUG    Define algorithm
+2021-02-13 01:05:17,820 genetic      DEBUG    Run optimization progress
+2021-02-13 01:07:33,835 genetic      DEBUG    Define algorithm
+2021-02-13 01:07:33,837 genetic      DEBUG    Run optimization progress
+2021-02-13 01:09:49,972 genetic      DEBUG    Define algorithm
+2021-02-13 01:09:49,974 genetic      DEBUG    Run optimization progress
+2021-02-13 01:12:06,986 genetic      DEBUG    Define algorithm
+2021-02-13 01:12:06,988 genetic      DEBUG    Run optimization progress
+2021-02-13 01:14:23,056 genetic      DEBUG    Define algorithm
+2021-02-13 01:14:23,057 genetic      DEBUG    Run optimization progress
+2021-02-13 01:16:39,453 genetic      DEBUG    Define algorithm
+2021-02-13 01:16:39,456 genetic      DEBUG    Run optimization progress
+2021-02-13 01:18:55,739 genetic      DEBUG    Define algorithm
+2021-02-13 01:18:55,741 genetic      DEBUG    Run optimization progress
+2021-02-13 01:21:11,309 genetic      DEBUG    Define algorithm
+2021-02-13 01:21:11,311 genetic      DEBUG    Run optimization progress
+2021-02-13 01:23:27,342 genetic      DEBUG    Define algorithm
+2021-02-13 01:23:27,344 genetic      DEBUG    Run optimization progress
+2021-02-13 01:25:44,155 genetic      DEBUG    Define algorithm
+2021-02-13 01:25:44,157 genetic      DEBUG    Run optimization progress
+2021-02-13 01:27:59,994 genetic      DEBUG    Define algorithm
+2021-02-13 01:27:59,996 genetic      DEBUG    Run optimization progress
+2021-02-13 01:30:16,068 genetic      DEBUG    Define algorithm
+2021-02-13 01:30:16,070 genetic      DEBUG    Run optimization progress
+2021-02-13 01:32:31,011 genetic      DEBUG    Define algorithm
+2021-02-13 01:32:31,014 genetic      DEBUG    Run optimization progress
+2021-02-13 01:34:47,390 genetic      DEBUG    Define algorithm
+2021-02-13 01:34:47,391 genetic      DEBUG    Run optimization progress
+2021-02-13 01:37:02,259 genetic      DEBUG    Define algorithm
+2021-02-13 01:37:02,263 genetic      DEBUG    Run optimization progress
+2021-02-13 01:39:17,423 genetic      DEBUG    Define algorithm
+2021-02-13 01:39:17,446 genetic      DEBUG    Run optimization progress
+2021-02-13 01:41:32,952 genetic      DEBUG    Define algorithm
+2021-02-13 01:41:32,955 genetic      DEBUG    Run optimization progress
+2021-02-13 01:43:49,850 genetic      DEBUG    Define algorithm
+2021-02-13 01:43:49,852 genetic      DEBUG    Run optimization progress
+2021-02-13 01:46:05,736 genetic      DEBUG    Define algorithm
+2021-02-13 01:46:05,738 genetic      DEBUG    Run optimization progress
+2021-02-13 01:48:22,447 genetic      DEBUG    Define algorithm
+2021-02-13 01:48:22,448 genetic      DEBUG    Run optimization progress
+2021-02-13 01:50:38,414 genetic      DEBUG    Define algorithm
+2021-02-13 01:50:38,415 genetic      DEBUG    Run optimization progress
+2021-02-13 01:52:55,532 genetic      DEBUG    Define algorithm
+2021-02-13 01:52:55,534 genetic      DEBUG    Run optimization progress
+2021-02-13 01:55:03,371 genetic      DEBUG    Define algorithm
+2021-02-13 01:55:03,373 genetic      DEBUG    Run optimization progress
+2021-02-13 01:57:10,251 genetic      DEBUG    Define algorithm
+2021-02-13 01:57:10,253 genetic      DEBUG    Run optimization progress
+2021-02-13 01:59:17,242 genetic      DEBUG    Define algorithm
+2021-02-13 01:59:17,243 genetic      DEBUG    Run optimization progress
+2021-02-13 02:01:24,265 genetic      DEBUG    Define algorithm
+2021-02-13 02:01:24,267 genetic      DEBUG    Run optimization progress
+2021-02-13 02:03:31,365 genetic      DEBUG    Define algorithm
+2021-02-13 02:03:31,367 genetic      DEBUG    Run optimization progress
+2021-02-13 02:05:38,301 genetic      DEBUG    Define algorithm
+2021-02-13 02:05:38,313 genetic      DEBUG    Run optimization progress
+2021-02-13 02:07:45,262 genetic      DEBUG    Define algorithm
+2021-02-13 02:07:45,264 genetic      DEBUG    Run optimization progress
+2021-02-13 02:09:52,276 genetic      DEBUG    Define algorithm
+2021-02-13 02:09:52,277 genetic      DEBUG    Run optimization progress
+2021-02-13 02:12:00,201 genetic      DEBUG    Define algorithm
+2021-02-13 02:12:00,202 genetic      DEBUG    Run optimization progress
+2021-02-13 02:14:07,710 genetic      DEBUG    Define algorithm
+2021-02-13 02:14:07,711 genetic      DEBUG    Run optimization progress
+2021-02-13 02:16:19,364 genetic      DEBUG    Define algorithm
+2021-02-13 02:16:19,366 genetic      DEBUG    Run optimization progress
+2021-02-13 02:18:30,108 genetic      DEBUG    Define algorithm
+2021-02-13 02:18:30,110 genetic      DEBUG    Run optimization progress
+2021-02-13 02:20:40,822 genetic      DEBUG    Define algorithm
+2021-02-13 02:20:40,823 genetic      DEBUG    Run optimization progress
+2021-02-13 02:22:47,945 genetic      DEBUG    Define algorithm
+2021-02-13 02:22:47,947 genetic      DEBUG    Run optimization progress
+2021-02-13 02:24:56,353 genetic      DEBUG    Define algorithm
+2021-02-13 02:24:56,355 genetic      DEBUG    Run optimization progress
+2021-02-13 02:27:03,239 genetic      DEBUG    Define algorithm
+2021-02-13 02:27:03,240 genetic      DEBUG    Run optimization progress
+2021-02-13 02:29:12,985 genetic      DEBUG    Define algorithm
+2021-02-13 02:29:12,988 genetic      DEBUG    Run optimization progress
+2021-02-13 02:31:22,235 genetic      DEBUG    Define algorithm
+2021-02-13 02:31:22,236 genetic      DEBUG    Run optimization progress
+2021-02-13 02:33:29,728 genetic      DEBUG    Define algorithm
+2021-02-13 02:33:29,730 genetic      DEBUG    Run optimization progress
+2021-02-13 02:35:37,465 genetic      DEBUG    Define algorithm
+2021-02-13 02:35:37,467 genetic      DEBUG    Run optimization progress
+2021-02-13 02:37:44,246 genetic      DEBUG    Define algorithm
+2021-02-13 02:37:44,248 genetic      DEBUG    Run optimization progress
+2021-02-13 02:39:51,999 genetic      DEBUG    Define algorithm
+2021-02-13 02:39:52,000 genetic      DEBUG    Run optimization progress
+2021-02-13 02:42:00,869 genetic      DEBUG    Define algorithm
+2021-02-13 02:42:00,870 genetic      DEBUG    Run optimization progress
+2021-02-13 02:44:08,377 genetic      DEBUG    Define algorithm
+2021-02-13 02:44:08,379 genetic      DEBUG    Run optimization progress
+2021-02-13 02:46:17,064 genetic      DEBUG    Define algorithm
+2021-02-13 02:46:17,065 genetic      DEBUG    Run optimization progress
+2021-02-13 02:48:24,721 genetic      DEBUG    Define algorithm
+2021-02-13 02:48:24,723 genetic      DEBUG    Run optimization progress
+2021-02-13 02:50:32,068 genetic      DEBUG    Define algorithm
+2021-02-13 02:50:32,069 genetic      DEBUG    Run optimization progress
+2021-02-13 02:52:39,916 genetic      DEBUG    Define algorithm
+2021-02-13 02:52:39,917 genetic      DEBUG    Run optimization progress
+2021-02-13 02:54:48,119 genetic      DEBUG    Define algorithm
+2021-02-13 02:54:48,121 genetic      DEBUG    Run optimization progress
+2021-02-13 02:56:55,178 genetic      DEBUG    Define algorithm
+2021-02-13 02:56:55,180 genetic      DEBUG    Run optimization progress
+2021-02-13 02:59:01,894 genetic      DEBUG    Define algorithm
+2021-02-13 02:59:01,895 genetic      DEBUG    Run optimization progress
+2021-02-13 03:01:10,076 genetic      DEBUG    Define algorithm
+2021-02-13 03:01:10,078 genetic      DEBUG    Run optimization progress
+2021-02-13 03:03:17,171 genetic      DEBUG    Define algorithm
+2021-02-13 03:03:17,172 genetic      DEBUG    Run optimization progress
+2021-02-13 03:05:23,699 genetic      DEBUG    Define algorithm
+2021-02-13 03:05:23,701 genetic      DEBUG    Run optimization progress
+2021-02-13 03:07:31,325 genetic      DEBUG    Define algorithm
+2021-02-13 03:07:31,326 genetic      DEBUG    Run optimization progress
+2021-02-13 03:09:39,499 genetic      DEBUG    Define algorithm
+2021-02-13 03:09:39,501 genetic      DEBUG    Run optimization progress
+2021-02-13 03:11:46,800 genetic      DEBUG    Define algorithm
+2021-02-13 03:11:46,801 genetic      DEBUG    Run optimization progress
+2021-02-13 03:13:54,401 genetic      DEBUG    Define algorithm
+2021-02-13 03:13:54,404 genetic      DEBUG    Run optimization progress
+2021-02-13 03:16:01,751 genetic      DEBUG    Define algorithm
+2021-02-13 03:16:01,753 genetic      DEBUG    Run optimization progress
+2021-02-13 03:18:08,290 genetic      DEBUG    Define algorithm
+2021-02-13 03:18:08,292 genetic      DEBUG    Run optimization progress
+2021-02-13 03:20:15,557 genetic      DEBUG    Define algorithm
+2021-02-13 03:20:15,558 genetic      DEBUG    Run optimization progress
+2021-02-13 03:22:23,164 genetic      DEBUG    Define algorithm
+2021-02-13 03:22:23,166 genetic      DEBUG    Run optimization progress
+2021-02-13 03:24:32,679 genetic      DEBUG    Define algorithm
+2021-02-13 03:24:32,681 genetic      DEBUG    Run optimization progress
+2021-02-13 03:26:40,970 genetic      DEBUG    Define algorithm
+2021-02-13 03:26:40,973 genetic      DEBUG    Run optimization progress
+2021-02-13 03:28:48,832 genetic      DEBUG    Define algorithm
+2021-02-13 03:28:48,834 genetic      DEBUG    Run optimization progress
+2021-02-13 03:30:56,215 genetic      DEBUG    Define algorithm
+2021-02-13 03:30:56,216 genetic      DEBUG    Run optimization progress
+2021-02-13 03:33:03,896 genetic      DEBUG    Define algorithm
+2021-02-13 03:33:03,897 genetic      DEBUG    Run optimization progress
+2021-02-13 03:35:11,153 genetic      DEBUG    Define algorithm
+2021-02-13 03:35:11,154 genetic      DEBUG    Run optimization progress
+2021-02-13 03:37:19,209 genetic      DEBUG    Define algorithm
+2021-02-13 03:37:19,211 genetic      DEBUG    Run optimization progress
+2021-02-13 03:39:26,537 genetic      DEBUG    Define algorithm
+2021-02-13 03:39:26,539 genetic      DEBUG    Run optimization progress
+2021-02-13 03:41:34,503 genetic      DEBUG    Define algorithm
+2021-02-13 03:41:34,505 genetic      DEBUG    Run optimization progress
+2021-02-13 03:43:42,221 genetic      DEBUG    Define algorithm
+2021-02-13 03:43:42,222 genetic      DEBUG    Run optimization progress
+2021-02-13 03:45:49,919 genetic      DEBUG    Define algorithm
+2021-02-13 03:45:49,919 genetic      DEBUG    Run optimization progress
+2021-02-13 03:47:57,511 genetic      DEBUG    Define algorithm
+2021-02-13 03:47:57,512 genetic      DEBUG    Run optimization progress
+2021-02-13 03:50:06,019 genetic      DEBUG    Define algorithm
+2021-02-13 03:50:06,020 genetic      DEBUG    Run optimization progress
+2021-02-13 03:52:13,130 genetic      DEBUG    Define algorithm
+2021-02-13 03:52:13,134 genetic      DEBUG    Run optimization progress
+2021-02-13 03:54:21,400 genetic      DEBUG    Define algorithm
+2021-02-13 03:54:21,401 genetic      DEBUG    Run optimization progress
+2021-02-13 03:56:28,811 genetic      DEBUG    Define algorithm
+2021-02-13 03:56:28,813 genetic      DEBUG    Run optimization progress
+2021-02-13 03:58:36,144 genetic      DEBUG    Define algorithm
+2021-02-13 03:58:36,146 genetic      DEBUG    Run optimization progress
+2021-02-13 04:00:43,920 genetic      DEBUG    Define algorithm
+2021-02-13 04:00:43,921 genetic      DEBUG    Run optimization progress
+2021-02-13 04:02:51,728 genetic      DEBUG    Define algorithm
+2021-02-13 04:02:51,730 genetic      DEBUG    Run optimization progress
+2021-02-13 04:04:59,152 genetic      DEBUG    Define algorithm
+2021-02-13 04:04:59,153 genetic      DEBUG    Run optimization progress
+2021-02-13 04:07:06,843 genetic      DEBUG    Define algorithm
+2021-02-13 04:07:06,844 genetic      DEBUG    Run optimization progress
+2021-02-13 04:09:15,218 genetic      DEBUG    Define algorithm
+2021-02-13 04:09:15,221 genetic      DEBUG    Run optimization progress
+2021-02-13 04:11:22,482 genetic      DEBUG    Define algorithm
+2021-02-13 04:11:22,484 genetic      DEBUG    Run optimization progress
+2021-02-13 04:13:30,362 genetic      DEBUG    Define algorithm
+2021-02-13 04:13:30,363 genetic      DEBUG    Run optimization progress
+2021-02-13 04:15:38,401 genetic      DEBUG    Define algorithm
+2021-02-13 04:15:38,403 genetic      DEBUG    Run optimization progress
+2021-02-13 04:17:45,498 genetic      DEBUG    Define algorithm
+2021-02-13 04:17:45,500 genetic      DEBUG    Run optimization progress
+2021-02-13 04:19:54,023 genetic      DEBUG    Define algorithm
+2021-02-13 04:19:54,025 genetic      DEBUG    Run optimization progress
+2021-02-13 04:22:01,249 genetic      DEBUG    Define algorithm
+2021-02-13 04:22:01,250 genetic      DEBUG    Run optimization progress
+2021-02-13 04:24:08,764 genetic      DEBUG    Define algorithm
+2021-02-13 04:24:08,765 genetic      DEBUG    Run optimization progress
+2021-02-13 04:26:16,068 genetic      DEBUG    Define algorithm
+2021-02-13 04:26:16,070 genetic      DEBUG    Run optimization progress
+2021-02-13 04:28:23,298 genetic      DEBUG    Define algorithm
+2021-02-13 04:28:23,299 genetic      DEBUG    Run optimization progress
+2021-02-13 04:30:30,391 genetic      DEBUG    Define algorithm
+2021-02-13 04:30:30,392 genetic      DEBUG    Run optimization progress
+2021-02-13 04:32:38,225 genetic      DEBUG    Define algorithm
+2021-02-13 04:32:38,226 genetic      DEBUG    Run optimization progress
+2021-02-13 04:34:45,141 genetic      DEBUG    Define algorithm
+2021-02-13 04:34:45,143 genetic      DEBUG    Run optimization progress
+2021-02-13 04:36:52,325 genetic      DEBUG    Define algorithm
+2021-02-13 04:36:52,327 genetic      DEBUG    Run optimization progress
+2021-02-13 04:38:59,279 genetic      DEBUG    Define algorithm
+2021-02-13 04:38:59,282 genetic      DEBUG    Run optimization progress
+2021-02-13 04:41:06,588 genetic      DEBUG    Define algorithm
+2021-02-13 04:41:06,590 genetic      DEBUG    Run optimization progress
+2021-02-13 04:43:13,561 genetic      DEBUG    Define algorithm
+2021-02-13 04:43:13,563 genetic      DEBUG    Run optimization progress
+2021-02-13 04:45:23,559 genetic      DEBUG    Define algorithm
+2021-02-13 04:45:23,561 genetic      DEBUG    Run optimization progress
+2021-02-13 04:47:30,827 genetic      DEBUG    Define algorithm
+2021-02-13 04:47:30,829 genetic      DEBUG    Run optimization progress
+2021-02-13 04:49:40,385 genetic      DEBUG    Define algorithm
+2021-02-13 04:49:40,387 genetic      DEBUG    Run optimization progress
+2021-02-13 04:51:48,807 genetic      DEBUG    Define algorithm
+2021-02-13 04:51:48,808 genetic      DEBUG    Run optimization progress
+2021-02-13 04:53:58,433 genetic      DEBUG    Define algorithm
+2021-02-13 04:53:58,434 genetic      DEBUG    Run optimization progress
+2021-02-13 04:56:06,154 genetic      DEBUG    Define algorithm
+2021-02-13 04:56:06,156 genetic      DEBUG    Run optimization progress
+2021-02-13 04:58:15,208 genetic      DEBUG    Define algorithm
+2021-02-13 04:58:15,210 genetic      DEBUG    Run optimization progress
+2021-02-13 05:00:22,383 genetic      DEBUG    Define algorithm
+2021-02-13 05:00:22,384 genetic      DEBUG    Run optimization progress
+2021-02-13 05:02:31,857 genetic      DEBUG    Define algorithm
+2021-02-13 05:02:31,860 genetic      DEBUG    Run optimization progress
+2021-02-13 05:04:39,020 genetic      DEBUG    Define algorithm
+2021-02-13 05:04:39,022 genetic      DEBUG    Run optimization progress
+2021-02-13 05:06:47,088 genetic      DEBUG    Define algorithm
+2021-02-13 05:06:47,090 genetic      DEBUG    Run optimization progress
+2021-02-13 05:08:55,358 genetic      DEBUG    Define algorithm
+2021-02-13 05:08:55,361 genetic      DEBUG    Run optimization progress
+2021-02-13 05:11:03,679 genetic      DEBUG    Define algorithm
+2021-02-13 05:11:03,680 genetic      DEBUG    Run optimization progress
+2021-02-13 05:13:10,798 genetic      DEBUG    Define algorithm
+2021-02-13 05:13:10,800 genetic      DEBUG    Run optimization progress
+2021-02-13 05:15:18,664 genetic      DEBUG    Define algorithm
+2021-02-13 05:15:18,666 genetic      DEBUG    Run optimization progress
+2021-02-13 05:17:26,845 genetic      DEBUG    Define algorithm
+2021-02-13 05:17:26,847 genetic      DEBUG    Run optimization progress
+2021-02-13 05:19:34,852 genetic      DEBUG    Define algorithm
+2021-02-13 05:19:34,853 genetic      DEBUG    Run optimization progress
+2021-02-13 05:21:42,601 genetic      DEBUG    Define algorithm
+2021-02-13 05:21:42,604 genetic      DEBUG    Run optimization progress
+2021-02-13 05:23:51,147 genetic      DEBUG    Define algorithm
+2021-02-13 05:23:51,149 genetic      DEBUG    Run optimization progress
+2021-02-13 05:26:02,147 genetic      DEBUG    Define algorithm
+2021-02-13 05:26:02,149 genetic      DEBUG    Run optimization progress
+2021-02-13 05:28:09,175 genetic      DEBUG    Define algorithm
+2021-02-13 05:28:09,189 genetic      DEBUG    Run optimization progress
+2021-02-13 05:30:15,996 genetic      DEBUG    Define algorithm
+2021-02-13 05:30:15,998 genetic      DEBUG    Run optimization progress
+2021-02-13 05:32:22,972 genetic      DEBUG    Define algorithm
+2021-02-13 05:32:22,974 genetic      DEBUG    Run optimization progress
+2021-02-13 05:34:34,087 genetic      DEBUG    Define algorithm
+2021-02-13 05:34:34,089 genetic      DEBUG    Run optimization progress
+2021-02-13 05:36:42,581 genetic      DEBUG    Define algorithm
+2021-02-13 05:36:42,596 genetic      DEBUG    Run optimization progress
+2021-02-13 05:38:49,672 genetic      DEBUG    Define algorithm
+2021-02-13 05:38:49,686 genetic      DEBUG    Run optimization progress
+2021-02-13 05:40:56,775 genetic      DEBUG    Define algorithm
+2021-02-13 05:40:56,790 genetic      DEBUG    Run optimization progress
+2021-02-13 05:43:03,727 genetic      DEBUG    Define algorithm
+2021-02-13 05:43:03,728 genetic      DEBUG    Run optimization progress
+2021-02-13 05:45:10,567 genetic      DEBUG    Define algorithm
+2021-02-13 05:45:10,568 genetic      DEBUG    Run optimization progress
+2021-02-13 05:47:17,683 genetic      DEBUG    Define algorithm
+2021-02-13 05:47:17,684 genetic      DEBUG    Run optimization progress
+2021-02-13 05:49:28,821 genetic      DEBUG    Define algorithm
+2021-02-13 05:49:28,822 genetic      DEBUG    Run optimization progress
+2021-02-13 05:51:35,752 genetic      DEBUG    Define algorithm
+2021-02-13 05:51:35,754 genetic      DEBUG    Run optimization progress
+2021-02-13 05:53:44,739 genetic      DEBUG    Define algorithm
+2021-02-13 05:53:44,740 genetic      DEBUG    Run optimization progress
+2021-02-13 05:55:52,146 genetic      DEBUG    Define algorithm
+2021-02-13 05:55:52,147 genetic      DEBUG    Run optimization progress
+2021-02-13 05:57:59,825 genetic      DEBUG    Define algorithm
+2021-02-13 05:57:59,827 genetic      DEBUG    Run optimization progress
+2021-02-13 06:00:10,028 genetic      DEBUG    Define algorithm
+2021-02-13 06:00:10,029 genetic      DEBUG    Run optimization progress
+2021-02-13 06:02:18,574 genetic      DEBUG    Define algorithm
+2021-02-13 06:02:18,575 genetic      DEBUG    Run optimization progress
+2021-02-13 06:04:26,275 genetic      DEBUG    Define algorithm
+2021-02-13 06:04:26,276 genetic      DEBUG    Run optimization progress
+2021-02-13 06:06:34,428 genetic      DEBUG    Define algorithm
+2021-02-13 06:06:34,429 genetic      DEBUG    Run optimization progress
+2021-02-13 06:08:42,377 genetic      DEBUG    Define algorithm
+2021-02-13 06:08:42,379 genetic      DEBUG    Run optimization progress
+2021-02-13 06:10:50,380 genetic      DEBUG    Define algorithm
+2021-02-13 06:10:50,381 genetic      DEBUG    Run optimization progress
+2021-02-13 06:12:58,357 genetic      DEBUG    Define algorithm
+2021-02-13 06:12:58,358 genetic      DEBUG    Run optimization progress
+2021-02-13 06:15:05,833 genetic      DEBUG    Define algorithm
+2021-02-13 06:15:05,835 genetic      DEBUG    Run optimization progress
+2021-02-13 06:17:13,234 genetic      DEBUG    Define algorithm
+2021-02-13 06:17:13,236 genetic      DEBUG    Run optimization progress
+2021-02-13 06:19:20,744 genetic      DEBUG    Define algorithm
+2021-02-13 06:19:20,746 genetic      DEBUG    Run optimization progress
+2021-02-13 06:21:28,299 genetic      DEBUG    Define algorithm
+2021-02-13 06:21:28,301 genetic      DEBUG    Run optimization progress
+2021-02-13 06:23:36,539 genetic      DEBUG    Define algorithm
+2021-02-13 06:23:36,541 genetic      DEBUG    Run optimization progress
+2021-02-13 06:25:43,857 genetic      DEBUG    Define algorithm
+2021-02-13 06:25:43,859 genetic      DEBUG    Run optimization progress
+2021-02-13 06:27:50,796 genetic      DEBUG    Define algorithm
+2021-02-13 06:27:50,799 genetic      DEBUG    Run optimization progress
+2021-02-13 06:29:58,264 genetic      DEBUG    Define algorithm
+2021-02-13 06:29:58,266 genetic      DEBUG    Run optimization progress
+2021-02-13 06:32:06,248 genetic      DEBUG    Define algorithm
+2021-02-13 06:32:06,249 genetic      DEBUG    Run optimization progress
+2021-02-13 06:34:15,150 genetic      DEBUG    Define algorithm
+2021-02-13 06:34:15,151 genetic      DEBUG    Run optimization progress
+2021-02-13 06:36:23,347 genetic      DEBUG    Define algorithm
+2021-02-13 06:36:23,349 genetic      DEBUG    Run optimization progress
+2021-02-13 06:38:31,793 genetic      DEBUG    Define algorithm
+2021-02-13 06:38:31,795 genetic      DEBUG    Run optimization progress
+2021-02-13 06:40:39,163 genetic      DEBUG    Define algorithm
+2021-02-13 06:40:39,165 genetic      DEBUG    Run optimization progress
+2021-02-13 06:42:46,190 genetic      DEBUG    Define algorithm
+2021-02-13 06:42:46,192 genetic      DEBUG    Run optimization progress
+2021-02-13 06:44:55,616 genetic      DEBUG    Define algorithm
+2021-02-13 06:44:55,618 genetic      DEBUG    Run optimization progress
+2021-02-13 06:47:03,670 genetic      DEBUG    Define algorithm
+2021-02-13 06:47:03,670 genetic      DEBUG    Run optimization progress
+2021-02-13 06:49:11,717 genetic      DEBUG    Define algorithm
+2021-02-13 06:49:11,718 genetic      DEBUG    Run optimization progress
+2021-02-13 06:51:19,377 genetic      DEBUG    Define algorithm
+2021-02-13 06:51:19,378 genetic      DEBUG    Run optimization progress
+2021-02-13 06:53:28,324 genetic      DEBUG    Define algorithm
+2021-02-13 06:53:28,326 genetic      DEBUG    Run optimization progress
+2021-02-13 06:55:35,511 genetic      DEBUG    Define algorithm
+2021-02-13 06:55:35,513 genetic      DEBUG    Run optimization progress
+2021-02-13 06:57:43,887 genetic      DEBUG    Define algorithm
+2021-02-13 06:57:43,888 genetic      DEBUG    Run optimization progress
+2021-02-13 06:59:52,261 genetic      DEBUG    Define algorithm
+2021-02-13 06:59:52,263 genetic      DEBUG    Run optimization progress
+2021-02-13 07:02:02,531 genetic      DEBUG    Define algorithm
+2021-02-13 07:02:02,533 genetic      DEBUG    Run optimization progress
+2021-02-13 07:04:10,759 genetic      DEBUG    Define algorithm
+2021-02-13 07:04:10,760 genetic      DEBUG    Run optimization progress
+2021-02-13 07:06:18,373 genetic      DEBUG    Define algorithm
+2021-02-13 07:06:18,374 genetic      DEBUG    Run optimization progress
+2021-02-13 07:08:25,074 genetic      DEBUG    Define algorithm
+2021-02-13 07:08:25,076 genetic      DEBUG    Run optimization progress
+2021-02-13 07:10:32,306 genetic      DEBUG    Define algorithm
+2021-02-13 07:10:32,307 genetic      DEBUG    Run optimization progress
+2021-02-13 07:12:40,401 genetic      DEBUG    Define algorithm
+2021-02-13 07:12:40,402 genetic      DEBUG    Run optimization progress
+2021-02-13 07:14:47,267 genetic      DEBUG    Define algorithm
+2021-02-13 07:14:47,269 genetic      DEBUG    Run optimization progress
+2021-02-13 07:16:54,628 genetic      DEBUG    Define algorithm
+2021-02-13 07:16:54,630 genetic      DEBUG    Run optimization progress
+2021-02-13 07:19:02,539 genetic      DEBUG    Define algorithm
+2021-02-13 07:19:02,541 genetic      DEBUG    Run optimization progress
+2021-02-13 07:21:10,345 genetic      DEBUG    Define algorithm
+2021-02-13 07:21:10,347 genetic      DEBUG    Run optimization progress
+2021-02-13 07:23:17,912 genetic      DEBUG    Define algorithm
+2021-02-13 07:23:17,914 genetic      DEBUG    Run optimization progress
+2021-02-13 07:25:25,114 genetic      DEBUG    Define algorithm
+2021-02-13 07:25:25,115 genetic      DEBUG    Run optimization progress
+2021-02-13 07:27:32,096 genetic      DEBUG    Define algorithm
+2021-02-13 07:27:32,097 genetic      DEBUG    Run optimization progress
+2021-02-13 07:29:43,276 genetic      DEBUG    Define algorithm
+2021-02-13 07:29:43,278 genetic      DEBUG    Run optimization progress
+2021-02-13 07:31:50,316 genetic      DEBUG    Define algorithm
+2021-02-13 07:31:50,318 genetic      DEBUG    Run optimization progress
+2021-02-13 07:33:58,344 genetic      DEBUG    Define algorithm
+2021-02-13 07:33:58,346 genetic      DEBUG    Run optimization progress
+2021-02-13 07:36:05,886 genetic      DEBUG    Define algorithm
+2021-02-13 07:36:05,888 genetic      DEBUG    Run optimization progress
+2021-02-13 07:38:13,874 genetic      DEBUG    Define algorithm
+2021-02-13 07:38:13,874 genetic      DEBUG    Run optimization progress
+2021-02-13 07:40:20,704 genetic      DEBUG    Define algorithm
+2021-02-13 07:40:20,706 genetic      DEBUG    Run optimization progress
+2021-02-13 07:42:30,343 genetic      DEBUG    Define algorithm
+2021-02-13 07:42:30,345 genetic      DEBUG    Run optimization progress
+2021-02-13 07:44:38,063 genetic      DEBUG    Define algorithm
+2021-02-13 07:44:38,065 genetic      DEBUG    Run optimization progress
+2021-02-13 07:46:46,772 genetic      DEBUG    Define algorithm
+2021-02-13 07:46:46,773 genetic      DEBUG    Run optimization progress
+2021-02-13 07:48:54,644 genetic      DEBUG    Define algorithm
+2021-02-13 07:48:54,645 genetic      DEBUG    Run optimization progress
+2021-02-13 07:51:02,351 genetic      DEBUG    Define algorithm
+2021-02-13 07:51:02,352 genetic      DEBUG    Run optimization progress
+2021-02-13 07:53:10,756 genetic      DEBUG    Define algorithm
+2021-02-13 07:53:10,757 genetic      DEBUG    Run optimization progress
+2021-02-13 07:55:19,462 genetic      DEBUG    Define algorithm
+2021-02-13 07:55:19,463 genetic      DEBUG    Run optimization progress
+2021-02-13 07:57:26,725 genetic      DEBUG    Define algorithm
+2021-02-13 07:57:26,727 genetic      DEBUG    Run optimization progress
+2021-02-13 07:59:33,275 genetic      DEBUG    Define algorithm
+2021-02-13 07:59:33,276 genetic      DEBUG    Run optimization progress
+2021-02-13 08:01:40,103 genetic      DEBUG    Define algorithm
+2021-02-13 08:01:40,105 genetic      DEBUG    Run optimization progress
+2021-02-13 08:03:47,328 genetic      DEBUG    Define algorithm
+2021-02-13 08:03:47,330 genetic      DEBUG    Run optimization progress
+2021-02-13 08:05:54,589 genetic      DEBUG    Define algorithm
+2021-02-13 08:05:54,591 genetic      DEBUG    Run optimization progress
+2021-02-13 08:08:04,219 genetic      DEBUG    Define algorithm
+2021-02-13 08:08:04,221 genetic      DEBUG    Run optimization progress
+2021-02-13 08:10:11,997 genetic      DEBUG    Define algorithm
+2021-02-13 08:10:11,999 genetic      DEBUG    Run optimization progress
+2021-02-13 08:12:23,439 genetic      DEBUG    Define algorithm
+2021-02-13 08:12:23,441 genetic      DEBUG    Run optimization progress
+2021-02-13 08:14:31,140 genetic      DEBUG    Define algorithm
+2021-02-13 08:14:31,141 genetic      DEBUG    Run optimization progress
+2021-02-13 08:16:39,877 genetic      DEBUG    Define algorithm
+2021-02-13 08:16:39,878 genetic      DEBUG    Run optimization progress
+2021-02-13 08:18:46,910 genetic      DEBUG    Define algorithm
+2021-02-13 08:18:46,911 genetic      DEBUG    Run optimization progress
+2021-02-13 08:20:58,596 genetic      DEBUG    Define algorithm
+2021-02-13 08:20:58,598 genetic      DEBUG    Run optimization progress
+2021-02-13 08:23:08,980 genetic      DEBUG    Define algorithm
+2021-02-13 08:23:08,982 genetic      DEBUG    Run optimization progress
+2021-02-13 08:25:16,316 genetic      DEBUG    Define algorithm
+2021-02-13 08:25:16,332 genetic      DEBUG    Run optimization progress
+2021-02-13 08:27:23,805 genetic      DEBUG    Define algorithm
+2021-02-13 08:27:23,807 genetic      DEBUG    Run optimization progress
+2021-02-13 08:29:31,377 genetic      DEBUG    Define algorithm
+2021-02-13 08:29:31,379 genetic      DEBUG    Run optimization progress
+2021-02-13 08:31:38,782 genetic      DEBUG    Define algorithm
+2021-02-13 08:31:38,783 genetic      DEBUG    Run optimization progress
+2021-02-13 08:33:45,880 genetic      DEBUG    Define algorithm
+2021-02-13 08:33:45,881 genetic      DEBUG    Run optimization progress
+2021-02-13 08:35:53,237 genetic      DEBUG    Define algorithm
+2021-02-13 08:35:53,239 genetic      DEBUG    Run optimization progress
+2021-02-13 08:38:00,230 genetic      DEBUG    Define algorithm
+2021-02-13 08:38:00,242 genetic      DEBUG    Run optimization progress
+2021-02-13 08:40:08,227 genetic      DEBUG    Define algorithm
+2021-02-13 08:40:08,229 genetic      DEBUG    Run optimization progress
+2021-02-13 08:42:16,770 genetic      DEBUG    Define algorithm
+2021-02-13 08:42:16,771 genetic      DEBUG    Run optimization progress
+2021-02-13 08:44:24,234 genetic      DEBUG    Define algorithm
+2021-02-13 08:44:24,236 genetic      DEBUG    Run optimization progress
+2021-02-13 08:46:31,269 genetic      DEBUG    Define algorithm
+2021-02-13 08:46:31,271 genetic      DEBUG    Run optimization progress
+2021-02-13 08:48:38,516 genetic      DEBUG    Define algorithm
+2021-02-13 08:48:38,519 genetic      DEBUG    Run optimization progress
+2021-02-13 08:50:46,579 genetic      DEBUG    Define algorithm
+2021-02-13 08:50:46,580 genetic      DEBUG    Run optimization progress
+2021-02-13 08:52:58,326 genetic      DEBUG    Define algorithm
+2021-02-13 08:52:58,327 genetic      DEBUG    Run optimization progress
+2021-02-13 08:55:06,788 genetic      DEBUG    Define algorithm
+2021-02-13 08:55:06,791 genetic      DEBUG    Run optimization progress
+2021-02-13 08:57:15,003 genetic      DEBUG    Define algorithm
+2021-02-13 08:57:15,005 genetic      DEBUG    Run optimization progress
+2021-02-13 08:59:22,555 genetic      DEBUG    Define algorithm
+2021-02-13 08:59:22,557 genetic      DEBUG    Run optimization progress
+2021-02-13 09:01:29,669 genetic      DEBUG    Define algorithm
+2021-02-13 09:01:29,670 genetic      DEBUG    Run optimization progress
+2021-02-13 09:03:37,084 genetic      DEBUG    Define algorithm
+2021-02-13 09:03:37,085 genetic      DEBUG    Run optimization progress
+2021-02-13 09:05:46,572 genetic      DEBUG    Define algorithm
+2021-02-13 09:05:46,573 genetic      DEBUG    Run optimization progress
+2021-02-13 09:07:54,550 genetic      DEBUG    Define algorithm
+2021-02-13 09:07:54,551 genetic      DEBUG    Run optimization progress
+2021-02-13 09:10:02,269 genetic      DEBUG    Define algorithm
+2021-02-13 09:10:02,270 genetic      DEBUG    Run optimization progress
+2021-02-13 09:12:09,553 genetic      DEBUG    Define algorithm
+2021-02-13 09:12:09,554 genetic      DEBUG    Run optimization progress
+2021-02-13 09:14:16,287 genetic      DEBUG    Define algorithm
+2021-02-13 09:14:16,289 genetic      DEBUG    Run optimization progress
+2021-02-13 09:16:25,246 genetic      DEBUG    Define algorithm
+2021-02-13 09:16:25,247 genetic      DEBUG    Run optimization progress
+2021-02-13 09:18:34,832 genetic      DEBUG    Define algorithm
+2021-02-13 09:18:34,834 genetic      DEBUG    Run optimization progress
+2021-02-13 09:20:42,850 genetic      DEBUG    Define algorithm
+2021-02-13 09:20:42,853 genetic      DEBUG    Run optimization progress
+2021-02-13 09:22:50,901 genetic      DEBUG    Define algorithm
+2021-02-13 09:22:50,903 genetic      DEBUG    Run optimization progress
+2021-02-13 09:24:58,052 genetic      DEBUG    Define algorithm
+2021-02-13 09:24:58,053 genetic      DEBUG    Run optimization progress
+2021-02-13 09:27:06,904 genetic      DEBUG    Define algorithm
+2021-02-13 09:27:06,906 genetic      DEBUG    Run optimization progress
+2021-02-13 09:29:17,775 genetic      DEBUG    Define algorithm
+2021-02-13 09:29:17,776 genetic      DEBUG    Run optimization progress
+2021-02-13 09:31:25,685 genetic      DEBUG    Define algorithm
+2021-02-13 09:31:25,686 genetic      DEBUG    Run optimization progress
+2021-02-13 09:33:33,296 genetic      DEBUG    Define algorithm
+2021-02-13 09:33:33,297 genetic      DEBUG    Run optimization progress
+2021-02-13 09:35:43,290 genetic      DEBUG    Define algorithm
+2021-02-13 09:35:43,292 genetic      DEBUG    Run optimization progress
+2021-02-13 09:37:51,618 genetic      DEBUG    Define algorithm
+2021-02-13 09:37:51,619 genetic      DEBUG    Run optimization progress
+2021-02-13 09:39:59,555 genetic      DEBUG    Define algorithm
+2021-02-13 09:39:59,558 genetic      DEBUG    Run optimization progress
+2021-02-13 09:42:07,652 genetic      DEBUG    Define algorithm
+2021-02-13 09:42:07,653 genetic      DEBUG    Run optimization progress
+2021-02-13 09:44:15,765 genetic      DEBUG    Define algorithm
+2021-02-13 09:44:15,767 genetic      DEBUG    Run optimization progress
+2021-02-13 09:46:22,710 genetic      DEBUG    Define algorithm
+2021-02-13 09:46:22,713 genetic      DEBUG    Run optimization progress
+2021-02-13 09:48:30,875 genetic      DEBUG    Define algorithm
+2021-02-13 09:48:30,876 genetic      DEBUG    Run optimization progress
+2021-02-13 09:50:37,835 genetic      DEBUG    Define algorithm
+2021-02-13 09:50:37,836 genetic      DEBUG    Run optimization progress
+2021-02-13 09:52:46,852 genetic      DEBUG    Define algorithm
+2021-02-13 09:52:46,854 genetic      DEBUG    Run optimization progress
+2021-02-13 09:54:54,059 genetic      DEBUG    Define algorithm
+2021-02-13 09:54:54,060 genetic      DEBUG    Run optimization progress
+2021-02-13 09:57:01,416 genetic      DEBUG    Define algorithm
+2021-02-13 09:57:01,418 genetic      DEBUG    Run optimization progress
+2021-02-13 09:59:08,757 genetic      DEBUG    Define algorithm
+2021-02-13 09:59:08,757 genetic      DEBUG    Run optimization progress
+2021-02-13 10:01:17,014 genetic      DEBUG    Define algorithm
+2021-02-13 10:01:17,016 genetic      DEBUG    Run optimization progress
+2021-02-13 10:03:26,338 genetic      DEBUG    Define algorithm
+2021-02-13 10:03:26,342 genetic      DEBUG    Run optimization progress
+2021-02-13 10:05:33,718 genetic      DEBUG    Define algorithm
+2021-02-13 10:05:33,719 genetic      DEBUG    Run optimization progress
+2021-02-13 10:07:41,636 genetic      DEBUG    Define algorithm
+2021-02-13 10:07:41,638 genetic      DEBUG    Run optimization progress
+2021-02-13 10:09:50,899 genetic      DEBUG    Define algorithm
+2021-02-13 10:09:50,901 genetic      DEBUG    Run optimization progress
+2021-02-13 10:11:58,445 genetic      DEBUG    Define algorithm
+2021-02-13 10:11:58,448 genetic      DEBUG    Run optimization progress
+2021-02-13 10:14:05,900 genetic      DEBUG    Define algorithm
+2021-02-13 10:14:05,902 genetic      DEBUG    Run optimization progress
+2021-02-13 10:16:16,497 genetic      DEBUG    Define algorithm
+2021-02-13 10:16:16,498 genetic      DEBUG    Run optimization progress
+2021-02-13 10:18:24,870 genetic      DEBUG    Define algorithm
+2021-02-13 10:18:24,871 genetic      DEBUG    Run optimization progress
+2021-02-13 10:20:34,649 genetic      DEBUG    Define algorithm
+2021-02-13 10:20:34,650 genetic      DEBUG    Run optimization progress
+2021-02-13 10:22:46,108 genetic      DEBUG    Define algorithm
+2021-02-13 10:22:46,109 genetic      DEBUG    Run optimization progress
+2021-02-13 10:24:53,750 genetic      DEBUG    Define algorithm
+2021-02-13 10:24:53,752 genetic      DEBUG    Run optimization progress
+2021-02-13 10:27:01,105 genetic      DEBUG    Define algorithm
+2021-02-13 10:27:01,107 genetic      DEBUG    Run optimization progress
+2021-02-13 10:29:10,133 genetic      DEBUG    Define algorithm
+2021-02-13 10:29:10,134 genetic      DEBUG    Run optimization progress
+2021-02-13 10:31:18,699 genetic      DEBUG    Define algorithm
+2021-02-13 10:31:18,701 genetic      DEBUG    Run optimization progress
+2021-02-13 10:33:26,528 genetic      DEBUG    Define algorithm
+2021-02-13 10:33:26,530 genetic      DEBUG    Run optimization progress
+2021-02-13 10:35:34,915 genetic      DEBUG    Define algorithm
+2021-02-13 10:35:34,917 genetic      DEBUG    Run optimization progress
+2021-02-13 10:37:43,041 genetic      DEBUG    Define algorithm
+2021-02-13 10:37:43,044 genetic      DEBUG    Run optimization progress
+2021-02-13 10:39:51,464 genetic      DEBUG    Define algorithm
+2021-02-13 10:39:51,466 genetic      DEBUG    Run optimization progress
+2021-02-13 10:41:58,918 genetic      DEBUG    Define algorithm
+2021-02-13 10:41:58,919 genetic      DEBUG    Run optimization progress
+2021-02-13 10:44:09,784 genetic      DEBUG    Define algorithm
+2021-02-13 10:44:09,786 genetic      DEBUG    Run optimization progress
+2021-02-13 10:46:20,579 genetic      DEBUG    Define algorithm
+2021-02-13 10:46:20,580 genetic      DEBUG    Run optimization progress
+2021-02-13 10:48:32,064 genetic      DEBUG    Define algorithm
+2021-02-13 10:48:32,066 genetic      DEBUG    Run optimization progress
+2021-02-13 10:50:40,075 genetic      DEBUG    Define algorithm
+2021-02-13 10:50:40,076 genetic      DEBUG    Run optimization progress
+2021-02-13 10:52:48,007 genetic      DEBUG    Define algorithm
+2021-02-13 10:52:48,009 genetic      DEBUG    Run optimization progress
+2021-02-13 10:54:54,513 genetic      DEBUG    Define algorithm
+2021-02-13 10:54:54,515 genetic      DEBUG    Run optimization progress
+2021-02-13 10:57:02,024 genetic      DEBUG    Define algorithm
+2021-02-13 10:57:02,038 genetic      DEBUG    Run optimization progress
+2021-02-13 10:59:08,743 genetic      DEBUG    Define algorithm
+2021-02-13 10:59:08,745 genetic      DEBUG    Run optimization progress
+2021-02-13 11:01:15,651 genetic      DEBUG    Define algorithm
+2021-02-13 11:01:15,653 genetic      DEBUG    Run optimization progress
+2021-02-13 11:03:23,520 genetic      DEBUG    Define algorithm
+2021-02-13 11:03:23,535 genetic      DEBUG    Run optimization progress
+2021-02-13 11:05:32,587 genetic      DEBUG    Define algorithm
+2021-02-13 11:05:32,589 genetic      DEBUG    Run optimization progress
+2021-02-13 11:07:39,797 genetic      DEBUG    Define algorithm
+2021-02-13 11:07:39,805 genetic      DEBUG    Run optimization progress
+2021-02-13 11:09:46,834 genetic      DEBUG    Define algorithm
+2021-02-13 11:09:46,836 genetic      DEBUG    Run optimization progress
+2021-02-13 11:11:53,810 genetic      DEBUG    Define algorithm
+2021-02-13 11:11:53,812 genetic      DEBUG    Run optimization progress
+2021-02-13 11:14:02,851 genetic      DEBUG    Define algorithm
+2021-02-13 11:14:02,852 genetic      DEBUG    Run optimization progress
+2021-02-13 11:16:13,201 genetic      DEBUG    Define algorithm
+2021-02-13 11:16:13,204 genetic      DEBUG    Run optimization progress
+2021-02-13 11:18:20,839 genetic      DEBUG    Define algorithm
+2021-02-13 11:18:20,841 genetic      DEBUG    Run optimization progress
+2021-02-13 11:20:27,692 genetic      DEBUG    Define algorithm
+2021-02-13 11:20:27,694 genetic      DEBUG    Run optimization progress
+2021-02-13 11:22:34,783 genetic      DEBUG    Define algorithm
+2021-02-13 11:22:34,784 genetic      DEBUG    Run optimization progress
+2021-02-13 11:24:43,566 genetic      DEBUG    Define algorithm
+2021-02-13 11:24:43,568 genetic      DEBUG    Run optimization progress
+2021-02-13 11:26:52,190 genetic      DEBUG    Define algorithm
+2021-02-13 11:26:52,193 genetic      DEBUG    Run optimization progress
+2021-02-13 11:28:59,280 genetic      DEBUG    Define algorithm
+2021-02-13 11:28:59,288 genetic      DEBUG    Run optimization progress
+2021-02-13 11:31:08,412 genetic      DEBUG    Define algorithm
+2021-02-13 11:31:08,425 genetic      DEBUG    Run optimization progress
+2021-02-13 11:33:16,561 genetic      DEBUG    Define algorithm
+2021-02-13 11:33:16,562 genetic      DEBUG    Run optimization progress
+2021-02-13 11:35:23,932 genetic      DEBUG    Define algorithm
+2021-02-13 11:35:23,934 genetic      DEBUG    Run optimization progress
+2021-02-13 11:37:31,405 genetic      DEBUG    Define algorithm
+2021-02-13 11:37:31,406 genetic      DEBUG    Run optimization progress
+2021-02-13 11:39:38,809 genetic      DEBUG    Define algorithm
+2021-02-13 11:39:38,811 genetic      DEBUG    Run optimization progress
+2021-02-13 11:41:46,424 genetic      DEBUG    Define algorithm
+2021-02-13 11:41:46,425 genetic      DEBUG    Run optimization progress
+2021-02-13 11:43:54,857 genetic      DEBUG    Define algorithm
+2021-02-13 11:43:54,858 genetic      DEBUG    Run optimization progress
+2021-02-13 11:46:05,035 genetic      DEBUG    Define algorithm
+2021-02-13 11:46:05,037 genetic      DEBUG    Run optimization progress
+2021-02-13 11:48:12,216 genetic      DEBUG    Define algorithm
+2021-02-13 11:48:12,218 genetic      DEBUG    Run optimization progress
+2021-02-13 11:50:19,116 genetic      DEBUG    Define algorithm
+2021-02-13 11:50:19,119 genetic      DEBUG    Run optimization progress
+2021-02-13 11:52:26,910 genetic      DEBUG    Define algorithm
+2021-02-13 11:52:26,911 genetic      DEBUG    Run optimization progress
+2021-02-13 11:54:34,291 genetic      DEBUG    Define algorithm
+2021-02-13 11:54:34,293 genetic      DEBUG    Run optimization progress
+2021-02-13 11:56:42,945 genetic      DEBUG    Define algorithm
+2021-02-13 11:56:42,946 genetic      DEBUG    Run optimization progress
+2021-02-13 11:58:51,887 genetic      DEBUG    Define algorithm
+2021-02-13 11:58:51,888 genetic      DEBUG    Run optimization progress
+2021-02-13 12:00:59,107 genetic      DEBUG    Define algorithm
+2021-02-13 12:00:59,108 genetic      DEBUG    Run optimization progress
+2021-02-13 12:03:06,055 genetic      DEBUG    Define algorithm
+2021-02-13 12:03:06,057 genetic      DEBUG    Run optimization progress
+2021-02-13 12:05:14,742 genetic      DEBUG    Define algorithm
+2021-02-13 12:05:14,743 genetic      DEBUG    Run optimization progress
+2021-02-13 12:07:22,666 genetic      DEBUG    Define algorithm
+2021-02-13 12:07:22,667 genetic      DEBUG    Run optimization progress
+2021-02-13 12:09:30,566 genetic      DEBUG    Define algorithm
+2021-02-13 12:09:30,568 genetic      DEBUG    Run optimization progress
+2021-02-13 12:11:39,977 genetic      DEBUG    Define algorithm
+2021-02-13 12:11:39,978 genetic      DEBUG    Run optimization progress
+2021-02-13 12:13:48,139 genetic      DEBUG    Define algorithm
+2021-02-13 12:13:48,140 genetic      DEBUG    Run optimization progress
+2021-02-13 12:15:56,640 genetic      DEBUG    Define algorithm
+2021-02-13 12:15:56,642 genetic      DEBUG    Run optimization progress
+2021-02-13 12:18:05,772 genetic      DEBUG    Define algorithm
+2021-02-13 12:18:05,773 genetic      DEBUG    Run optimization progress
+2021-02-13 12:20:13,621 genetic      DEBUG    Define algorithm
+2021-02-13 12:20:13,623 genetic      DEBUG    Run optimization progress
+2021-02-13 12:22:21,396 genetic      DEBUG    Define algorithm
+2021-02-13 12:22:21,398 genetic      DEBUG    Run optimization progress
+2021-02-13 12:24:29,418 genetic      DEBUG    Define algorithm
+2021-02-13 12:24:29,419 genetic      DEBUG    Run optimization progress
+2021-02-13 12:26:37,491 genetic      DEBUG    Define algorithm
+2021-02-13 12:26:37,493 genetic      DEBUG    Run optimization progress
+2021-02-13 12:28:45,866 genetic      DEBUG    Define algorithm
+2021-02-13 12:28:45,868 genetic      DEBUG    Run optimization progress
+2021-02-13 12:30:53,740 genetic      DEBUG    Define algorithm
+2021-02-13 12:30:53,741 genetic      DEBUG    Run optimization progress
+2021-02-13 12:33:01,066 genetic      DEBUG    Define algorithm
+2021-02-13 12:33:01,067 genetic      DEBUG    Run optimization progress
+2021-02-13 12:35:09,556 genetic      DEBUG    Define algorithm
+2021-02-13 12:35:09,559 genetic      DEBUG    Run optimization progress
+2021-02-13 12:37:16,626 genetic      DEBUG    Define algorithm
+2021-02-13 12:37:16,629 genetic      DEBUG    Run optimization progress
+2021-02-13 12:39:23,763 genetic      DEBUG    Define algorithm
+2021-02-13 12:39:23,765 genetic      DEBUG    Run optimization progress
+2021-02-13 12:41:31,775 genetic      DEBUG    Define algorithm
+2021-02-13 12:41:31,776 genetic      DEBUG    Run optimization progress
+2021-02-13 12:43:38,985 genetic      DEBUG    Define algorithm
+2021-02-13 12:43:38,988 genetic      DEBUG    Run optimization progress
+2021-02-13 12:45:46,654 genetic      DEBUG    Define algorithm
+2021-02-13 12:45:46,655 genetic      DEBUG    Run optimization progress
+2021-02-13 12:47:54,089 genetic      DEBUG    Define algorithm
+2021-02-13 12:47:54,090 genetic      DEBUG    Run optimization progress
+2021-02-13 12:50:02,480 genetic      DEBUG    Define algorithm
+2021-02-13 12:50:02,481 genetic      DEBUG    Run optimization progress
+2021-02-13 12:52:10,251 genetic      DEBUG    Define algorithm
+2021-02-13 12:52:10,252 genetic      DEBUG    Run optimization progress
+2021-02-13 12:54:19,873 genetic      DEBUG    Define algorithm
+2021-02-13 12:54:19,874 genetic      DEBUG    Run optimization progress
+2021-02-13 12:56:27,470 genetic      DEBUG    Define algorithm
+2021-02-13 12:56:27,471 genetic      DEBUG    Run optimization progress
+2021-02-13 12:58:35,429 genetic      DEBUG    Define algorithm
+2021-02-13 12:58:35,430 genetic      DEBUG    Run optimization progress
+2021-02-13 13:00:42,717 genetic      DEBUG    Define algorithm
+2021-02-13 13:00:42,717 genetic      DEBUG    Run optimization progress
+2021-02-13 13:02:50,423 genetic      DEBUG    Define algorithm
+2021-02-13 13:02:50,426 genetic      DEBUG    Run optimization progress
+2021-02-13 13:04:57,625 genetic      DEBUG    Define algorithm
+2021-02-13 13:04:57,626 genetic      DEBUG    Run optimization progress
+2021-02-13 13:07:05,471 genetic      DEBUG    Define algorithm
+2021-02-13 13:07:05,472 genetic      DEBUG    Run optimization progress
+2021-02-13 13:09:13,279 genetic      DEBUG    Define algorithm
+2021-02-13 13:09:13,281 genetic      DEBUG    Run optimization progress
+2021-02-13 13:11:21,226 genetic      DEBUG    Define algorithm
+2021-02-13 13:11:21,228 genetic      DEBUG    Run optimization progress
+2021-02-13 13:13:29,602 genetic      DEBUG    Define algorithm
+2021-02-13 13:13:29,603 genetic      DEBUG    Run optimization progress
+2021-02-13 13:15:36,872 genetic      DEBUG    Define algorithm
+2021-02-13 13:15:36,873 genetic      DEBUG    Run optimization progress
+2021-02-13 13:17:44,014 genetic      DEBUG    Define algorithm
+2021-02-13 13:17:44,016 genetic      DEBUG    Run optimization progress
+2021-02-13 13:19:51,042 genetic      DEBUG    Define algorithm
+2021-02-13 13:19:51,042 genetic      DEBUG    Run optimization progress
+2021-02-13 13:21:58,103 genetic      DEBUG    Define algorithm
+2021-02-13 13:21:58,104 genetic      DEBUG    Run optimization progress
+2021-02-13 13:24:07,198 genetic      DEBUG    Define algorithm
+2021-02-13 13:24:07,200 genetic      DEBUG    Run optimization progress
+2021-02-13 13:26:17,586 genetic      DEBUG    Define algorithm
+2021-02-13 13:26:17,589 genetic      DEBUG    Run optimization progress
+2021-02-13 13:28:25,984 genetic      DEBUG    Define algorithm
+2021-02-13 13:28:25,987 genetic      DEBUG    Run optimization progress
+2021-02-13 13:30:35,626 genetic      DEBUG    Define algorithm
+2021-02-13 13:30:35,629 genetic      DEBUG    Run optimization progress
+2021-02-13 13:32:45,001 genetic      DEBUG    Define algorithm
+2021-02-13 13:32:45,003 genetic      DEBUG    Run optimization progress
+2021-02-13 13:34:55,261 genetic      DEBUG    Define algorithm
+2021-02-13 13:34:55,263 genetic      DEBUG    Run optimization progress
+2021-02-13 13:37:06,505 genetic      DEBUG    Define algorithm
+2021-02-13 13:37:06,507 genetic      DEBUG    Run optimization progress
+2021-02-13 13:39:17,347 genetic      DEBUG    Define algorithm
+2021-02-13 13:39:17,349 genetic      DEBUG    Run optimization progress
+2021-02-13 13:41:27,039 genetic      DEBUG    Define algorithm
+2021-02-13 13:41:27,042 genetic      DEBUG    Run optimization progress
+2021-02-13 13:43:36,829 genetic      DEBUG    Define algorithm
+2021-02-13 13:43:36,830 genetic      DEBUG    Run optimization progress
+2021-02-13 13:45:45,702 genetic      DEBUG    Define algorithm
+2021-02-13 13:45:45,704 genetic      DEBUG    Run optimization progress
+2021-02-13 13:47:52,885 genetic      DEBUG    Define algorithm
+2021-02-13 13:47:52,886 genetic      DEBUG    Run optimization progress
+2021-02-13 13:50:00,429 genetic      DEBUG    Define algorithm
+2021-02-13 13:50:00,431 genetic      DEBUG    Run optimization progress
+2021-02-13 13:52:08,553 genetic      DEBUG    Define algorithm
+2021-02-13 13:52:08,555 genetic      DEBUG    Run optimization progress
+2021-02-13 13:54:17,799 genetic      DEBUG    Define algorithm
+2021-02-13 13:54:17,801 genetic      DEBUG    Run optimization progress
+2021-02-13 13:56:27,576 genetic      DEBUG    Define algorithm
+2021-02-13 13:56:27,578 genetic      DEBUG    Run optimization progress
+2021-02-13 13:58:35,731 genetic      DEBUG    Define algorithm
+2021-02-13 13:58:35,732 genetic      DEBUG    Run optimization progress
+2021-02-13 14:00:43,381 genetic      DEBUG    Define algorithm
+2021-02-13 14:00:43,383 genetic      DEBUG    Run optimization progress
+2021-02-13 14:02:51,367 genetic      DEBUG    Define algorithm
+2021-02-13 14:02:51,369 genetic      DEBUG    Run optimization progress
+2021-02-13 14:05:00,625 genetic      DEBUG    Define algorithm
+2021-02-13 14:05:00,626 genetic      DEBUG    Run optimization progress
+2021-02-13 14:07:08,694 genetic      DEBUG    Define algorithm
+2021-02-13 14:07:08,696 genetic      DEBUG    Run optimization progress
+2021-02-13 14:09:17,075 genetic      DEBUG    Define algorithm
+2021-02-13 14:09:17,078 genetic      DEBUG    Run optimization progress
+2021-02-13 14:11:25,104 genetic      DEBUG    Define algorithm
+2021-02-13 14:11:25,105 genetic      DEBUG    Run optimization progress
+2021-02-13 14:13:34,029 genetic      DEBUG    Define algorithm
+2021-02-13 14:13:34,030 genetic      DEBUG    Run optimization progress
+2021-02-13 14:15:40,865 genetic      DEBUG    Define algorithm
+2021-02-13 14:15:40,868 genetic      DEBUG    Run optimization progress
+2021-02-13 14:17:48,359 genetic      DEBUG    Define algorithm
+2021-02-13 14:17:48,361 genetic      DEBUG    Run optimization progress
+2021-02-13 14:19:57,097 genetic      DEBUG    Define algorithm
+2021-02-13 14:19:57,098 genetic      DEBUG    Run optimization progress
+2021-02-13 14:22:05,951 genetic      DEBUG    Define algorithm
+2021-02-13 14:22:05,953 genetic      DEBUG    Run optimization progress
+2021-02-13 14:24:14,093 genetic      DEBUG    Define algorithm
+2021-02-13 14:24:14,095 genetic      DEBUG    Run optimization progress
+2021-02-13 14:26:21,266 genetic      DEBUG    Define algorithm
+2021-02-13 14:26:21,268 genetic      DEBUG    Run optimization progress
+2021-02-13 14:28:29,195 genetic      DEBUG    Define algorithm
+2021-02-13 14:28:29,197 genetic      DEBUG    Run optimization progress
+2021-02-13 14:30:36,453 genetic      DEBUG    Define algorithm
+2021-02-13 14:30:36,454 genetic      DEBUG    Run optimization progress
+2021-02-13 14:32:44,504 genetic      DEBUG    Define algorithm
+2021-02-13 14:32:44,506 genetic      DEBUG    Run optimization progress
+2021-02-13 14:34:52,780 genetic      DEBUG    Define algorithm
+2021-02-13 14:34:52,783 genetic      DEBUG    Run optimization progress
+2021-02-13 14:37:00,098 genetic      DEBUG    Define algorithm
+2021-02-13 14:37:00,100 genetic      DEBUG    Run optimization progress
+2021-02-13 14:39:06,974 genetic      DEBUG    Define algorithm
+2021-02-13 14:39:06,975 genetic      DEBUG    Run optimization progress
+2021-02-13 14:41:14,418 genetic      DEBUG    Define algorithm
+2021-02-13 14:41:14,419 genetic      DEBUG    Run optimization progress
+2021-02-13 14:43:21,121 genetic      DEBUG    Define algorithm
+2021-02-13 14:43:21,125 genetic      DEBUG    Run optimization progress
+2021-02-13 14:45:27,988 genetic      DEBUG    Define algorithm
+2021-02-13 14:45:27,989 genetic      DEBUG    Run optimization progress
+2021-02-13 14:47:36,153 genetic      DEBUG    Define algorithm
+2021-02-13 14:47:36,155 genetic      DEBUG    Run optimization progress
+2021-02-13 14:49:43,324 genetic      DEBUG    Define algorithm
+2021-02-13 14:49:43,325 genetic      DEBUG    Run optimization progress
+2021-02-13 14:51:50,434 genetic      DEBUG    Define algorithm
+2021-02-13 14:51:50,436 genetic      DEBUG    Run optimization progress
+2021-02-13 14:53:58,180 genetic      DEBUG    Define algorithm
+2021-02-13 14:53:58,183 genetic      DEBUG    Run optimization progress
+2021-02-13 14:56:06,261 genetic      DEBUG    Define algorithm
+2021-02-13 14:56:06,264 genetic      DEBUG    Run optimization progress
+2021-02-13 14:58:18,139 genetic      DEBUG    Define algorithm
+2021-02-13 14:58:18,141 genetic      DEBUG    Run optimization progress
+2021-02-13 15:00:26,669 genetic      DEBUG    Define algorithm
+2021-02-13 15:00:26,671 genetic      DEBUG    Run optimization progress
+2021-02-13 15:02:34,116 genetic      DEBUG    Define algorithm
+2021-02-13 15:02:34,116 genetic      DEBUG    Run optimization progress
+2021-02-13 15:04:44,123 genetic      DEBUG    Define algorithm
+2021-02-13 15:04:44,126 genetic      DEBUG    Run optimization progress
+2021-02-13 15:06:52,373 genetic      DEBUG    Define algorithm
+2021-02-13 15:06:52,374 genetic      DEBUG    Run optimization progress
+2021-02-13 15:09:01,233 genetic      DEBUG    Define algorithm
+2021-02-13 15:09:01,233 genetic      DEBUG    Run optimization progress
+2021-02-13 15:11:08,637 genetic      DEBUG    Define algorithm
+2021-02-13 15:11:08,638 genetic      DEBUG    Run optimization progress
+2021-02-13 15:13:16,406 genetic      DEBUG    Define algorithm
+2021-02-13 15:13:16,407 genetic      DEBUG    Run optimization progress
+2021-02-13 15:15:23,649 genetic      DEBUG    Define algorithm
+2021-02-13 15:15:23,650 genetic      DEBUG    Run optimization progress
+2021-02-13 15:17:30,693 genetic      DEBUG    Define algorithm
+2021-02-13 15:17:30,694 genetic      DEBUG    Run optimization progress
+2021-02-13 15:19:38,735 genetic      DEBUG    Define algorithm
+2021-02-13 15:19:38,736 genetic      DEBUG    Run optimization progress
+2021-02-13 15:21:46,018 genetic      DEBUG    Define algorithm
+2021-02-13 15:21:46,023 genetic      DEBUG    Run optimization progress
+2021-02-13 15:23:54,769 genetic      DEBUG    Define algorithm
+2021-02-13 15:23:54,770 genetic      DEBUG    Run optimization progress

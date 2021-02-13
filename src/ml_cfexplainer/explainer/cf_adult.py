@@ -1,6 +1,4 @@
 from .distance import Distance
-from ml_cfexplainer.utils.helpers import load_adult_income_dataset
-from ml_cfexplainer import utils
 
 import numpy as np
 import pandas as pd
