@@ -21,6 +21,8 @@ from scipy.spatial.distance import cdist
 
 
 def find_best_solution(resX, x0, pred_model):
+    
+    
     y_prediction = pred_model.predict(resX)
     pos_index = np.where(y_prediction == 1)[0]
     filtered_arr  = resX[pos_index]
@@ -144,17 +146,19 @@ if __name__ == "__main__":
     # logger.debug(len(xu))
     # logger.debug(np.array(xu) - np.array(xl))
 
-    # logger.debug("Number of variable {}".format(n_var))
 
     # sys.exit(1)
 
     if n_sample == -1:
         n_sample = len(neg_index)
 
+    logger.debug("Number of samples {}".format(n_sample))
+
     # logger.debug(n_sample)
     # sys.exit(1)
 
     for i in range(n_sample):
+        logger.debug("Sample {}".format(i))
 
         """Explainer"""
         index_ = neg_index[i]
@@ -198,7 +202,7 @@ if __name__ == "__main__":
         logger.debug("Run optimization progress")
         res = minimize(problem,
                        algorithm,
-                       ('n_gen', 300),
+                       ('n_gen', 100),
                        save_history=True,
                        seed=seed,
                        verbose=True)

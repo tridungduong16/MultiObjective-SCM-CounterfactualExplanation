@@ -260,66 +260,69 @@ class Distance:
         loss = np.sqrt((x3 - x0[2]) ** 2)
         return loss
 
-    def MAD(self, df):
-        """Compute the median absolute deviation in training data
+
+    def social_cost(self):
+        return 0
+    # def MAD(self, df):
+    #     """Compute the median absolute deviation in training data
         
-        :param df: DESCRIPTION
-        :type df: TYPE
-        :return: DESCRIPTION
-        :rtype: TYPE
+    #     :param df: DESCRIPTION
+    #     :type df: TYPE
+    #     :return: DESCRIPTION
+    #     :rtype: TYPE
 
-        """
-        mad_0 = np.mean(df['age'].values - df['age'].median())
-        mad_7 = np.mean(df['hours_per_week'].values - df['hours_per_week'].median())
+    #     """
+    #     mad_0 = np.mean(df['age'].values - df['age'].median())
+    #     mad_7 = np.mean(df['hours_per_week'].values - df['hours_per_week'].median())
     
-        mad_1 = 4
-        mad_2 = 6
-        mad_3 = 1
-        mad_4 = 2
-        mad_5 = 3
-        mad_6 = 2
-        return [mad_0, mad_1, mad_2, mad_3, mad_4, mad_5, mad_6, mad_7]
+    #     mad_1 = 4
+    #     mad_2 = 6
+    #     mad_3 = 1
+    #     mad_4 = 2
+    #     mad_5 = 3
+    #     mad_6 = 2
+    #     return [mad_0, mad_1, mad_2, mad_3, mad_4, mad_5, mad_6, mad_7]
 
-    def distance_mad(self):
-        """Compute loss for MAD
+    # def distance_mad(self):
+    #     """Compute loss for MAD
         
-        :param x0: DESCRIPTION
-        :type x0: TYPE
-        :param xcf: DESCRIPTION
-        :type xcf: TYPE
-        :param df: DESCRIPTION
-        :type df: TYPE
-        :return: DESCRIPTION
-        :rtype: TYPE
+    #     :param x0: DESCRIPTION
+    #     :type x0: TYPE
+    #     :param xcf: DESCRIPTION
+    #     :type xcf: TYPE
+    #     :param df: DESCRIPTION
+    #     :type df: TYPE
+    #     :return: DESCRIPTION
+    #     :rtype: TYPE
     
-        """
-        mean_absolute_deviation = np.array(MAD(df))
+    #     """
+    #     mean_absolute_deviation = np.array(MAD(df))
     
-        distance = (x0 - xcf) / mean_absolute_deviation
+    #     distance = (x0 - xcf) / mean_absolute_deviation
     
-        return np.mean(distance)
+    #     return np.mean(distance)
 
-    def certifai_distance(self, x0, xcf):
-        """Compute loss for CERTIFAI
+    # def certifai_distance(self, x0, xcf):
+    #     """Compute loss for CERTIFAI
 
-        :param x0: DESCRIPTION
-        :type x0: TYPE
-        :param xcf: DESCRIPTION
-        :type xcf: TYPE
-        :return: DESCRIPTION
-        :rtype: TYPE
+    #     :param x0: DESCRIPTION
+    #     :type x0: TYPE
+    #     :param xcf: DESCRIPTION
+    #     :type xcf: TYPE
+    #     :return: DESCRIPTION
+    #     :rtype: TYPE
 
-        """
-        cat_indexes = [1, 2, 3, 4, 5, 6]
-        con_indexes = [0, 7]
-        loss = 0
-        for i in cat_indexes:
-            if x0[i] == xcf[i]:
-                loss -= 1
-        for j in con_indexes:
-            loss += (xcf[j] - x0[j])
+    #     """
+    #     cat_indexes = [1, 2, 3, 4, 5, 6]
+    #     con_indexes = [0, 7]
+    #     loss = 0
+    #     for i in cat_indexes:
+    #         if x0[i] == xcf[i]:
+    #             loss -= 1
+    #     for j in con_indexes:
+    #         loss += (xcf[j] - x0[j])
 
-        return loss
+    #     return loss
 
     def cross_entropy(self, targets=1, epsilon=1e-12):
         """

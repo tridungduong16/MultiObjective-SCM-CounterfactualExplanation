@@ -21,6 +21,7 @@ Number of objective function: 2
 
 
 class CF_Adult(Problem):
+    
     def __init__(self, x0,
                  d,
                  features,
@@ -46,6 +47,7 @@ class CF_Adult(Problem):
         self.features = features
 
     def _evaluate(self, xcf, out, *args, **kwargs):
+        
         df_store = pd.DataFrame(columns=list(self.features.columns))
         df_store.loc[0] = self.x0
         df_store.loc[1] = xcf

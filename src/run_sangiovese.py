@@ -20,6 +20,7 @@ from scipy.spatial.distance import cdist
 
 
 def find_best_solution(resX, x0, pred_model):
+    
     y_prediction = pred_model.predict(resX)
     pos_index = np.where(y_prediction == 1)[0]
     filtered_arr  = resX[pos_index]

@@ -4,6 +4,7 @@ prediction_model_simple_bn: /data/trduong/multiobj-scm-cf/model/simple_bn/simple
 scm_model_simple_bn: /data/trduong/multiobj-scm-cf/model/simple_bn/simpleBN_scm.pkl
 prediction_model_credit: /data/trduong/multiobj-scm-cf/model/credit/credit_prediction.pkl
 autoencoder_model_credit: /data/trduong/multiobj-scm-cf/model/credit/dfencoder_{}_{}.pt
+autoencoder_model_adult: /data/trduong/multiobj-scm-cf/model/adult/dfencoder_{}_{}.pt
 
 
 
