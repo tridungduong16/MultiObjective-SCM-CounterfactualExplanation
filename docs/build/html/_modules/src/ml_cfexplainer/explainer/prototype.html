@@ -1,0 +1,274 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="Python" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>src.ml_cfexplainer.explainer.prototype &mdash; Counterfactual explanation 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/theme_override.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Counterfactual explanation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"></div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Counterfactual explanation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../../index.html">Module code</a> &raquo;</li>
+        
+      <li>src.ml_cfexplainer.explainer.prototype</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for src.ml_cfexplainer.explainer.prototype</h1><div class="highlight"><pre>
+<span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Created on Thu Dec  3 11:06:31 2020</span>
+
+<span class="sd">@author: trduong</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">torch</span>
+
+<span class="n">seed</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="find_proto"><a class="viewcode-back" href="../../../../src.ml_cfexplainer.explainer.html#src.ml_cfexplainer.explainer.prototype.find_proto">[docs]</a><span class="k">def</span> <span class="nf">find_proto</span><span class="p">(</span><span class="n">original_latent</span><span class="p">,</span> <span class="n">pos_latent</span><span class="p">,</span> <span class="n">neg_latent</span><span class="p">,</span> <span class="n">k_instance</span><span class="p">):</span>
+    <span class="n">ori_pos_dist</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cdist</span><span class="p">(</span><span class="n">original_latent</span><span class="p">,</span> <span class="n">pos_latent</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">ori_neg_dist</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cdist</span><span class="p">(</span><span class="n">original_latent</span><span class="p">,</span> <span class="n">neg_latent</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">_</span><span class="p">,</span> <span class="n">pos_index</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">topk</span><span class="p">(</span><span class="o">-</span><span class="n">ori_pos_dist</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="n">k_instance</span><span class="p">)</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">neg_index</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">topk</span><span class="p">(</span><span class="o">-</span><span class="n">ori_neg_dist</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="n">k_instance</span><span class="p">)</span>
+
+    <span class="n">pos_proto</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">pos_latent</span><span class="p">[</span><span class="n">pos_index</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">neg_proto</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">neg_latent</span><span class="p">[</span><span class="n">neg_index</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">pos_proto</span><span class="p">,</span> <span class="n">neg_proto</span></div>
+
+
+
+<div class="viewcode-block" id="get_pos_neg_latent"><a class="viewcode-back" href="../../../../src.ml_cfexplainer.explainer.html#src.ml_cfexplainer.explainer.prototype.get_pos_neg_latent">[docs]</a><span class="k">def</span> <span class="nf">get_pos_neg_latent</span><span class="p">(</span><span class="n">prediction</span><span class="p">,</span> <span class="n">z_representation</span><span class="p">):</span>
+    <span class="n">pos_locs</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">eq</span><span class="p">(</span><span class="n">prediction</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+    <span class="n">neg_locs</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">eq</span><span class="p">(</span><span class="n">prediction</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+
+    <span class="n">pos_z</span> <span class="o">=</span> <span class="n">z_representation</span><span class="p">[</span><span class="n">pos_locs</span><span class="p">]</span>
+    <span class="n">neg_z</span> <span class="o">=</span> <span class="n">z_representation</span><span class="p">[</span><span class="n">neg_locs</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">pos_z</span><span class="p">,</span> <span class="n">neg_z</span></div>
+
+
+<span class="c1"># class Prototype:</span>
+<span class="c1">#     &quot;&quot;&quot; Prototype finding</span>
+<span class="c1">#     &quot;&quot;&quot;</span>
+<span class="c1">#</span>
+<span class="c1">#     def __init__(self, x0, xcf):</span>
+<span class="c1">#         &quot;&quot;&quot;Constructor method</span>
+<span class="c1">#         &quot;&quot;&quot;</span>
+<span class="c1">#         self.x0 = x0</span>
+<span class="c1">#         self.xcf = xcf</span>
+<span class="c1">#</span>
+<span class="c1">#     def find_proto(self, original_latent, pos_latent, neg_latent, k_instance):</span>
+<span class="c1">#         ori_pos_dist = torch.cdist(original_latent, pos_latent, p=1)</span>
+<span class="c1">#         ori_neg_dist = torch.cdist(original_latent, neg_latent, p=1)</span>
+<span class="c1">#</span>
+<span class="c1">#         _ , pos_index = torch.topk(-ori_pos_dist, k=k_instance)</span>
+<span class="c1">#         _ , neg_index = torch.topk(-ori_neg_dist, k=k_instance)</span>
+<span class="c1">#</span>
+<span class="c1">#         pos_proto = torch.mean(pos_latent[pos_index], dim = 1)</span>
+<span class="c1">#         neg_proto = torch.mean(neg_latent[neg_index], dim = 1)</span>
+<span class="c1">#</span>
+<span class="c1">#         proto_pos_dist = torch.cdist(original_latent, pos_proto, p=1)</span>
+<span class="c1">#         proto_neg_dist = torch.cdist(original_latent, neg_proto, p=1)</span>
+<span class="c1">#</span>
+<span class="c1">#         # print(&quot;Positive distance &quot;, torch.mean(proto_pos_dist, dim = 1))</span>
+<span class="c1">#         # print(&quot;Negative distance &quot;, torch.mean(proto_neg_dist, dim = 1))</span>
+<span class="c1">#</span>
+<span class="c1">#</span>
+<span class="c1">#         return pos_proto, neg_proto</span>
+<span class="c1">#</span>
+<span class="c1">#     def get_pos_neg_latent(self, prediction, z_representation):</span>
+<span class="c1">#         pos_locs = torch.eq(prediction, 1.0)</span>
+<span class="c1">#         neg_locs = torch.eq(prediction, 0.0)</span>
+<span class="c1">#</span>
+<span class="c1">#         pos_z = z_representation[pos_locs]</span>
+<span class="c1">#         neg_z = z_representation[neg_locs]</span>
+<span class="c1">#         return pos_z, neg_z</span>
+
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Dung Duong.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

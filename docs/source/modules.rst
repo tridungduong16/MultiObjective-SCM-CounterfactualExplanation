@@ -1,6 +1,7 @@
-multiobj-scm-cf
-===============
+src
+===
 
 .. toctree::
    :maxdepth: 4
 
+   src

@@ -12,7 +12,12 @@
 #
 import os
 import sys
-sys.path.insert(0, os.path.abspath('..'))
+# sys.path.insert(0, os.path.abspath('..'))
+# sys.path.insert(0, os.path.abspath('..'))
+# sys.path.insert(0,os.path.abspath('../..'))
+# sys.path.insert(0,os.path.abspath('..'))
+# sys.path.insert(0,os.path.abspath('../')
+sys.path.insert(0, os.path.abspath('../..'))
 
 # -- Project information -----------------------------------------------------
 
@@ -36,7 +41,7 @@ extensions = ['sphinx.ext.autodoc',
             'sphinx.ext.napoleon',
             'sphinx.ext.autosummary',
             'nbsphinx',
-            'sphinx_gallery.load_style',]
+            'sphinx_gallery.load_style']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -45,7 +50,6 @@ templates_path = ['_templates']
 #Generate the API documentation when building
 autosummary_generate = True
 autodoc_member_order = 'bysource'
-# autodoc_default_flags = ['members']
 napoleon_google_docstring = False
 napoleon_numpy_docstring = True
 napoleon_include_init_with_doc = False

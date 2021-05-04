@@ -27,4 +27,3 @@ Latest additions
    :hidden:
 
    author
-   source/prototype
