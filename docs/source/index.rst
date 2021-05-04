@@ -22,13 +22,10 @@ Indices and tables
 Latest additions
 ----------------
 
-.. include:: release_notes/0.3.2.rst
-
-
 .. toctree::
    :maxdepth: 1
    :hidden:
 
 
-   authors
+   author
    source/prototype
