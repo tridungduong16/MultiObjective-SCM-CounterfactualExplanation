@@ -7,3 +7,4 @@ torchvision
 torchaudio
 tqdm==4.48.0
 sphinx
+nbsphinx
