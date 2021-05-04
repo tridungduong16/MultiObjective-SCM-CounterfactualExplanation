@@ -26,4 +26,4 @@ Latest additions
    :maxdepth: 1
    :hidden:
 
-   author
+   src

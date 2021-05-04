@@ -1,9 +1,13 @@
-.. module:: stlearn
-.. automodule:: stlearn
+.. module:: ml_cfexplainer
+.. automodule:: ml_cfexplainer
    :noindex:
 
 API
 ======================================
+
+Import stLearn as::
+
+   import stlearn as st
 
 
 Wrapper functions: `wrapper`
