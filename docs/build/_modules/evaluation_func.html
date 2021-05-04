@@ -1,0 +1,666 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>evaluation_func &mdash; Multi-obj CF 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Multi-obj CF
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">Multi-objective Optimization for Counterfactual Explanation with Structural Causal Model</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Notebooks:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/DiCE_getting_started.html">Quick introduction to generating counterfactual explanations using DiCE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/DiCE_with_private_data.html">Generating Diverse Counterfactual Explanations without accessing training data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/DiCE_with_advanced_options.html">Advanced options to customize Counterfactual Explanations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/DiCE_getting_started_feasible.html">Generate feasible counterfactual explanations using a VAE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/DiCE_getting_started_feasible.html#Adding-feasibility-constraints">Adding feasibility constraints</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/visualization.html">Visualize validity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/visualization.html#Visualize-IM1-and-IM2">Visualize IM1 and IM2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/visualization.html#Visualize-proximity">Visualize proximity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/visualization.html#Visualized-all">Visualized all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/visualization.html#Visualize-with-different-number-of-samples">Visualize with different number of samples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/visualization.html#Visualize-with-different-number-of-instances">Visualize with different number of instances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/visualization.html#Visualize-with-different-size">Visualize with different size</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/visualization.html#Visualize-different-sizes-with-confidence">Visualize different sizes with confidence</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Package:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../distance.html">distance module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../evaluation_func.html">evaluation_func module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dfencoder.html">dfencoder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prototype.html">prototype module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../utils.html">utils package</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Multi-obj CF</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Module code</a> &raquo;</li>
+        
+      <li>evaluation_func</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for evaluation_func</h1><div class="highlight"><pre>
+<span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Created on Sun Dec 13 16:59:22 2020</span>
+
+<span class="sd">@author: trduong</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">MAIN_PATH</span> <span class="o">=</span> <span class="s2">&quot;/home/trduong/Data/counterfactual-explanation-research.git/my-algorithm&quot;</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">MAIN_PATH</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">source_code.configuration_path</span> <span class="k">as</span> <span class="nn">cf</span>
+<span class="kn">from</span> <span class="nn">source_code.helpers_algo</span> <span class="kn">import</span> <span class="n">load_encoder_data</span>
+<span class="kn">from</span> <span class="nn">source_code.evaluation</span> <span class="kn">import</span> <span class="n">con_proximity</span><span class="p">,</span> <span class="n">cat_proximity</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">LabelEncoder</span>
+<span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span> 
+
+<span class="kn">import</span> <span class="nn">torch</span> 
+<span class="kn">import</span> <span class="nn">argparse</span>
+
+<div class="viewcode-block" id="Evaluation"><a class="viewcode-back" href="../evaluation_func.html#evaluation_func.Evaluation">[docs]</a><span class="k">class</span> <span class="nc">Evaluation</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">xcf</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        </span>
+<span class="sd">        :param x0: DESCRIPTION</span>
+<span class="sd">        :type x0: TYPE</span>
+<span class="sd">        :param xcf: DESCRIPTION</span>
+<span class="sd">        :type xcf: TYPE</span>
+<span class="sd">        :return: DESCRIPTION</span>
+<span class="sd">        :rtype: TYPE</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x0</span> <span class="o">=</span> <span class="n">x0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xcf</span> <span class="o">=</span> <span class="n">xcf</span>
+
+<div class="viewcode-block" id="Evaluation.convert_to_label"><a class="viewcode-back" href="../evaluation_func.html#evaluation_func.Evaluation.convert_to_label">[docs]</a>    <span class="k">def</span> <span class="nf">convert_to_label</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        </span>
+<span class="sd">        :param df: DESCRIPTION</span>
+<span class="sd">        :type df: TYPE</span>
+<span class="sd">        :param d: DESCRIPTION</span>
+<span class="sd">        :type d: TYPE</span>
+<span class="sd">        :return: DESCRIPTION</span>
+<span class="sd">        :rtype: TYPE</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">categorical_feature_names</span><span class="p">:</span>
+            <span class="n">le</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
+            <span class="n">le</span><span class="o">.</span><span class="n">classes_</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">cf</span><span class="o">.</span><span class="n">MODEL_FINAL_PATH</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">c</span> <span class="o">+</span> <span class="s1">&#39;.npy&#39;</span><span class="p">),</span> <span class="n">allow_pickle</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">le</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="n">c</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">df</span></div>
+
+<div class="viewcode-block" id="Evaluation.im1_score"><a class="viewcode-back" href="../evaluation_func.html#evaluation_func.Evaluation.im1_score">[docs]</a>    <span class="k">def</span> <span class="nf">im1_score</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xcf</span><span class="p">,</span> <span class="n">ae1</span><span class="p">,</span> <span class="n">ae0</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        </span>
+<span class="sd">        :param xcf: DESCRIPTION</span>
+<span class="sd">        :type xcf: TYPE</span>
+<span class="sd">        :param ae1: DESCRIPTION</span>
+<span class="sd">        :type ae1: TYPE</span>
+<span class="sd">        :param ae0: DESCRIPTION</span>
+<span class="sd">        :type ae0: TYPE</span>
+<span class="sd">        :return: DESCRIPTION</span>
+<span class="sd">        :rtype: TYPE</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">xcf</span><span class="o">-</span><span class="n">ae1</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">xcf</span><span class="o">-</span><span class="n">ae0</span><span class="p">)</span> <span class="o">+</span> <span class="mf">0.005</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Evaluation.im2_score"><a class="viewcode-back" href="../evaluation_func.html#evaluation_func.Evaluation.im2_score">[docs]</a>    <span class="k">def</span> <span class="nf">im2_score</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ae1</span><span class="p">,</span> <span class="n">ae_full</span><span class="p">,</span> <span class="n">xcf</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        </span>
+<span class="sd">        :param ae1: DESCRIPTION</span>
+<span class="sd">        :type ae1: TYPE</span>
+<span class="sd">        :param ae_full: DESCRIPTION</span>
+<span class="sd">        :type ae_full: TYPE</span>
+<span class="sd">        :param xcf: DESCRIPTION</span>
+<span class="sd">        :type xcf: TYPE</span>
+<span class="sd">        :return: DESCRIPTION</span>
+<span class="sd">        :rtype: TYPE</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">ae1</span><span class="o">-</span><span class="n">ae_full</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">xcf</span><span class="p">,</span> <span class="nb">ord</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="mf">0.005</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Evaluation.change_width"><a class="viewcode-back" href="../evaluation_func.html#evaluation_func.Evaluation.change_width">[docs]</a>    <span class="k">def</span> <span class="nf">change_width</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">new_value</span><span class="p">)</span> <span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        </span>
+<span class="sd">        :param ax: DESCRIPTION</span>
+<span class="sd">        :type ax: TYPE</span>
+<span class="sd">        :param new_value: DESCRIPTION</span>
+<span class="sd">        :type new_value: TYPE</span>
+<span class="sd">        :return: DESCRIPTION</span>
+<span class="sd">        :rtype: TYPE</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">patch</span> <span class="ow">in</span> <span class="n">ax</span><span class="o">.</span><span class="n">patches</span> <span class="p">:</span>
+            <span class="n">current_width</span> <span class="o">=</span> <span class="n">patch</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span>
+            <span class="n">diff</span> <span class="o">=</span> <span class="n">current_width</span> <span class="o">-</span> <span class="n">new_value</span>
+            <span class="n">patch</span><span class="o">.</span><span class="n">set_width</span><span class="p">(</span><span class="n">new_value</span><span class="p">)</span>
+            <span class="n">patch</span><span class="o">.</span><span class="n">set_x</span><span class="p">(</span><span class="n">patch</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span> <span class="o">+</span> <span class="n">diff</span> <span class="o">*</span> <span class="o">.</span><span class="mi">5</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Evaluation.con_prox_eval"><a class="viewcode-back" href="../evaluation_func.html#evaluation_func.Evaluation.con_prox_eval">[docs]</a>    <span class="k">def</span> <span class="nf">con_prox_eval</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df_cf</span><span class="p">,</span> <span class="n">df_original</span><span class="p">,</span> <span class="n">df_evaluation</span><span class="p">,</span> <span class="n">method_name</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        </span>
+<span class="sd">        :param df_cf: DESCRIPTION</span>
+<span class="sd">        :type df_cf: TYPE</span>
+<span class="sd">        :param df_original: DESCRIPTION</span>
+<span class="sd">        :type df_original: TYPE</span>
+<span class="sd">        :param df_evaluation: DESCRIPTION</span>
+<span class="sd">        :type df_evaluation: TYPE</span>
+<span class="sd">        :param method_name: DESCRIPTION</span>
+<span class="sd">        :type method_name: TYPE</span>
+<span class="sd">        :return: DESCRIPTION</span>
+<span class="sd">        :rtype: TYPE</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">loc_</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_evaluation</span><span class="p">)</span>
+        <span class="n">subtract_df</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">df_cf</span> <span class="o">-</span> <span class="n">df_original</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">con_prox</span> <span class="o">=</span> <span class="n">subtract_df</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+        <span class="n">df_evaluation</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">loc_</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">con_prox</span>
+        <span class="n">df_evaluation</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">loc_</span><span class="p">,</span> <span class="s1">&#39;method&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">method_name</span>
+        <span class="n">df_evaluation</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">loc_</span><span class="p">,</span> <span class="s1">&#39;metric&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;continuous proximity&#39;</span>
+        <span class="k">return</span> <span class="n">df_evaluation</span></div>
+
+
+<div class="viewcode-block" id="Evaluation.multiple_con_prox_eval"><a class="viewcode-back" href="../evaluation_func.html#evaluation_func.Evaluation.multiple_con_prox_eval">[docs]</a>    <span class="k">def</span> <span class="nf">multiple_con_prox_eval</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df_cf</span><span class="p">,</span> <span class="n">df_original</span><span class="p">,</span> <span class="n">method_name</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        </span>
+<span class="sd">        :param df_cf: DESCRIPTION</span>
+<span class="sd">        :type df_cf: TYPE</span>
+<span class="sd">        :param df_original: DESCRIPTION</span>
+<span class="sd">        :type df_original: TYPE</span>
+<span class="sd">        :param method_name: DESCRIPTION</span>
+<span class="sd">        :type method_name: TYPE</span>
+<span class="sd">        :return: DESCRIPTION</span>
+<span class="sd">        :rtype: TYPE</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">subtract_df</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">df_cf</span> <span class="o">-</span> <span class="n">df_original</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">con_prox</span> <span class="o">=</span> <span class="n">subtract_df</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+        <span class="k">return</span> <span class="n">con_prox</span></div>
+
+
+<div class="viewcode-block" id="Evaluation.cat_prox"><a class="viewcode-back" href="../evaluation_func.html#evaluation_func.Evaluation.cat_prox">[docs]</a>    <span class="k">def</span> <span class="nf">cat_prox</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">xcf</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        </span>
+<span class="sd">        :param x0: DESCRIPTION</span>
+<span class="sd">        :type x0: TYPE</span>
+<span class="sd">        :param xcf: DESCRIPTION</span>
+<span class="sd">        :type xcf: TYPE</span>
+<span class="sd">        :return: DESCRIPTION</span>
+<span class="sd">        :rtype: TYPE</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">proximity</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x0</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">x0</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">==</span> <span class="n">xcf</span><span class="p">[</span><span class="n">c</span><span class="p">]:</span>
+                <span class="n">proximity</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">proximity</span></div>
+
+<div class="viewcode-block" id="Evaluation.mul_cat_prox_eval"><a class="viewcode-back" href="../evaluation_func.html#evaluation_func.Evaluation.mul_cat_prox_eval">[docs]</a>    <span class="k">def</span> <span class="nf">mul_cat_prox_eval</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df_cf</span><span class="p">,</span> <span class="n">df_original</span><span class="p">,</span> <span class="n">method_name</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        </span>
+<span class="sd">        :param df_cf: DESCRIPTION</span>
+<span class="sd">        :type df_cf: TYPE</span>
+<span class="sd">        :param df_original: DESCRIPTION</span>
+<span class="sd">        :type df_original: TYPE</span>
+<span class="sd">        :param method_name: DESCRIPTION</span>
+<span class="sd">        :type method_name: TYPE</span>
+<span class="sd">        :return: DESCRIPTION</span>
+<span class="sd">        :rtype: TYPE</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">df_evaluation</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+        <span class="n">loc_</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df_cf</span><span class="p">)):</span>
+            <span class="n">loc_</span> <span class="o">+=</span><span class="mi">1</span>
+            <span class="n">x0</span> <span class="o">=</span> <span class="n">df_original</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">xcf</span> <span class="o">=</span> <span class="n">df_cf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">df_evaluation</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">loc_</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cat_prox</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">xcf</span><span class="p">)</span>
+            <span class="n">df_evaluation</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">loc_</span><span class="p">,</span> <span class="s1">&#39;metric&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;categorical proximity&#39;</span>
+            <span class="n">df_evaluation</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">loc_</span><span class="p">,</span> <span class="s1">&#39;method&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">method_name</span>
+        <span class="k">return</span> <span class="n">df_evaluation</span></div>
+
+
+<div class="viewcode-block" id="Evaluation.cat_prox_eval"><a class="viewcode-back" href="../evaluation_func.html#evaluation_func.Evaluation.cat_prox_eval">[docs]</a>    <span class="k">def</span> <span class="nf">cat_prox_eval</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df_cf</span><span class="p">,</span> <span class="n">df_original</span><span class="p">,</span> <span class="n">df_evaluation</span><span class="p">,</span> <span class="n">method_name</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        </span>
+<span class="sd">        :param df_cf: DESCRIPTION</span>
+<span class="sd">        :type df_cf: TYPE</span>
+<span class="sd">        :param df_original: DESCRIPTION</span>
+<span class="sd">        :type df_original: TYPE</span>
+<span class="sd">        :param df_evaluation: DESCRIPTION</span>
+<span class="sd">        :type df_evaluation: TYPE</span>
+<span class="sd">        :param method_name: DESCRIPTION</span>
+<span class="sd">        :type method_name: TYPE</span>
+<span class="sd">        :return: DESCRIPTION</span>
+<span class="sd">        :rtype: TYPE</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">loc_</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_evaluation</span><span class="p">)</span>
+        <span class="n">cprox</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df_cf</span><span class="p">)):</span>
+            <span class="n">x0</span> <span class="o">=</span> <span class="n">df_original</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">xcf</span> <span class="o">=</span> <span class="n">df_cf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">cprox</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cat_prox</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">xcf</span><span class="p">)</span>
+        <span class="n">df_evaluation</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">loc_</span><span class="p">,</span> <span class="s1">&#39;method&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">method_name</span>
+        <span class="n">df_evaluation</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">loc_</span><span class="p">,</span> <span class="s1">&#39;metric&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;categorical proximity&#39;</span>
+        <span class="n">df_evaluation</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">loc_</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cprox</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">df_cf</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">df_evaluation</span></div>
+
+<div class="viewcode-block" id="Evaluation.target_valid"><a class="viewcode-back" href="../evaluation_func.html#evaluation_func.Evaluation.target_valid">[docs]</a>    <span class="k">def</span> <span class="nf">target_valid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df_cf</span><span class="p">,</span> <span class="n">df_evaluation</span><span class="p">,</span> <span class="n">method_name</span><span class="p">,</span> <span class="n">outcome</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        </span>
+<span class="sd">        :param df_cf: DESCRIPTION</span>
+<span class="sd">        :type df_cf: TYPE</span>
+<span class="sd">        :param df_evaluation: DESCRIPTION</span>
+<span class="sd">        :type df_evaluation: TYPE</span>
+<span class="sd">        :param method_name: DESCRIPTION</span>
+<span class="sd">        :type method_name: TYPE</span>
+<span class="sd">        :param outcome: DESCRIPTION</span>
+<span class="sd">        :type outcome: TYPE</span>
+<span class="sd">        :return: DESCRIPTION</span>
+<span class="sd">        :rtype: TYPE</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">loc_</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_evaluation</span><span class="p">)</span>
+        <span class="n">n_valid</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_cf</span><span class="p">[</span><span class="n">df_cf</span><span class="p">[</span><span class="n">outcome</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mf">0.5</span><span class="p">])</span>
+
+        <span class="n">df_evaluation</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">loc_</span><span class="p">,</span> <span class="s1">&#39;method&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">method_name</span>
+        <span class="n">df_evaluation</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">loc_</span><span class="p">,</span> <span class="s1">&#39;metric&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;target valid&#39;</span>
+        <span class="n">df_evaluation</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">loc_</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">n_valid</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">df_cf</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">df_evaluation</span></div>
+
+<div class="viewcode-block" id="Evaluation.IM_calculate"><a class="viewcode-back" href="../evaluation_func.html#evaluation_func.Evaluation.IM_calculate">[docs]</a>    <span class="k">def</span> <span class="nf">IM_calculate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">features</span><span class="p">,</span> <span class="n">dfencoder_model</span><span class="p">,</span> <span class="n">dfencoder_model_pos</span><span class="p">,</span> <span class="n">dfencoder_model_neg</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        </span>
+<span class="sd">        :param features: DESCRIPTION</span>
+<span class="sd">        :type features: TYPE</span>
+<span class="sd">        :param dfencoder_model: DESCRIPTION</span>
+<span class="sd">        :type dfencoder_model: TYPE</span>
+<span class="sd">        :param dfencoder_model_pos: DESCRIPTION</span>
+<span class="sd">        :type dfencoder_model_pos: TYPE</span>
+<span class="sd">        :param dfencoder_model_neg: DESCRIPTION</span>
+<span class="sd">        :type dfencoder_model_neg: TYPE</span>
+<span class="sd">        :return: DESCRIPTION</span>
+<span class="sd">        :rtype: TYPE</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">z_cer</span> <span class="o">=</span> <span class="n">dfencoder_model</span><span class="o">.</span><span class="n">get_representation</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
+        <span class="n">z_cer_pos</span> <span class="o">=</span> <span class="n">dfencoder_model_pos</span><span class="o">.</span><span class="n">get_representation</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
+        <span class="n">z_cer_neg</span> <span class="o">=</span> <span class="n">dfencoder_model_neg</span><span class="o">.</span><span class="n">get_representation</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
+
+        <span class="n">rec_cf</span> <span class="o">=</span> <span class="n">dfencoder_model</span><span class="o">.</span><span class="n">decode_to_df</span><span class="p">(</span><span class="n">z_cer</span><span class="p">)</span>
+        <span class="n">rec_pos_cf</span> <span class="o">=</span> <span class="n">dfencoder_model_pos</span><span class="o">.</span><span class="n">decode_to_df</span><span class="p">(</span><span class="n">z_cer_pos</span><span class="p">)</span>
+        <span class="n">rec_neg_cf</span> <span class="o">=</span> <span class="n">dfencoder_model_neg</span><span class="o">.</span><span class="n">decode_to_df</span><span class="p">(</span><span class="n">z_cer_neg</span><span class="p">)</span>
+
+        <span class="n">im1_val</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">im2_val</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">features</span><span class="p">)):</span>
+            <span class="n">im1_val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">im1_score</span><span class="p">(</span><span class="n">features</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">rec_pos_cf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">rec_neg_cf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="n">im2_val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">im2_score</span><span class="p">(</span><span class="n">rec_pos_cf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">rec_cf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">features</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+        <span class="k">return</span> <span class="n">im1_val</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">features</span><span class="p">),</span> <span class="n">im2_val</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">features</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Evaluation.multi_IM_calculate"><a class="viewcode-back" href="../evaluation_func.html#evaluation_func.Evaluation.multi_IM_calculate">[docs]</a>    <span class="k">def</span> <span class="nf">multi_IM_calculate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">features</span><span class="p">,</span> <span class="n">dfencoder_model</span><span class="p">,</span> <span class="n">dfencoder_model_pos</span><span class="p">,</span> <span class="n">dfencoder_model_neg</span><span class="p">,</span> <span class="n">method_name</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        </span>
+<span class="sd">        :param features: DESCRIPTION</span>
+<span class="sd">        :type features: TYPE</span>
+<span class="sd">        :param dfencoder_model: DESCRIPTION</span>
+<span class="sd">        :type dfencoder_model: TYPE</span>
+<span class="sd">        :param dfencoder_model_pos: DESCRIPTION</span>
+<span class="sd">        :type dfencoder_model_pos: TYPE</span>
+<span class="sd">        :param dfencoder_model_neg: DESCRIPTION</span>
+<span class="sd">        :type dfencoder_model_neg: TYPE</span>
+<span class="sd">        :param method_name: DESCRIPTION</span>
+<span class="sd">        :type method_name: TYPE</span>
+<span class="sd">        :return: DESCRIPTION</span>
+<span class="sd">        :rtype: TYPE</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">z_cer</span> <span class="o">=</span> <span class="n">dfencoder_model</span><span class="o">.</span><span class="n">get_representation</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
+        <span class="n">z_cer_pos</span> <span class="o">=</span> <span class="n">dfencoder_model_pos</span><span class="o">.</span><span class="n">get_representation</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
+        <span class="n">z_cer_neg</span> <span class="o">=</span> <span class="n">dfencoder_model_neg</span><span class="o">.</span><span class="n">get_representation</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
+
+        <span class="n">rec_cf</span> <span class="o">=</span> <span class="n">dfencoder_model</span><span class="o">.</span><span class="n">decode_to_df</span><span class="p">(</span><span class="n">z_cer</span><span class="p">)</span>
+        <span class="n">rec_pos_cf</span> <span class="o">=</span> <span class="n">dfencoder_model_pos</span><span class="o">.</span><span class="n">decode_to_df</span><span class="p">(</span><span class="n">z_cer_pos</span><span class="p">)</span>
+        <span class="n">rec_neg_cf</span> <span class="o">=</span> <span class="n">dfencoder_model_neg</span><span class="o">.</span><span class="n">decode_to_df</span><span class="p">(</span><span class="n">z_cer_neg</span><span class="p">)</span>
+
+        <span class="n">im1_val</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">im2_val</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="n">df_evaluation_im1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+        <span class="n">df_evaluation_im2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+
+        <span class="n">loc_</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">features</span><span class="p">)):</span>
+            <span class="n">loc_</span> <span class="o">+=</span><span class="mi">1</span>
+            <span class="n">im1_val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">im1_score</span><span class="p">(</span><span class="n">features</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">rec_pos_cf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">rec_neg_cf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="n">im2_val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">im2_score</span><span class="p">(</span><span class="n">rec_pos_cf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">rec_cf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">features</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="n">df_evaluation_im1</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">loc_</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">im1_val</span>
+            <span class="n">df_evaluation_im1</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">loc_</span><span class="p">,</span> <span class="s1">&#39;metric&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;IM1&#39;</span>
+            <span class="n">df_evaluation_im1</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">loc_</span><span class="p">,</span> <span class="s1">&#39;method&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">method_name</span>
+
+            <span class="n">df_evaluation_im2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">loc_</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">im2_val</span>
+            <span class="n">df_evaluation_im2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">loc_</span><span class="p">,</span> <span class="s1">&#39;metric&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;IM2&#39;</span>
+            <span class="n">df_evaluation_im2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">loc_</span><span class="p">,</span> <span class="s1">&#39;method&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">method_name</span>
+
+        <span class="k">return</span> <span class="n">df_evaluation_im1</span><span class="p">,</span> <span class="n">df_evaluation_im2</span></div>
+
+
+<div class="viewcode-block" id="Evaluation.IM_evaluation"><a class="viewcode-back" href="../evaluation_func.html#evaluation_func.Evaluation.IM_evaluation">[docs]</a>    <span class="k">def</span> <span class="nf">IM_evaluation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df_cf</span><span class="p">,</span> <span class="n">df_evaluation</span><span class="p">,</span> <span class="n">method_name</span><span class="p">,</span> <span class="n">im1</span><span class="p">,</span> <span class="n">im2</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        </span>
+<span class="sd">        :param df_cf: DESCRIPTION</span>
+<span class="sd">        :type df_cf: TYPE</span>
+<span class="sd">        :param df_evaluation: DESCRIPTION</span>
+<span class="sd">        :type df_evaluation: TYPE</span>
+<span class="sd">        :param method_name: DESCRIPTION</span>
+<span class="sd">        :type method_name: TYPE</span>
+<span class="sd">        :param im1: DESCRIPTION</span>
+<span class="sd">        :type im1: TYPE</span>
+<span class="sd">        :param im2: DESCRIPTION</span>
+<span class="sd">        :type im2: TYPE</span>
+<span class="sd">        :return: DESCRIPTION</span>
+<span class="sd">        :rtype: TYPE</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">loc_</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_evaluation</span><span class="p">)</span>
+        <span class="n">df_evaluation</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">loc_</span><span class="p">,</span> <span class="s1">&#39;method&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">method_name</span>
+        <span class="n">df_evaluation</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">loc_</span><span class="p">,</span> <span class="s1">&#39;metric&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;IM1&#39;</span>
+        <span class="n">df_evaluation</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">loc_</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">im1</span>
+
+        <span class="n">loc_</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_evaluation</span><span class="p">)</span>
+        <span class="n">df_evaluation</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">loc_</span><span class="p">,</span> <span class="s1">&#39;method&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">method_name</span>
+        <span class="n">df_evaluation</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">loc_</span><span class="p">,</span> <span class="s1">&#39;metric&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;IM2&#39;</span>
+        <span class="n">df_evaluation</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">loc_</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">im2</span>
+
+        <span class="k">return</span> <span class="n">df_evaluation</span></div>
+
+<div class="viewcode-block" id="Evaluation.causal_validity"><a class="viewcode-back" href="../evaluation_func.html#evaluation_func.Evaluation.causal_validity">[docs]</a>    <span class="k">def</span> <span class="nf">causal_validity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="n">dataset</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        </span>
+<span class="sd">        :param df: DESCRIPTION</span>
+<span class="sd">        :type df: TYPE</span>
+<span class="sd">        :param dataset: DESCRIPTION</span>
+<span class="sd">        :type dataset: TYPE</span>
+<span class="sd">        :return: DESCRIPTION</span>
+<span class="sd">        :rtype: TYPE</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="n">c_validity</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)):</span>
+            <span class="c1"># if all(x  &gt;= 0 for x in df.loc[i]) or all(x &lt; 0 for x in df.loc[i]):</span>
+            <span class="k">if</span> <span class="nb">all</span><span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="mf">0.1</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
+                <span class="n">c_validity</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">c_validity</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Evaluation.cau_val_evaluation"><a class="viewcode-back" href="../evaluation_func.html#evaluation_func.Evaluation.cau_val_evaluation">[docs]</a>    <span class="k">def</span> <span class="nf">cau_val_evaluation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df_cf</span><span class="p">,</span> <span class="n">df_original</span><span class="p">,</span> <span class="n">df_evaluation</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">method_name</span><span class="p">,</span> <span class="n">dataset</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        </span>
+<span class="sd">        :param df_cf: DESCRIPTION</span>
+<span class="sd">        :type df_cf: TYPE</span>
+<span class="sd">        :param df_original: DESCRIPTION</span>
+<span class="sd">        :type df_original: TYPE</span>
+<span class="sd">        :param df_evaluation: DESCRIPTION</span>
+<span class="sd">        :type df_evaluation: TYPE</span>
+<span class="sd">        :param col: DESCRIPTION</span>
+<span class="sd">        :type col: TYPE</span>
+<span class="sd">        :param method_name: DESCRIPTION</span>
+<span class="sd">        :type method_name: TYPE</span>
+<span class="sd">        :param dataset: DESCRIPTION</span>
+<span class="sd">        :type dataset: TYPE</span>
+<span class="sd">        :return: DESCRIPTION</span>
+<span class="sd">        :rtype: TYPE</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">c_validity</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">dataset</span> <span class="o">==</span> <span class="s1">&#39;siag&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">dataset</span> <span class="o">==</span> <span class="s1">&#39;adult&#39;</span><span class="p">):</span>
+            <span class="n">df_sub</span> <span class="o">=</span> <span class="n">df_cf</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">-</span> <span class="n">df_original</span><span class="p">[</span><span class="n">col</span><span class="p">]</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df_sub</span><span class="p">)):</span>
+                <span class="k">if</span> <span class="nb">all</span><span class="p">(</span><span class="n">x</span>  <span class="o">&gt;=</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">df_sub</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="ow">or</span> <span class="nb">all</span><span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">df_sub</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
+                    <span class="n">c_validity</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">df_sub</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">df_cf</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">-</span> <span class="n">df_original</span><span class="p">[</span><span class="n">col</span><span class="p">])</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df_sub</span><span class="p">)):</span>
+                <span class="k">if</span> <span class="nb">all</span><span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="mf">0.1</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">df_sub</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
+                    <span class="n">c_validity</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">c_eval</span> <span class="o">=</span> <span class="n">c_validity</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_cf</span><span class="p">)</span>
+        <span class="c1"># c_eval = causal_validity(df_sub, dataset)</span>
+        <span class="n">loc_</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_evaluation</span><span class="p">)</span>
+        <span class="n">df_evaluation</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">loc_</span><span class="p">,</span> <span class="s1">&#39;method&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">method_name</span>
+        <span class="n">df_evaluation</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">loc_</span><span class="p">,</span> <span class="s1">&#39;metric&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;causal validity&#39;</span>
+        <span class="n">df_evaluation</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">loc_</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">c_eval</span>
+
+        <span class="k">return</span> <span class="n">df_evaluation</span></div>
+
+<div class="viewcode-block" id="Evaluation.map_ordered_education"><a class="viewcode-back" href="../evaluation_func.html#evaluation_func.Evaluation.map_ordered_education">[docs]</a>    <span class="k">def</span> <span class="nf">map_ordered_education</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        </span>
+<span class="sd">        :param df: DESCRIPTION</span>
+<span class="sd">        :type df: TYPE</span>
+<span class="sd">        :return: DESCRIPTION</span>
+<span class="sd">        :rtype: TYPE</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;education&#39;</span>
+        <span class="n">le</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
+        <span class="n">le</span><span class="o">.</span><span class="n">classes_</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">cf</span><span class="o">.</span><span class="n">MODEL_FINAL_PATH</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">c</span> <span class="o">+</span> <span class="s1">&#39;.npy&#39;</span><span class="p">),</span> <span class="n">allow_pickle</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">mapping</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">le</span><span class="o">.</span><span class="n">classes_</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">le</span><span class="o">.</span><span class="n">classes_</span><span class="p">))))</span>
+        <span class="n">map_back</span> <span class="o">=</span> <span class="p">{</span><span class="n">v</span><span class="p">:</span> <span class="n">k</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">mapping</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+        <span class="c1"># print(mapping)</span>
+        <span class="n">education_score</span><span class="o">=</span> <span class="p">{</span><span class="s1">&#39;HS-grad&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s1">&#39;School&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s1">&#39;Bachelors&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s1">&#39;Assoc&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s1">&#39;Some-college&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s1">&#39;Masters&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="s1">&#39;Prof-school&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="s1">&#39;Doctorate&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+
+
+
+        <span class="n">df</span><span class="p">[</span><span class="s1">&#39;new_education&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;education&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">map_back</span><span class="p">)</span>
+        <span class="n">df</span><span class="p">[</span><span class="s1">&#39;new_education&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;new_education&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">education_score</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">df</span></div></div>
+
+
+    
+    
+ 
+
+    
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2021 Dung Duong, Qian Li, Guandong Xu
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_veldus_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
