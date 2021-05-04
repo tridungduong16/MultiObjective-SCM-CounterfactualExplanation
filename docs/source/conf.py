@@ -36,7 +36,6 @@ extensions = ['sphinx.ext.autodoc',
             'sphinx.ext.napoleon',
             'sphinx.ext.autosummary',
             'nbsphinx',
-            'jupyter_sphinx.embed_widgets',
             'sphinx_gallery.load_style',]
 
 # Add any paths that contain templates here, relative to this directory.
