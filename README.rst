@@ -16,16 +16,7 @@ Multi-objective Optimization for Counterfactual Explanation with Structural Caus
 
 `Dung Duong <https://scholar.google.com/citations?user=hoq2nt8AAAAJ&hl=en>`_, `Qian Li <https://scholar.google.com/citations?hl=en&user=yic0QMYAAAAJ>`_, `Guandong Xu <https://scholar.google.com/citations?user=kcrdCq4AAAAJ&hl=en&oi=ao>`_
 
-This is the code used for the paper Prototype-based Counterfactual Explanation for Causal Classification `<https://arxiv.org/abs/2105.00703>`.
-
-I submitted this paper to IJCAI 2021 and got rejected. This work is still in progress. I appreciate your feedback to improve my work. Contact me at TriDung.Duong@student.uts.edu.au
-
-
-  
-`<https://arxiv.org/abs/2105.00703>`_ | `Docs <>`_ | Live Jupyter notebook |Binder|_
-
-.. |Binder| image:: https://mybinder.org/badge_logo.svg
-.. _Binder:  https://mybinder.org/v2/gh/interpretML/DiCE/master?filepath=docs/source/notebooks
+This is the code used for the paper `Prototype-based Counterfactual Explanation for Causal Classification <https://arxiv.org/abs/2105.00703>`_. I submitted this paper to IJCAI 2021 and got rejected. This work is still in progress. I appreciate your feedback to improve my work. Contact me at TriDung.Duong@student.uts.edu.au
 
 
 Code Structure 
