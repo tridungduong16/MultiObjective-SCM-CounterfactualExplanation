@@ -12,9 +12,9 @@
 Multi-objective Optimization for Counterfactual Explanation with Structural Causal Model
 ======================================================================
 
-*How to explain a machine learning model such that the explanation is truthful to the model and yet interpretable to people?*
+*Our work pay attention to counterfactual explanation with the structural causal model and multiobjective optimization*
 
-`Dung Duong <https://scholar.google.com/citations?user=hoq2nt8AAAAJ&hl=en>`_, `Qian Li <https://scholar.google.com/citations?hl=en&user=yic0QMYAAAAJ>`_, `Guandong Xu <https://scholar.google.com/citations?user=kcrdCq4AAAAJ&hl=en&oi=ao>`_
+Author: `Dung Duong <https://scholar.google.com/citations?user=hoq2nt8AAAAJ&hl=en>`_, `Qian Li <https://scholar.google.com/citations?hl=en&user=yic0QMYAAAAJ>`_, `Guandong Xu <https://scholar.google.com/citations?user=kcrdCq4AAAAJ&hl=en&oi=ao>`_
 
 This is the code used for the paper `Prototype-based Counterfactual Explanation for Causal Classification <https://arxiv.org/abs/2105.00703>`_. I submitted this paper to IJCAI 2021 and got rejected. This work is still in progress. I appreciate your feedback to improve my work. Contact me at TriDung.Duong@student.uts.edu.au
 
@@ -26,39 +26,14 @@ How to run
 Code Structure 
 -------------------------
 
-
-* CF-Adult.py
-
-  - Contains pre trained models for the different methods across datasets
-
-
-* CF-Sangiovese.py
-
-  - Contains pre trained models for the different methods across datasets
-
-
-* CF-SimpleBN.py
-
-  - Contains pre trained models for the different methods across datasets
-
-* evaluation_final.py
-
-  - Contains pre trained models for the different methods across datasets
-
-* df_encoder_adults.py
-
-  - Contains pre trained models for the different methods across datasets
-
-* df_encoder_bn.py
-
-  - Contains pre trained models for the different methods across datasets
-
-* prototype.py
-
-  - Contains pre trained models for the different methods across datasets
-
-* prototype.py
-
-  - Contains pre trained models for the different methods across datasets
-
 If you feel my code helpful, please cite to my paper.
+
+
+Citing
+-------------------------
+If you find our work useful for your research work, please cite it as follows.
+
+
+Reference:
+-------------------------
+
