@@ -10,3 +10,5 @@ sphinx
 nbsphinx
 jupyter_sphinx
 sphinx_gallery
+recommonmark
+sphinx_rtd_theme

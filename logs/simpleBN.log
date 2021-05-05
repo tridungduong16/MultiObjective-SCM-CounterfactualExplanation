@@ -1,0 +1,20 @@
+2021-05-05 10:18:29,188 genetic      DEBUG    Load data and dataloader and normalize data
+2021-05-05 10:18:29,192 genetic      DEBUG    Store result
+2021-05-05 10:18:32,230 genetic      DEBUG    Setup for genetic algorithm
+2021-05-05 10:18:32,233 genetic      DEBUG    Define algorithm
+2021-05-05 10:18:33,195 genetic      DEBUG    Run optimization progress
+2021-05-05 10:22:49,167 genetic      DEBUG    Load data and dataloader and normalize data
+2021-05-05 10:22:49,174 genetic      DEBUG    Store result
+2021-05-05 10:22:51,844 genetic      DEBUG    Setup for genetic algorithm
+2021-05-05 10:22:51,846 genetic      DEBUG    Define algorithm
+2021-05-05 10:22:51,863 genetic      DEBUG    Run optimization progress
+2021-05-05 10:26:19,089 genetic      DEBUG    Load data and dataloader and normalize data
+2021-05-05 10:26:19,093 genetic      DEBUG    Store result
+2021-05-05 10:26:21,795 genetic      DEBUG    Setup for genetic algorithm
+2021-05-05 10:26:21,798 genetic      DEBUG    Define algorithm
+2021-05-05 10:26:21,822 genetic      DEBUG    Run optimization progress
+2021-05-05 10:28:49,223 genetic      DEBUG    Load data and dataloader and normalize data
+2021-05-05 10:28:49,231 genetic      DEBUG    Store result
+2021-05-05 10:28:51,946 genetic      DEBUG    Setup for genetic algorithm
+2021-05-05 10:28:51,948 genetic      DEBUG    Define algorithm
+2021-05-05 10:28:51,968 genetic      DEBUG    Run optimization progress

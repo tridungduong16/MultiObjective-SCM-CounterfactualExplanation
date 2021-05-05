@@ -19,6 +19,10 @@ Multi-objective Optimization for Counterfactual Explanation with Structural Caus
 This is the code used for the paper `Prototype-based Counterfactual Explanation for Causal Classification <https://arxiv.org/abs/2105.00703>`_. I submitted this paper to IJCAI 2021 and got rejected. This work is still in progress. I appreciate your feedback to improve my work. Contact me at TriDung.Duong@student.uts.edu.au
 
 
+How to run
+-------------------------
+
+
 Code Structure 
 -------------------------
 
@@ -56,3 +60,5 @@ Code Structure
 * prototype.py
 
   - Contains pre trained models for the different methods across datasets
+
+If you feel my code helpful, please cite to my paper.
