@@ -23,6 +23,7 @@ How to run
 -------------------------
 
 .. code-block:: console
+
 	python /multiobj-scm-cf/src/run_simplebn.py
 	python /multiobj-scm-cf/src/run_adult.py
 	python /multiobj-scm-cf/src/run_credit.py
