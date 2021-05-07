@@ -21,6 +21,13 @@ This is the code used for the paper `Prototype-based Counterfactual Explanation 
 
 How to run
 -------------------------
+Train auto-encoder model
+
+.. code-block:: console
+
+	python /home/trduong/Data/multiobj-scm-cf/src/ml_cfexplainer/run_algorithm/dfencoder_adult.py
+	python /home/trduong/Data/multiobj-scm-cf/src/ml_cfexplainer/run_algorithm/dfencoder_adult.py
+
 
 Reproduce the result
 
