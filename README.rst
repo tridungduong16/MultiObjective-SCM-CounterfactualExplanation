@@ -1,5 +1,3 @@
-|BuildStatus|_ |PyPiVersion|_ |PythonSupport|_
-
 Multi-objective Optimization for Counterfactual Explanation with Structural Causal Model
 ======================================================================
 
