@@ -22,12 +22,32 @@ This is the code used for the paper `Prototype-based Counterfactual Explanation 
 How to run
 -------------------------
 
+Build the classifier model
+
+.. code-block:: console
+
+	python /multiobj-scm-cf/src/model_adult.py
+	python /multiobj-scm-cf/src/model_credit.py
+	python /multiobj-scm-cf/src/model_simple.py
+	python /multiobj-scm-cf/src/model_sangiovese.py
+
+
+Build the auto-encoder model
+
+.. code-block:: console
+
+	python /multiobj-scm-cf/src/dfencoder_adult.py
+	python /multiobj-scm-cf/src/dfencoder_credit.py
+
+Reproduce the results
+
 .. code-block:: console
 
 	python /multiobj-scm-cf/src/run_simplebn.py
 	python /multiobj-scm-cf/src/run_adult.py
 	python /multiobj-scm-cf/src/run_credit.py
 	python /multiobj-scm-cf/src/run_sangiovese.py
+
 
 Code Structure 
 -------------------------
