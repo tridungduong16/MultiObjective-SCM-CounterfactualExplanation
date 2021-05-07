@@ -44,7 +44,7 @@ Citing
 -------
 If you find DiCE useful for your research work, please cite it as follows.
 
-Duong, T.D., Li, Q., & Xu, G. (2021). Prototype-based Counterfactual Explanation for Causal Classification.
+Duong, T.D., Li, Q., & Xu, G. (2021). **Prototype-based Counterfactual Explanation for Causal Classification.**
 
 Bibtex::
 
