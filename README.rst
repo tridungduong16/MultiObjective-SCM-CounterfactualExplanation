@@ -1,14 +1,5 @@
 |BuildStatus|_ |PyPiVersion|_ |PythonSupport|_
 
-.. |BuildStatus| image:: https://github.com/interpretml/dice/workflows/Python%20package/badge.svg
-.. _BuildStatus: https://github.com/interpretml/dice/actions?query=workflow%3A%22Python+package%22
-
-.. |PyPiVersion| image:: https://img.shields.io/pypi/v/dice-ml
-.. _PyPiVersion: https://pypi.org/project/dice-ml/
-
-.. |PythonSupport| image:: https://img.shields.io/pypi/pyversions/dice-ml
-.. _PythonSupport: https://pypi.org/project/dice-ml/
-
 Multi-objective Optimization for Counterfactual Explanation with Structural Causal Model
 ======================================================================
 
@@ -49,19 +40,28 @@ Reproduce the results
 	python /multiobj-scm-cf/src/run_sangiovese.py
 
 
-Code Structure 
--------------------------
-
-
 Citing
--------------------------
-If you find our work useful for your research work, please cite it as follows.
+-------
+If you find DiCE useful for your research work, please cite it as follows.
 
+Duong, T.D., Li, Q., & Xu, G. (2021). Prototype-based Counterfactual Explanation for Causal Classification.
+
+Bibtex::
+
+	@misc{duong2021prototypebased,
+	      title={Prototype-based Counterfactual Explanation for Causal Classification}, 
+	      author={Tri Dung Duong and Qian Li and Guandong Xu},
+	      year={2021},
+	      eprint={2105.00703},
+	      archivePrefix={arXiv},
+	      primaryClass={cs.LG}
+	}
 
 Reference:
 -------------------------
 
 - Mahajan, D., Tan, C., & Sharma, A. (2019). Preserving causal constraints in counterfactual explanations for machine learning classifiers. arXiv preprint arXiv:1912.03277.
 - Van Looveren, A., & Klaise, J. (2019). Interpretable counterfactual explanations guided by prototypes. arXiv preprint arXiv:1907.02584.
+- AutoEncoders for DataFrames: https://github.com/AlliedToasters/dfencoder
 
 
