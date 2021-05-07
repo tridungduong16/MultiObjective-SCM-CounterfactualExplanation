@@ -87,7 +87,7 @@ if __name__ == "__main__":
 
     """Train model"""
     ae_model.to(device)
-    ae_model.fit(X_train, epochs=100, val=X_val)
+    ae_model.generator_fit(X_train, epochs=100, val=X_val)
 
     """Save model"""
     torch.save(ae_model, conf['autoencoder_model_credit'].format(version, emb_size))

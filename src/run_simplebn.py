@@ -34,7 +34,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--mode', type=str, default='different_instance')
     parser.add_argument('--n_instance', type=int, default=10)
-    parser.add_argument('--n_sample', type=int, default=2)
+    parser.add_argument('--n_sample', type=int, default=-1)
     parser.add_argument('--emb_size', type=int, default=512)
     parser.add_argument('--seed', type=int, default=1)
 
@@ -126,15 +126,14 @@ if __name__ == "__main__":
         logger.debug("Run optimization progress")
         res = minimize(problem,
                        algorithm,
-                       ('n_gen', 100),
+                       ('n_gen', 1),
                        save_history=True,
                        seed=seed,
                        verbose=True)
 
 
-
-        df_original.loc[i, :-1] = x0
-        df_cf.loc[i, :-1] =  find_best_solution(res.X, x0, pred_model)
+        df_original.at[i, :-1] = x0
+        df_cf.at[i, :-1] =  find_best_solution(res.X, x0, pred_model)
 
         del problem
         del algorithm
@@ -146,6 +145,7 @@ if __name__ == "__main__":
     df_original['y'] = pred_model.predict_proba(df_original[features_col].values)[:,1]
     df_cf['y'] =  pred_model.predict_proba(df_cf[features_col].values)[:,1]
 
+    print("Output file to ", conf['result_simple_bn'].format(n_instance, n_sample, emb_size, seed))
     df_original.to_csv(conf['original_simple_bn'].format(n_sample), index = False)
     df_cf.to_csv(conf['result_simple_bn'].format(n_instance, n_sample, emb_size, seed), index = False)
 

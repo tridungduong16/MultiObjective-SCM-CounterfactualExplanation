@@ -22,14 +22,18 @@ This is the code used for the paper `Prototype-based Counterfactual Explanation 
 How to run
 -------------------------
 
-.. code-block:: python
+Reproduce the result
 
-    pygments_style = 'sphinx'
+.. code-block:: console
+
+	python /multiobj-scm-cf/src/run_simplebn.py
+	python /multiobj-scm-cf/src/run_adult.py
+	python /multiobj-scm-cf/src/run_credit.py
+	python /multiobj-scm-cf/src/run_sangiovese.py
+
 
 Code Structure 
 -------------------------
-
-If you feel my code helpful, please cite to my paper.
 
 
 Citing
@@ -40,3 +44,5 @@ If you find our work useful for your research work, please cite it as follows.
 Reference:
 -------------------------
 
+- Mahajan, D., Tan, C., & Sharma, A. (2019). Preserving causal constraints in counterfactual explanations for machine learning classifiers. arXiv preprint arXiv:1912.03277.
+- Van Looveren, A., & Klaise, J. (2019). Interpretable counterfactual explanations guided by prototypes. arXiv preprint arXiv:1907.02584.
