@@ -94,7 +94,7 @@ if __name__ == "__main__":
 
     """Load model"""
     version = 'full'
-    name = 'simple_bn'
+    name = 'credit'
     pred_model = pickle.load(open(conf['prediction_model_credit'], 'rb'))
     dfencoder_model = torch.load(conf['autoencoder_model_credit'].format(version, emb_size))
 

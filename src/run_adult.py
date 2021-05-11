@@ -65,26 +65,38 @@ if __name__ == "__main__":
 
     """Load data"""
     data = pd.read_csv(conf['data_credit'])
-    
-    """Define features value"""
 
-    outcome = 'default payment next month'
-    features_col = ['LIMIT_BAL', 'SEX', 'EDUCATION', 'MARRIAGE', 'AGE', 'PAY_0',
-                'PAY_2', 'PAY_3', 'PAY_4', 'PAY_5', 'PAY_6', 'BILL_AMT1', 'BILL_AMT2',
-                'BILL_AMT3', 'BILL_AMT4', 'BILL_AMT5', 'BILL_AMT6', 'PAY_AMT1',
-                'PAY_AMT2', 'PAY_AMT3', 'PAY_AMT4', 'PAY_AMT5', 'PAY_AMT6']
-    category = ['SEX', 'EDUCATION', 'MARRIAGE']
-    categorical_index = {'EDUCATION': 2, 'MARRIAGE': 3}
+    """Load data and dataloader and normalize data"""
+    dataset = load_adult_income_dataset()
+    params= {'dataframe':dataset.copy(),
+              'continuous_features':['age','hours_per_week'],
+              'outcome_name':'income'}
+    d = DataLoader(params)
+    df = d.data_df
+    df = d.normalize_data(df)
+
+
+    outcome = 'income'
+    features_col = ['age','workclass','education','marital_status','occupation','hours_per_week', 'race', 'gender']
+    category = ['gender', 'education', 'workclass', 'education', 'marital_status', 'occupation', 'race', 'gender']
+
+    categorical_index = {'age': 2,
+                         'workclass': 3,
+                         'education': 4,
+                         'marital_status':5,
+                         'occupation':6,
+                         'race':7,
+                         'gender':8}
     cat_index = [1,2,3]
     con_index = [0,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22]
-    
+
     features = data[features_col]
     n_var = len(features_col)
-    
+
     """Find range value"""
-    education = list(features['EDUCATION'].unique())
-    marriage = list(features['MARRIAGE'].unique())
-    sex = list(features['SEX'].unique())
+    education = list(features['education'].unique())
+    marriage = list(features['marital_status'].unique())
+    sex = list(features['gender'].unique())
 
     """Store result"""
     logger.debug("Store result")
@@ -93,9 +105,9 @@ if __name__ == "__main__":
 
     """Load model"""
     version = 'full'
-    name = 'simple_bn'
-    pred_model = pickle.load(open(conf['prediction_model_credit'], 'rb'))
-    dfencoder_model = torch.load(conf['autoencoder_model_credit'].format(version, emb_size))
+    name = 'adult'
+    pred_model = pickle.load(open(conf['prediction_model_adult'], 'rb'))
+    dfencoder_model = torch.load(conf['autoencoder_model_adult'].format(version, emb_size))
 
     """Get prediction and negative index"""
     y_prediction = pred_model.predict(features.values)
@@ -171,7 +183,7 @@ if __name__ == "__main__":
 
         pos_proto, neg_proto = find_proto(z0.reshape(1, -1), pos_z, neg_z, k_instance)
 
-        problem = CF_Credit(x0,
+        problem = CF_Adult(x0,
                  pred_model,
                  dfencoder_model,
                  features_col,
