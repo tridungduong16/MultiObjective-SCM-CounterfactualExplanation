@@ -26,7 +26,7 @@ processed_simple_bn: /data/trduong/multiobj-scm-cf/data/simple_bn/processed_bn1.
 data_sangiovese: /data/trduong/multiobj-scm-cf/data/sangiovese/sangiovese.csv
 data_credit: /data/trduong/multiobj-scm-cf/data/credit/credit_raw.csv
 processed_data_credit: /data/trduong/multiobj-scm-cf/data/credit/processed_credit_raw.csv
-data_adult: /data/trduong/multiobj-scm-cf/data/adult/original_adult.ftr
+data_adult: /data/trduong/multiobj-scm-cf/data/adult/adult.data
 processed_data_adult: /data/trduong/multiobj-scm-cf/data/adult/processed_adult.ftr
 
 
