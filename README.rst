@@ -3,8 +3,6 @@ Multi-objective Optimization for Counterfactual Explanation with Structural Caus
 
 *Our work pay attention to counterfactual explanation with the structural causal model and multiobjective optimization*
 
-This is the code used for the paper `Prototype-based Counterfactual Explanation for Causal Classification <https://arxiv.org/abs/2105.00703>`_. I submitted this paper to IJCAI 2021 and got rejected. This work is still in progress. I appreciate your feedback to improve my work. Contact me at TriDung.Duong@student.uts.edu.au
-
 
 How to run
 -------------------------
