@@ -16,6 +16,15 @@ Build the classifier model
 
 An example of using :red:`interpreted text`
 
+
+.. raw:: html
+
+    <style> .red {color:#aa0060; font-weight:bold; font-size:16px} </style>
+
+.. role:: red
+
+:red:`test - this text should be red``
+
 .. code-block:: console
 
 	python /multiobj-scm-cf/src/model_adult.py
