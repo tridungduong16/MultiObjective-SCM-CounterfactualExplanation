@@ -12,6 +12,10 @@ How to run
 
 Build the classifier model
 
+.. role:: red
+
+An example of using :red:`interpreted text`
+
 .. code-block:: console
 
 	python /multiobj-scm-cf/src/model_adult.py
